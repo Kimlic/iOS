@@ -1,0 +1,143 @@
+
+
+//*********** System Genel Button Text ******************
+"next" = "Next";
+"useTouchID" = "Use Touch ID";
+"enterCodeAccept" = "Enter code to accept";
+"delete" = "Delete";
+//*******************************************************
+
+
+//*********** Verification Page *************************
+
+"createVerificationCode" = "Create Verification Code";
+"confirmVerificationCode" = "Confirm Code";
+"verificateVerificationCode" = "Enter Verification Code";
+
+//*******************************************************
+
+//*********** Tutorials Page ****************************
+
+"tutorialsFirstPageTitle" = "Kimlic is your Secure Identity on your phone";
+"tutorialsFirstPageDesc" = "Your Kimlic ID gives you easy and secure access to online services with the tap of a button.";
+
+"tutorialsSecondPageTitle" = "You are in control of your Kimic ID";
+"tutorialsSecondPageDesc" = "When a site or app requests to know who you are so you can use their service, Kimlic lets you know which detail they need so you get to approve what you share.";
+
+"tutorialsThirdPageTitle" = "For security, locking this app is required";
+"tutorialsThirdPageDesc" = "To keep you safe from hackers, your personal data is on your device - not on centralized servers.";
+
+//*******************************************************
+
+
+//*********** User Basic Info Page **********************
+
+"basicProfileInfo" = "Basic profile information";
+
+//*******************************************************
+
+//*********** User Phone Number Page **********************
+
+"questionText" = "What is your mobile number?";
+
+//*******************************************************
+
+//*********** User Profile Page **********************
+
+//----- Profile Level -----
+"basic" = "Basic";
+"medium" = "Medium";
+"high" = "High";
+"complate" = "Complete";
+//-------------------------
+
+//*******************************************************
+
+
+//*********** Popup Default Message *********************
+
+"errorTitle" = "Oh snap";
+"errorMessage" = "Something went wrong";
+"errorButtonTitle" = "TRY, AGAIN";
+
+"warningTitle" = "Whoa!";
+"warningMessage" = "You need to verify your email and phone number to login!";
+"warningButtonTitle" = "GOT IT";
+
+"successTitle" = "Yay!";
+"successMessage" = "Your phone number confirmed successfully";
+"successButtonTitle" = "OK, COOL";
+
+"fieldsRequiredTitle" = "Fields is required";
+"fieldsRequiredMessage" = "Please enter all fields correctly and completely";
+"fieldsRequiredButtonTitle" = "OK";
+
+"qrCodeTitle" = "Place the QR code inside the rectangle";
+"qrCodeMessage" = "Scanning will starts automatically";
+"qrCodeButtonTitle" = "OK, COOL";
+
+//*******************************************************
+
+
+
+//*********** Alert Dialogs *********************
+
+//------------ Camera Alert Dialogs -------------------------------
+"noCameraTitle" = "No Camera";
+"noCameraMessage" = "Sorry, there is no camera available";
+"noCameraButtonTitle" = "GOT IT";
+
+//------------ Phone Verification Code Alert ----------------------
+"incorrectCodeTitle" = "Wrong Code";
+"incorrectCodeMessage" = "Phone number validation code is incorrect";
+"incorrectCodeButtonTitle" = "TRY, AGAIN";
+
+//------------ Phone Resend Verification Code Alert ----------------------
+"resendCodeTitle" = "Success";
+"resendCodeMessage" = "The verification code was successfully sent to your phone";
+"resendCodeButtonTitle" = "OK, THANKS";
+
+
+//------------ Touch ID Alert Dialogs ------------------------------
+"touchIDConfirmMessage" = "Please confirm to continue";
+
+"notSupportedTitle" = "Not Supported";
+"notSupportedMessage" = "Your phone does not support touch id";
+"notSupportedButtonTitle" = "OK";
+
+"incorrectTitle" = "Incorrect";
+"incorrectMessage" = "Touch ID validation is denied!";
+"incorrectButtonTitle" = "TRY, AGAIN";
+
+//---------------- Logout Dialogs ----------------------------------
+"logoutTitle" = "Are you sure?";
+"logoutMessage" = "If you log out, all saved data will be deleted.";
+"logoutButtonTitle" = "OK, LOG OUT";
+
+//---------------- All Permissions is Null ----------------------------------
+"allPermissionsNullTitle" = "Whoa";
+"allPermissionsNullMessage" = "You have not granted any application yet!";
+"allPermissionsNullButtonTitle" = "GOT IT";
+
+//---------------- Wrong QR Code ----------------------------------
+"wrongQrTitle" = "Wrong QR Code";
+"wrongQrMessage" = "Please read a qr code with the correct content!";
+"wrongQrButtonTitle" = "TRY, AGAIN";
+
+//---------------- Success Permission Added ----------------------------------
+"permissionAddTitle" = "Success";
+"permissionAddMessage" = "Required informations shared successfully.";
+"permissionAddButtonTitle" = "GOT IT";
+
+//----------------Phone is not valid----------------------------------
+"phoneNotValidTitle" = "Phone is not valid";
+"phoneNotValidMessage" = "Please enter a valid phone number.";
+"phoneNotValidButtonTitle" = "TRY, AGAIN";
+
+
+//*******************************************************
+
+
+
+
+
