@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RevealingSplashView
 
 class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
     
