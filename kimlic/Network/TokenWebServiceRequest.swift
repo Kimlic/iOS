@@ -22,9 +22,9 @@ class TokenWebServiceRequest: NSObject {
         ]
         
         let parameters: Parameters = [
-            "grant_type" : "client_credentials",
-            "client_id" : "90c8c7cab6a1cfe3808992bb9fc3d96f14d783581371336eb046e8143e3eedab",
-            "client_secret" : "38ef41d735a0a323d536ab8a2fcc6881d267a1710956bffbb6df3672edd8a333"
+            "grant_type" : Bundle.main.grantType,
+            "client_id" : Bundle.main.clientID,
+            "client_secret" : Bundle.main.clientSecret
         ]
         
         WebServicesBaseRequest().executeRequest(url: requestUrl, method: .post, params: parameters, headers: headers) { (stringJson) in
