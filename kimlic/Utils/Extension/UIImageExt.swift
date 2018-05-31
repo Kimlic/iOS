@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     
     
     func profileImageMask() -> UIImage {
@@ -38,11 +38,11 @@ extension UIImage {
     }
     
     func getImageData() -> Data {
-        return UIImageJPEGRepresentation(self, 1.0) as Data!
+        return UIImageJPEGRepresentation(self, 1.0)!
     }
     
     func convertBase64() -> String {
-        let imageData:Data = UIImageJPEGRepresentation(self, 1.0) as Data!
+        let imageData:Data = UIImageJPEGRepresentation(self, 1.0)!
         let dataImage = imageData.base64EncodedString(options: .endLineWithLineFeed)
         return dataImage.trimmingCharacters(in: .whitespacesAndNewlines)
     }

@@ -35,9 +35,7 @@ extension AnimatedImageView {
         self.animationRepeatCount = 1
         self.startAnimating()
         return
-        
     }
-    
     
     
 }

@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class UserResponse: GenericResponseMappable, NSCoding {
+public class UserResponse: GenericResponseMappable, NSCoding {
     
     
     // MARK: Declaration for string constants to be used to decode and also serialize.

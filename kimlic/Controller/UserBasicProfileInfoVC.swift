@@ -69,7 +69,7 @@ class UserBasicProfileInfoVC: UIViewController {
                         Defaults[.lastName] = lastName
                         Defaults[.email] = email
                         UIUtils.stopLoading()
-                        let _ = UIUtils().setUserProfileScreenAsRoot()
+                        let _ = UIUtils.setUserProfileScreenAsRoot()
                     }else {
                         UIUtils.stopLoading()
                         PopupGenerator.createPopup(controller: self, type: .error, popup: Popup())

@@ -9,7 +9,7 @@
 import UIKit
 import PopupDialog
 
-class PopupGenerator {
+public class PopupGenerator {
     
     static func createPopup(controller: UIViewController, type: PopupType, popup: Popup, btnClickCompletion: (() -> ())? = nil) {
         

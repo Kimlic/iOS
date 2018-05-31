@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SwiftyUserDefaults
 
-class SystemUtils {
+public class SystemUtils {
     
     static func isValidEmail(email: String?) -> Bool {
         if let mail = email?.trimmingCharacters(in: .whitespaces) {
@@ -55,7 +55,8 @@ class SystemUtils {
         Defaults[.verificationCodeEnable] = nil
         Defaults[.verificationCode] = nil
         Defaults.synchronize()
-        let root = UIUtils().setTutorialScreenAsRoot()
+//        let root = UIUtils.setTutorialScreenAsRoot()
+        let root = UIUtils.setTutorialScreenAsRoot()
         controller.navigationController?.popRootViewControllerWithHandler(completion: {
             let popup = Popup()
             popup.title = "Success logout"
