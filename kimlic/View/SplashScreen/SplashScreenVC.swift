@@ -30,7 +30,7 @@ class SplashScreenVC: BaseVC {
             },completion: {
                 (finished: Bool) -> Void in
                 if Defaults[.userToken] == nil {
-                    let _ = UIUtils.setTutorialScreenAsRoot()
+                    let _ = UIUtils.setSignUpScreenAsRoot()
                 }else {
                     let _ = UIUtils.setUserProfileScreenAsRoot()
                 }

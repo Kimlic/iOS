@@ -14,6 +14,21 @@ import PhoneNumberKit
 
 public class UIUtils {
     
+    static func setSignUpScreenAsRoot() -> SignUpVC {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let window :UIWindow = appDelegate.window!
+        let storyboard = AppStoryboard.SignUp.instance
+        let homeVC = storyboard.instantiateViewController(withIdentifier: SignUpVC.className) as! SignUpVC
+        let navVc = UINavigationController(rootViewController: homeVC)
+        navVc.isNavigationBarHidden = true
+        UIView.transition(with: appDelegate.window!, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            window.rootViewController = navVc
+        }, completion: { completed in
+            // maybe do something here
+        })
+        return homeVC
+    }
+    
     static func setTutorialScreenAsRoot() -> TutorialsVC {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let window :UIWindow = appDelegate.window!

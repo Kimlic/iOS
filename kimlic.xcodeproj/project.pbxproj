@@ -20,6 +20,9 @@
 		7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161A241FBDB526004FD9A0 /* Enums.swift */; };
 		7C161A451FBDD27F004FD9A0 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161A441FBDD27F004FD9A0 /* RoundButton.swift */; };
 		7C161A4B1FBDEA05004FD9A0 /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161A4A1FBDEA05004FD9A0 /* UITextFieldExt.swift */; };
+		7C2F326520C0301700AEB314 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F326420C0301700AEB314 /* SignUp.storyboard */; };
+		7C2F326720C0303900AEB314 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F326620C0303900AEB314 /* SignUpVC.swift */; };
+		7C2F326920C0424700AEB314 /* TermsAndConditionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F326820C0424700AEB314 /* TermsAndConditionsVC.swift */; };
 		7C3023E320C012B10093598E /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C3023E220C012B00093598E /* SplashScreen.storyboard */; };
 		7C36C6E21FD1539400D4501D /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36C6E11FD1539400D4501D /* AnimatedImageView.swift */; };
 		7C36C6E41FD153AC00D4501D /* AnimatedImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36C6E31FD153AC00D4501D /* AnimatedImageViewExt.swift */; };
@@ -83,6 +86,9 @@
 		7C161A241FBDB526004FD9A0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		7C161A441FBDD27F004FD9A0 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		7C161A4A1FBDEA05004FD9A0 /* UITextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
+		7C2F326420C0301700AEB314 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		7C2F326620C0303900AEB314 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		7C2F326820C0424700AEB314 /* TermsAndConditionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsVC.swift; sourceTree = "<group>"; };
 		7C3023E220C012B00093598E /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		7C36C6E11FD1539400D4501D /* AnimatedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
 		7C36C6E31FD153AC00D4501D /* AnimatedImageViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImageViewExt.swift; sourceTree = "<group>"; };
@@ -157,14 +163,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7C3023E120C012750093598E /* Storyboard */ = {
+		7C2F325F20C02B5300AEB314 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
+				7C379AA21FB9DCF900D005CC /* SplashScreenVC.swift */,
 				7C3023E220C012B00093598E /* SplashScreen.storyboard */,
-				7C4838551FB5F62500FC864A /* Main.storyboard */,
-				7C48385A1FB5F62500FC864A /* LaunchScreen.storyboard */,
 			);
-			path = Storyboard;
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		7C2F326020C02FC700AEB314 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				7C2F326420C0301700AEB314 /* SignUp.storyboard */,
+				7C2F326620C0303900AEB314 /* SignUpVC.swift */,
+				7C2F326820C0424700AEB314 /* TermsAndConditionsVC.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		7C379AA41FB9DED200D005CC /* Utils */ = {
@@ -234,7 +249,6 @@
 		7C4838501FB5F62400FC864A /* kimlic */ = {
 			isa = PBXGroup;
 			children = (
-				7C3023E120C012750093598E /* Storyboard */,
 				7CB5674B1FB9B53400F03D24 /* Model */,
 				7CB5674C1FB9B54700F03D24 /* View */,
 				7CB5674D1FB9B55600F03D24 /* Controller */,
@@ -242,6 +256,8 @@
 				7CF6556C1FBACF0D00CA9C1A /* Resources */,
 				7C379AA41FB9DED200D005CC /* Utils */,
 				7C4838511FB5F62400FC864A /* AppDelegate.swift */,
+				7C4838551FB5F62500FC864A /* Main.storyboard */,
+				7C48385A1FB5F62500FC864A /* LaunchScreen.storyboard */,
 				7C4838581FB5F62500FC864A /* Assets.xcassets */,
 				7C48385D1FB5F62500FC864A /* Info.plist */,
 			);
@@ -271,6 +287,8 @@
 		7CB5674C1FB9B54700F03D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7C2F326020C02FC700AEB314 /* SignUp */,
+				7C2F325F20C02B5300AEB314 /* SplashScreen */,
 				7C8A80CE1FBD839E009E74F9 /* PermissionCell.swift */,
 				0F8F2B5D1FC5D66200BEF5B2 /* PermissionCell.xib */,
 			);
@@ -284,7 +302,6 @@
 				0F359D901FC095C9007E07DC /* BaseVC.swift */,
 				7C8A80CC1FBD668D009E74F9 /* PermissionDetailVC.swift */,
 				7C882B091FC3FD1B0064DF7F /* ScanCodeVC.swift */,
-				7C379AA21FB9DCF900D005CC /* SplashScreenVC.swift */,
 				7CB567501FB9C2CA00F03D24 /* TutorialsContentVC.swift */,
 				7CB5674E1FB9C28E00F03D24 /* TutorialsVC.swift */,
 				7CF655771FBAFA4600CA9C1A /* UserBasicProfileInfoVC.swift */,
@@ -385,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C48385C1FB5F62500FC864A /* LaunchScreen.storyboard in Resources */,
+				7C2F326520C0301700AEB314 /* SignUp.storyboard in Resources */,
 				7CDBFE3D1FC9AA020073D70A /* country_code.json in Resources */,
 				0F8F2B5E1FC5D66200BEF5B2 /* PermissionCell.xib in Resources */,
 				7CF655711FBAF19F00CA9C1A /* Localizable.strings in Resources */,
@@ -482,6 +500,7 @@
 				7C36C6E41FD153AC00D4501D /* AnimatedImageViewExt.swift in Sources */,
 				7CB5674F1FB9C28E00F03D24 /* TutorialsVC.swift in Sources */,
 				7C99D6E11FC7FF8E00A593C5 /* TokenWebServiceRequest.swift in Sources */,
+				7C2F326720C0303900AEB314 /* SignUpVC.swift in Sources */,
 				0F359D911FC095C9007E07DC /* BaseVC.swift in Sources */,
 				7C882B0A1FC3FD1B0064DF7F /* ScanCodeVC.swift in Sources */,
 				0FBA58F01FC0A81D00DF593F /* PopupGenerator.swift in Sources */,
@@ -512,6 +531,7 @@
 				7C99D6E31FC7FFDE00A593C5 /* UserWebServiceRequest.swift in Sources */,
 				7CF655701FBAF15D00CA9C1A /* StringExt.swift in Sources */,
 				7CB567511FB9C2CA00F03D24 /* TutorialsContentVC.swift in Sources */,
+				7C2F326920C0424700AEB314 /* TermsAndConditionsVC.swift in Sources */,
 				7C99D6D91FC7FE8D00A593C5 /* WrappedRootResponse.swift in Sources */,
 				7C8A80CD1FBD668D009E74F9 /* PermissionDetailVC.swift in Sources */,
 				7C161A4B1FBDEA05004FD9A0 /* UITextFieldExt.swift in Sources */,
