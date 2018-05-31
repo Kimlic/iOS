@@ -28,10 +28,10 @@
 	<string>$(PRODUCT_NAME) use camera for user profile image.</string>
 	<key>ServerURL</key>
 	<string>https://kimlic.herokuapp.com</string>
+	<key>UIMainStoryboardFile</key>
+	<string>SplashScreen</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

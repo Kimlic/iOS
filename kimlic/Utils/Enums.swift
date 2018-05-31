@@ -5,7 +5,7 @@
 //  Created by İzzet Öztürk on 16.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
 import Foundation
-
+import UIKit
 
 enum PopupType {
     case error
@@ -28,4 +28,12 @@ enum VerificationCodePageType {
     case create
     case createConfirm
     case verificate
+}
+
+
+enum AppStoryboard : String {
+    case SplashScreen, Main
+    var instance : UIStoryboard {
+        return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
+    }
 }
