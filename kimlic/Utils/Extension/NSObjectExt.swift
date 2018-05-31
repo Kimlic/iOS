@@ -4,8 +4,6 @@
 //
 //  Created by ibrahim özdemir on 18.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import Foundation
 
 public extension NSObject {
@@ -16,8 +14,7 @@ public extension NSObject {
     
     public static var className: String {
         return stringFromClass(aClass: self)
-    }
-    
+    }    
 }
 
 public func stringFromClass(aClass: AnyClass) -> String {

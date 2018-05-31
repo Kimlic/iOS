@@ -4,8 +4,6 @@
 //
 //  Created by ibrahim özdemir on 18.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -70,8 +68,6 @@ public class Animz: UIView{
             })
         })
     }
-    
-    
     static func fadeIn(image: UIImageView!, duration: Double, completion: (() -> ())? = nil) {
         
         image.alpha = 0.0
@@ -97,7 +93,6 @@ public class Animz: UIView{
         }, completion: { finished in
             completion?()
         })
-        
     }
     
     static func rotateY(layer:CALayer, angleFrom:Int,duration: Double, completion: @escaping() -> ()){
@@ -116,7 +111,6 @@ public class Animz: UIView{
         CATransaction.setCompletionBlock {
             completion()
         }
-        
         layer.add(rotationAnimation, forKey: "rotateInner")
         CATransaction.commit()
     }

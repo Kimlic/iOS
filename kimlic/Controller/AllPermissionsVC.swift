@@ -4,8 +4,6 @@
 //
 //  Created by İzzet Öztürk on 15.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 import Foundation
 import FSPagerView
@@ -59,7 +57,6 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate, FSPagerViewDelegate
             PopupGenerator.createPopup(controller: self, type: .error, popup: popup)
             return
         }
-        
         guard let emailVerified = Defaults[.emailVerified], emailVerified,
             let phoneVerifed = Defaults[.phoneVerified], phoneVerifed  else{
                 PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup())
@@ -90,8 +87,6 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate, FSPagerViewDelegate
         cell.contentView.layer.shadowRadius = 0
         return setCellDetail(cell: cell, index: index)
     }
-    
-    
     // Permissions CollectionView set cell value
     func setCellDetail(cell: PermissionCell, index: Int) -> PermissionCell {
         
@@ -107,7 +102,6 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate, FSPagerViewDelegate
                 cell.imgBage.image = img
             }
         }
-        
         //Download and set company logo
         cell.imgLogo.downloadedFrom(link: permission.avatarUrl)
         

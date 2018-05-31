@@ -4,8 +4,6 @@
 //
 //  Created by İzzet Öztürk on 23.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -34,7 +32,6 @@ class WebServicesBaseRequest: NSObject {
                 
             }
         }
-    }
-    
+    }    
 }
 

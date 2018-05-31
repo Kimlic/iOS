@@ -4,8 +4,6 @@
 //
 //  Created by İzzet Öztürk on 14.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 import SwiftyUserDefaults
 
@@ -63,8 +61,6 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         
         
     }
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated) // No need for semicolon
         
@@ -78,8 +74,6 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         
     }
     
-    
-    
     //Opens the camera when profile picture is clicked
     @objc func selectProfileImage() {
         
@@ -87,7 +81,6 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
             PopupGenerator.createPopup(controller: self, type: .error, popup: Popup(title: "noCameraTitle".localized, message: "noCameraMessage".localized, buttonTitle: "noCameraButtonTitle".localized))
             return
         }
-        
         //Camera settings are made
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .camera
@@ -131,8 +124,6 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         dismiss(animated: true, completion: nil)
     }
     //****************************************************************
-    
-    
     @IBAction func btnPhoneNumberPressed(_ sender: Any) {
         if Defaults[.phoneVerified] == nil {
             UIUtils.navigateToUserPhoneNumber(vc: self)
@@ -155,7 +146,6 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
             PopupGenerator.createPopup(controller: self, type: .error, popup: Popup(title: "noCameraTitle".localized, message: "noCameraMessage".localized, buttonTitle: "noCameraButtonTitle".localized))
             return
         }
-        
         //If e-mail and phone number are not verified, a warning is given
         //Backplane email web service triggered
         guard let emailVerified = Defaults[.emailVerified], emailVerified else {
@@ -163,12 +153,10 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
             callEmailVerificateWebService()
             return
         }
-        
         guard let phoneVerifed = Defaults[.phoneVerified], phoneVerifed else {
             PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup())
             return
         }
-        
         UIUtils.navigateToScanCode(vc: self)
     }
     
@@ -183,8 +171,6 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         }
         
     }
-    
-    
     //user information is retrieved and set in fields
     func setUserProfileLevel(type: LevelBarAnimationType) {
         
@@ -206,9 +192,7 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
             }else {
                 txtEmailAddress.removeIcon()
             }
-            
         }
-        
         // phone textfield set value and icon
         if let phoneVerified = Defaults[.phoneVerified], phoneVerified {
             verifiedCount += 1
@@ -221,22 +205,17 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
             }else {
                 txtPhoneNumber.removeIcon()
             }
-            
         }
-        
         // photo imageview set image
         if let photoVerified = Defaults[.photoVerified], photoVerified {
             verifiedCount += 1
             imgProfileImageFrame.image = UIImage(named: "profile_image_frame_green")
             if let imgData = Defaults[.photo] {
                 imgProfileImage.image = UIImage(data: imgData, scale: 1.0)?.profileImageMask()
-            }
-            
+            }            
         }else {
             imgProfileImageFrame.image = UIImage(named: "add_image_frame")
         }
-        
-        
         switch verifiedCount {
         case 1:
             lblProfileLevel.text = "medium".localized
@@ -266,13 +245,10 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
     //the level bar images are loaded when this page is opened for the first time
     func setLevelBarAnimationImage() {
-        
         mediumImages.append(UIImage(named: "complete_transparent")!)
         mediumImages.append(UIImage(named: "medium_orange_level")!)
-        
         highImages.append(UIImage(named: "complete_transparent")!)
-        complateImages.append(UIImage(named: "complete_transparent")!)
-        
+        complateImages.append(UIImage(named: "complete_transparent")!)       
         
         for i in 1...2 {
             if let img = UIImage(named: "high_green_level\(i)") {
@@ -286,8 +262,6 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
             }
         }
     }
-    
-
     // update the relevant fields by checking from the web service that the email address is authenticated
     func callEmailVerificateWebService() {
         guard let emailVerified = Defaults[.emailVerified], emailVerified else {

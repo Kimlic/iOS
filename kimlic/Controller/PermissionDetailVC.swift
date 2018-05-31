@@ -4,22 +4,16 @@
 //
 //  Created by İzzet Öztürk on 16.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 import SwiftyUserDefaults
 
 class PermissionDetailVC: UIViewController {
-    
-    
     @IBOutlet weak var txtEmailAddress: UITextField!
     @IBOutlet weak var txtMobilePhone: UITextField!
     @IBOutlet weak var txtTitle: UILabel!
     @IBOutlet weak var imgBage: UIImageView!
     @IBOutlet weak var imgLogo: UIImageView!
     @IBOutlet weak var btnTouchIdAccept: RoundButton!
-    
-    
     var permission: PermissionDetailResponse!
     var qrCode: String!
     
@@ -39,8 +33,6 @@ class PermissionDetailVC: UIViewController {
         Animz.fadeIn(image: imgBage, duration: Animz.time06)
         Animz.fadeIn(image: imgLogo, duration: Animz.time06)
     }
-    
-    
     @IBAction func btnBack(_ sender: Any) {     
         self.navigationController?.popViewController(animated: true)
     }
@@ -48,8 +40,6 @@ class PermissionDetailVC: UIViewController {
     @IBAction func cancel(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
-    
-    
     @IBAction func btnTouchIDAcceptPressed(_ sender: Any) {
         if let code =  Defaults[.verificationCodeEnable], code {
             UIUtils.presentVerificationCodeVC(vc: self, pageType: .verificate, qrCode: self.qrCode)
@@ -65,7 +55,6 @@ class PermissionDetailVC: UIViewController {
             btnTouchIdAccept.setImage(nil, for: .normal)
             btnTouchIdAccept.setTitle("enterCodeAccept".localized, for: .normal)
         }
-        
         txtTitle.text = permission.name
         txtEmailAddress.text = Defaults[.email]
         txtEmailAddress.greenCheckIcon()
@@ -80,9 +69,7 @@ class PermissionDetailVC: UIViewController {
                 imgBage.image = img
             }
         }
-        
         imgLogo.downloadedFrom(link: permission.avatarUrl)
-        
     }
     
     func setPermissionScope() {
@@ -100,10 +87,7 @@ class PermissionDetailVC: UIViewController {
                 break
             default:
                 break
-            }
-            
+            }            
         })
-        
-    }
-    
+    }    
 }

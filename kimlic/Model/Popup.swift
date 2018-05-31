@@ -4,10 +4,7 @@
 //
 //  Created by İzzet Öztürk on 16.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
-
 
 class Popup {
     
@@ -26,14 +23,9 @@ class Popup {
         self.buttonTitle = buttonTitle
     }
     
-    
-    
     init(title: String?, message: String?, buttonTitle: String?) {
         self.title = title
         self.message = message
         self.buttonTitle = buttonTitle
     }
-    
-    
 }
-

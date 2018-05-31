@@ -42,8 +42,7 @@ public extension SwiftyColor {
             (a, r, g, b) = (1, 1, 1, 0)
         }
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
-    }
-    
+    }    
 }
 
 // MARK: - Components
@@ -56,19 +55,16 @@ public extension SwiftyColor {
             getRed(&r, green: nil, blue: nil, alpha: nil)
             return Int(r * 255)
         }
-        
         public var greenComponent: Int {
             var g: CGFloat = 0
             getRed(nil, green: &g, blue: nil, alpha: nil)
             return Int(g * 255)
         }
-        
         public var blueComponent: Int {
             var b: CGFloat = 0
             getRed(nil, green: nil, blue: &b, alpha: nil)
             return Int(b * 255)
         }
-        
         public var alpha: CGFloat {
             var alpha: CGFloat = 0
             getRed(nil, green: nil, blue: nil, alpha: &alpha)
@@ -79,7 +75,6 @@ public extension SwiftyColor {
 #endif
 
 // MARK: - Brightness
-
 public extension SwiftyColor {
     
     public func lighter(amount: CGFloat = 0.25) -> SwiftyColor {
@@ -109,7 +104,5 @@ public extension SwiftyColor {
                                brightness: brightness * amount,
                                alpha: alpha)
         #endif
-    }
-    
+    }    
 }
-

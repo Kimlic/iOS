@@ -4,15 +4,11 @@
 //
 //  Created by İzzet Öztürk on 14.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
 
 class Constants {
-    
-    
     struct Colors {
         
         static let appBlue = UIColor(hex:"#65beff")
@@ -44,6 +40,5 @@ class Constants {
         static let Profile = "profile"
         static let Emails = "emails"
         static let Phones = "phones"
-    }
-    
+    }    
 }

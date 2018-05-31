@@ -4,8 +4,6 @@
 //
 //  Created by İzzet Öztürk on 16.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 
 class RoundButton: UIButton {
@@ -17,9 +15,7 @@ class RoundButton: UIButton {
         self.layer.cornerRadius = self.frame.height / 2
         self.setTitleColor(UIColor.white, for: .normal)
         self.contentEdgeInsets = UIEdgeInsetsMake(0, 20, 0, 20)
-    }    
-    
-    //Image left aligment
+    }    //Image left aligment
     override func layoutSubviews() {
         super.layoutSubviews()
         contentHorizontalAlignment = .left
@@ -27,6 +23,4 @@ class RoundButton: UIButton {
         let availableWidth = availableSpace.width - imageEdgeInsets.right - (imageView?.frame.width ?? 0) - (titleLabel?.frame.width ?? 0)
         titleEdgeInsets = UIEdgeInsets(top: 0, left: availableWidth / 2, bottom: 0, right: 0)
     }
-    
-    
 }

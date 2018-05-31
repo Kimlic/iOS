@@ -4,21 +4,14 @@
 //
 //  Created by İzzet Öztürk on 23.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import Foundation
 import ObjectMapper
-
 
 // MARK: Declaration for string constants to be used to decode and also serialize.
 private struct SerializationKeys {
     static let data = "data"
 }
-
-
 public final class WrappedRootResponse<T: GenericResponseMappable>: Mappable {
-    
-    
     // MARK: Properties
     public var data: WrappedResponse<T>?
     
@@ -26,9 +19,7 @@ public final class WrappedRootResponse<T: GenericResponseMappable>: Mappable {
     /// Map a JSON object to this class using ObjectMapper.
     ///
     /// - parameter map: A mapping from ObjectMapper.
-    public required init?(map: Map){
-        
-    }
+    public required init?(map: Map){}
     
     /// Map a JSON object to this class using ObjectMapper.
     ///
@@ -44,7 +35,5 @@ public final class WrappedRootResponse<T: GenericResponseMappable>: Mappable {
         var dictionary: [String: Any] = [:]
         if let value = data { dictionary[SerializationKeys.data] = value.dictionaryRepresentation() }
         return dictionary
-    }
-    
+    }    
 }
-

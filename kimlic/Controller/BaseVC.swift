@@ -4,11 +4,8 @@
 //
 //  Created by ibrahim özdemir on 18.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import Foundation
 import UIKit
-
 
 class BaseVC: UIViewController {
     
@@ -23,5 +20,4 @@ class BaseVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
 }

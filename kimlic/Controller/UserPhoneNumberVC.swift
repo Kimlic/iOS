@@ -4,8 +4,6 @@
 //
 //  Created by İzzet Öztürk on 15.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 import PhoneNumberKit
 import SwiftyUserDefaults
@@ -44,8 +42,6 @@ class UserPhoneNumberVC: UIViewController, UIPickerViewDataSource, UIPickerViewD
         Animz.fadeIn(image: imgHexagon, duration: Animz.time06)
         Animz.fadeIn(image: imgHexagonContent, duration: Animz.time06)
     }
-    
-    
     // Country code and name json file path "Resources > country_code.json"
     // PickerView set country code and name data
     func setCountryData() {
@@ -88,8 +84,6 @@ class UserPhoneNumberVC: UIViewController, UIPickerViewDataSource, UIPickerViewD
             return
         }
     }
-    
-    
     @IBAction func btnBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -101,7 +95,6 @@ class UserPhoneNumberVC: UIViewController, UIPickerViewDataSource, UIPickerViewD
         guard !(phoneNumber?.isEmpty)! else {
             return
         }
-        
         do {
             UIUtils.showLoading()
             let verificatePhone = try phoneNumberKit.parse(phoneNumber!)
@@ -129,6 +122,5 @@ class UserPhoneNumberVC: UIViewController, UIPickerViewDataSource, UIPickerViewD
     @IBAction func selectedCountryPressed(_ sender: Any) {
         txtMobilePhone.endEditing(true)
         countryView.isHidden = false
-    }
-    
+    }    
 }

@@ -4,14 +4,10 @@
 //
 //  Created by İzzet Öztürk on 14.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 import SwiftyUserDefaults
 
 class UserBasicProfileInfoVC: UIViewController {
-    
-    
     @IBOutlet weak var txtFirstName: UITextField!
     @IBOutlet weak var txtLastName: UITextField!
     @IBOutlet weak var txtEmailAddress: UITextField!
@@ -29,18 +25,12 @@ class UserBasicProfileInfoVC: UIViewController {
         Animz.fadeIn(image: imgHexagonContent, duration: Animz.time06)
         Animz.fadeIn(image: imgHexagon, duration: Animz.time06)
     }
-    
-    
     @IBAction func back(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    
-    
     @IBAction func btnSavePressed(_ sender: Any) {
         formControl()
     }
-    
-    
     @IBAction func txtFirstNameEndEditing(_ sender: Any) {
         txtLastName.becomeFirstResponder()
     }
@@ -48,8 +38,6 @@ class UserBasicProfileInfoVC: UIViewController {
     @IBAction func txtLastNameEndEditing(_ sender: Any) {
         txtEmailAddress.becomeFirstResponder()
     }    
-    
-    
     @IBAction func txtEmailEndEditing(_ sender: Any) {
     }
     
@@ -94,8 +82,6 @@ class UserBasicProfileInfoVC: UIViewController {
             PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "fieldsRequiredTitle".localized, message: "fieldsRequiredMessage".localized, buttonTitle: "fieldsRequiredButtonTitle".localized))
             return
         }
-        
         self.saveUser(firstName: firstName!, lastName: lastName!, email: email!)
-    }
-    
+    }    
 }

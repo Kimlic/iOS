@@ -5,12 +5,10 @@
 //  Created by İzzet Öztürk on 23.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
 //
-
 import Foundation
 import ObjectMapper
 
 public class UserResponse: GenericResponseMappable, NSCoding {
-    
     
     // MARK: Declaration for string constants to be used to decode and also serialize.
     private struct SerializationKeys {
@@ -27,9 +25,7 @@ public class UserResponse: GenericResponseMappable, NSCoding {
     /// Map a JSON object to this class using ObjectMapper.
     ///
     /// - parameter map: A mapping from ObjectMapper.
-    public required init?(map: Map){
-        
-    }
+    public required init?(map: Map){}
     
     /// Map a JSON object to this class using ObjectMapper.
     ///
@@ -62,7 +58,5 @@ public class UserResponse: GenericResponseMappable, NSCoding {
         aCoder.encode(firstName, forKey: SerializationKeys.firstName)
         aCoder.encode(lastName, forKey: SerializationKeys.lastName)
         aCoder.encode(avatarUrl, forKey: SerializationKeys.avatarUrl)
-    }
-    
+    }    
 }
-

@@ -4,8 +4,6 @@
 //
 //  Created by İzzet Öztürk on 15.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 import SwiftyUserDefaults
 import PhoneNumberKit
@@ -30,8 +28,6 @@ class UserPhoneNumberValidateVC: UIViewController {
         Animz.fadeIn(image: imgHexagonContent, duration: Animz.time06)
         Animz.fadeIn(image: imgHexagon, duration: Animz.time06)
     }
-    
-    
     @IBAction func textChange(_ sender: Any) {
         
         let code = txtPhoneVerifacitionCode.text?.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -39,7 +35,6 @@ class UserPhoneNumberValidateVC: UIViewController {
         guard code?.count == 6 else {
             return
         }
-        
         txtPhoneVerifacitionCode.text = code
         UIUtils.showLoading()
         PhoneWebServiceRequest().verifyPhone(verifiyCode: code, completion: { (phoneResponse) in
@@ -60,13 +55,9 @@ class UserPhoneNumberValidateVC: UIViewController {
             }
         })
     }
-    
-    
     @IBAction func btnBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    
-    
     @IBAction func btnResendPressed(_ sender: Any) {
         UIUtils.showLoading()
         PhoneWebServiceRequest().resendVerifiyCode { (phoneResponse) in
@@ -80,6 +71,4 @@ class UserPhoneNumberValidateVC: UIViewController {
             }
         }
     }
-    
-    
 }

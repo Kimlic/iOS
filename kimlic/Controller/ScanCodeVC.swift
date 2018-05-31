@@ -4,8 +4,6 @@
 //
 //  Created by İzzet Öztürk on 21.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
 
@@ -56,7 +54,6 @@ class ScanCodeVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate  {
             })
             return
         }
-        
         guard object.type == AVMetadataObject.ObjectType.qr else {
             UIUtils.stopLoading()
             session.stopRunning()
@@ -65,7 +62,6 @@ class ScanCodeVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate  {
             })
             return
         }
-        
         if let value = object.stringValue {
             
             session.stopRunning()
@@ -95,8 +91,4 @@ class ScanCodeVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate  {
     @IBAction func btnBackPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    
-    
-    
-    
 }

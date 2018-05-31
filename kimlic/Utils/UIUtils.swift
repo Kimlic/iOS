@@ -4,8 +4,6 @@
 //
 //  Created by İzzet Öztürk on 20.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import Foundation
 import UIKit
 import SwiftyUserDefaults
@@ -144,8 +142,6 @@ public class UIUtils {
         let tarVC = storyboard.instantiateViewController(withIdentifier: ScanCodeVC.className) as! ScanCodeVC
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
-    
-    
     //Touch ID Confirm
     //This feature is used in tutorial and permission detail screens
     //targetcontroller: UserBasicProfile or UserProfile
@@ -213,6 +209,4 @@ public class UIUtils {
     static func stopLoading(){
         NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
     }
-    
-    
 }

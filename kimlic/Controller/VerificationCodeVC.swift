@@ -4,8 +4,6 @@
 //
 //  Created by izzet öztürk on 6.12.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 import SmileLock
 import SwiftyUserDefaults
@@ -42,8 +40,6 @@ class VerificationCodeVC: UIViewController {
         setPageLbl()
         
     }
-    
-    
     func setPageLbl() {
         
         switch pageType {
@@ -73,11 +69,8 @@ class VerificationCodeVC: UIViewController {
             Defaults[.verificationCode] = nil
         }
         dismiss(animated: true, completion: nil)
-    }
-    
+    }    
 }
-
-
 extension VerificationCodeVC: PasswordInputCompleteProtocol {
     func touchAuthenticationComplete(_ passwordContainerView: PasswordContainerView, success: Bool, error: Error?) {}
     
@@ -126,7 +119,5 @@ extension VerificationCodeVC: PasswordInputCompleteProtocol {
         case .some(_):
             break
         }
-        
-        
     }
 }

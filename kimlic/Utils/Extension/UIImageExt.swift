@@ -4,13 +4,9 @@
 //
 //  Created by İzzet Öztürk on 22.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 
 public extension UIImage {
-    
-    
     func profileImageMask() -> UIImage {
         return maskedImage(mask: UIImage(named:"black_profile_mask")!)
     }
@@ -33,7 +29,6 @@ public extension UIImage {
             ),
             let maskedReference = imageReference.masking(imageMask)
             else { return mask }
-        
         return UIImage(cgImage: maskedReference)
     }
     
@@ -46,8 +41,6 @@ public extension UIImage {
         let dataImage = imageData.base64EncodedString(options: .endLineWithLineFeed)
         return dataImage.trimmingCharacters(in: .whitespacesAndNewlines)
     }
-    
-    
     public func resizeImage(size: CGSize) -> UIImage {
         var returnImage: UIImage?
         
@@ -76,9 +69,7 @@ public extension UIImage {
                 thumbnailPoint.x = (size.width - scaledWidth) * 0.5
             }
         }
-        
-        UIGraphicsBeginImageContextWithOptions(size, true, 0)
-        
+        UIGraphicsBeginImageContextWithOptions(size, true, 0)        
         var thumbnailRect = CGRect(x: 0, y: 0, width: 0, height: 0)
         thumbnailRect.origin = thumbnailPoint
         thumbnailRect.size.width = scaledWidth
@@ -91,7 +82,5 @@ public extension UIImage {
         
         return returnImage!
     }
-    
-    
 }
 

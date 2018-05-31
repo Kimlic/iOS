@@ -4,8 +4,6 @@
 //
 //  Created by İzzet Öztürk on 18.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import Foundation
 import SwiftyUserDefaults
 

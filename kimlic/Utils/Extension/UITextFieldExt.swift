@@ -4,15 +4,11 @@
 //
 //  Created by İzzet Öztürk on 16.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 
 
 private var __maxLengths = [UITextField: Int]()
 extension UITextField {
-    
-    
     func greenCheckIcon() {
         addRightIcon(image: UIImage(named: "green_check_icon"))
     }
@@ -33,7 +29,7 @@ extension UITextField {
             self.rightView?.frame = imageView.frame
             self.rightViewMode = .always
         }
-    }    
+    }
     
     func removeIcon() {
         self.rightViewMode = .never
@@ -54,8 +50,4 @@ extension UITextField {
         let text = textField.text
         textField.text = text?.safelyLimitedTo(length: maxLength)
     }
-    
-    
 }
-
-

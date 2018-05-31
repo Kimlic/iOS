@@ -4,8 +4,6 @@
 //
 //  Created by İzzet Öztürk on 16.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 import PopupDialog
 
@@ -175,12 +173,9 @@ public class PopupGenerator {
             break
             
         }
-        
         popupDialog.transitionStyle = PopupDialogTransitionStyle.zoomIn
         
         controller.present(popupDialog, animated: true, completion: nil)
 
     }
-    
-    
 }

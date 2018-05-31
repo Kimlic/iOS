@@ -4,16 +4,12 @@
 //
 //  Created by İzzet Öztürk on 13.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 
 class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
     
     var pageViewController: UIPageViewController!
     var pageCount = 3
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,8 +34,6 @@ class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
         self.pageViewController.didMove(toParentViewController: self)
         
     }
-    
-    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         let contentVC = viewController as! TutorialsContentVC
@@ -48,7 +42,6 @@ class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
         if (index == 0 || index == NSNotFound){
             return nil
         }
-        
         // Before ViewContrller, so we are (-) form the current index
         index -= 1
         
@@ -62,14 +55,12 @@ class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
         if (index == NSNotFound){
             return nil
         }
-        
         // After ViewContrller, so we are (+) form the current index
         index += 1
         if(index == pageCount)
         {
             return nil
         }
-        
         return self.contentViewAtIndex(index)
     }
     
@@ -123,6 +114,4 @@ class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
         }
         
     }
-    
-    
 }

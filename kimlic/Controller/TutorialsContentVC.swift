@@ -4,13 +4,9 @@
 //
 //  Created by İzzet Öztürk on 13.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 
 class TutorialsContentVC: UIViewController {
-    
-    
     @IBOutlet weak var tutorialImage: UIImageView!
     @IBOutlet weak var tutorialTitle: UILabel!
     @IBOutlet weak var tutorialDesc: UILabel!
@@ -50,7 +46,6 @@ class TutorialsContentVC: UIViewController {
             self.view.addConstraint(NSLayoutConstraint(item: btnNext, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self.viewContent, attribute: NSLayoutAttribute.bottom, multiplier: 1.0, constant: 30))
             
         }
-        
         self.view.backgroundColor = UIColor.clear
         self.view.isOpaque = false
         controller = self
@@ -62,8 +57,6 @@ class TutorialsContentVC: UIViewController {
         super.viewWillAppear(animated) // No need for semicolon
         Animz.fadeIn(image: tutorialImage, duration: Animz.time06)
     }
-    
-    
     @IBAction func btnNextPressed(_ sender: Any) {
         if pageIndex == pageCount-1 {
             UIUtils.confirmTouchID(controller: self, targetController: .UserBasicProfileVC, qrCode:nil)
@@ -78,8 +71,6 @@ class TutorialsContentVC: UIViewController {
             })
         }
     }
-    
-    
     @IBAction func btnGenerateCodePressed(_ sender: Any) {
         UIUtils.presentVerificationCodeVC(vc: self, pageType: .create, qrCode: nil)        
     }
@@ -100,6 +91,5 @@ class TutorialsContentVC: UIViewController {
         tutorialImage.image = UIImage(named: imageName)
         tutorialTitle.text = tutTitle
         tutorialDesc.text = tutDesc        
-    }
-    
+    }    
 }

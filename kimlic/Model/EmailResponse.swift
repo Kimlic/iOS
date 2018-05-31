@@ -4,14 +4,10 @@
 //
 //  Created by İzzet Öztürk on 23.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import Foundation
 import ObjectMapper
 
 public class EmailResponse: GenericResponseMappable, NSCoding {
-    
-    
     // MARK: Declaration for string constants to be used to decode and also serialize.
     private struct SerializationKeys {
         static let value = "value"
@@ -27,9 +23,7 @@ public class EmailResponse: GenericResponseMappable, NSCoding {
     /// Map a JSON object to this class using ObjectMapper.
     ///
     /// - parameter map: A mapping from ObjectMapper.
-    public required init?(map: Map){
-        
-    }
+    public required init?(map: Map){}
     
     /// Map a JSON object to this class using ObjectMapper.
     ///
@@ -62,7 +56,5 @@ public class EmailResponse: GenericResponseMappable, NSCoding {
         aCoder.encode(value, forKey: SerializationKeys.value)
         aCoder.encode(verified, forKey: SerializationKeys.verified)
         aCoder.encode(verifiedAt, forKey: SerializationKeys.verifiedAt)
-    }
-    
+    }    
 }
-

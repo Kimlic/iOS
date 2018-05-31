@@ -4,8 +4,6 @@
 //
 //  Created by paltimoz on 11/23/17.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import Foundation
 import ObjectMapper
 import Alamofire
@@ -39,8 +37,6 @@ class TokenWebServiceRequest: NSObject {
             }
         }
     }
-    
-    
     func resourceOwnerRequest(walletAddress: String!, privateKey: String!, completion: @escaping (TokenResponse?) -> Void) {
         
         let requestUrl = Constants.WebServicesUrl.ClientCredentials        
@@ -67,9 +63,6 @@ class TokenWebServiceRequest: NSObject {
                 completion(nil)
             }
         }
-    }
-    
-    
-    
+    }    
 }
 

@@ -4,8 +4,6 @@
 //
 //  Created by İzzet Öztürk on 30.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import UIKit
 extension AppDelegate {
     class func isIPhone5s () -> Bool{

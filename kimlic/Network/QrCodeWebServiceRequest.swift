@@ -4,8 +4,6 @@
 //
 //  Created by İzzet Öztürk on 27.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import Foundation
 import ObjectMapper
 import Alamofire
@@ -48,8 +46,6 @@ class QrCodeWebServiceRequest: NSObject {
             }
         }
     }
-    
-    
     func getApplicationDetail(appId: String, completion: @escaping (PermissionDetailResponse?) -> Void) {
         
         let requestUrl = Constants.WebServicesUrl.Applications + "/\(appId)"
@@ -104,6 +100,4 @@ class QrCodeWebServiceRequest: NSObject {
             }
         }
     }
-    
-    
 }

@@ -4,8 +4,6 @@
 //
 //  Created by İzzet Öztürk on 24.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import Foundation
 
 public extension Bundle {
@@ -38,8 +36,6 @@ public extension Bundle {
         }
         return value
     }
-    
-    
 }
 
 fileprivate extension Bundle {
@@ -58,6 +54,5 @@ fileprivate extension Bundle {
                 return [:]
         }
         return value
-    }
-    
+    }    
 }

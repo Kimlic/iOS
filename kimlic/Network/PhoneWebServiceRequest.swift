@@ -4,8 +4,6 @@
 //
 //  Created by İzzet Öztürk on 23.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
-//
-
 import Foundation
 import ObjectMapper
 import Alamofire
@@ -75,8 +73,6 @@ class PhoneWebServiceRequest: NSObject {
         }
         
     }
-    
-    
     func resendVerifiyCode(completion: @escaping (PhoneResponse?) -> Void) {
         
         let baseUrl = Constants.WebServicesUrl.BasePhone + "/" + (Defaults[.phoneId] ?? "")
@@ -103,8 +99,4 @@ class PhoneWebServiceRequest: NSObject {
         }
         
     }
-    
-    
 }
-
-
