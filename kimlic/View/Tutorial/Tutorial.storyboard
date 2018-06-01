@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="gsx-oM-sdV">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="3Sf-5O-NxK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oqx-1I-Iq4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1719" y="-799"/>
+        </scene>
+        <!--TutorialsVC-->
+        <scene sceneID="gVW-PP-jyI">
+            <objects>
+                <viewController storyboardIdentifier="TutorialsVC" id="T2U-Wc-WLd" customClass="TutorialsVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JOU-Wo-pNC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="1rC-AW-t0w">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1rC-AW-t0w" firstAttribute="top" secondItem="JOU-Wo-pNC" secondAttribute="top" id="H9O-2b-SK7"/>
+                            <constraint firstItem="1rC-AW-t0w" firstAttribute="trailing" secondItem="ND6-0L-hQE" secondAttribute="trailing" id="LJK-cf-ToC"/>
+                            <constraint firstItem="1rC-AW-t0w" firstAttribute="centerX" secondItem="JOU-Wo-pNC" secondAttribute="centerX" id="Mcb-XT-ae4"/>
+                            <constraint firstItem="1rC-AW-t0w" firstAttribute="leading" secondItem="ND6-0L-hQE" secondAttribute="leading" id="RS2-y6-MWe"/>
+                            <constraint firstItem="1rC-AW-t0w" firstAttribute="centerY" secondItem="JOU-Wo-pNC" secondAttribute="centerY" id="u8w-J1-DAh"/>
+                            <constraint firstItem="1rC-AW-t0w" firstAttribute="bottom" secondItem="ND6-0L-hQE" secondAttribute="bottom" id="zVL-I4-vA7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ND6-0L-hQE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jQu-0F-Xda"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="crr-vG-qyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-999" y="-799"/>
+        </scene>
+        <!--Tutorials ContentVC-->
+        <scene sceneID="1Xq-5l-dek">
+            <objects>
+                <viewController storyboardIdentifier="TutorialsContentVC" id="PW4-g8-CNn" customClass="TutorialsContentVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5WO-Gi-CYu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2y2-B5-Lhi" userLabel="Content">
+                                <rect key="frame" x="20" y="70" width="335" height="557"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_popup_background" translatesAutoresizingMaskIntoConstraints="NO" id="jcX-z0-Rt0">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="557"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kimlic is your Secure Identity on your phone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="UdY-fV-lIV" userLabel="tutorialTitle">
+                                        <rect key="frame" x="20" y="236" width="295" height="62.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Kimlic ID gives you easy and secure access to online services with the tap of a button." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Zr-l0-JYF" userLabel="tutorialDesc">
+                                        <rect key="frame" x="20" y="313.5" width="295" height="64.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <color key="textColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLt-1R-bmy" userLabel="btnNext" customClass="RoundButton" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="461" width="255" height="50"/>
+                                        <color key="backgroundColor" red="0.39607843139999999" green="0.74509803919999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="k3G-ve-Zrh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="btnNextPressed:" destination="PW4-g8-CNn" eventType="touchUpInside" id="JNH-Pg-wgF"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_1_illustration" translatesAutoresizingMaskIntoConstraints="NO" id="X3r-Tv-9rz">
+                                        <rect key="frame" x="35" y="8" width="265" height="208"/>
+                                    </imageView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xy7-yF-vJA">
+                                        <rect key="frame" x="40" y="519" width="255" height="30"/>
+                                        <state key="normal" title="Generate verification code">
+                                            <color key="titleColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnGenerateCodePressed:" destination="PW4-g8-CNn" eventType="touchUpInside" id="9G4-M0-xDc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="X3r-Tv-9rz" secondAttribute="trailing" constant="35" id="0uB-4B-PP5"/>
+                                    <constraint firstItem="jcX-z0-Rt0" firstAttribute="trailing" secondItem="UdY-fV-lIV" secondAttribute="trailing" constant="20" id="3dg-6x-bhh"/>
+                                    <constraint firstItem="jcX-z0-Rt0" firstAttribute="trailing" secondItem="4Zr-l0-JYF" secondAttribute="trailing" constant="20" id="57w-Gp-uM6"/>
+                                    <constraint firstItem="Xy7-yF-vJA" firstAttribute="centerX" secondItem="aLt-1R-bmy" secondAttribute="centerX" id="BvX-D7-AjP"/>
+                                    <constraint firstItem="UdY-fV-lIV" firstAttribute="leading" secondItem="jcX-z0-Rt0" secondAttribute="leading" constant="20" id="Ctu-Bb-9Cs"/>
+                                    <constraint firstItem="UdY-fV-lIV" firstAttribute="top" secondItem="X3r-Tv-9rz" secondAttribute="bottom" constant="20" id="Eqg-Lr-GBK"/>
+                                    <constraint firstItem="4Zr-l0-JYF" firstAttribute="top" secondItem="UdY-fV-lIV" secondAttribute="bottom" constant="15" id="HfZ-F1-uwS"/>
+                                    <constraint firstItem="jcX-z0-Rt0" firstAttribute="leading" secondItem="2y2-B5-Lhi" secondAttribute="leading" id="JO8-sq-SW7"/>
+                                    <constraint firstAttribute="bottom" secondItem="jcX-z0-Rt0" secondAttribute="bottom" id="L0q-oD-b0d"/>
+                                    <constraint firstItem="X3r-Tv-9rz" firstAttribute="leading" secondItem="2y2-B5-Lhi" secondAttribute="leading" constant="35" id="LDb-S8-ual"/>
+                                    <constraint firstItem="X3r-Tv-9rz" firstAttribute="top" secondItem="2y2-B5-Lhi" secondAttribute="top" constant="8" id="NDD-u2-vv8"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xy7-yF-vJA" secondAttribute="bottom" constant="8" id="Xre-ts-C19"/>
+                                    <constraint firstAttribute="trailing" secondItem="aLt-1R-bmy" secondAttribute="trailing" constant="40" id="bng-Ir-vrx"/>
+                                    <constraint firstItem="Xy7-yF-vJA" firstAttribute="width" secondItem="aLt-1R-bmy" secondAttribute="width" id="bvu-m6-6Qh"/>
+                                    <constraint firstItem="Xy7-yF-vJA" firstAttribute="top" secondItem="aLt-1R-bmy" secondAttribute="bottom" constant="8" id="fcN-Fe-GeD"/>
+                                    <constraint firstAttribute="trailing" secondItem="jcX-z0-Rt0" secondAttribute="trailing" id="jJi-ha-6NF"/>
+                                    <constraint firstItem="jcX-z0-Rt0" firstAttribute="top" secondItem="2y2-B5-Lhi" secondAttribute="top" id="qAu-aT-NPo"/>
+                                    <constraint firstItem="aLt-1R-bmy" firstAttribute="leading" secondItem="2y2-B5-Lhi" secondAttribute="leading" constant="40" id="qIJ-q5-gv5"/>
+                                    <constraint firstItem="X3r-Tv-9rz" firstAttribute="centerX" secondItem="2y2-B5-Lhi" secondAttribute="centerX" id="vNy-el-m54"/>
+                                    <constraint firstItem="4Zr-l0-JYF" firstAttribute="leading" secondItem="jcX-z0-Rt0" secondAttribute="leading" constant="20" id="xWv-hN-mNH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2y2-B5-Lhi" firstAttribute="top" secondItem="5QG-fv-tks" secondAttribute="top" constant="50" id="OvM-MC-l0q"/>
+                            <constraint firstItem="5QG-fv-tks" firstAttribute="bottom" secondItem="2y2-B5-Lhi" secondAttribute="bottom" constant="40" id="Q8w-6e-bbE"/>
+                            <constraint firstItem="5QG-fv-tks" firstAttribute="trailing" secondItem="2y2-B5-Lhi" secondAttribute="trailing" constant="20" id="ZXY-XA-gTT"/>
+                            <constraint firstItem="2y2-B5-Lhi" firstAttribute="leading" secondItem="5QG-fv-tks" secondAttribute="leading" constant="20" id="qLE-2a-uCp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5QG-fv-tks"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zW8-gR-fAL"/>
+                    <connections>
+                        <outlet property="btnGenerateCode" destination="Xy7-yF-vJA" id="RNt-zJ-7dw"/>
+                        <outlet property="btnNext" destination="aLt-1R-bmy" id="Nlm-ks-X6S"/>
+                        <outlet property="tutorialDesc" destination="4Zr-l0-JYF" id="vek-o1-rWU"/>
+                        <outlet property="tutorialImage" destination="X3r-Tv-9rz" id="Zhh-0t-Cok"/>
+                        <outlet property="tutorialTitle" destination="UdY-fV-lIV" id="440-a9-GBB"/>
+                        <outlet property="viewContent" destination="2y2-B5-Lhi" id="g1Z-7y-Nz4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cFh-QM-Puk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="-799"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tutorial_1_illustration" width="237" height="208"/>
+        <image name="tutorial_background" width="375" height="667"/>
+        <image name="tutorial_popup_background" width="309" height="514"/>
+    </resources>
+</document>

@@ -75,7 +75,7 @@ public class UIUtils {
     }
     
     static func navigateToTutorial(vc: UIViewController){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = AppStoryboard.Tutorial.instance
         let tarVC = storyboard.instantiateViewController(withIdentifier: TutorialsVC.className) as! TutorialsVC
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }

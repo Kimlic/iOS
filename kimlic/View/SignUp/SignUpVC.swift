@@ -12,9 +12,12 @@ class SignUpVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-
     }
+    
+    @IBAction func newIdentityButtonPressed(_ sender: Any) {
+        UIUtils.navigateToTutorial(vc: self)
+    }
+    
+    
 
 }

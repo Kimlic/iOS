@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rxu-dC-R6U">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Terms And ConditionsVC-->
+        <scene sceneID="jaS-r9-C8K">
+            <objects>
+                <viewController id="Rxu-dC-R6U" customClass="TermsAndConditionsVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WwI-6L-Azi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uo6-qB-HL7" userLabel="ContentView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsD-gP-N1C">
+                                        <rect key="frame" x="48" y="567" width="280" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="DU8-bQ-e8T"/>
+                                            <constraint firstAttribute="height" constant="50" id="Ffo-xZ-IyX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                        <state key="normal" title="Accept"/>
+                                    </button>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv6-2s-MJd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBB-wT-nSy">
+                                                <rect key="frame" x="41" y="50" width="292" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="0.540518088745915" green="0.72156862745098038" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last modified December 5, 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtM-1U-0ni">
+                                                <rect key="frame" x="41" y="86" width="292" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.54051808869999995" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Du6-N8-9mk">
+                                                <rect key="frame" x="20" y="120.5" width="335" height="687.5"/>
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat sapien magna, congue varius ligula mattis aliquet. Praesent ut tortor sit amet arcu dignissim consequat at sit amet orci. Ut ex neque, egestas nec vehicula vitae, facilisis eu nisi. Etiam in erat quis mauris porta facilisis. Vestibulum consectetur vitae nulla sit amet vehicula. Sed magna urna, porta vel tincidunt eu, tempor ac massa. Vestibulum quis cursus orci. Quisque nec purus tellus. Vivamus sapien libero, consectetur id dignissim eu, fermentum id magna. Donec nec vestibulum metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce ante tellus, imperdiet vitae semper in, pellentesque a ante. In convallis ullamcorper nisi, a suscipit dolor luctus at. In imperdiet quam vel consectetur tempor.
+
+Vestibulum ac accumsan lorem. Mauris a pretium lacus. Etiam a dictum ligula. Fusce ultricies vitae quam scelerisque efficitur. Vivamus ultrices ipsum ac pulvinar tincidunt. Cras tincidunt lectus vel leo viverra, consequat posuere massa luctus. Integer luctus ac arcu id semper. Sed quis ligula molestie, ultricies est quis, imperdiet diam. Ut quis efficitur neque, ac dapibus sapien. Duis facilisis ultricies dui eget ornare. Mauris quis sem viverra ex gravida faucibus accumsan ut magna. Vestibulum vitae massa eu neque iaculis interdum. Curabitur suscipit mollis odio ut sollicitudin. Phasellus vitae neque eu odio porttitor egestas.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.54051808869999995" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Du6-N8-9mk" firstAttribute="leading" secondItem="Kv6-2s-MJd" secondAttribute="leading" constant="20" id="3qy-H8-BDT"/>
+                                            <constraint firstItem="FBB-wT-nSy" firstAttribute="centerX" secondItem="Kv6-2s-MJd" secondAttribute="centerX" id="7xz-yA-lnn"/>
+                                            <constraint firstItem="FBB-wT-nSy" firstAttribute="leading" secondItem="Kv6-2s-MJd" secondAttribute="leading" constant="41" id="E9U-xY-OFb"/>
+                                            <constraint firstItem="FBB-wT-nSy" firstAttribute="top" secondItem="Kv6-2s-MJd" secondAttribute="top" constant="50" id="Qma-WP-RxV"/>
+                                            <constraint firstAttribute="trailing" secondItem="Du6-N8-9mk" secondAttribute="trailing" constant="20" id="TfZ-wj-gyX"/>
+                                            <constraint firstItem="Du6-N8-9mk" firstAttribute="top" secondItem="OtM-1U-0ni" secondAttribute="bottom" constant="15" id="XZ1-VL-mma"/>
+                                            <constraint firstItem="OtM-1U-0ni" firstAttribute="top" secondItem="FBB-wT-nSy" secondAttribute="bottom" id="bgL-CJ-uGE"/>
+                                            <constraint firstAttribute="bottom" secondItem="Du6-N8-9mk" secondAttribute="bottom" id="ldR-7k-HmA"/>
+                                            <constraint firstItem="OtM-1U-0ni" firstAttribute="width" secondItem="FBB-wT-nSy" secondAttribute="width" id="t4R-fh-jro"/>
+                                            <constraint firstItem="OtM-1U-0ni" firstAttribute="centerX" secondItem="FBB-wT-nSy" secondAttribute="centerX" id="tAT-Y7-d40"/>
+                                            <constraint firstAttribute="trailing" secondItem="FBB-wT-nSy" secondAttribute="trailing" constant="42" id="wHX-HK-Pat"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="MsD-gP-N1C" secondAttribute="bottom" constant="50" id="Giw-Jv-fPh"/>
+                                    <constraint firstItem="Kv6-2s-MJd" firstAttribute="top" secondItem="uo6-qB-HL7" secondAttribute="top" id="NT2-Av-ave"/>
+                                    <constraint firstItem="MsD-gP-N1C" firstAttribute="top" secondItem="Kv6-2s-MJd" secondAttribute="bottom" id="fHl-cZ-5OD"/>
+                                    <constraint firstItem="Kv6-2s-MJd" firstAttribute="leading" secondItem="uo6-qB-HL7" secondAttribute="leading" id="nug-z6-RAT"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kv6-2s-MJd" secondAttribute="trailing" id="qhv-tQ-8lq"/>
+                                    <constraint firstItem="MsD-gP-N1C" firstAttribute="centerX" secondItem="uo6-qB-HL7" secondAttribute="centerX" id="v2q-ZV-Nff"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84313725490000002" green="0.8862745098" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="uo6-qB-HL7" secondAttribute="bottom" id="AfB-Ii-F0o"/>
+                            <constraint firstAttribute="trailing" secondItem="uo6-qB-HL7" secondAttribute="trailing" id="Ala-TI-Lw5"/>
+                            <constraint firstItem="uo6-qB-HL7" firstAttribute="top" secondItem="WwI-6L-Azi" secondAttribute="top" id="WUX-9a-kWN"/>
+                            <constraint firstItem="uo6-qB-HL7" firstAttribute="leading" secondItem="WwI-6L-Azi" secondAttribute="leading" id="meL-4A-Wwz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0u3-ND-OWL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2dT-Mn-hma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594" y="339"/>
+        </scene>
+    </scenes>
+</document>
