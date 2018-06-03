@@ -15,5 +15,10 @@ class TermsAndConditionsVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func acceptButtonPressed(_ sender: Any) {        
+        UIUtils.navigateToPhoneNumber(self)
+    }
+    
+    
 }

@@ -15,6 +15,9 @@
 		0F8F2B5E1FC5D66200BEF5B2 /* PermissionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8F2B5D1FC5D66200BEF5B2 /* PermissionCell.xib */; };
 		0FBA58F01FC0A81D00DF593F /* PopupGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */; };
 		3FA05207AA63FC037BD17670 /* Pods_kimlic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4839EE1351BF59D4372E9EB /* Pods_kimlic.framework */; };
+		79AF1D2720C48BE300CCA150 /* PhoneNumber.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AF1D2620C48BE300CCA150 /* PhoneNumber.storyboard */; };
+		79AF1D2920C4903400CCA150 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF1D2820C4903400CCA150 /* Country.swift */; };
+		79AF1D2B20C4A16000CCA150 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF1D2A20C4A16000CCA150 /* PickerTextField.swift */; };
 		7C02B3111FD7F238005C55E3 /* VerificationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C02B3101FD7F238005C55E3 /* VerificationCodeVC.swift */; };
 		7C161A211FBDB4E3004FD9A0 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161A201FBDB4E3004FD9A0 /* Popup.swift */; };
 		7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161A241FBDB526004FD9A0 /* Enums.swift */; };
@@ -64,8 +67,8 @@
 		7CB5674F1FB9C28E00F03D24 /* TutorialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB5674E1FB9C28E00F03D24 /* TutorialsVC.swift */; };
 		7CB567511FB9C2CA00F03D24 /* TutorialsContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB567501FB9C2CA00F03D24 /* TutorialsContentVC.swift */; };
 		7CCE2C861FBB32D400CC0E71 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCE2C851FBB32D400CC0E71 /* UserProfileVC.swift */; };
-		7CDBFE3D1FC9AA020073D70A /* country_code.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CDBFE3C1FC9AA020073D70A /* country_code.json */; };
-		7CDED00E1FBC7DD8006FB0AC /* UserPhoneNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDED00D1FBC7DD8006FB0AC /* UserPhoneNumberVC.swift */; };
+		7CDBFE3D1FC9AA020073D70A /* CountryCode.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CDBFE3C1FC9AA020073D70A /* CountryCode.json */; };
+		7CDED00E1FBC7DD8006FB0AC /* PhoneNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDED00D1FBC7DD8006FB0AC /* PhoneNumberVC.swift */; };
 		7CDED0101FBC87AF006FB0AC /* UserPhoneNumberValidateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDED00F1FBC87AF006FB0AC /* UserPhoneNumberValidateVC.swift */; };
 		7CF655691FBACB1F00CA9C1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF655681FBACB1F00CA9C1A /* Constants.swift */; };
 		7CF6556B1FBACC1400CA9C1A /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6556A1FBACC1400CA9C1A /* ColorExtension.swift */; };
@@ -83,6 +86,9 @@
 		0F359D931FC098F7007E07DC /* NSObjectExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExt.swift; sourceTree = "<group>"; };
 		0F8F2B5D1FC5D66200BEF5B2 /* PermissionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionCell.xib; sourceTree = "<group>"; };
 		0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupGenerator.swift; sourceTree = "<group>"; };
+		79AF1D2620C48BE300CCA150 /* PhoneNumber.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhoneNumber.storyboard; sourceTree = "<group>"; };
+		79AF1D2820C4903400CCA150 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		79AF1D2A20C4A16000CCA150 /* PickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
 		7C02B3101FD7F238005C55E3 /* VerificationCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeVC.swift; sourceTree = "<group>"; };
 		7C161A201FBDB4E3004FD9A0 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		7C161A241FBDB526004FD9A0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -134,8 +140,8 @@
 		7CB5674E1FB9C28E00F03D24 /* TutorialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialsVC.swift; sourceTree = "<group>"; };
 		7CB567501FB9C2CA00F03D24 /* TutorialsContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialsContentVC.swift; sourceTree = "<group>"; };
 		7CCE2C851FBB32D400CC0E71 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
-		7CDBFE3C1FC9AA020073D70A /* country_code.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = country_code.json; sourceTree = "<group>"; };
-		7CDED00D1FBC7DD8006FB0AC /* UserPhoneNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoneNumberVC.swift; sourceTree = "<group>"; };
+		7CDBFE3C1FC9AA020073D70A /* CountryCode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CountryCode.json; sourceTree = "<group>"; };
+		7CDED00D1FBC7DD8006FB0AC /* PhoneNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberVC.swift; sourceTree = "<group>"; };
 		7CDED00F1FBC87AF006FB0AC /* UserPhoneNumberValidateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoneNumberValidateVC.swift; sourceTree = "<group>"; };
 		7CF655681FBACB1F00CA9C1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7CF6556A1FBACC1400CA9C1A /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -165,6 +171,15 @@
 				B978BD0257D03E5317353E1D /* Pods-kimlic.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		79AF1D1B20C489E800CCA150 /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				79AF1D2620C48BE300CCA150 /* PhoneNumber.storyboard */,
+				7CDED00D1FBC7DD8006FB0AC /* PhoneNumberVC.swift */,
+			);
+			path = Phone;
 			sourceTree = "<group>";
 		};
 		7C2F325F20C02B5300AEB314 /* SplashScreen */ = {
@@ -302,6 +317,7 @@
 				7C99D6EE1FC84C5200A593C5 /* WrappedRootResponseCollection.swift */,
 				7C161A201FBDB4E3004FD9A0 /* Popup.swift */,
 				7C99D6DC1FC7FF4000A593C5 /* User.swift */,
+				79AF1D2820C4903400CCA150 /* Country.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,10 +325,11 @@
 		7CB5674C1FB9B54700F03D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7C2F326020C02FC700AEB314 /* SignUp */,
-				7C30A62020C0493E00EC69F7 /* TermsAndConditions */,
-				7C30A62320C04AC100EC69F7 /* Tutorial */,
 				7C2F325F20C02B5300AEB314 /* SplashScreen */,
+				7C2F326020C02FC700AEB314 /* SignUp */,
+				7C30A62320C04AC100EC69F7 /* Tutorial */,
+				7C30A62020C0493E00EC69F7 /* TermsAndConditions */,
+				79AF1D1B20C489E800CCA150 /* Phone */,
 				7C8A80CE1FBD839E009E74F9 /* PermissionCell.swift */,
 				0F8F2B5D1FC5D66200BEF5B2 /* PermissionCell.xib */,
 			);
@@ -328,7 +345,6 @@
 				7C882B091FC3FD1B0064DF7F /* ScanCodeVC.swift */,
 				7CF655771FBAFA4600CA9C1A /* UserBasicProfileInfoVC.swift */,
 				7CDED00F1FBC87AF006FB0AC /* UserPhoneNumberValidateVC.swift */,
-				7CDED00D1FBC7DD8006FB0AC /* UserPhoneNumberVC.swift */,
 				7CCE2C851FBB32D400CC0E71 /* UserProfileVC.swift */,
 				7C02B3101FD7F238005C55E3 /* VerificationCodeVC.swift */,
 			);
@@ -338,7 +354,7 @@
 		7CF6556C1FBACF0D00CA9C1A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7CDBFE3C1FC9AA020073D70A /* country_code.json */,
+				7CDBFE3C1FC9AA020073D70A /* CountryCode.json */,
 				7CF655731FBAF19F00CA9C1A /* Localizable.strings */,
 			);
 			path = Resources;
@@ -349,6 +365,7 @@
 			children = (
 				7C161A441FBDD27F004FD9A0 /* RoundButton.swift */,
 				7C36C6E11FD1539400D4501D /* AnimatedImageView.swift */,
+				79AF1D2A20C4A16000CCA150 /* PickerTextField.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -424,8 +441,9 @@
 			files = (
 				7C30A62520C04AE700EC69F7 /* Tutorial.storyboard in Resources */,
 				7C48385C1FB5F62500FC864A /* LaunchScreen.storyboard in Resources */,
+				79AF1D2720C48BE300CCA150 /* PhoneNumber.storyboard in Resources */,
 				7C2F326520C0301700AEB314 /* SignUp.storyboard in Resources */,
-				7CDBFE3D1FC9AA020073D70A /* country_code.json in Resources */,
+				7CDBFE3D1FC9AA020073D70A /* CountryCode.json in Resources */,
 				0F8F2B5E1FC5D66200BEF5B2 /* PermissionCell.xib in Resources */,
 				7CF655711FBAF19F00CA9C1A /* Localizable.strings in Resources */,
 				7C4838591FB5F62500FC864A /* Assets.xcassets in Resources */,
@@ -521,6 +539,7 @@
 				7C02B3111FD7F238005C55E3 /* VerificationCodeVC.swift in Sources */,
 				7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */,
 				7C842B9F1FC2B8CC0010F98A /* UIUtils.swift in Sources */,
+				79AF1D2920C4903400CCA150 /* Country.swift in Sources */,
 				7C99D6D71FC7FE7A00A593C5 /* WrappedResponseCollection.swift in Sources */,
 				7C99D6EF1FC84C5200A593C5 /* WrappedRootResponseCollection.swift in Sources */,
 				7CF655781FBAFA4600CA9C1A /* UserBasicProfileInfoVC.swift in Sources */,
@@ -541,12 +560,13 @@
 				7CB567511FB9C2CA00F03D24 /* TutorialsContentVC.swift in Sources */,
 				7C2F326920C0424700AEB314 /* TermsAndConditionsVC.swift in Sources */,
 				7C99D6D91FC7FE8D00A593C5 /* WrappedRootResponse.swift in Sources */,
+				79AF1D2B20C4A16000CCA150 /* PickerTextField.swift in Sources */,
 				7C8A80CD1FBD668D009E74F9 /* PermissionDetailVC.swift in Sources */,
 				7C161A4B1FBDEA05004FD9A0 /* UITextFieldExt.swift in Sources */,
 				7C379AA31FB9DCF900D005CC /* SplashScreenVC.swift in Sources */,
 				7C99D6D11FC7FE3C00A593C5 /* PhoneResponse.swift in Sources */,
 				0F359D8F1FC07EDD007E07DC /* Animz.swift in Sources */,
-				7CDED00E1FBC7DD8006FB0AC /* UserPhoneNumberVC.swift in Sources */,
+				7CDED00E1FBC7DD8006FB0AC /* PhoneNumberVC.swift in Sources */,
 				7C4838521FB5F62400FC864A /* AppDelegate.swift in Sources */,
 				7C99D6D51FC7FE6600A593C5 /* WrappedResponse.swift in Sources */,
 				7CF655691FBACB1F00CA9C1A /* Constants.swift in Sources */,

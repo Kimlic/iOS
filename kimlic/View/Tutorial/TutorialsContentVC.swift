@@ -36,7 +36,7 @@ class TutorialsContentVC: UIViewController {
     
     @IBAction func skipButtonPressed(_ sender: Any) {
         if pageIndex == pageCount-1 {
-            return
+            UIUtils.navigateToTerms(self)
         }else {
             //ibrahim - prevent double click on next button
             self.pageViewController.view.isUserInteractionEnabled = false

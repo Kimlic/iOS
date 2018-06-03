@@ -74,9 +74,21 @@ public class UIUtils {
         })
     }
     
-    static func navigateToTutorial(vc: UIViewController){
+    static func navigateToTutorial(_ vc: UIViewController){
         let storyboard = AppStoryboard.Tutorial.instance
         let tarVC = storyboard.instantiateViewController(withIdentifier: TutorialsVC.className) as! TutorialsVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
+    static func navigateToTerms(_ vc: UIViewController){
+        let storyboard = AppStoryboard.TermsAndConditions.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: TermsAndConditionsVC.className) as! TermsAndConditionsVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
+    static func navigateToPhoneNumber(_ vc: UIViewController){
+        let storyboard = AppStoryboard.PhoneNumber.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: PhoneNumberVC.className) as! PhoneNumberVC
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
@@ -98,12 +110,6 @@ public class UIUtils {
         vc.navigationController?.pushViewControllerWithHandler(tarVC: tarVC, completion: {
             let _ = self.setUserProfileScreenAsRoot()
         })
-    }
-    
-    static func navigateToUserPhoneNumber(vc: UIViewController){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tarVC = storyboard.instantiateViewController(withIdentifier: UserPhoneNumberVC.className) as! UserPhoneNumberVC
-        vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
     static func navigateToUserPhoneValidate(vc: UIViewController, phoneNumber: PhoneNumber!){

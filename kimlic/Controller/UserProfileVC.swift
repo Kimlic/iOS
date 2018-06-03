@@ -126,7 +126,7 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     //****************************************************************
     @IBAction func btnPhoneNumberPressed(_ sender: Any) {
         if Defaults[.phoneVerified] == nil {
-            UIUtils.navigateToUserPhoneNumber(vc: self)
+            UIUtils.navigateToPhoneNumber(self)
         }
     }
     

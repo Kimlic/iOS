@@ -32,7 +32,7 @@ enum VerificationCodePageType {
 
 
 enum AppStoryboard : String {
-    case SplashScreen, SignUp, Tutorial, TermsAndConditions
+    case SplashScreen, SignUp, Tutorial, TermsAndConditions, PhoneNumber
     var instance : UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
     }

@@ -15,7 +15,7 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func newIdentityButtonPressed(_ sender: Any) {
-        UIUtils.navigateToTutorial(vc: self)
+        UIUtils.navigateToTutorial(self)
     }
     
     
