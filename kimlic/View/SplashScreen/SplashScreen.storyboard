@@ -40,7 +40,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.84313725490000002" green="0.8862745098" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VAQ-OC-sbT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LkQ-P5-PPC"/>
                             <constraint firstItem="VAQ-OC-sbT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TKG-yi-qyK"/>

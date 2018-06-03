@@ -18,14 +18,10 @@
 
 //*********** Tutorials Page ****************************
 
-"tutorialsFirstPageTitle" = "Kimlic is your Secure Identity on your phone";
-"tutorialsFirstPageDesc" = "Your Kimlic ID gives you easy and secure access to online services with the tap of a button.";
+"tutorialsFirstPageTitle" = "Scan QR Code";
+"tutorialsFirstPageDesc" = "Close auto-starting apps keep your phone works smoothly";
 
-"tutorialsSecondPageTitle" = "You are in control of your Kimic ID";
-"tutorialsSecondPageDesc" = "When a site or app requests to know who you are so you can use their service, Kimlic lets you know which detail they need so you get to approve what you share.";
 
-"tutorialsThirdPageTitle" = "For security, locking this app is required";
-"tutorialsThirdPageDesc" = "To keep you safe from hackers, your personal data is on your device - not on centralized servers.";
 
 //*******************************************************
 

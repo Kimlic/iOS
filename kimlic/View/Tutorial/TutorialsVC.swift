@@ -20,6 +20,8 @@ class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
         // PageViewContrller DataSource Method
         self.pageViewController.dataSource = self
         
+        
+        
         // Initialising the ViewController and setting ViewController to PageViewContrller
         let initialVC = self.contentViewAtIndex(0) as TutorialsContentVC
         self.pageViewController.setViewControllers([initialVC], direction: .forward, animated: true, completion: nil)
@@ -66,7 +68,14 @@ class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
     
     //Tutorials Present Page Count
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        setupPageControl()
         return pageCount
+    }
+    
+    private func setupPageControl() {
+        let appearance = UIPageControl.appearance()
+        appearance.pageIndicatorTintColor = UIColor.gray
+        appearance.currentPageIndicatorTintColor = Constants.Colors.appBlue
     }
     
     //Tutorials Start Page Number
@@ -84,34 +93,29 @@ class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
     func createTutorialPage(pageIndex: Int!) -> TutorialsContentVC {
         
         let contentVC = self.storyboard?.instantiateViewController(withIdentifier: "TutorialsContentVC") as! TutorialsContentVC
+        contentVC.pageIndex = pageIndex
+        contentVC.pageCount = pageCount
+        contentVC.pageViewController = pageViewController
+        
         switch pageIndex {
         case 0:
-            contentVC.pageIndex = pageIndex
-            contentVC.pageCount = pageCount
             contentVC.tutTitle = "tutorialsFirstPageTitle".localized
             contentVC.tutDesc = "tutorialsFirstPageDesc".localized
-            contentVC.imageName = "tutorial_1_illustration.png"
-            contentVC.pageViewController = pageViewController
-            return contentVC
+            contentVC.imageName = "scan_QR_iilustration"
         case 1:
-            contentVC.pageIndex = pageIndex
-            contentVC.pageCount = pageCount
-            contentVC.tutTitle = "tutorialsSecondPageTitle".localized
-            contentVC.tutDesc = "tutorialsSecondPageDesc".localized
-            contentVC.imageName = "tutorial_2_illustration.png"
-            contentVC.pageViewController = pageViewController
-            return contentVC
+            contentVC.tutTitle = "tutorialsFirstPageTitle".localized
+            contentVC.tutDesc = "tutorialsFirstPageDesc".localized
+            contentVC.imageName = "scan_QR_iilustration"
         case 2:
-            contentVC.pageIndex = pageIndex
-            contentVC.pageCount = pageCount
-            contentVC.tutTitle = "tutorialsThirdPageTitle".localized
-            contentVC.tutDesc = "tutorialsThirdPageDesc".localized
-            contentVC.imageName = "tutorial_3_illustration.png"
-            contentVC.pageViewController = pageViewController
-            return contentVC
+            contentVC.tutTitle = "tutorialsFirstPageTitle".localized
+            contentVC.tutDesc = "tutorialsFirstPageDesc".localized
+            contentVC.imageName = "scan_QR_iilustration"
         default:
-            return contentVC
-        }
+            contentVC.tutTitle = "tutorialsFirstPageTitle".localized
+            contentVC.tutDesc = "tutorialsFirstPageDesc".localized
+            contentVC.imageName = "scan_QR_iilustration"
+        }        
+        return contentVC
         
     }
 }
