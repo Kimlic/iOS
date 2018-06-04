@@ -32,7 +32,7 @@ class PhoneVerificationVC: UIViewController {
     
     
     private func setupView() {
-        lblPhoneNumber.text = "Code sent to +\(phoneNumber.numberString) \(phoneNumber.adjustedNationalNumber())"
+        lblPhoneNumber.text = "Code sent to +\(phoneNumber.countryCode) \(phoneNumber.adjustedNationalNumber())"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,7 +96,7 @@ class PhoneVerificationVC: UIViewController {
     
     private func verifyAndNavigate() {
         if self.codeVerify() {
-            self.verifyAndNavigate()
+            UIUtils.navigateToMessage(self, messageType: .successPhoneNumber)
         }else {
             PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "incorrectCodeTitle".localized, message: "incorrectCodeMessage".localized, buttonTitle: "incorrectCodeButtonTitle".localized))
         }

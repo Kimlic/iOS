@@ -16,7 +16,7 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func newIdentityButtonPressed(_ sender: Any) {
-        UIUtils.navigateToMessage(self, messageType: .successPhoneNumber)
+        UIUtils.navigateToTutorial(self)
     }
     
     

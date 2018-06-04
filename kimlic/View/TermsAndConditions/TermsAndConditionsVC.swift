@@ -10,10 +10,13 @@ import UIKit
 
 class TermsAndConditionsVC: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        scrollView.alwaysBounceVertical = true
+        self.scrollView.isDirectionalLockEnabled = true
     }
     
     @IBAction func acceptButtonPressed(_ sender: Any) {        

@@ -34,7 +34,7 @@
                                             <action selector="acceptButtonPressed:" destination="Rxu-dC-R6U" eventType="touchUpInside" id="xEs-sb-ouF"/>
                                         </connections>
                                     </button>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv6-2s-MJd">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv6-2s-MJd">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBB-wT-nSy">
@@ -93,6 +93,9 @@ Vestibulum ac accumsan lorem. Mauris a pretium lacus. Etiam a dictum ligula. Fus
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0u3-ND-OWL"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Kv6-2s-MJd" id="0Mu-RS-0yq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dT-Mn-hma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
