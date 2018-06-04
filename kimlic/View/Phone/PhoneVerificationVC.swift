@@ -32,7 +32,7 @@ class PhoneVerificationVC: UIViewController {
     
     
     private func setupView() {
-        lblPhoneNumber.text = "Code sent to +\(phoneNumber.countryCode) " + phoneNumber.adjustedNationalNumber()
+        lblPhoneNumber.text = "Code sent to +\(phoneNumber.numberString) \(phoneNumber.adjustedNationalNumber())"
     }
     
     override func viewWillAppear(_ animated: Bool) {

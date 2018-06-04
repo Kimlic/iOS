@@ -14,6 +14,10 @@ enum PopupType {
     case qrcode
 }
 
+enum MessageType {
+    case none, successPhoneNumber, successMnenomic, successPasscode, successTouchID
+}
+
 enum TouchIDNavigateTarget {
     case UserProfileVC
     case UserBasicProfileVC
@@ -32,7 +36,7 @@ enum VerificationCodePageType {
 
 
 enum AppStoryboard : String {
-    case SplashScreen, SignUp, Tutorial, TermsAndConditions, PhoneNumber, PhoneVerification
+    case SplashScreen, SignUp, Tutorial, TermsAndConditions, PhoneNumber, PhoneVerification, Message
     var instance : UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
     }

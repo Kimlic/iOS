@@ -40,5 +40,14 @@ class Constants {
         static let Profile = "profile"
         static let Emails = "emails"
         static let Phones = "phones"
-    }    
+    }
+    
+    struct Message {
+        static let congratulation = "congratulation".localized
+        static let idSecured = "congratulation".localized
+        static let successPhoneNumber = "successPhoneNumber".localized
+        static let successMnemonic = "successMnemonic".localized
+        static let successPasscode = "successPasscode".localized
+        static let successTouchID = "successTouchID".localized
+    }
 }

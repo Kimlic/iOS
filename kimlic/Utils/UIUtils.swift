@@ -99,6 +99,14 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
+    static func navigateToMessage(_ vc: UIViewController, messageType: MessageType, message: Message? = nil){
+        let storyboard = AppStoryboard.Message.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: MessageVC.className) as! MessageVC
+        tarVC.messageType = messageType
+        tarVC.message = message
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
     static func navigateToUserBasicProfile(vc: UIViewController){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tarVC = storyboard.instantiateViewController(withIdentifier: UserBasicProfileInfoVC.className) as! UserBasicProfileInfoVC

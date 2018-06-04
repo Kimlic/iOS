@@ -50,6 +50,20 @@
 //*******************************************************
 
 
+//*********** Common Message *********************
+
+// Title
+"congratulation" = "Congratulation!";
+"idSecured" = "Your ID Secured !";
+
+// Desc
+"successPhoneNumber" = "Your decentralized identity successfully created.";
+"successMnemonic" = "Your mnemonic passphrase matched.";
+"successPasscode" = "Your account passcode created successfully.";
+"successTouchID" = "Your Touch ID Enabled.";
+//*******************************************************
+
+
 //*********** Popup Default Message *********************
 
 "errorTitle" = "Oh snap";
