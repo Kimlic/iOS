@@ -18,6 +18,8 @@
 		79AF1D2720C48BE300CCA150 /* PhoneNumber.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AF1D2620C48BE300CCA150 /* PhoneNumber.storyboard */; };
 		79AF1D2920C4903400CCA150 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF1D2820C4903400CCA150 /* Country.swift */; };
 		79AF1D2B20C4A16000CCA150 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF1D2A20C4A16000CCA150 /* PickerTextField.swift */; };
+		79AF1D2D20C4A3D300CCA150 /* PhoneVerification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AF1D2C20C4A3D300CCA150 /* PhoneVerification.storyboard */; };
+		79AF1D2F20C4BCD100CCA150 /* PinTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF1D2E20C4BCD100CCA150 /* PinTextField.swift */; };
 		7C02B3111FD7F238005C55E3 /* VerificationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C02B3101FD7F238005C55E3 /* VerificationCodeVC.swift */; };
 		7C161A211FBDB4E3004FD9A0 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161A201FBDB4E3004FD9A0 /* Popup.swift */; };
 		7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161A241FBDB526004FD9A0 /* Enums.swift */; };
@@ -69,7 +71,7 @@
 		7CCE2C861FBB32D400CC0E71 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCE2C851FBB32D400CC0E71 /* UserProfileVC.swift */; };
 		7CDBFE3D1FC9AA020073D70A /* CountryCode.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CDBFE3C1FC9AA020073D70A /* CountryCode.json */; };
 		7CDED00E1FBC7DD8006FB0AC /* PhoneNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDED00D1FBC7DD8006FB0AC /* PhoneNumberVC.swift */; };
-		7CDED0101FBC87AF006FB0AC /* UserPhoneNumberValidateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDED00F1FBC87AF006FB0AC /* UserPhoneNumberValidateVC.swift */; };
+		7CDED0101FBC87AF006FB0AC /* PhoneVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDED00F1FBC87AF006FB0AC /* PhoneVerificationVC.swift */; };
 		7CF655691FBACB1F00CA9C1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF655681FBACB1F00CA9C1A /* Constants.swift */; };
 		7CF6556B1FBACC1400CA9C1A /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6556A1FBACC1400CA9C1A /* ColorExtension.swift */; };
 		7CF655701FBAF15D00CA9C1A /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6556F1FBAF15D00CA9C1A /* StringExt.swift */; };
@@ -89,6 +91,8 @@
 		79AF1D2620C48BE300CCA150 /* PhoneNumber.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhoneNumber.storyboard; sourceTree = "<group>"; };
 		79AF1D2820C4903400CCA150 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		79AF1D2A20C4A16000CCA150 /* PickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
+		79AF1D2C20C4A3D300CCA150 /* PhoneVerification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhoneVerification.storyboard; sourceTree = "<group>"; };
+		79AF1D2E20C4BCD100CCA150 /* PinTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTextField.swift; sourceTree = "<group>"; };
 		7C02B3101FD7F238005C55E3 /* VerificationCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeVC.swift; sourceTree = "<group>"; };
 		7C161A201FBDB4E3004FD9A0 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		7C161A241FBDB526004FD9A0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -142,7 +146,7 @@
 		7CCE2C851FBB32D400CC0E71 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		7CDBFE3C1FC9AA020073D70A /* CountryCode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CountryCode.json; sourceTree = "<group>"; };
 		7CDED00D1FBC7DD8006FB0AC /* PhoneNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberVC.swift; sourceTree = "<group>"; };
-		7CDED00F1FBC87AF006FB0AC /* UserPhoneNumberValidateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoneNumberValidateVC.swift; sourceTree = "<group>"; };
+		7CDED00F1FBC87AF006FB0AC /* PhoneVerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationVC.swift; sourceTree = "<group>"; };
 		7CF655681FBACB1F00CA9C1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7CF6556A1FBACC1400CA9C1A /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		7CF6556F1FBAF15D00CA9C1A /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 			children = (
 				79AF1D2620C48BE300CCA150 /* PhoneNumber.storyboard */,
 				7CDED00D1FBC7DD8006FB0AC /* PhoneNumberVC.swift */,
+				79AF1D2C20C4A3D300CCA150 /* PhoneVerification.storyboard */,
+				7CDED00F1FBC87AF006FB0AC /* PhoneVerificationVC.swift */,
 			);
 			path = Phone;
 			sourceTree = "<group>";
@@ -344,7 +350,6 @@
 				7C8A80CC1FBD668D009E74F9 /* PermissionDetailVC.swift */,
 				7C882B091FC3FD1B0064DF7F /* ScanCodeVC.swift */,
 				7CF655771FBAFA4600CA9C1A /* UserBasicProfileInfoVC.swift */,
-				7CDED00F1FBC87AF006FB0AC /* UserPhoneNumberValidateVC.swift */,
 				7CCE2C851FBB32D400CC0E71 /* UserProfileVC.swift */,
 				7C02B3101FD7F238005C55E3 /* VerificationCodeVC.swift */,
 			);
@@ -366,6 +371,7 @@
 				7C161A441FBDD27F004FD9A0 /* RoundButton.swift */,
 				7C36C6E11FD1539400D4501D /* AnimatedImageView.swift */,
 				79AF1D2A20C4A16000CCA150 /* PickerTextField.swift */,
+				79AF1D2E20C4BCD100CCA150 /* PinTextField.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -443,6 +449,7 @@
 				7C48385C1FB5F62500FC864A /* LaunchScreen.storyboard in Resources */,
 				79AF1D2720C48BE300CCA150 /* PhoneNumber.storyboard in Resources */,
 				7C2F326520C0301700AEB314 /* SignUp.storyboard in Resources */,
+				79AF1D2D20C4A3D300CCA150 /* PhoneVerification.storyboard in Resources */,
 				7CDBFE3D1FC9AA020073D70A /* CountryCode.json in Resources */,
 				0F8F2B5E1FC5D66200BEF5B2 /* PermissionCell.xib in Resources */,
 				7CF655711FBAF19F00CA9C1A /* Localizable.strings in Resources */,
@@ -544,7 +551,7 @@
 				7C99D6EF1FC84C5200A593C5 /* WrappedRootResponseCollection.swift in Sources */,
 				7CF655781FBAFA4600CA9C1A /* UserBasicProfileInfoVC.swift in Sources */,
 				7C929D681FCC583F001B9E22 /* QrCodeWebServiceRequest.swift in Sources */,
-				7CDED0101FBC87AF006FB0AC /* UserPhoneNumberValidateVC.swift in Sources */,
+				7CDED0101FBC87AF006FB0AC /* PhoneVerificationVC.swift in Sources */,
 				0F1E43C41FC0A5A500B0B631 /* UserDefaultsExt.swift in Sources */,
 				0F1E43C21FC0A56700B0B631 /* SystemUtils.swift in Sources */,
 				7C99D6CF1FC7FE2600A593C5 /* UserCreateResponse.swift in Sources */,
@@ -564,6 +571,7 @@
 				7C8A80CD1FBD668D009E74F9 /* PermissionDetailVC.swift in Sources */,
 				7C161A4B1FBDEA05004FD9A0 /* UITextFieldExt.swift in Sources */,
 				7C379AA31FB9DCF900D005CC /* SplashScreenVC.swift in Sources */,
+				79AF1D2F20C4BCD100CCA150 /* PinTextField.swift in Sources */,
 				7C99D6D11FC7FE3C00A593C5 /* PhoneResponse.swift in Sources */,
 				0F359D8F1FC07EDD007E07DC /* Animz.swift in Sources */,
 				7CDED00E1FBC7DD8006FB0AC /* PhoneNumberVC.swift in Sources */,

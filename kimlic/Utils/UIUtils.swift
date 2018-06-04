@@ -92,6 +92,13 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
+    static func navigateToPhoneVerification(_ vc: UIViewController, phoneNumber: PhoneNumber){
+        let storyboard = AppStoryboard.PhoneVerification.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: PhoneVerificationVC.className) as! PhoneVerificationVC
+        tarVC.phoneNumber = phoneNumber
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
     static func navigateToUserBasicProfile(vc: UIViewController){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tarVC = storyboard.instantiateViewController(withIdentifier: UserBasicProfileInfoVC.className) as! UserBasicProfileInfoVC
@@ -110,13 +117,6 @@ public class UIUtils {
         vc.navigationController?.pushViewControllerWithHandler(tarVC: tarVC, completion: {
             let _ = self.setUserProfileScreenAsRoot()
         })
-    }
-    
-    static func navigateToUserPhoneValidate(vc: UIViewController, phoneNumber: PhoneNumber!){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tarVC = storyboard.instantiateViewController(withIdentifier: UserPhoneNumberValidateVC.className) as! UserPhoneNumberValidateVC
-        tarVC.phoneNumber = phoneNumber
-        vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
     static func navigateToAllPermissionsFooter(vc: UIViewController, completion: @escaping() -> ()){

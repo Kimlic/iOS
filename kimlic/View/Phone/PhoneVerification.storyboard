@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Phone VerificationVC-->
+        <scene sceneID="OhW-s4-u0X">
+            <objects>
+                <viewController storyboardIdentifier="PhoneVerificationVC" id="iNw-St-gwC" customClass="PhoneVerificationVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nBD-gc-aEc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fw-hf-VFB" userLabel="ContentView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czb-g5-rff" userLabel="BodyView">
+                                        <rect key="frame" x="40" y="0.0" width="295" height="647"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone_verify_message_illustration" translatesAutoresizingMaskIntoConstraints="NO" id="GLl-j3-m5J">
+                                                <rect key="frame" x="120" y="30" width="54" height="79"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="54" id="BpB-ea-4WZ"/>
+                                                    <constraint firstAttribute="height" constant="79" id="OIp-1Q-yf2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Your Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlj-k8-mhL">
+                                                <rect key="frame" x="0.0" y="134" width="295" height="31.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code sent to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="vpL-0n-DNw">
+                                                <rect key="frame" x="0.0" y="166" width="295" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bj7-eC-Kz9">
+                                                <rect key="frame" x="42.5" y="212.5" width="210" height="45"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ih-FK-COq" userLabel="codeFirstNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" white="0.95088433165277786" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" selected="YES"/>
+                                                        </accessibility>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="45" id="Fgc-6Q-6Nv"/>
+                                                        </constraints>
+                                                        <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                                <real key="value" value="0.69999999999999996"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="NO"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didEditingBegin:" destination="iNw-St-gwC" eventType="editingDidBegin" id="dNf-Ky-Y5d"/>
+                                                            <action selector="didEditingEnd:" destination="iNw-St-gwC" eventType="editingDidEnd" id="QMN-7v-FyK"/>
+                                                            <action selector="textFieldDidChange:" destination="iNw-St-gwC" eventType="editingChanged" id="wPk-vY-8Ja"/>
+                                                            <outlet property="delegate" destination="iNw-St-gwC" id="jCk-gH-07V"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mK5-2x-IM2" userLabel="codeSecondNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
+                                                        <rect key="frame" x="55" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" white="0.95088433165277786" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" selected="YES"/>
+                                                        </accessibility>
+                                                        <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                                <real key="value" value="0.69999999999999996"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="NO"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didEditingBegin:" destination="iNw-St-gwC" eventType="editingDidBegin" id="k0u-mG-eTi"/>
+                                                            <action selector="didEditingEnd:" destination="iNw-St-gwC" eventType="editingDidEnd" id="bvw-Rm-4jZ"/>
+                                                            <action selector="textFieldDidChange:" destination="iNw-St-gwC" eventType="editingChanged" id="Kxw-YS-mDI"/>
+                                                            <outlet property="delegate" destination="iNw-St-gwC" id="wtS-fa-2Ee"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KKm-uJ-gSe" userLabel="codeThirdNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
+                                                        <rect key="frame" x="110" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" white="0.95088433165277786" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" selected="YES"/>
+                                                        </accessibility>
+                                                        <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                                <real key="value" value="0.69999999999999996"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="NO"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didEditingBegin:" destination="iNw-St-gwC" eventType="editingDidBegin" id="Dcm-UT-keE"/>
+                                                            <action selector="didEditingEnd:" destination="iNw-St-gwC" eventType="editingDidEnd" id="4F6-bf-ebK"/>
+                                                            <action selector="textFieldDidChange:" destination="iNw-St-gwC" eventType="editingChanged" id="M72-dG-b3v"/>
+                                                            <outlet property="delegate" destination="iNw-St-gwC" id="Ikr-bB-7U8"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AG1-N9-QqC" userLabel="codeFourthNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
+                                                        <rect key="frame" x="165" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" white="0.95088433165277786" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" selected="YES"/>
+                                                        </accessibility>
+                                                        <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                                <real key="value" value="0.69999999999999996"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="NO"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didEditingBegin:" destination="iNw-St-gwC" eventType="editingDidBegin" id="LvM-es-NZT"/>
+                                                            <action selector="didEditingEnd:" destination="iNw-St-gwC" eventType="editingDidEnd" id="qYE-Zj-uWX"/>
+                                                            <action selector="textFieldDidChange:" destination="iNw-St-gwC" eventType="editingChanged" id="SZb-mI-5FD"/>
+                                                            <outlet property="delegate" destination="iNw-St-gwC" id="xIc-mB-GRd"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Yky-fG-ybQ"/>
+                                                </constraints>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-Tf-7Ld">
+                                                <rect key="frame" x="0.0" y="337.5" width="295" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Pml-wb-BrA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <state key="normal" title="Verify Number">
+                                                    <color key="titleColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="verifyButtonPressed:" destination="iNw-St-gwC" eventType="touchUpInside" id="TdS-2z-Qxz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdb-ev-h14">
+                                                <rect key="frame" x="0.0" y="287" width="295" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="4Pq-12-K1z"/>
+                                                </constraints>
+                                                <state key="normal" title="Change number"/>
+                                                <connections>
+                                                    <action selector="changePhoneButtonPressed:" destination="iNw-St-gwC" eventType="touchUpInside" id="tKe-wB-uIg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="kFq-Tf-7Ld" secondAttribute="trailing" id="423-0w-gIB"/>
+                                            <constraint firstItem="GLl-j3-m5J" firstAttribute="centerX" secondItem="czb-g5-rff" secondAttribute="centerX" id="7KX-9h-klN"/>
+                                            <constraint firstItem="GLl-j3-m5J" firstAttribute="top" secondItem="czb-g5-rff" secondAttribute="top" constant="30" id="Ae4-Vd-YFW"/>
+                                            <constraint firstItem="kFq-Tf-7Ld" firstAttribute="top" secondItem="Jdb-ev-h14" secondAttribute="bottom" id="ICa-Ch-7KT"/>
+                                            <constraint firstItem="vpL-0n-DNw" firstAttribute="leading" secondItem="czb-g5-rff" secondAttribute="leading" id="Swe-uG-KBc"/>
+                                            <constraint firstAttribute="trailing" secondItem="xlj-k8-mhL" secondAttribute="trailing" id="WBe-MO-yT8"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jdb-ev-h14" secondAttribute="trailing" id="X9N-Gr-8Qw"/>
+                                            <constraint firstItem="bj7-eC-Kz9" firstAttribute="top" secondItem="vpL-0n-DNw" secondAttribute="bottom" constant="25" id="ZZG-cf-Sfz"/>
+                                            <constraint firstItem="Jdb-ev-h14" firstAttribute="top" secondItem="bj7-eC-Kz9" secondAttribute="bottom" constant="30" id="egQ-hV-PJ0"/>
+                                            <constraint firstItem="xlj-k8-mhL" firstAttribute="top" secondItem="GLl-j3-m5J" secondAttribute="bottom" constant="25" id="iNP-YL-Z1u"/>
+                                            <constraint firstAttribute="trailing" secondItem="vpL-0n-DNw" secondAttribute="trailing" id="lDr-sg-fND"/>
+                                            <constraint firstItem="kFq-Tf-7Ld" firstAttribute="leading" secondItem="czb-g5-rff" secondAttribute="leading" id="mXp-a9-7er"/>
+                                            <constraint firstItem="vpL-0n-DNw" firstAttribute="top" secondItem="xlj-k8-mhL" secondAttribute="bottom" id="mtB-2g-lHm"/>
+                                            <constraint firstItem="bj7-eC-Kz9" firstAttribute="centerX" secondItem="czb-g5-rff" secondAttribute="centerX" id="oHJ-Hk-FlI"/>
+                                            <constraint firstItem="Jdb-ev-h14" firstAttribute="leading" secondItem="czb-g5-rff" secondAttribute="leading" id="ru6-qm-m1f"/>
+                                            <constraint firstItem="xlj-k8-mhL" firstAttribute="leading" secondItem="czb-g5-rff" secondAttribute="leading" id="vFf-0F-qvg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="czb-g5-rff" firstAttribute="top" secondItem="8Fw-hf-VFB" secondAttribute="top" id="02z-fc-sKN"/>
+                                    <constraint firstAttribute="trailing" secondItem="czb-g5-rff" secondAttribute="trailing" constant="40" id="0cK-QO-UHB"/>
+                                    <constraint firstAttribute="bottom" secondItem="czb-g5-rff" secondAttribute="bottom" id="mLh-f0-4sf"/>
+                                    <constraint firstItem="czb-g5-rff" firstAttribute="leading" secondItem="8Fw-hf-VFB" secondAttribute="leading" constant="40" id="naM-Ei-ftB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Fw-hf-VFB" firstAttribute="leading" secondItem="NOB-X3-46e" secondAttribute="leading" id="E4K-zh-al7"/>
+                            <constraint firstItem="8Fw-hf-VFB" firstAttribute="trailing" secondItem="NOB-X3-46e" secondAttribute="trailing" id="YA4-zi-dAa"/>
+                            <constraint firstItem="NOB-X3-46e" firstAttribute="bottom" secondItem="8Fw-hf-VFB" secondAttribute="bottom" id="fJP-4z-1Yi"/>
+                            <constraint firstItem="8Fw-hf-VFB" firstAttribute="top" secondItem="NOB-X3-46e" secondAttribute="top" id="mbv-LP-9oq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NOB-X3-46e"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstNumberTextField" destination="7ih-FK-COq" id="K2j-Ry-uaK"/>
+                        <outlet property="fourthNumberTextField" destination="AG1-N9-QqC" id="zgj-0f-UyU"/>
+                        <outlet property="lblPhoneNumber" destination="vpL-0n-DNw" id="Ax0-v1-Zrb"/>
+                        <outlet property="secondNumberTextField" destination="mK5-2x-IM2" id="4HT-Ab-0su"/>
+                        <outlet property="thirdNumberTextField" destination="KKm-uJ-gSe" id="wOh-4k-rqE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fbf-6B-bcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4743.1999999999998" y="111.99400299850076"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Phone_verify_message_illustration" width="119" height="159"/>
+    </resources>
+</document>

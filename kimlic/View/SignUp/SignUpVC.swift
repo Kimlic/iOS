@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PhoneNumberKit
 
 class SignUpVC: UIViewController {
 
@@ -15,7 +16,13 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func newIdentityButtonPressed(_ sender: Any) {
-        UIUtils.navigateToTutorial(self)
+        do {
+            let phoneNumberKit = PhoneNumberKit()
+            let verificatePhone = try phoneNumberKit.parse("+905439316168")
+            UIUtils.navigateToPhoneVerification(self, phoneNumber: verificatePhone)
+        }catch {
+            PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "phoneNotValidTitle".localized, message: "phoneNotValidMessage".localized, buttonTitle: "phoneNotValidButtonTitle".localized))
+        }
     }
     
     
