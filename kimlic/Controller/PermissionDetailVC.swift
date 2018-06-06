@@ -44,7 +44,7 @@ class PermissionDetailVC: UIViewController {
         if let code =  Defaults[.verificationCodeEnable], code {
             UIUtils.presentVerificationCodeVC(vc: self, pageType: .verificate, qrCode: self.qrCode)
         }else {
-            UIUtils.confirmTouchID(controller: self, targetController: .UserProfileVC, qrCode: self.qrCode)
+//            UIUtils.confirmTouchID(controller: self, targetController: .UserProfileVC, qrCode: self.qrCode)
         }
         
     }

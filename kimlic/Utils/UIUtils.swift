@@ -7,7 +7,6 @@
 import Foundation
 import UIKit
 import SwiftyUserDefaults
-import LocalAuthentication
 import NVActivityIndicatorView
 import PhoneNumberKit
 
@@ -77,6 +76,12 @@ public class UIUtils {
     static func navigateToTutorial(_ vc: UIViewController){
         let storyboard = AppStoryboard.Tutorial.instance
         let tarVC = storyboard.instantiateViewController(withIdentifier: TutorialsVC.className) as! TutorialsVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
+    static func navigateToTouchID(_ vc: UIViewController) {
+        let storyboard = AppStoryboard.TouchID.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: TouchIDVC.className) as! TouchIDVC
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
@@ -170,63 +175,6 @@ public class UIUtils {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tarVC = storyboard.instantiateViewController(withIdentifier: ScanCodeVC.className) as! ScanCodeVC
         vc.navigationController?.pushViewController(tarVC, animated: true)
-    }
-    //Touch ID Confirm
-    //This feature is used in tutorial and permission detail screens
-    //targetcontroller: UserBasicProfile or UserProfile
-    static func confirmTouchID(controller: UIViewController, targetController: TouchIDNavigateTarget, qrCode: String?){
-        let myContext = LAContext()
-        var authError: NSError?
-        
-        if #available(iOS 8.0, macOS 10.12.1, *) {
-            if myContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
-                myContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "touchIDConfirmMessage".localized) { success, evaluateError in
-                    if success {
-                        DispatchQueue.main.async(){
-                            switch targetController {
-                            case .UserBasicProfileVC: //If touch id validation is successful user redirect UserBasicProfile screen
-                                Defaults[.verificationCodeEnable] = nil
-                                Defaults[.verificationCode] = nil
-                                self.navigateToUserBasicProfile(vc: controller)
-                                break
-                            case .UserProfileVC:
-                                self.authenticationWebServiceRequest(controller: controller, qrCode: qrCode)
-                                break
-                            }
-                        }
-                    } else {
-                        if authError != nil {
-                            PopupGenerator.createPopup(controller: controller, type: .error, popup: Popup(title: "Error", message: authError?.localizedDescription, buttonTitle: "OK"))
-                        }
-                    }
-                }
-            } else {
-                PopupGenerator.createPopup(controller: controller, type: .error, popup: Popup(title: "Error", message: authError?.localizedDescription, buttonTitle: "OK"))
-            }
-        } else {
-            PopupGenerator.createPopup(controller: controller, type: .error, popup: Popup(title: "notSupportedTitle".localized, message: "notSupportedMessage".localized, buttonTitle: "notSupportedButtonTitle".localized))
-        }
-    }
-    
-    static func authenticationWebServiceRequest(controller: UIViewController, qrCode: String?) {
-        
-        if let appId = qrCode?.getAppIdFromQrCode(), let token = qrCode?.getToken() {
-            self.showLoading()
-            QrCodeWebServiceRequest().authenticationRequest(appId: appId, token: token, completion: { (success) in
-                // If the read qr code is verified by the web service, the user is directed to the UserProfile screen and the relevant popup is displayed
-                if success != nil {
-                    self.showLoading()
-                    let rootController = controller.navigationController?.viewControllers.first as! UserProfileVC
-                    controller.navigationController?.popRootViewControllerWithHandler(completion: {
-                        Animz.newScreenAddedAnimation(controller: rootController)
-                    })
-                }else {
-                    self.stopLoading()
-                    PopupGenerator.createPopup(controller: controller, type: .error, popup: Popup())
-                }
-            })
-        }
-        
     }
     
     // Loading 

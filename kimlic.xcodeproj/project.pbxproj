@@ -48,6 +48,9 @@
 		7C882B0A1FC3FD1B0064DF7F /* ScanCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C882B091FC3FD1B0064DF7F /* ScanCodeVC.swift */; };
 		7C8A80CD1FBD668D009E74F9 /* PermissionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8A80CC1FBD668D009E74F9 /* PermissionDetailVC.swift */; };
 		7C8A80CF1FBD839E009E74F9 /* PermissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8A80CE1FBD839E009E74F9 /* PermissionCell.swift */; };
+		7C90C4B720C811BA006EEF87 /* TouchID.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C90C4B620C811BA006EEF87 /* TouchID.storyboard */; };
+		7C90C4B920C811CC006EEF87 /* TouchIDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C90C4B820C811CC006EEF87 /* TouchIDVC.swift */; };
+		7C90C4BD20C8290B006EEF87 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C90C4BC20C8290B006EEF87 /* LocalAuthentication.framework */; };
 		7C929D661FCC53E6001B9E22 /* PermissionDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929D651FCC53E6001B9E22 /* PermissionDetailResponse.swift */; };
 		7C929D681FCC583F001B9E22 /* QrCodeWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929D671FCC583F001B9E22 /* QrCodeWebServiceRequest.swift */; };
 		7C96874D1FBC949200DF4AB8 /* AllPermissionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C96874C1FBC949200DF4AB8 /* AllPermissionsVC.swift */; };
@@ -126,6 +129,9 @@
 		7C882B091FC3FD1B0064DF7F /* ScanCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCodeVC.swift; sourceTree = "<group>"; };
 		7C8A80CC1FBD668D009E74F9 /* PermissionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionDetailVC.swift; sourceTree = "<group>"; };
 		7C8A80CE1FBD839E009E74F9 /* PermissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionCell.swift; sourceTree = "<group>"; };
+		7C90C4B620C811BA006EEF87 /* TouchID.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TouchID.storyboard; sourceTree = "<group>"; };
+		7C90C4B820C811CC006EEF87 /* TouchIDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDVC.swift; sourceTree = "<group>"; };
+		7C90C4BC20C8290B006EEF87 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		7C929D651FCC53E6001B9E22 /* PermissionDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionDetailResponse.swift; sourceTree = "<group>"; };
 		7C929D671FCC583F001B9E22 /* QrCodeWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeWebServiceRequest.swift; sourceTree = "<group>"; };
 		7C96874C1FBC949200DF4AB8 /* AllPermissionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPermissionsVC.swift; sourceTree = "<group>"; };
@@ -167,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C90C4BD20C8290B006EEF87 /* LocalAuthentication.framework in Frameworks */,
 				3FA05207AA63FC037BD17670 /* Pods_kimlic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +329,15 @@
 			path = CommonMessage;
 			sourceTree = "<group>";
 		};
+		7C90C4B520C8119C006EEF87 /* TouchID */ = {
+			isa = PBXGroup;
+			children = (
+				7C90C4B620C811BA006EEF87 /* TouchID.storyboard */,
+				7C90C4B820C811CC006EEF87 /* TouchIDVC.swift */,
+			);
+			path = TouchID;
+			sourceTree = "<group>";
+		};
 		7CB5674B1FB9B53400F03D24 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +363,7 @@
 		7CB5674C1FB9B54700F03D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7C90C4B520C8119C006EEF87 /* TouchID */,
 				7C7A7FC620C53B4300BDE95C /* CommonMessage */,
 				7C2F325F20C02B5300AEB314 /* SplashScreen */,
 				7C2F326020C02FC700AEB314 /* SignUp */,
@@ -396,6 +413,7 @@
 		819710C74CB57B34F052FD71 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C90C4BC20C8290B006EEF87 /* LocalAuthentication.framework */,
 				E4839EE1351BF59D4372E9EB /* Pods_kimlic.framework */,
 			);
 			name = Frameworks;
@@ -470,6 +488,7 @@
 				79AF1D2D20C4A3D300CCA150 /* PhoneVerification.storyboard in Resources */,
 				7CDBFE3D1FC9AA020073D70A /* CountryCode.json in Resources */,
 				0F8F2B5E1FC5D66200BEF5B2 /* PermissionCell.xib in Resources */,
+				7C90C4B720C811BA006EEF87 /* TouchID.storyboard in Resources */,
 				7CF655711FBAF19F00CA9C1A /* Localizable.strings in Resources */,
 				7C4838591FB5F62500FC864A /* Assets.xcassets in Resources */,
 				7C30A62220C04A1B00EC69F7 /* TermsAndConditions.storyboard in Resources */,
@@ -581,6 +600,7 @@
 				7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */,
 				7C842B9F1FC2B8CC0010F98A /* UIUtils.swift in Sources */,
 				79AF1D2920C4903400CCA150 /* Country.swift in Sources */,
+				7C90C4B920C811CC006EEF87 /* TouchIDVC.swift in Sources */,
 				7C99D6D71FC7FE7A00A593C5 /* WrappedResponseCollection.swift in Sources */,
 				7C99D6EF1FC84C5200A593C5 /* WrappedRootResponseCollection.swift in Sources */,
 				7CF655781FBAFA4600CA9C1A /* UserBasicProfileInfoVC.swift in Sources */,

@@ -108,7 +108,7 @@ extension VerificationCodeVC: PasswordInputCompleteProtocol {
         case .verificate:
             if input == Defaults[.verificationCode] {
                 dismiss(animated: true, completion: {
-                    UIUtils.authenticationWebServiceRequest(controller: self.baseController, qrCode: self.qrCode)
+//                    UIUtils.authenticationWebServiceRequest(controller: self.baseController, qrCode: self.qrCode)
                 })
             } else {
                 passwordContainerView.wrongPassword()
