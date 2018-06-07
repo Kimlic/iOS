@@ -61,17 +61,6 @@ public class UIUtils {
         return homeVC
     }
     
-    static func presentVerificationCodeVC(vc: UIViewController, pageType: VerificationCodePageType, qrCode: String?, completion: (() -> Swift.Void)? = nil) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let verificationVC = storyboard.instantiateViewController(withIdentifier: VerificationCodeVC.className) as! VerificationCodeVC
-        verificationVC.pageType = pageType
-        verificationVC.baseController = vc
-        verificationVC.qrCode = qrCode
-        verificationVC.modalPresentationStyle = .overCurrentContext
-        vc.present(verificationVC, animated: true, completion: {
-            completion?()
-        })
-    }
     
     static func navigateToTutorial(_ vc: UIViewController){
         let storyboard = AppStoryboard.Tutorial.instance
@@ -186,4 +175,15 @@ public class UIUtils {
     static func stopLoading(){
         NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
     }
+    
+    static func showPasscodeVC(vc: UIViewController, pageType: PasscodePageType, completion: (() -> Swift.Void)? = nil) {
+        let storyboard = AppStoryboard.Passcode.instance
+        let passVC = storyboard.instantiateViewController(withIdentifier: PasscodeVC.className) as! PasscodeVC
+        passVC.modalPresentationStyle = .overCurrentContext
+        vc.present(passVC, animated: true, completion: {
+            completion?()
+        })
+    }
 }
+
+import SmileLock

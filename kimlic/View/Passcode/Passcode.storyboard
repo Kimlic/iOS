@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PasscodeVC-->
+        <scene sceneID="VxS-x9-DaJ">
+            <objects>
+                <viewController storyboardIdentifier="PasscodeVC" id="koH-iY-CIg" customClass="PasscodeVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="3DP-ad-aq1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="zpu-Qc-Deo">
+                                <rect key="frame" x="90.666666666666686" y="352.66666666666669" width="233" height="31.333333333333314"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Xvr-e5-srs">
+                                        <rect key="frame" x="0.0" y="0.0" width="233" height="31.333333333333332"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="C9F-XN-xIy">
+                                                <rect key="frame" x="0.0" y="0.0" width="233" height="31.333333333333332"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your Passcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Psj-GT-fb2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="233" height="31.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
+                                                        <color key="textColor" red="0.54901960780000003" green="0.67450980390000004" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gLH-LK-o5v">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="BGg-pF-FTR"/>
+                                    <barButtonItem title="Cancel" id="gAB-sU-er8">
+                                        <color key="tintColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="btnCancelPressed:" destination="koH-iY-CIg" id="MtX-l9-HvV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zpu-Qc-Deo" firstAttribute="centerX" secondItem="3DP-ad-aq1" secondAttribute="centerX" id="8Sq-eL-dba"/>
+                            <constraint firstItem="zpu-Qc-Deo" firstAttribute="centerY" secondItem="3DP-ad-aq1" secondAttribute="centerY" id="GnW-8D-Qzf"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zpu-Qc-Deo" secondAttribute="trailing" constant="50" id="HZv-gb-Hn2"/>
+                            <constraint firstItem="zpu-Qc-Deo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3DP-ad-aq1" secondAttribute="leading" constant="50" id="X3N-vH-ITy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EsH-vJ-Ng8"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblVerificationCode" destination="Psj-GT-fb2" id="ydQ-p6-au4"/>
+                        <outlet property="stackViewLbl" destination="zpu-Qc-Deo" id="XA7-K5-UM8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dhj-VT-grT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1237.5" y="820.77464788732391"/>
+        </scene>
+    </scenes>
+</document>

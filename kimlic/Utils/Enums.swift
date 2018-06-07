@@ -29,16 +29,17 @@ enum LevelBarAnimationType {
     case show
 }
 
-enum VerificationCodePageType {
+enum PasscodePageType {
     case create
     case createConfirm
     case verificate
+    case update
 }
 
 
 enum AppStoryboard : String {
     // Must be the same as storyboard name
-    case SplashScreen, SignUp, Tutorial, TermsAndConditions, PhoneNumber, PhoneVerification, Message, TouchID
+    case SplashScreen, SignUp, Tutorial, TermsAndConditions, PhoneNumber, PhoneVerification, Message, TouchID, Passcode
     var instance : UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
     }
