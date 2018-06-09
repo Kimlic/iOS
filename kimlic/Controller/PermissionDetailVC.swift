@@ -13,7 +13,7 @@ class PermissionDetailVC: UIViewController {
     @IBOutlet weak var txtTitle: UILabel!
     @IBOutlet weak var imgBage: UIImageView!
     @IBOutlet weak var imgLogo: UIImageView!
-    @IBOutlet weak var btnTouchIdAccept: RoundButton!
+    @IBOutlet weak var btnTouchIdAccept: UIButton!
     var permission: PermissionDetailResponse!
     var qrCode: String!
     

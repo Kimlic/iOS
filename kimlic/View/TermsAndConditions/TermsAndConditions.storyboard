@@ -22,10 +22,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsD-gP-N1C">
-                                        <rect key="frame" x="48" y="567" width="280" height="50"/>
+                                        <rect key="frame" x="40" y="587" width="295" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="280" id="DU8-bQ-e8T"/>
                                             <constraint firstAttribute="height" constant="50" id="Ffo-xZ-IyX"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
@@ -35,7 +34,7 @@
                                         </connections>
                                     </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv6-2s-MJd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBB-wT-nSy">
                                                 <rect key="frame" x="41" y="50" width="292" height="36"/>
@@ -75,7 +74,9 @@ Vestibulum ac accumsan lorem. Mauris a pretium lacus. Etiam a dictum ligula. Fus
                                     </scrollView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="MsD-gP-N1C" secondAttribute="bottom" constant="50" id="Giw-Jv-fPh"/>
+                                    <constraint firstAttribute="bottom" secondItem="MsD-gP-N1C" secondAttribute="bottom" constant="30" id="Giw-Jv-fPh"/>
+                                    <constraint firstItem="MsD-gP-N1C" firstAttribute="leading" secondItem="uo6-qB-HL7" secondAttribute="leading" constant="40" id="Io7-vp-TPe"/>
+                                    <constraint firstAttribute="trailing" secondItem="MsD-gP-N1C" secondAttribute="trailing" constant="40" id="NHA-rO-Vin"/>
                                     <constraint firstItem="Kv6-2s-MJd" firstAttribute="top" secondItem="uo6-qB-HL7" secondAttribute="top" id="NT2-Av-ave"/>
                                     <constraint firstItem="MsD-gP-N1C" firstAttribute="top" secondItem="Kv6-2s-MJd" secondAttribute="bottom" id="fHl-cZ-5OD"/>
                                     <constraint firstItem="Kv6-2s-MJd" firstAttribute="leading" secondItem="uo6-qB-HL7" secondAttribute="leading" id="nug-z6-RAT"/>

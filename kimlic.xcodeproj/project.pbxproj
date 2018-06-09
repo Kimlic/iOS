@@ -23,7 +23,6 @@
 		7C02B3111FD7F238005C55E3 /* PasscodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C02B3101FD7F238005C55E3 /* PasscodeVC.swift */; };
 		7C161A211FBDB4E3004FD9A0 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161A201FBDB4E3004FD9A0 /* Popup.swift */; };
 		7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161A241FBDB526004FD9A0 /* Enums.swift */; };
-		7C161A451FBDD27F004FD9A0 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161A441FBDD27F004FD9A0 /* RoundButton.swift */; };
 		7C161A4B1FBDEA05004FD9A0 /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161A4A1FBDEA05004FD9A0 /* UITextFieldExt.swift */; };
 		7C2F326520C0301700AEB314 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F326420C0301700AEB314 /* SignUp.storyboard */; };
 		7C2F326720C0303900AEB314 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F326620C0303900AEB314 /* SignUpVC.swift */; };
@@ -44,6 +43,9 @@
 		7C7A7FC820C53B6400BDE95C /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A7FC720C53B6400BDE95C /* MessageVC.swift */; };
 		7C7A7FCA20C53B7200BDE95C /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C7A7FC920C53B7200BDE95C /* Message.storyboard */; };
 		7C7A7FCC20C5440700BDE95C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A7FCB20C5440700BDE95C /* Message.swift */; };
+		7C7FC46720CBFAA000AC8F8F /* MnemonicImportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7FC46620CBFAA000AC8F8F /* MnemonicImportVC.swift */; };
+		7C7FC46920CBFDA700AC8F8F /* MnemonicImport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C7FC46820CBFDA700AC8F8F /* MnemonicImport.storyboard */; };
+		7C7FC46B20CC07D100AC8F8F /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7FC46A20CC07D100AC8F8F /* DesignableView.swift */; };
 		7C8272C51FC583C600054277 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8272C41FC583C600054277 /* UIImageExt.swift */; };
 		7C842B9F1FC2B8CC0010F98A /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C842B9E1FC2B8CC0010F98A /* UIUtils.swift */; };
 		7C882B0A1FC3FD1B0064DF7F /* ScanCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C882B091FC3FD1B0064DF7F /* ScanCodeVC.swift */; };
@@ -103,7 +105,6 @@
 		7C02B3101FD7F238005C55E3 /* PasscodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeVC.swift; sourceTree = "<group>"; };
 		7C161A201FBDB4E3004FD9A0 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		7C161A241FBDB526004FD9A0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		7C161A441FBDD27F004FD9A0 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		7C161A4A1FBDEA05004FD9A0 /* UITextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
 		7C2F326420C0301700AEB314 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		7C2F326620C0303900AEB314 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -126,6 +127,9 @@
 		7C7A7FC720C53B6400BDE95C /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
 		7C7A7FC920C53B7200BDE95C /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		7C7A7FCB20C5440700BDE95C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		7C7FC46620CBFAA000AC8F8F /* MnemonicImportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicImportVC.swift; sourceTree = "<group>"; };
+		7C7FC46820CBFDA700AC8F8F /* MnemonicImport.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MnemonicImport.storyboard; sourceTree = "<group>"; };
+		7C7FC46A20CC07D100AC8F8F /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		7C8272C41FC583C600054277 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		7C842B9E1FC2B8CC0010F98A /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		7C882B091FC3FD1B0064DF7F /* ScanCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCodeVC.swift; sourceTree = "<group>"; };
@@ -340,6 +344,15 @@
 			path = CommonMessage;
 			sourceTree = "<group>";
 		};
+		7C7FC46520CBE73900AC8F8F /* Mnemonic */ = {
+			isa = PBXGroup;
+			children = (
+				7C7FC46620CBFAA000AC8F8F /* MnemonicImportVC.swift */,
+				7C7FC46820CBFDA700AC8F8F /* MnemonicImport.storyboard */,
+			);
+			path = Mnemonic;
+			sourceTree = "<group>";
+		};
 		7C90C4B520C8119C006EEF87 /* TouchID */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +387,7 @@
 		7CB5674C1FB9B54700F03D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7C7FC46520CBE73900AC8F8F /* Mnemonic */,
 				7C75E89C20C913DC00EEB053 /* Passcode */,
 				7C90C4B520C8119C006EEF87 /* TouchID */,
 				7C7A7FC620C53B4300BDE95C /* CommonMessage */,
@@ -413,10 +427,10 @@
 		7CF655741FBAF6FB00CA9C1A /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
-				7C161A441FBDD27F004FD9A0 /* RoundButton.swift */,
 				7C36C6E11FD1539400D4501D /* AnimatedImageView.swift */,
 				79AF1D2A20C4A16000CCA150 /* PickerTextField.swift */,
 				79AF1D2E20C4BCD100CCA150 /* PinTextField.swift */,
+				7C7FC46A20CC07D100AC8F8F /* DesignableView.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -493,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C30A62520C04AE700EC69F7 /* Tutorial.storyboard in Resources */,
+				7C7FC46920CBFDA700AC8F8F /* MnemonicImport.storyboard in Resources */,
 				7C48385C1FB5F62500FC864A /* LaunchScreen.storyboard in Resources */,
 				79AF1D2720C48BE300CCA150 /* PhoneNumber.storyboard in Resources */,
 				7C2F326520C0301700AEB314 /* SignUp.storyboard in Resources */,
@@ -594,10 +609,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C161A211FBDB4E3004FD9A0 /* Popup.swift in Sources */,
-				7C161A451FBDD27F004FD9A0 /* RoundButton.swift in Sources */,
 				7C36C6E41FD153AC00D4501D /* AnimatedImageViewExt.swift in Sources */,
 				7CB5674F1FB9C28E00F03D24 /* TutorialsVC.swift in Sources */,
 				7C99D6E11FC7FF8E00A593C5 /* TokenWebServiceRequest.swift in Sources */,
+				7C7FC46720CBFAA000AC8F8F /* MnemonicImportVC.swift in Sources */,
 				7C2F326720C0303900AEB314 /* SignUpVC.swift in Sources */,
 				0F359D911FC095C9007E07DC /* BaseVC.swift in Sources */,
 				7C882B0A1FC3FD1B0064DF7F /* ScanCodeVC.swift in Sources */,
@@ -630,6 +645,7 @@
 				7CF6556B1FBACC1400CA9C1A /* ColorExtension.swift in Sources */,
 				7C99D6E31FC7FFDE00A593C5 /* UserWebServiceRequest.swift in Sources */,
 				7CF655701FBAF15D00CA9C1A /* StringExt.swift in Sources */,
+				7C7FC46B20CC07D100AC8F8F /* DesignableView.swift in Sources */,
 				7CB567511FB9C2CA00F03D24 /* TutorialsContentVC.swift in Sources */,
 				7C2F326920C0424700AEB314 /* TermsAndConditionsVC.swift in Sources */,
 				7C99D6D91FC7FE8D00A593C5 /* WrappedRootResponse.swift in Sources */,

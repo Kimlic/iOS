@@ -101,6 +101,12 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
+    static func navigateToMnemonicImport(_ vc: UIViewController){
+        let storyboard = AppStoryboard.MnemonicImport.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: MnemonicImportVC.className) as! MnemonicImportVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
     static func navigateToUserBasicProfile(vc: UIViewController){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tarVC = storyboard.instantiateViewController(withIdentifier: UserBasicProfileInfoVC.className) as! UserBasicProfileInfoVC

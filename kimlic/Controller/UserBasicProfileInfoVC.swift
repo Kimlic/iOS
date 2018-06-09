@@ -11,7 +11,7 @@ class UserBasicProfileInfoVC: UIViewController {
     @IBOutlet weak var txtFirstName: UITextField!
     @IBOutlet weak var txtLastName: UITextField!
     @IBOutlet weak var txtEmailAddress: UITextField!
-    @IBOutlet weak var btnSave: RoundButton!
+    @IBOutlet weak var btnSave: UIButton!
     @IBOutlet weak var imgHexagon: UIImageView!
     @IBOutlet weak var imgHexagonContent: UIImageView!
     
