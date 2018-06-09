@@ -176,14 +176,15 @@ public class UIUtils {
         NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
     }
     
-    static func showPasscodeVC(vc: UIViewController, pageType: PasscodePageType, completion: (() -> Swift.Void)? = nil) {
+    static func showPasscodeVC(vc: UIViewController, pageType: PasscodePageType, tmpCode: String? = nil, completion: (() -> Swift.Void)? = nil) {
         let storyboard = AppStoryboard.Passcode.instance
         let passVC = storyboard.instantiateViewController(withIdentifier: PasscodeVC.className) as! PasscodeVC
         passVC.modalPresentationStyle = .overCurrentContext
+        passVC.pageType = pageType
+        passVC.tmpCode = tmpCode
+        passVC.rootVC = vc
         vc.present(passVC, animated: true, completion: {
             completion?()
         })
     }
 }
-
-import SmileLock

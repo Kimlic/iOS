@@ -41,7 +41,6 @@
 		7C48385C1FB5F62500FC864A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C48385A1FB5F62500FC864A /* LaunchScreen.storyboard */; };
 		7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */; };
 		7C75E8A020C9141E00EEB053 /* Passcode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C75E89F20C9141E00EEB053 /* Passcode.storyboard */; };
-		7C75E8A320C917C700EEB053 /* KeychainPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C75E8A220C917C700EEB053 /* KeychainPass.swift */; };
 		7C7A7FC820C53B6400BDE95C /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A7FC720C53B6400BDE95C /* MessageVC.swift */; };
 		7C7A7FCA20C53B7200BDE95C /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C7A7FC920C53B7200BDE95C /* Message.storyboard */; };
 		7C7A7FCC20C5440700BDE95C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A7FCB20C5440700BDE95C /* Message.swift */; };
@@ -124,7 +123,6 @@
 		7C48385D1FB5F62500FC864A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateExt.swift; sourceTree = "<group>"; };
 		7C75E89F20C9141E00EEB053 /* Passcode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Passcode.storyboard; sourceTree = "<group>"; };
-		7C75E8A220C917C700EEB053 /* KeychainPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainPass.swift; sourceTree = "<group>"; };
 		7C7A7FC720C53B6400BDE95C /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
 		7C7A7FC920C53B7200BDE95C /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		7C7A7FCB20C5440700BDE95C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -253,7 +251,6 @@
 				7C161A241FBDB526004FD9A0 /* Enums.swift */,
 				0F359D8E1FC07EDD007E07DC /* Animz.swift */,
 				7C842B9E1FC2B8CC0010F98A /* UIUtils.swift */,
-				7C75E8A220C917C700EEB053 /* KeychainPass.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -634,7 +631,6 @@
 				7C99D6E31FC7FFDE00A593C5 /* UserWebServiceRequest.swift in Sources */,
 				7CF655701FBAF15D00CA9C1A /* StringExt.swift in Sources */,
 				7CB567511FB9C2CA00F03D24 /* TutorialsContentVC.swift in Sources */,
-				7C75E8A320C917C700EEB053 /* KeychainPass.swift in Sources */,
 				7C2F326920C0424700AEB314 /* TermsAndConditionsVC.swift in Sources */,
 				7C99D6D91FC7FE8D00A593C5 /* WrappedRootResponse.swift in Sources */,
 				7C7A7FCC20C5440700BDE95C /* Message.swift in Sources */,

@@ -51,6 +51,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
                                         <state key="normal" title="Recover My Identity"/>
+                                        <connections>
+                                            <action selector="recoverIdentityButtonPressed:" destination="1Ew-4g-Iex" eventType="touchUpInside" id="2yH-3e-m1o"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

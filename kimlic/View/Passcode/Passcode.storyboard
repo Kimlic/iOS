@@ -63,8 +63,8 @@
                         <viewLayoutGuide key="safeArea" id="EsH-vJ-Ng8"/>
                     </view>
                     <connections>
-                        <outlet property="lblVerificationCode" destination="Psj-GT-fb2" id="ydQ-p6-au4"/>
-                        <outlet property="stackViewLbl" destination="zpu-Qc-Deo" id="XA7-K5-UM8"/>
+                        <outlet property="bodyStackView" destination="zpu-Qc-Deo" id="9Qw-4J-6H6"/>
+                        <outlet property="infoLabel" destination="Psj-GT-fb2" id="hjb-Pt-eBN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dhj-VT-grT" userLabel="First Responder" sceneMemberID="firstResponder"/>

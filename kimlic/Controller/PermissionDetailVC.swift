@@ -41,20 +41,20 @@ class PermissionDetailVC: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     @IBAction func btnTouchIDAcceptPressed(_ sender: Any) {
-        if let code =  Defaults[.verificationCodeEnable], code {
+        guard Defaults[.passcode] != nil else {
 //            UIUtils.presentVerificationCodeVC(vc: self, pageType: .verificate, qrCode: self.qrCode)
-        }else {
-//            UIUtils.confirmTouchID(controller: self, targetController: .UserProfileVC, qrCode: self.qrCode)
+            return
         }
-        
+//        UIUtils.confirmTouchID(controller: self, targetController: .UserProfileVC, qrCode: self.qrCode)
     }
     
     func setPageFieldsValue() {
         
-        if let code =  Defaults[.verificationCodeEnable], code {
+        if Defaults[.passcode] != nil {
             btnTouchIdAccept.setImage(nil, for: .normal)
             btnTouchIdAccept.setTitle("enterCodeAccept".localized, for: .normal)
         }
+        
         txtTitle.text = permission.name
         txtEmailAddress.text = Defaults[.email]
         txtEmailAddress.greenCheckIcon()

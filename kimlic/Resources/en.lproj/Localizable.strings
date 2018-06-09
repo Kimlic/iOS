@@ -8,12 +8,12 @@
 //*******************************************************
 
 
-//*********** Verification Page *************************
-
-"createVerificationCode" = "Create Verification Code";
-"confirmVerificationCode" = "Confirm Code";
-"verificateVerificationCode" = "Enter Verification Code";
-
+//*********** Passcode Page *************************
+"createPasscode" = "Create your Passcode";
+"createConfirmPasscode" = "Confirm your Code";
+"confirmPasscode" = "Confirm your Code";
+"updatePasscode" = "Update your Code";
+"deletePasscode" = "Delete your Code";
 //*******************************************************
 
 //*********** Tutorials Page ****************************

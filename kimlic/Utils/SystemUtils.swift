@@ -50,8 +50,7 @@ public class SystemUtils {
         Defaults[.phoneVerified] = nil
         Defaults[.photoVerified] = nil
         Defaults[.userToken] = nil
-        Defaults[.verificationCodeEnable] = nil
-        Defaults[.verificationCode] = nil
+        Defaults[.passcode] = nil
         Defaults.synchronize()
 //        let root = UIUtils.setTutorialScreenAsRoot()
         let root = UIUtils.setTutorialScreenAsRoot()

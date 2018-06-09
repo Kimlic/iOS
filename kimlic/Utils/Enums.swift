@@ -30,12 +30,12 @@ enum LevelBarAnimationType {
 }
 
 enum PasscodePageType {
+    case confirm
     case create
     case createConfirm
-    case verificate
     case update
+    case delete
 }
-
 
 enum AppStoryboard : String {
     // Must be the same as storyboard name

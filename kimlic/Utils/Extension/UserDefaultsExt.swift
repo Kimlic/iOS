@@ -25,6 +25,5 @@ extension DefaultsKeys {
     static let accessToken = DefaultsKey<String?>("accessToken")
     
     //if the user wishes to generate a confirmation code for entry permits
-    static let verificationCodeEnable = DefaultsKey<Bool?>("verificationCodeEnable")
-    static let verificationCode = DefaultsKey<String?>("verificationCode")
+    static let passcode = DefaultsKey<String?>("passcode")
 }
