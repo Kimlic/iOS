@@ -33,6 +33,21 @@ DEPENDENCIES:
   - SwiftyUserDefaults (~> 3.0)
   - TextFieldEffects (~> 1.4)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AlamofireImage
+    - FSPagerView
+    - IQKeyboardManagerSwift
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - PhoneNumberKit
+    - PopupDialog
+    - SmileLock
+    - SwiftyJSON
+    - SwiftyUserDefaults
+    - TextFieldEffects
+
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
@@ -49,4 +64,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: fe866de998a90f4a8edef3be060e2ecd80aa83b4
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0

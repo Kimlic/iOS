@@ -107,6 +107,18 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
+    static func navigateToMnemonicCreate(_ vc: UIViewController){
+        let storyboard = AppStoryboard.MnemonicCreate.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: MnemonicCreateVC.className) as! MnemonicCreateVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
+    static func navigateToConfirmPassphrase(_ vc: UIViewController){
+        let storyboard = AppStoryboard.ConfirmPassphrase.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: ConfirmPassphraseVC.className) as! ConfirmPassphraseVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
     static func navigateToUserBasicProfile(vc: UIViewController){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tarVC = storyboard.instantiateViewController(withIdentifier: UserBasicProfileInfoVC.className) as! UserBasicProfileInfoVC
