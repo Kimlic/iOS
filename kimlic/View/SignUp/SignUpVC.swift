@@ -23,6 +23,8 @@ class SignUpVC: UIViewController {
 //        UIUtils.showPasscodeVC(vc: self, pageType: .create)
 //        UIUtils.navigateToTouchID(self)
 //        UIUtils.navigateToMnemonicCreate(self)
-        UIUtils.navigateToConfirmPassphrase(self)
+//        UIUtils.navigateToConfirmPassphrase(self)
+//        UIUtils.navigateToSettings(self)
+        UIUtils.navigateToEmail(self)
     }
 }

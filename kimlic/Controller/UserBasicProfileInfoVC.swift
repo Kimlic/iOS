@@ -78,7 +78,7 @@ class UserBasicProfileInfoVC: UIViewController {
         let lastName = txtLastName.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let email = txtEmailAddress.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        guard !firstName!.isEmpty, !lastName!.isEmpty, !email!.isEmpty ,SystemUtils.isValidEmail(email: txtEmailAddress?.text) else {
+        guard !firstName!.isEmpty, !lastName!.isEmpty, !email!.isEmpty, email!.isEmail else {
             PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "fieldsRequiredTitle".localized, message: "fieldsRequiredMessage".localized, buttonTitle: "fieldsRequiredButtonTitle".localized))
             return
         }

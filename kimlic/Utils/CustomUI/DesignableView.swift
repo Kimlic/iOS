@@ -99,7 +99,7 @@ class CustomTextView: UITextView, UITextViewDelegate {
         placeholderLabel.sizeToFit()
         
         placeholderLabel.font = self.font
-        placeholderLabel.textColor = self.borderColor
+        placeholderLabel.textColor = UIColor.lightGray
         placeholderLabel.tag = 100
         
         placeholderLabel.isHidden = self.text.characters.count > 0
@@ -111,7 +111,7 @@ class CustomTextView: UITextView, UITextViewDelegate {
     
 }
 
-extension UIView {
+extension CustomView {
     
     @IBInspectable
     var cornerRadius: CGFloat {

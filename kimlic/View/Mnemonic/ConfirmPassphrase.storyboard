@@ -86,7 +86,7 @@
                                             <action selector="cancelButtonPressed:" destination="X5a-Sb-VcU" eventType="touchUpInside" id="Ogx-ny-3D2"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="4th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-7p-jBy" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="4th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-7p-jBy">
                                         <rect key="frame" x="0.0" y="216" width="240" height="45"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>
@@ -116,7 +116,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="5th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dhp-AS-4xw" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="5th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dhp-AS-4xw">
                                         <rect key="frame" x="0.0" y="276" width="240" height="45"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>
@@ -146,7 +146,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="12th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJs-PJ-0bC" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="12th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJs-PJ-0bC">
                                         <rect key="frame" x="0.0" y="336" width="240" height="45"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>

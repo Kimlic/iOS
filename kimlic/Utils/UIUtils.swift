@@ -61,6 +61,11 @@ public class UIUtils {
         return homeVC
     }
     
+    static func navigateToSettings(_ vc: UIViewController){
+        let storyboard = AppStoryboard.Settings.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: SettingsVC.className) as! SettingsVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
     
     static func navigateToTutorial(_ vc: UIViewController){
         let storyboard = AppStoryboard.Tutorial.instance
@@ -77,6 +82,12 @@ public class UIUtils {
     static func navigateToTerms(_ vc: UIViewController){
         let storyboard = AppStoryboard.TermsAndConditions.instance
         let tarVC = storyboard.instantiateViewController(withIdentifier: TermsAndConditionsVC.className) as! TermsAndConditionsVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
+    static func navigateToEmail(_ vc: UIViewController){
+        let storyboard = AppStoryboard.UserEmail.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: UserEmailVC.className) as! UserEmailVC
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
