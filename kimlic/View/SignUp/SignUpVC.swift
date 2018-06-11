@@ -20,11 +20,6 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func recoverIdentityButtonPressed(_ sender: Any) {
-//        UIUtils.showPasscodeVC(vc: self, pageType: .create)
-//        UIUtils.navigateToTouchID(self)
-//        UIUtils.navigateToMnemonicCreate(self)
-//        UIUtils.navigateToConfirmPassphrase(self)
-//        UIUtils.navigateToSettings(self)
-        UIUtils.navigateToEmail(self)
+        UIUtils.navigateToProfile(self)
     }
 }

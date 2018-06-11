@@ -61,6 +61,12 @@ public class UIUtils {
         return homeVC
     }
     
+    static func navigateToProfile(_ vc: UIViewController){
+        let storyboard = AppStoryboard.Profile.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: ProfileVC.className) as! ProfileVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
     static func navigateToSettings(_ vc: UIViewController){
         let storyboard = AppStoryboard.Settings.instance
         let tarVC = storyboard.instantiateViewController(withIdentifier: SettingsVC.className) as! SettingsVC

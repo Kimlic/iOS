@@ -6,7 +6,7 @@ target 'kimlic' do
 
  pod 'PopupDialog', '~> 0.6'
  pod 'TextFieldEffects', '~> 1.4'
- pod 'SwiftyUserDefaults', '~> 3.0'
+ pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
  pod 'SwiftyJSON', '3.1.0'
  pod 'PhoneNumberKit', '~> 2.1'
  pod 'AlamofireImage', '~> 3.3'

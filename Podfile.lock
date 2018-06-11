@@ -17,7 +17,7 @@ PODS:
   - PopupDialog (0.6.0)
   - SmileLock (3.0.0)
   - SwiftyJSON (3.1.0)
-  - SwiftyUserDefaults (3.0.0)
+  - SwiftyUserDefaults (4.0.0-alpha.1)
   - TextFieldEffects (1.4.0)
 
 DEPENDENCIES:
@@ -30,23 +30,8 @@ DEPENDENCIES:
   - PopupDialog (~> 0.6)
   - SmileLock (~> 3.0)
   - SwiftyJSON (= 3.1.0)
-  - SwiftyUserDefaults (~> 3.0)
+  - SwiftyUserDefaults (= 4.0.0-alpha.1)
   - TextFieldEffects (~> 1.4)
-
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - Alamofire
-    - AlamofireImage
-    - FSPagerView
-    - IQKeyboardManagerSwift
-    - NVActivityIndicatorView
-    - ObjectMapper
-    - PhoneNumberKit
-    - PopupDialog
-    - SmileLock
-    - SwiftyJSON
-    - SwiftyUserDefaults
-    - TextFieldEffects
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
@@ -59,9 +44,9 @@ SPEC CHECKSUMS:
   PopupDialog: 687af43af0f7b89948cd411ac701865f931bd6dc
   SmileLock: 94289220d5e1fbfd774115b605d3c0371024df59
   SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
-  SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
+  SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
   TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
 
-PODFILE CHECKSUM: fe866de998a90f4a8edef3be060e2ecd80aa83b4
+PODFILE CHECKSUM: 04dcec2ecac82109f54a9b52146c8aaf66c8e539
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.4.0

@@ -49,6 +49,9 @@
 		7C4838591FB5F62500FC864A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4838581FB5F62500FC864A /* Assets.xcassets */; };
 		7C48385C1FB5F62500FC864A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C48385A1FB5F62500FC864A /* LaunchScreen.storyboard */; };
 		7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */; };
+		7C6FC84D20CE72EE0026AF1C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C6FC84C20CE72EE0026AF1C /* Profile.storyboard */; };
+		7C6FC84F20CE730E0026AF1C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6FC84E20CE730E0026AF1C /* ProfileVC.swift */; };
+		7C6FC85320CEA9530026AF1C /* UITableViewCellExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6FC85220CEA9530026AF1C /* UITableViewCellExt.swift */; };
 		7C75E8A020C9141E00EEB053 /* Passcode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C75E89F20C9141E00EEB053 /* Passcode.storyboard */; };
 		7C7A7FC820C53B6400BDE95C /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A7FC720C53B6400BDE95C /* MessageVC.swift */; };
 		7C7A7FCA20C53B7200BDE95C /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C7A7FC920C53B7200BDE95C /* Message.storyboard */; };
@@ -143,6 +146,9 @@
 		7C48385B1FB5F62500FC864A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C48385D1FB5F62500FC864A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateExt.swift; sourceTree = "<group>"; };
+		7C6FC84C20CE72EE0026AF1C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		7C6FC84E20CE730E0026AF1C /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		7C6FC85220CEA9530026AF1C /* UITableViewCellExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExt.swift; sourceTree = "<group>"; };
 		7C75E89F20C9141E00EEB053 /* Passcode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Passcode.storyboard; sourceTree = "<group>"; };
 		7C7A7FC720C53B6400BDE95C /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
 		7C7A7FC920C53B7200BDE95C /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
@@ -223,6 +229,8 @@
 				79AD4C8820CD55F000EE9160 /* SettingsVC.swift */,
 				79AD4C8E20CE24E700EE9160 /* UserEmail.storyboard */,
 				79AD4C8C20CE24D100EE9160 /* UserEmailVC.swift */,
+				7C6FC84C20CE72EE0026AF1C /* Profile.storyboard */,
+				7C6FC84E20CE730E0026AF1C /* ProfileVC.swift */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -314,6 +322,7 @@
 				7C4441B41FCD664F00DB551C /* UIImageViewExt.swift */,
 				7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */,
 				7C36C6E31FD153AC00D4501D /* AnimatedImageViewExt.swift */,
+				7C6FC85220CEA9530026AF1C /* UITableViewCellExt.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -502,6 +511,7 @@
 				7C48384B1FB5F62400FC864A /* Frameworks */,
 				7C48384C1FB5F62400FC864A /* Resources */,
 				DB2BEA7B75DD495A223EDDA9 /* [CP] Embed Pods Frameworks */,
+				BDEFC489F3680A9B0DF9835E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -524,7 +534,7 @@
 				TargetAttributes = {
 					7C48384D1FB5F62400FC864A = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -563,6 +573,7 @@
 				0F8F2B5E1FC5D66200BEF5B2 /* PermissionCell.xib in Resources */,
 				7C90C4B720C811BA006EEF87 /* TouchID.storyboard in Resources */,
 				7CF655711FBAF19F00CA9C1A /* Localizable.strings in Resources */,
+				7C6FC84D20CE72EE0026AF1C /* Profile.storyboard in Resources */,
 				7C4838591FB5F62500FC864A /* Assets.xcassets in Resources */,
 				7C30A62220C04A1B00EC69F7 /* TermsAndConditions.storyboard in Resources */,
 				7C4838571FB5F62500FC864A /* Main.storyboard in Resources */,
@@ -593,6 +604,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDEFC489F3680A9B0DF9835E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kimlic/Pods-kimlic-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DB2BEA7B75DD495A223EDDA9 /* [CP] Embed Pods Frameworks */ = {
@@ -671,6 +697,7 @@
 				7CF655781FBAFA4600CA9C1A /* UserBasicProfileInfoVC.swift in Sources */,
 				7C929D681FCC583F001B9E22 /* QrCodeWebServiceRequest.swift in Sources */,
 				7CDED0101FBC87AF006FB0AC /* PhoneVerificationVC.swift in Sources */,
+				7C6FC85320CEA9530026AF1C /* UITableViewCellExt.swift in Sources */,
 				0F1E43C41FC0A5A500B0B631 /* UserDefaultsExt.swift in Sources */,
 				0F1E43C21FC0A56700B0B631 /* SystemUtils.swift in Sources */,
 				7C99D6CF1FC7FE2600A593C5 /* UserCreateResponse.swift in Sources */,
@@ -706,6 +733,7 @@
 				7C99D6DF1FC7FF7000A593C5 /* WebServicesBaseRequest.swift in Sources */,
 				7C929D661FCC53E6001B9E22 /* PermissionDetailResponse.swift in Sources */,
 				7CCE2C861FBB32D400CC0E71 /* UserProfileVC.swift in Sources */,
+				7C6FC84F20CE730E0026AF1C /* ProfileVC.swift in Sources */,
 				0F359D941FC098F7007E07DC /* NSObjectExt.swift in Sources */,
 				7C8A80CF1FBD839E009E74F9 /* PermissionCell.swift in Sources */,
 				7C96874D1FBC949200DF4AB8 /* AllPermissionsVC.swift in Sources */,
@@ -862,8 +890,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z9WP434U24;
 				INFOPLIST_FILE = kimlic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -883,8 +911,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z9WP434U24;
 				INFOPLIST_FILE = kimlic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

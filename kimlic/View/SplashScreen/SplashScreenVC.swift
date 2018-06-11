@@ -29,11 +29,12 @@ class SplashScreenVC: BaseVC {
                 self.labelLogo.alpha = 1.0
             },completion: {
                 (finished: Bool) -> Void in
-                if Defaults[.userToken] == nil {
-                    let _ = UIUtils.setSignUpScreenAsRoot()
-                }else {
-                    let _ = UIUtils.setUserProfileScreenAsRoot()
-                }
+                let _ = UIUtils.setSignUpScreenAsRoot()
+//                if Defaults[.userToken] == nil {
+//                    let _ = UIUtils.setSignUpScreenAsRoot()
+//                }else {
+//                    let _ = UIUtils.setUserProfileScreenAsRoot()
+//                }
             })
         }
     }
