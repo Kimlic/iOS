@@ -88,6 +88,8 @@
 		7C99D6EB1FC842B700A593C5 /* UINavigationControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6EA1FC842B700A593C5 /* UINavigationControllerExt.swift */; };
 		7C99D6ED1FC84A6400A593C5 /* EmailWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6EC1FC84A6400A593C5 /* EmailWebServiceRequest.swift */; };
 		7C99D6EF1FC84C5200A593C5 /* WrappedRootResponseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6EE1FC84C5200A593C5 /* WrappedRootResponseCollection.swift */; };
+		7CB516FB20D00DC0006FF06D /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CB516FA20D00DC0006FF06D /* UserInfo.storyboard */; };
+		7CB516FD20D00DE2006FF06D /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB516FC20D00DE2006FF06D /* UserInfoVC.swift */; };
 		7CB5674F1FB9C28E00F03D24 /* TutorialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB5674E1FB9C28E00F03D24 /* TutorialsVC.swift */; };
 		7CB567511FB9C2CA00F03D24 /* TutorialsContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB567501FB9C2CA00F03D24 /* TutorialsContentVC.swift */; };
 		7CCE2C861FBB32D400CC0E71 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCE2C851FBB32D400CC0E71 /* UserProfileVC.swift */; };
@@ -185,6 +187,8 @@
 		7C99D6EA1FC842B700A593C5 /* UINavigationControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExt.swift; sourceTree = "<group>"; };
 		7C99D6EC1FC84A6400A593C5 /* EmailWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailWebServiceRequest.swift; sourceTree = "<group>"; };
 		7C99D6EE1FC84C5200A593C5 /* WrappedRootResponseCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedRootResponseCollection.swift; sourceTree = "<group>"; };
+		7CB516FA20D00DC0006FF06D /* UserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
+		7CB516FC20D00DE2006FF06D /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		7CB5674E1FB9C28E00F03D24 /* TutorialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialsVC.swift; sourceTree = "<group>"; };
 		7CB567501FB9C2CA00F03D24 /* TutorialsContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialsContentVC.swift; sourceTree = "<group>"; };
 		7CCE2C851FBB32D400CC0E71 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 				79AD4C8C20CE24D100EE9160 /* UserEmailVC.swift */,
 				7C6FC84C20CE72EE0026AF1C /* Profile.storyboard */,
 				7C6FC84E20CE730E0026AF1C /* ProfileVC.swift */,
+				7CB516FA20D00DC0006FF06D /* UserInfo.storyboard */,
+				7CB516FC20D00DE2006FF06D /* UserInfoVC.swift */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -578,6 +584,7 @@
 				7C30A62220C04A1B00EC69F7 /* TermsAndConditions.storyboard in Resources */,
 				7C4838571FB5F62500FC864A /* Main.storyboard in Resources */,
 				7C7A7FCA20C53B7200BDE95C /* Message.storyboard in Resources */,
+				7CB516FB20D00DC0006FF06D /* UserInfo.storyboard in Resources */,
 				79AD4C8020CD051800EE9160 /* MnemonicCreate.storyboard in Resources */,
 				7C75E8A020C9141E00EEB053 /* Passcode.storyboard in Resources */,
 				7C3023E320C012B10093598E /* SplashScreen.storyboard in Resources */,
@@ -707,6 +714,7 @@
 				79AD4C9420CE326700EE9160 /* CoreDataManager.swift in Sources */,
 				7C99D6CB1FC7FDCB00A593C5 /* TokenResponse.swift in Sources */,
 				7C99D6D31FC7FE5000A593C5 /* EmailResponse.swift in Sources */,
+				7CB516FD20D00DE2006FF06D /* UserInfoVC.swift in Sources */,
 				7C4441B51FCD664F00DB551C /* UIImageViewExt.swift in Sources */,
 				7CF6556B1FBACC1400CA9C1A /* ColorExtension.swift in Sources */,
 				7C99D6E31FC7FFDE00A593C5 /* UserWebServiceRequest.swift in Sources */,

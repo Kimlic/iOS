@@ -11,6 +11,9 @@ import UIKit
 class TermsAndConditionsVC: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var modifiedLabel: UILabel!
+    @IBOutlet weak var termNoticeLabel: UILabel!
+    @IBOutlet weak var termsDescLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,5 +26,8 @@ class TermsAndConditionsVC: UIViewController {
         UIUtils.navigateToPhoneNumber(self)
     }
     
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
 }

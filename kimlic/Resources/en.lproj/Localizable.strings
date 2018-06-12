@@ -18,10 +18,14 @@
 
 //*********** Tutorials Page ****************************
 
-"tutorialsFirstPageTitle" = "Scan QR Code";
-"tutorialsFirstPageDesc" = "Close auto-starting apps keep your phone works smoothly";
+"tutorial1Title" = "Decentrlized identity";
+"tutorial1Desc" = "All your credentials stored in private blockchain";
 
+"tutorial2Title" = "Fast, Secure Access";
+"tutorial2Desc" = "Forget your password, use Kimlic connect to login";
 
+"tutorial3Title" = "Manage your Accounts";
+"tutorial3Desc" = "All your credentials stored in private blockchain";
 
 //*******************************************************
 

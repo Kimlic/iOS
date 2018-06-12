@@ -37,21 +37,21 @@ class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
         
     }
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        
+
         let contentVC = viewController as! TutorialsContentVC
         var index = contentVC.pageIndex as Int
-        
+
         if (index == 0 || index == NSNotFound){
             return nil
         }
         // Before ViewContrller, so we are (-) form the current index
         index -= 1
-        
+
         return contentViewAtIndex(index)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        
+
         let contentVC = viewController as! TutorialsContentVC
         var index = contentVC.pageIndex as Int
         if (index == NSNotFound){
@@ -91,31 +91,26 @@ class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
     }
     
     func createTutorialPage(pageIndex: Int!) -> TutorialsContentVC {
-        
-        let contentVC = self.storyboard?.instantiateViewController(withIdentifier: "TutorialsContentVC") as! TutorialsContentVC
+        let contentVC = self.storyboard?.instantiateViewController(withIdentifier: TutorialsContentVC.className) as! TutorialsContentVC
         contentVC.pageIndex = pageIndex
-        contentVC.pageCount = pageCount
-        contentVC.pageViewController = pageViewController
-        
         switch pageIndex {
         case 0:
-            contentVC.tutTitle = "tutorialsFirstPageTitle".localized
-            contentVC.tutDesc = "tutorialsFirstPageDesc".localized
-            contentVC.imageName = "scan_QR_iilustration"
+            contentVC.tutTitle = "tutorial1Title".localized
+            contentVC.tutDesc = "tutorial1Desc".localized
+            contentVC.image = #imageLiteral(resourceName: "scan_QR_iilustration")
         case 1:
-            contentVC.tutTitle = "tutorialsFirstPageTitle".localized
-            contentVC.tutDesc = "tutorialsFirstPageDesc".localized
-            contentVC.imageName = "scan_QR_iilustration"
+            contentVC.tutTitle = "tutorial2Title".localized
+            contentVC.tutDesc = "tutorial2Desc".localized
+            contentVC.image = #imageLiteral(resourceName: "scan_QR_iilustration")
         case 2:
-            contentVC.tutTitle = "tutorialsFirstPageTitle".localized
-            contentVC.tutDesc = "tutorialsFirstPageDesc".localized
-            contentVC.imageName = "scan_QR_iilustration"
+            contentVC.tutTitle = "tutorial3Title".localized
+            contentVC.tutDesc = "tutorial3Desc".localized
+            contentVC.image = #imageLiteral(resourceName: "scan_QR_iilustration")
         default:
-            contentVC.tutTitle = "tutorialsFirstPageTitle".localized
-            contentVC.tutDesc = "tutorialsFirstPageDesc".localized
-            contentVC.imageName = "scan_QR_iilustration"
+            contentVC.tutTitle = "tutorial1Title".localized
+            contentVC.tutDesc = "tutorial1Desc".localized
+            contentVC.image = #imageLiteral(resourceName: "scan_QR_iilustration")
         }        
         return contentVC
-        
     }
 }
