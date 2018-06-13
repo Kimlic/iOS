@@ -21,6 +21,7 @@ class SignUpVC: UIViewController {
     @IBAction func recoverIdentityButtonPressed(_ sender: Any) {
 //        UIUtils.navigateToProfile(self)
 //        UIUtils.navigateToTerms(self)
-        UIUtils.navigateToVerification(self, email: "izzet.ozturk@gmail.com.tr")
+//        UIUtils.navigateToVerification(self, email: "izzet.ozturk@gmail.com.tr")
+        UIUtils.showPasscodeVC(vc: self, pageType: .create)
     }
 }

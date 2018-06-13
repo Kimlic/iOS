@@ -24,20 +24,11 @@ class PasscodeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //create PasswordContainerView
-        passwordContainerView = PasswordContainerView.create(in: bodyStackView, digit: kPasswordDigit)
-        passwordContainerView.delegate = self
-        passwordContainerView.deleteButtonLocalizedTitle = "delete"
-        passwordContainerView.touchAuthenticationEnabled = false
-        
-        //customize password UI
-        passwordContainerView.tintColor = Constants.Colors.textGray
-        passwordContainerView.highlightedColor = Constants.Colors.appBlue
-        
         setupView()
-        
+        changeLabelText()
     }
-    private func setupView() {
+    
+    private func changeLabelText() {
         switch pageType {
         case .confirm:
             infoLabel.text = "confirmPasscode".localized
@@ -49,7 +40,27 @@ class PasscodeVC: UIViewController {
             infoLabel.text = "updatePasscode".localized
         case .delete:
             infoLabel.text = "deletePasscode".localized
-        }        
+        }
+    }
+    
+    private func setupView() {
+        //create PasswordContainerView
+        passwordContainerView = PasswordContainerView.create(in: bodyStackView, digit: kPasswordDigit)
+        passwordContainerView.delegate = self
+        passwordContainerView.deleteButtonLocalizedTitle = "delete"
+        passwordContainerView.touchAuthenticationEnabled = false
+        
+//        //customize password UI
+        passwordContainerView.tintColor = UIColor.white
+        passwordContainerView.highlightedColor = UIColor.white
+        
+        // Change label color
+        for view in passwordContainerView.passwordInputViews {
+            view.label.textColor = UIColor.white
+            view.label.backgroundColor = UIColor(red: 75/255, green: 193/255, blue: 255/255, alpha: 1)
+            view.label.font = UIFont.boldSystemFont(ofSize: view.label.font.pointSize)
+        }
+        
     }
     
     @IBAction func btnCancelPressed(_ sender: Any) {
