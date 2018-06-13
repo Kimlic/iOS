@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PhoneNumberKit
 
 class SignUpVC: UIViewController {
 
@@ -20,7 +19,8 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func recoverIdentityButtonPressed(_ sender: Any) {
-        UIUtils.navigateToProfile(self)
+//        UIUtils.navigateToProfile(self)
 //        UIUtils.navigateToTerms(self)
+        UIUtils.navigateToVerification(self, email: "izzet.ozturk@gmail.com.tr")
     }
 }

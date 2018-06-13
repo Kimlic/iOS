@@ -4,13 +4,11 @@
 //
 //  Created by İzzet Öztürk on 20.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
+
 import Foundation
 import UIKit
 import SwiftyUserDefaults
 import NVActivityIndicatorView
-import PhoneNumberKit
-
-
 public class UIUtils {
     
     static func setSignUpScreenAsRoot() -> SignUpVC {
@@ -103,10 +101,11 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
-    static func navigateToPhoneVerification(_ vc: UIViewController, phoneNumber: PhoneNumber){
-        let storyboard = AppStoryboard.PhoneVerification.instance
-        let tarVC = storyboard.instantiateViewController(withIdentifier: PhoneVerificationVC.className) as! PhoneVerificationVC
+    static func navigateToVerification(_ vc: UIViewController, phoneNumber: String? = nil, email: String? = nil){
+        let storyboard = AppStoryboard.Verification.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: VerificationVC.className) as! VerificationVC
         tarVC.phoneNumber = phoneNumber
+        tarVC.email = email
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     

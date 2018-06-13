@@ -1,38 +1,42 @@
 //
-//  PhoneVerificationVC.swift
+//  VerificationVC.swift
 //  kimlic
 //
 //  Created by İzzet Öztürk on 15.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
+
 import UIKit
 import SwiftyUserDefaults
 import PhoneNumberKit
 
-class PhoneVerificationVC: UIViewController {
+class VerificationVC: UIViewController {
     
-    @IBOutlet weak var lblPhoneNumber: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var firstNumberTextField: PinTextField!
     @IBOutlet weak var secondNumberTextField: PinTextField!
     @IBOutlet weak var thirdNumberTextField: PinTextField!
     @IBOutlet weak var fourthNumberTextField: PinTextField!
+    @IBOutlet weak var changeButton: UIButton!
     
-    var phoneNumber: PhoneNumber!
+    var phoneNumber: String?
+    var email: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Set default value
         setupView()
-        
-        
-        
     }
     
-    
-    
-    
     private func setupView() {
-        lblPhoneNumber.text = "Code sent to +\(phoneNumber.countryCode) \(phoneNumber.adjustedNationalNumber())"
+        let address = email ?? "\(PartialFormatter().formatPartial(phoneNumber ?? ""))"
+        addressLabel.text = address
+        
+        if email != nil {
+            changeButton.setTitle("Change email address", for: .normal)
+        }else {
+            changeButton.setTitle("Change phone number", for: .normal)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,13 +80,18 @@ class PhoneVerificationVC: UIViewController {
         }
     }
     @IBAction func didEditingBegin(_ sender: UITextField) {
-        sender.backgroundColor = UIColor.white
+        sender.backgroundColor = UIColor.blue
+        sender.layer.borderColor = UIColor.white.cgColor
+        sender.layer.borderWidth = 2
+        sender.layer.cornerRadius = 5
     }
     
     @IBAction func didEditingEnd(_ sender: UITextField) {
         if let count = sender.text?.count, count <= 0 {            
-            sender.backgroundColor = UIColor(white: 0, alpha: 0.02)
+            sender.backgroundColor = UIColor.clear            
         }
+        sender.layer.borderColor = UIColor.clear.cgColor
+        sender.layer.borderWidth = 1
     }
     
     @IBAction func changePhoneButtonPressed(_ sender: Any) {
@@ -130,7 +139,7 @@ class PhoneVerificationVC: UIViewController {
     
 }
 
-extension PhoneVerificationVC: PinTexFieldDelegate {
+extension VerificationVC: PinTexFieldDelegate {
     
     func didPressBackspace(_ textField: PinTextField) {
         self.textFieldDidChange(textField)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,54 +10,74 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Phone VerificationVC-->
+        <!--VerificationVC-->
         <scene sceneID="OhW-s4-u0X">
             <objects>
-                <viewController storyboardIdentifier="PhoneVerificationVC" id="iNw-St-gwC" customClass="PhoneVerificationVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VerificationVC" id="iNw-St-gwC" customClass="VerificationVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nBD-gc-aEc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fw-hf-VFB" userLabel="ContentView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czb-g5-rff" userLabel="BodyView">
-                                        <rect key="frame" x="40" y="0.0" width="295" height="647"/>
+                                        <rect key="frame" x="40" y="0.0" width="334" height="716"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone_verify_message_illustration" translatesAutoresizingMaskIntoConstraints="NO" id="GLl-j3-m5J">
-                                                <rect key="frame" x="120" y="30" width="54" height="79"/>
+                                                <rect key="frame" x="140" y="30" width="54" height="79"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="54" id="BpB-ea-4WZ"/>
                                                     <constraint firstAttribute="height" constant="79" id="OIp-1Q-yf2"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Your Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlj-k8-mhL">
-                                                <rect key="frame" x="0.0" y="134" width="295" height="31.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                                <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code sent to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="vpL-0n-DNw">
-                                                <rect key="frame" x="0.0" y="166" width="295" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bj7-eC-Kz9">
-                                                <rect key="frame" x="42.5" y="212.5" width="210" height="45"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hdD-ab-ByJ">
+                                                <rect key="frame" x="0.0" y="139" width="334" height="21.666666666666657"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ih-FK-COq" userLabel="codeFirstNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code sent to" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vpL-0n-DNw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="145.33333333333334" height="21.666666666666668"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21.5" id="ail-WZ-Nl0"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="555 653 49 59" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gGE-mf-j6J">
+                                                        <rect key="frame" x="150.33333333333337" y="0.0" width="183.66666666666663" height="21.666666666666668"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21.5" id="Ltv-B9-gjJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="vpL-0n-DNw" firstAttribute="leading" secondItem="hdD-ab-ByJ" secondAttribute="leading" id="5yf-o3-eP8"/>
+                                                    <constraint firstAttribute="bottom" secondItem="gGE-mf-j6J" secondAttribute="bottom" id="AQu-8t-zXk"/>
+                                                    <constraint firstAttribute="bottom" secondItem="vpL-0n-DNw" secondAttribute="bottom" id="NMl-OL-Tgi"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gGE-mf-j6J" secondAttribute="trailing" id="RmV-uj-Dsq"/>
+                                                    <constraint firstAttribute="height" constant="21.5" id="eyO-BD-QiO"/>
+                                                    <constraint firstItem="gGE-mf-j6J" firstAttribute="top" secondItem="hdD-ab-ByJ" secondAttribute="top" id="mKd-EU-8HE"/>
+                                                    <constraint firstItem="vpL-0n-DNw" firstAttribute="top" secondItem="hdD-ab-ByJ" secondAttribute="top" id="pPu-aK-Hwe"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bj7-eC-Kz9">
+                                                <rect key="frame" x="62" y="225.66666666666666" width="210" height="44.999999999999972"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ih-FK-COq" userLabel="codeFirstNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                        <color key="backgroundColor" white="0.95088433165277786" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" selected="YES"/>
                                                         </accessibility>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="45" id="Fgc-6Q-6Nv"/>
                                                         </constraints>
-                                                        <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,15 +103,15 @@
                                                             <outlet property="delegate" destination="iNw-St-gwC" id="jCk-gH-07V"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mK5-2x-IM2" userLabel="codeSecondNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mK5-2x-IM2" userLabel="codeSecondNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
                                                         <rect key="frame" x="55" y="0.0" width="45" height="45"/>
-                                                        <color key="backgroundColor" white="0.95088433165277786" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" selected="YES"/>
                                                         </accessibility>
-                                                        <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -117,15 +137,15 @@
                                                             <outlet property="delegate" destination="iNw-St-gwC" id="wtS-fa-2Ee"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KKm-uJ-gSe" userLabel="codeThirdNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KKm-uJ-gSe" userLabel="codeThirdNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
                                                         <rect key="frame" x="110" y="0.0" width="45" height="45"/>
-                                                        <color key="backgroundColor" white="0.95088433165277786" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" selected="YES"/>
                                                         </accessibility>
-                                                        <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -151,15 +171,15 @@
                                                             <outlet property="delegate" destination="iNw-St-gwC" id="Ikr-bB-7U8"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AG1-N9-QqC" userLabel="codeFourthNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AG1-N9-QqC" userLabel="codeFourthNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
                                                         <rect key="frame" x="165" y="0.0" width="45" height="45"/>
-                                                        <color key="backgroundColor" white="0.95088433165277786" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" selected="YES"/>
                                                         </accessibility>
-                                                        <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -191,25 +211,27 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-Tf-7Ld">
-                                                <rect key="frame" x="0.0" y="337.5" width="295" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="290.66666666666669" width="334" height="50"/>
+                                                <color key="backgroundColor" red="0.59607843140000005" green="0.85098039219999999" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Pml-wb-BrA"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                 <state key="normal" title="Verify Number">
-                                                    <color key="titleColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="verifyButtonPressed:" destination="iNw-St-gwC" eventType="touchUpInside" id="TdS-2z-Qxz"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdb-ev-h14">
-                                                <rect key="frame" x="0.0" y="287" width="295" height="50"/>
+                                                <rect key="frame" x="89" y="160.66666666666666" width="157" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="4Pq-12-K1z"/>
+                                                    <constraint firstAttribute="height" constant="40" id="4Pq-12-K1z"/>
                                                 </constraints>
-                                                <state key="normal" title="Change number"/>
+                                                <state key="normal" title="Change phone number">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="changePhoneButtonPressed:" destination="iNw-St-gwC" eventType="touchUpInside" id="tKe-wB-uIg"/>
                                                 </connections>
@@ -217,21 +239,17 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="kFq-Tf-7Ld" secondAttribute="trailing" id="423-0w-gIB"/>
+                                            <constraint firstItem="Jdb-ev-h14" firstAttribute="centerX" secondItem="czb-g5-rff" secondAttribute="centerX" id="4mz-qC-aUl"/>
                                             <constraint firstItem="GLl-j3-m5J" firstAttribute="centerX" secondItem="czb-g5-rff" secondAttribute="centerX" id="7KX-9h-klN"/>
                                             <constraint firstItem="GLl-j3-m5J" firstAttribute="top" secondItem="czb-g5-rff" secondAttribute="top" constant="30" id="Ae4-Vd-YFW"/>
-                                            <constraint firstItem="kFq-Tf-7Ld" firstAttribute="top" secondItem="Jdb-ev-h14" secondAttribute="bottom" id="ICa-Ch-7KT"/>
-                                            <constraint firstItem="vpL-0n-DNw" firstAttribute="leading" secondItem="czb-g5-rff" secondAttribute="leading" id="Swe-uG-KBc"/>
-                                            <constraint firstAttribute="trailing" secondItem="xlj-k8-mhL" secondAttribute="trailing" id="WBe-MO-yT8"/>
-                                            <constraint firstAttribute="trailing" secondItem="Jdb-ev-h14" secondAttribute="trailing" id="X9N-Gr-8Qw"/>
-                                            <constraint firstItem="bj7-eC-Kz9" firstAttribute="top" secondItem="vpL-0n-DNw" secondAttribute="bottom" constant="25" id="ZZG-cf-Sfz"/>
-                                            <constraint firstItem="Jdb-ev-h14" firstAttribute="top" secondItem="bj7-eC-Kz9" secondAttribute="bottom" constant="30" id="egQ-hV-PJ0"/>
-                                            <constraint firstItem="xlj-k8-mhL" firstAttribute="top" secondItem="GLl-j3-m5J" secondAttribute="bottom" constant="25" id="iNP-YL-Z1u"/>
-                                            <constraint firstAttribute="trailing" secondItem="vpL-0n-DNw" secondAttribute="trailing" id="lDr-sg-fND"/>
+                                            <constraint firstItem="hdD-ab-ByJ" firstAttribute="leading" secondItem="czb-g5-rff" secondAttribute="leading" id="QyU-r3-GXl"/>
+                                            <constraint firstAttribute="trailing" secondItem="hdD-ab-ByJ" secondAttribute="trailing" id="Rwb-AX-Ylt"/>
+                                            <constraint firstItem="hdD-ab-ByJ" firstAttribute="top" secondItem="GLl-j3-m5J" secondAttribute="bottom" constant="30" id="fV0-lT-CRD"/>
+                                            <constraint firstItem="bj7-eC-Kz9" firstAttribute="top" secondItem="Jdb-ev-h14" secondAttribute="bottom" constant="25" id="lL7-9d-NMU"/>
                                             <constraint firstItem="kFq-Tf-7Ld" firstAttribute="leading" secondItem="czb-g5-rff" secondAttribute="leading" id="mXp-a9-7er"/>
-                                            <constraint firstItem="vpL-0n-DNw" firstAttribute="top" secondItem="xlj-k8-mhL" secondAttribute="bottom" id="mtB-2g-lHm"/>
                                             <constraint firstItem="bj7-eC-Kz9" firstAttribute="centerX" secondItem="czb-g5-rff" secondAttribute="centerX" id="oHJ-Hk-FlI"/>
-                                            <constraint firstItem="Jdb-ev-h14" firstAttribute="leading" secondItem="czb-g5-rff" secondAttribute="leading" id="ru6-qm-m1f"/>
-                                            <constraint firstItem="xlj-k8-mhL" firstAttribute="leading" secondItem="czb-g5-rff" secondAttribute="leading" id="vFf-0F-qvg"/>
+                                            <constraint firstItem="Jdb-ev-h14" firstAttribute="top" secondItem="hdD-ab-ByJ" secondAttribute="bottom" id="pxr-rR-7FA"/>
+                                            <constraint firstItem="kFq-Tf-7Ld" firstAttribute="top" secondItem="bj7-eC-Kz9" secondAttribute="bottom" constant="20" id="rfJ-gJ-b60"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -243,7 +261,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.25098039220000001" green="0.71372549019999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8Fw-hf-VFB" firstAttribute="leading" secondItem="NOB-X3-46e" secondAttribute="leading" id="E4K-zh-al7"/>
                             <constraint firstItem="8Fw-hf-VFB" firstAttribute="trailing" secondItem="NOB-X3-46e" secondAttribute="trailing" id="YA4-zi-dAa"/>
@@ -253,9 +271,10 @@
                         <viewLayoutGuide key="safeArea" id="NOB-X3-46e"/>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="gGE-mf-j6J" id="O5y-kx-HNJ"/>
+                        <outlet property="changeButton" destination="Jdb-ev-h14" id="hjD-1h-Gum"/>
                         <outlet property="firstNumberTextField" destination="7ih-FK-COq" id="K2j-Ry-uaK"/>
                         <outlet property="fourthNumberTextField" destination="AG1-N9-QqC" id="zgj-0f-UyU"/>
-                        <outlet property="lblPhoneNumber" destination="vpL-0n-DNw" id="Ax0-v1-Zrb"/>
                         <outlet property="secondNumberTextField" destination="mK5-2x-IM2" id="4HT-Ab-0su"/>
                         <outlet property="thirdNumberTextField" destination="KKm-uJ-gSe" id="wOh-4k-rqE"/>
                     </connections>
@@ -266,6 +285,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Phone_verify_message_illustration" width="119" height="159"/>
+        <image name="Phone_verify_message_illustration" width="119" height="158"/>
     </resources>
 </document>

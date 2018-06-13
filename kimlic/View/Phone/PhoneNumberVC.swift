@@ -72,7 +72,7 @@ class PhoneNumberVC: UIViewController {
         
         do {
             let verificatePhone = try phoneNumberKit.parse(phoneNumber)
-            UIUtils.navigateToPhoneVerification(self, phoneNumber: verificatePhone)
+            UIUtils.navigateToVerification(self, phoneNumber: verificatePhone.numberString)
         }catch {
             PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "phoneNotValidTitle".localized, message: "phoneNotValidMessage".localized, buttonTitle: "phoneNotValidButtonTitle".localized))
         }
