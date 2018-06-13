@@ -229,14 +229,8 @@
 		79AD4C8520CD55AD00EE9160 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
-				79AD4C8620CD55DC00EE9160 /* Settings.storyboard */,
-				79AD4C8820CD55F000EE9160 /* SettingsVC.swift */,
-				79AD4C8E20CE24E700EE9160 /* UserEmail.storyboard */,
-				79AD4C8C20CE24D100EE9160 /* UserEmailVC.swift */,
 				7C6FC84C20CE72EE0026AF1C /* Profile.storyboard */,
 				7C6FC84E20CE730E0026AF1C /* ProfileVC.swift */,
-				7CB516FA20D00DC0006FF06D /* UserInfo.storyboard */,
-				7CB516FC20D00DE2006FF06D /* UserInfoVC.swift */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -380,6 +374,33 @@
 			path = kimlic;
 			sourceTree = "<group>";
 		};
+		7C5DE2D120D1234100B75B41 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				79AD4C8E20CE24E700EE9160 /* UserEmail.storyboard */,
+				79AD4C8C20CE24D100EE9160 /* UserEmailVC.swift */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		7C5DE2D220D1236600B75B41 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				79AD4C8620CD55DC00EE9160 /* Settings.storyboard */,
+				79AD4C8820CD55F000EE9160 /* SettingsVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7C5DE2D320D1237800B75B41 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				7CB516FA20D00DC0006FF06D /* UserInfo.storyboard */,
+				7CB516FC20D00DE2006FF06D /* UserInfoVC.swift */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
 		7C75E89C20C913DC00EEB053 /* Passcode */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,7 +475,12 @@
 		7CB5674C1FB9B54700F03D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7C5DE2D320D1237800B75B41 /* UserInfo */,
+				7C5DE2D220D1236600B75B41 /* Settings */,
+				7C5DE2D120D1234100B75B41 /* Email */,
+				79AF1D1B20C489E800CCA150 /* Phone */,
 				79AD4C8520CD55AD00EE9160 /* UserProfile */,
+				7C85966F20D0FEF0005F774A /* Verification */,
 				7C7FC46520CBE73900AC8F8F /* Mnemonic */,
 				7C75E89C20C913DC00EEB053 /* Passcode */,
 				7C90C4B520C8119C006EEF87 /* TouchID */,
@@ -463,8 +489,6 @@
 				7C2F326020C02FC700AEB314 /* SignUp */,
 				7C30A62320C04AC100EC69F7 /* Tutorial */,
 				7C30A62020C0493E00EC69F7 /* TermsAndConditions */,
-				79AF1D1B20C489E800CCA150 /* Phone */,
-				7C85966F20D0FEF0005F774A /* Verification */,
 				7C8A80CE1FBD839E009E74F9 /* PermissionCell.swift */,
 				0F8F2B5D1FC5D66200BEF5B2 /* PermissionCell.xib */,
 			);

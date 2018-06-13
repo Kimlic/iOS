@@ -15,14 +15,11 @@ class UserEmailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
         if let email = emailTextField.text, email.isEmail {
-            PopupGenerator.createPopup(controller: self, type: .success, popup: Popup()) {
-                self.navigationController?.popViewController(animated: true)
-            }
+            UIUtils.navigateToVerification(self, email: email)
         }else {
             PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "Wrong", message: "Wrong Email Address", buttonTitle: "Try! AGAIN"))
         }

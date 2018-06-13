@@ -43,7 +43,7 @@ class SettingsTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 3:
-            print("Terms & Conditions Clicked")
+            UIUtils.navigateToTerms(self, nextPage: .none)
         case 4:
             print("About Kimlic Clicked")
         default:

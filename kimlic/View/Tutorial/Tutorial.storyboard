@@ -56,36 +56,33 @@
                                         <color key="textColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLt-1R-bmy" userLabel="skipButton">
-                                        <rect key="frame" x="157.66666666666666" y="611" width="60" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="D8N-oU-EgU"/>
-                                            <constraint firstAttribute="height" constant="40" id="k3G-ve-Zrh"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Skip">
-                                            <color key="titleColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="skipButtonPressed:" destination="PW4-g8-CNn" eventType="touchUpInside" id="VQX-nB-EOM"/>
-                                        </connections>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan_QR_iilustration" translatesAutoresizingMaskIntoConstraints="NO" id="X3r-Tv-9rz">
                                         <rect key="frame" x="35" y="8" width="304" height="233"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j66-vz-a86">
+                                        <rect key="frame" x="172" y="628" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="GND-Lv-uTE"/>
+                                            <constraint firstAttribute="height" constant="30" id="VY7-eq-T2a"/>
+                                        </constraints>
+                                        <state key="normal" title="Skip"/>
+                                        <connections>
+                                            <action selector="skipButtonPressed:" destination="PW4-g8-CNn" eventType="touchUpInside" id="6qW-ir-pMe"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="X3r-Tv-9rz" secondAttribute="trailing" constant="35" id="0uB-4B-PP5"/>
                                     <constraint firstItem="UdY-fV-lIV" firstAttribute="top" secondItem="X3r-Tv-9rz" secondAttribute="bottom" constant="20" id="1Wd-nS-QnJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="aLt-1R-bmy" secondAttribute="bottom" constant="15" id="8S3-vx-JRx"/>
+                                    <constraint firstItem="j66-vz-a86" firstAttribute="centerX" secondItem="2y2-B5-Lhi" secondAttribute="centerX" id="BFL-mI-nWa"/>
                                     <constraint firstItem="4Zr-l0-JYF" firstAttribute="leading" secondItem="2y2-B5-Lhi" secondAttribute="leading" constant="20" id="Ggl-bo-hy3"/>
                                     <constraint firstItem="X3r-Tv-9rz" firstAttribute="leading" secondItem="2y2-B5-Lhi" secondAttribute="leading" constant="35" id="LDb-S8-ual"/>
                                     <constraint firstItem="X3r-Tv-9rz" firstAttribute="top" secondItem="2y2-B5-Lhi" secondAttribute="top" constant="8" id="NDD-u2-vv8"/>
                                     <constraint firstItem="4Zr-l0-JYF" firstAttribute="top" secondItem="UdY-fV-lIV" secondAttribute="bottom" constant="15" id="XtE-c1-3dZ"/>
                                     <constraint firstAttribute="trailing" secondItem="4Zr-l0-JYF" secondAttribute="trailing" constant="20" id="Y0C-1q-96q"/>
-                                    <constraint firstItem="aLt-1R-bmy" firstAttribute="centerX" secondItem="2y2-B5-Lhi" secondAttribute="centerX" id="ZNm-VJ-af3"/>
                                     <constraint firstAttribute="trailing" secondItem="UdY-fV-lIV" secondAttribute="trailing" constant="20" id="jGJ-B4-uqe"/>
+                                    <constraint firstAttribute="bottom" secondItem="j66-vz-a86" secondAttribute="bottom" constant="8" id="p90-FY-u47"/>
                                     <constraint firstItem="X3r-Tv-9rz" firstAttribute="centerX" secondItem="2y2-B5-Lhi" secondAttribute="centerX" id="vNy-el-m54"/>
                                     <constraint firstItem="UdY-fV-lIV" firstAttribute="leading" secondItem="2y2-B5-Lhi" secondAttribute="leading" constant="20" id="xCW-AO-B84"/>
                                 </constraints>
@@ -102,7 +99,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="zW8-gR-fAL"/>
                     <connections>
-                        <outlet property="skipButton" destination="aLt-1R-bmy" id="pzN-d1-AE3"/>
                         <outlet property="tutorialDesc" destination="4Zr-l0-JYF" id="vek-o1-rWU"/>
                         <outlet property="tutorialImage" destination="X3r-Tv-9rz" id="Zhh-0t-Cok"/>
                         <outlet property="tutorialTitle" destination="UdY-fV-lIV" id="440-a9-GBB"/>

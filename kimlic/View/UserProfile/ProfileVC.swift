@@ -82,14 +82,14 @@ class BodyTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 0:
-            print("Add your full name")
-        case 1:
+        case 0: // first name, last name page
+            UIUtils.navigateToUserInfo(self)
+        case 1: // user phone number page
             UIUtils.navigateToPhoneNumber(self)
-        case 2:
+        case 2: // user email page
             UIUtils.navigateToEmail(self)
-        case 3:
-            print("Add your full name")
+        case 3: // verify ID
+            print("Add verify ID")
         default:
             print("Add your full name")
         }

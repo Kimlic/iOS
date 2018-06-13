@@ -35,4 +35,8 @@ class TutorialsContentVC: UIViewController {
         tutorialDesc.text = tutDesc
     }
     
+    @IBAction func skipButtonPressed(_ sender: Any) {
+        UIUtils.navigateToTerms(self, nextPage: .phoneNumber)
+    }
+    
 }

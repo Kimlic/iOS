@@ -24,6 +24,10 @@ enum TouchIDNavigateTarget {
     case UserBasicProfileVC
 }
 
+enum TermsNavigateTarget {
+    case none, phoneNumber, accountRecovery
+}
+
 enum LevelBarAnimationType {
     case create
     case show

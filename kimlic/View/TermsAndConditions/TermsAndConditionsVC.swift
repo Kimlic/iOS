@@ -14,16 +14,30 @@ class TermsAndConditionsVC: UIViewController {
     @IBOutlet weak var modifiedLabel: UILabel!
     @IBOutlet weak var termNoticeLabel: UILabel!
     @IBOutlet weak var termsDescLabel: UILabel!
+    @IBOutlet weak var acceptButton: UIButton!
+    
+    var nextPage: TermsNavigateTarget!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         scrollView.alwaysBounceVertical = true
         self.scrollView.isDirectionalLockEnabled = true
+        
+        if nextPage == TermsNavigateTarget.none {
+            acceptButton.isHidden = true
+        }
     }
     
-    @IBAction func acceptButtonPressed(_ sender: Any) {        
-        UIUtils.navigateToPhoneNumber(self)
+    @IBAction func acceptButtonPressed(_ sender: Any) {
+        switch nextPage {
+        case .phoneNumber:
+            UIUtils.navigateToPhoneNumber(self)
+        case .accountRecovery:
+            UIUtils.navigateToMnemonicImport(self)
+        default:
+            break
+        }
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {

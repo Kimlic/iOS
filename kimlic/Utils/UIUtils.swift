@@ -83,9 +83,16 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
-    static func navigateToTerms(_ vc: UIViewController){
+    static func navigateToTerms(_ vc: UIViewController, nextPage: TermsNavigateTarget){        
         let storyboard = AppStoryboard.TermsAndConditions.instance
         let tarVC = storyboard.instantiateViewController(withIdentifier: TermsAndConditionsVC.className) as! TermsAndConditionsVC
+        tarVC.nextPage = nextPage
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
+    static func navigateToUserInfo(_ vc: UIViewController){
+        let storyboard = AppStoryboard.UserInfo.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: UserInfoVC.className) as! UserInfoVC
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     

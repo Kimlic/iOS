@@ -120,6 +120,7 @@ Vestibulum ac accumsan lorem. Mauris a pretium lacus. Etiam a dictum ligula. Fus
                         <viewLayoutGuide key="safeArea" id="0u3-ND-OWL"/>
                     </view>
                     <connections>
+                        <outlet property="acceptButton" destination="fQH-Xu-rlE" id="51V-MH-oE4"/>
                         <outlet property="modifiedLabel" destination="OtM-1U-0ni" id="pa9-4I-yxA"/>
                         <outlet property="scrollView" destination="Kv6-2s-MJd" id="0Mu-RS-0yq"/>
                         <outlet property="termNoticeLabel" destination="xUx-xn-YwH" id="8Nt-n3-fOZ"/>

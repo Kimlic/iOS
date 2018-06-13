@@ -28,7 +28,7 @@ class MessageVC: UIViewController {
     }
     
     @objc func redirectHome() {
-        self.navigationController?.popToRootViewController(animated: true)
+        UIUtils.navigateToProfile(self)
     }
     
     private func setupView() {

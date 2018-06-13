@@ -27,7 +27,7 @@ class MnemonicImportVC: UIViewController {
     }
     
     @IBAction func verifyButtonPressed(_ sender: Any) {
-        
+        UIUtils.navigateToMessage(self, messageType: .successMnenomic)
     }
     
     
