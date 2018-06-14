@@ -17,8 +17,8 @@
 		3FA05207AA63FC037BD17670 /* Pods_kimlic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4839EE1351BF59D4372E9EB /* Pods_kimlic.framework */; };
 		79AD4C7E20CD050200EE9160 /* MnemonicCreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD4C7D20CD050200EE9160 /* MnemonicCreateVC.swift */; };
 		79AD4C8020CD051800EE9160 /* MnemonicCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD4C7F20CD051800EE9160 /* MnemonicCreate.storyboard */; };
-		79AD4C8220CD182500EE9160 /* ConfirmPassphraseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD4C8120CD182500EE9160 /* ConfirmPassphraseVC.swift */; };
-		79AD4C8420CD183800EE9160 /* ConfirmPassphrase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD4C8320CD183800EE9160 /* ConfirmPassphrase.storyboard */; };
+		79AD4C8220CD182500EE9160 /* VerifyPassphraseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD4C8120CD182500EE9160 /* VerifyPassphraseVC.swift */; };
+		79AD4C8420CD183800EE9160 /* VerifyPassphrase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD4C8320CD183800EE9160 /* VerifyPassphrase.storyboard */; };
 		79AD4C8720CD55DC00EE9160 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD4C8620CD55DC00EE9160 /* Settings.storyboard */; };
 		79AD4C8920CD55F000EE9160 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD4C8820CD55F000EE9160 /* SettingsVC.swift */; };
 		79AD4C8D20CE24D100EE9160 /* UserEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD4C8C20CE24D100EE9160 /* UserEmailVC.swift */; };
@@ -120,8 +120,8 @@
 		0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupGenerator.swift; sourceTree = "<group>"; };
 		79AD4C7D20CD050200EE9160 /* MnemonicCreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicCreateVC.swift; sourceTree = "<group>"; };
 		79AD4C7F20CD051800EE9160 /* MnemonicCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MnemonicCreate.storyboard; sourceTree = "<group>"; };
-		79AD4C8120CD182500EE9160 /* ConfirmPassphraseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPassphraseVC.swift; sourceTree = "<group>"; };
-		79AD4C8320CD183800EE9160 /* ConfirmPassphrase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfirmPassphrase.storyboard; sourceTree = "<group>"; };
+		79AD4C8120CD182500EE9160 /* VerifyPassphraseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPassphraseVC.swift; sourceTree = "<group>"; };
+		79AD4C8320CD183800EE9160 /* VerifyPassphrase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VerifyPassphrase.storyboard; sourceTree = "<group>"; };
 		79AD4C8620CD55DC00EE9160 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		79AD4C8820CD55F000EE9160 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		79AD4C8C20CE24D100EE9160 /* UserEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEmailVC.swift; sourceTree = "<group>"; };
@@ -437,8 +437,8 @@
 				7C7FC46820CBFDA700AC8F8F /* MnemonicImport.storyboard */,
 				79AD4C7D20CD050200EE9160 /* MnemonicCreateVC.swift */,
 				79AD4C7F20CD051800EE9160 /* MnemonicCreate.storyboard */,
-				79AD4C8120CD182500EE9160 /* ConfirmPassphraseVC.swift */,
-				79AD4C8320CD183800EE9160 /* ConfirmPassphrase.storyboard */,
+				79AD4C8120CD182500EE9160 /* VerifyPassphraseVC.swift */,
+				79AD4C8320CD183800EE9160 /* VerifyPassphrase.storyboard */,
 			);
 			path = Mnemonic;
 			sourceTree = "<group>";
@@ -650,7 +650,7 @@
 				7C75E8A020C9141E00EEB053 /* Passcode.storyboard in Resources */,
 				7C3023E320C012B10093598E /* SplashScreen.storyboard in Resources */,
 				7C8437F120D2259400DD754D /* Muli-Bold.ttf in Resources */,
-				79AD4C8420CD183800EE9160 /* ConfirmPassphrase.storyboard in Resources */,
+				79AD4C8420CD183800EE9160 /* VerifyPassphrase.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,7 +754,7 @@
 				7C99D6CD1FC7FDFD00A593C5 /* UserResponse.swift in Sources */,
 				7C8272C51FC583C600054277 /* UIImageExt.swift in Sources */,
 				7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */,
-				79AD4C8220CD182500EE9160 /* ConfirmPassphraseVC.swift in Sources */,
+				79AD4C8220CD182500EE9160 /* VerifyPassphraseVC.swift in Sources */,
 				7C02B3111FD7F238005C55E3 /* PasscodeVC.swift in Sources */,
 				7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */,
 				7C842B9F1FC2B8CC0010F98A /* UIUtils.swift in Sources */,

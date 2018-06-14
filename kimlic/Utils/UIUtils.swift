@@ -116,10 +116,10 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
-    static func navigateToMessage(_ vc: UIViewController, messageType: MessageType, message: Message? = nil){
+    // Message = Constants > StaticMessage
+    static func navigateToMessage(_ vc: UIViewController, message: Message){
         let storyboard = AppStoryboard.Message.instance
         let tarVC = storyboard.instantiateViewController(withIdentifier: MessageVC.className) as! MessageVC
-        tarVC.messageType = messageType
         tarVC.message = message
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
@@ -136,9 +136,9 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
-    static func navigateToConfirmPassphrase(_ vc: UIViewController){
-        let storyboard = AppStoryboard.ConfirmPassphrase.instance
-        let tarVC = storyboard.instantiateViewController(withIdentifier: ConfirmPassphraseVC.className) as! ConfirmPassphraseVC
+    static func navigateToVerifyPassphrase(_ vc: UIViewController){
+        let storyboard = AppStoryboard.VerifyPassphrase.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: VerifyPassphraseVC.className) as! VerifyPassphraseVC
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     

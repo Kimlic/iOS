@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MessageVC-->
         <scene sceneID="aYX-cz-tqz">
@@ -18,6 +26,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="ySZ-b3-NjG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gis-Iy-efY" userLabel="ContentView">
                                 <rect key="frame" x="40" y="20" width="295" height="647"/>
                                 <subviews>
@@ -28,15 +39,15 @@
                                             <constraint firstAttribute="height" constant="235" id="FIh-RD-kcE"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdz-JZ-PI2" userLabel="tutorialTitle">
-                                        <rect key="frame" x="0.0" y="320" width="295" height="31.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdz-JZ-PI2" userLabel="tutorialTitle">
+                                        <rect key="frame" x="0.0" y="320" width="295" height="38"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your decentralized identity successfully created." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H3-qE-iLT" userLabel="tutorialTitle">
-                                        <rect key="frame" x="0.0" y="359.5" width="295" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your decentralized identity successfully created." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8H3-qE-iLT" userLabel="tutorialTitle">
+                                        <rect key="frame" x="0.0" y="366" width="295" height="50.5"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -55,10 +66,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.5490196078431373" green="0.67450980392156867" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ySZ-b3-NjG" secondAttribute="trailing" id="0nG-Qj-FDX"/>
                             <constraint firstItem="0sZ-pM-KI1" firstAttribute="trailing" secondItem="Gis-Iy-efY" secondAttribute="trailing" constant="40" id="3qw-5I-cpe"/>
+                            <constraint firstAttribute="bottom" secondItem="ySZ-b3-NjG" secondAttribute="bottom" id="4bP-YM-mMn"/>
                             <constraint firstItem="Gis-Iy-efY" firstAttribute="top" secondItem="0sZ-pM-KI1" secondAttribute="top" id="Q6S-ss-aJN"/>
                             <constraint firstItem="Gis-Iy-efY" firstAttribute="leading" secondItem="0sZ-pM-KI1" secondAttribute="leading" constant="40" id="dxy-5P-F1U"/>
+                            <constraint firstItem="ySZ-b3-NjG" firstAttribute="top" secondItem="4B6-TJ-eOb" secondAttribute="top" id="lP9-FA-xGK"/>
                             <constraint firstItem="0sZ-pM-KI1" firstAttribute="bottom" secondItem="Gis-Iy-efY" secondAttribute="bottom" id="lfi-oe-Z2C"/>
+                            <constraint firstItem="ySZ-b3-NjG" firstAttribute="leading" secondItem="4B6-TJ-eOb" secondAttribute="leading" id="x49-bx-b5H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0sZ-pM-KI1"/>
                     </view>
@@ -75,5 +90,6 @@
     </scenes>
     <resources>
         <image name="Success_popup_illustration" width="338" height="235"/>
+        <image name="tutorial_background" width="375" height="667"/>
     </resources>
 </document>

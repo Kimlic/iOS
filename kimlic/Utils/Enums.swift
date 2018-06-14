@@ -14,11 +14,6 @@ enum PopupType {
     case qrcode
 }
 
-// Common Message Display Types
-enum MessageType {
-    case none, successPhoneNumber, successMnenomic, successPasscode, successTouchID
-}
-
 enum TouchIDNavigateTarget {
     case UserProfileVC
     case UserBasicProfileVC
@@ -44,7 +39,7 @@ enum PasscodePageType {
 enum AppStoryboard : String {
     // Must be the same as storyboard name
     case SplashScreen, SignUp, Tutorial, TermsAndConditions, PhoneNumber, Verification, Message, TouchID, Passcode,
-    MnemonicImport, MnemonicCreate, ConfirmPassphrase, Settings, UserEmail, Profile, UserInfo
+    MnemonicImport, MnemonicCreate, VerifyPassphrase, Settings, UserEmail, Profile, UserInfo
     var instance : UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
     }

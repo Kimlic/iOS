@@ -42,12 +42,15 @@ class Constants {
         static let Phones = "phones"
     }
     
-    struct Message {
-        static let congratulation = "congratulation".localized
-        static let idSecured = "congratulation".localized
-        static let successPhoneNumber = "successPhoneNumber".localized
-        static let successMnemonic = "successMnemonic".localized
-        static let successPasscode = "successPasscode".localized
-        static let successTouchID = "successTouchID".localized
+    struct StaticMessage {
+        static let addressSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "congratulation".localized, desc: "successAddress".localized)
+        static let passphraseSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "identitySecured".localized, desc: "successPassphrase".localized)
+        static let pascodeSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "identitySecured".localized, desc: "successPasscode".localized)
+        static let touchIDSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "touchIDEnabled".localized, desc: "successTouchID".localized)
+        static let verifyIDSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "congratulation".localized, desc: "successVerified".localized)
+        static let phoneNumberSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "congratulation".localized, desc: "successPhoneNumber".localized)
+        static let emailSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "congratulation".localized, desc: "successEmail".localized)
+        static let accountLinkSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "newAccount".localized, desc: "successAccount".localized)
+        static let fullNameSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "congratulation".localized, desc: "successFullname".localized)
     }
 }

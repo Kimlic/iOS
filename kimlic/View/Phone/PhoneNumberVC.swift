@@ -64,6 +64,11 @@ class PhoneNumberVC: UIViewController {
         }
     }
     
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
     @IBAction func saveButtonPressed(_ sender: Any) {
         
         guard let phoneNumber = phoneNumberTextField?.text?.trimmingCharacters(in: .whitespacesAndNewlines), !phoneNumber.isEmpty else {

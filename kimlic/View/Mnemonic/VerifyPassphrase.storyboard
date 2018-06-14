@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,204 +9,229 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Confirm PassphraseVC-->
+        <!--Verify PassphraseVC-->
         <scene sceneID="KvP-jE-wfz">
             <objects>
-                <viewController storyboardIdentifier="ConfirmPassphraseVC" id="X5a-Sb-VcU" customClass="ConfirmPassphraseVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VerifyPassphraseVC" id="X5a-Sb-VcU" customClass="VerifyPassphraseVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="StV-7S-r3c">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="syP-4v-6T1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94q-rI-JXU" userLabel="ContentView">
-                                <rect key="frame" x="40" y="20" width="240" height="548"/>
+                                <rect key="frame" x="40" y="20" width="295" height="647"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Passphrase" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oCn-B8-ZCQ">
-                                        <rect key="frame" x="0.0" y="40" width="240" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                        <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="40" width="295" height="38"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the mising words from your mnemonic passphrase" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bU9-yo-WhL">
-                                        <rect key="frame" x="0.0" y="81" width="240" height="55"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
-                                        <color key="textColor" red="0.54051808869999995" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="86" width="295" height="45.5"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2nd Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R9A-Ih-sEH" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                        <rect key="frame" x="0.0" y="156" width="240" height="45"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2nd Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R9A-Ih-sEH" customClass="CustomTextField" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="161.5" width="295" height="45"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>
                                         </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="p6L-Q3-ZDG"/>
                                         </constraints>
-                                        <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" red="0.81960784310000001" green="0.90980392160000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
-                                                <real key="value" value="0.69999999999999996"/>
+                                                <real key="value" value="0.80000000000000004"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.59999999999999998" green="0.83137254900000002" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="NO"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                 <integer key="value" value="50"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.81960784310000001" green="0.90980392160000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cz1-RF-aFY">
-                                        <rect key="frame" x="0.0" y="468" width="240" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cz1-RF-aFY" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="517" width="295" height="50"/>
+                                        <color key="backgroundColor" red="0.59607843140000005" green="0.85098039219999999" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="39r-eE-XGb"/>
+                                            <constraint firstAttribute="height" constant="50" id="Ofi-Av-pfJ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
-                                        <state key="normal" title="Verify"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                        <state key="normal" title="Verify">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="verifyButtonPressed:" destination="X5a-Sb-VcU" eventType="touchUpInside" id="Kli-aZ-ZDU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lv-ok-2j0">
-                                        <rect key="frame" x="87" y="418" width="66" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lv-ok-2j0" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="108" y="567" width="79" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="lQr-8e-Aeg"/>
+                                            <constraint firstAttribute="height" constant="50" id="bmO-zs-kmB"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
-                                        <state key="normal" title="Go Back"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                        <state key="normal" title="Go Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="cancelButtonPressed:" destination="X5a-Sb-VcU" eventType="touchUpInside" id="Ogx-ny-3D2"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="4th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-7p-jBy">
-                                        <rect key="frame" x="0.0" y="216" width="240" height="45"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="4th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-7p-jBy" customClass="CustomTextField" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="221.5" width="295" height="45"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>
                                         </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="1Zm-Hs-DZd"/>
                                         </constraints>
-                                        <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" red="0.81960784310000001" green="0.90980392160000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
-                                                <real key="value" value="0.69999999999999996"/>
+                                                <real key="value" value="0.80000000000000004"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.59999999999999998" green="0.83137254900000002" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="NO"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                 <integer key="value" value="50"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.81960784310000001" green="0.90980392160000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="5th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dhp-AS-4xw">
-                                        <rect key="frame" x="0.0" y="276" width="240" height="45"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="5th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dhp-AS-4xw" customClass="CustomTextField" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="281.5" width="295" height="45"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>
                                         </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="6aQ-FV-qBM"/>
                                         </constraints>
-                                        <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" red="0.81960784310000001" green="0.90980392160000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
-                                                <real key="value" value="0.69999999999999996"/>
+                                                <real key="value" value="0.80000000000000004"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.59999999999999998" green="0.83137254900000002" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="NO"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                 <integer key="value" value="50"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.81960784310000001" green="0.90980392160000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="12th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJs-PJ-0bC">
-                                        <rect key="frame" x="0.0" y="336" width="240" height="45"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="12th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJs-PJ-0bC" customClass="CustomTextField" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="341.5" width="295" height="45"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>
                                         </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="EwQ-RR-WTn"/>
                                         </constraints>
-                                        <color key="textColor" red="0.54117647059999996" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" red="0.81960784310000001" green="0.90980392160000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
-                                                <real key="value" value="0.69999999999999996"/>
+                                                <real key="value" value="0.80000000000000004"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.59999999999999998" green="0.83137254900000002" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="NO"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                 <integer key="value" value="50"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.81960784310000001" green="0.90980392160000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ieo-7p-jBy" firstAttribute="top" secondItem="R9A-Ih-sEH" secondAttribute="bottom" constant="15" id="065-kM-Bzj"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cz1-RF-aFY" secondAttribute="trailing" id="2bT-DK-Jmm"/>
                                     <constraint firstAttribute="trailing" secondItem="bU9-yo-WhL" secondAttribute="trailing" id="2kh-rK-UbR"/>
                                     <constraint firstAttribute="trailing" secondItem="ieo-7p-jBy" secondAttribute="trailing" id="4cr-sd-a4U"/>
                                     <constraint firstItem="Dhp-AS-4xw" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="794-fu-F3Y"/>
                                     <constraint firstItem="bU9-yo-WhL" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="8IU-O2-nnL"/>
                                     <constraint firstAttribute="trailing" secondItem="R9A-Ih-sEH" secondAttribute="trailing" id="Eaw-vm-eY7"/>
+                                    <constraint firstItem="Cz1-RF-aFY" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="Hzd-yc-l59"/>
                                     <constraint firstItem="MJs-PJ-0bC" firstAttribute="top" secondItem="Dhp-AS-4xw" secondAttribute="bottom" constant="15" id="I2o-UM-wfv"/>
-                                    <constraint firstAttribute="bottom" secondItem="Cz1-RF-aFY" secondAttribute="bottom" constant="30" id="KK9-DF-8D5"/>
-                                    <constraint firstAttribute="trailing" secondItem="Cz1-RF-aFY" secondAttribute="trailing" id="Kr7-0x-vPQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Lv-ok-2j0" secondAttribute="bottom" constant="30" id="KTs-lS-0Fs"/>
+                                    <constraint firstItem="4Lv-ok-2j0" firstAttribute="top" secondItem="Cz1-RF-aFY" secondAttribute="bottom" id="Lmm-j7-FsE"/>
                                     <constraint firstAttribute="trailing" secondItem="MJs-PJ-0bC" secondAttribute="trailing" id="OO2-j0-GqT"/>
                                     <constraint firstItem="ieo-7p-jBy" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="OQD-Wx-5jU"/>
                                     <constraint firstItem="Dhp-AS-4xw" firstAttribute="top" secondItem="ieo-7p-jBy" secondAttribute="bottom" constant="15" id="Pd3-Xl-cM0"/>
                                     <constraint firstAttribute="trailing" secondItem="Dhp-AS-4xw" secondAttribute="trailing" id="Qor-ly-YBd"/>
                                     <constraint firstItem="R9A-Ih-sEH" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="R3O-aC-7YZ"/>
-                                    <constraint firstItem="4Lv-ok-2j0" firstAttribute="centerX" secondItem="Cz1-RF-aFY" secondAttribute="centerX" id="T9j-iz-Hc2"/>
-                                    <constraint firstItem="R9A-Ih-sEH" firstAttribute="top" secondItem="bU9-yo-WhL" secondAttribute="bottom" constant="20" id="cXC-O0-OB8"/>
-                                    <constraint firstItem="bU9-yo-WhL" firstAttribute="top" secondItem="oCn-B8-ZCQ" secondAttribute="bottom" id="ed8-EE-UcZ"/>
+                                    <constraint firstItem="R9A-Ih-sEH" firstAttribute="top" secondItem="bU9-yo-WhL" secondAttribute="bottom" constant="30" id="cXC-O0-OB8"/>
+                                    <constraint firstItem="bU9-yo-WhL" firstAttribute="top" secondItem="oCn-B8-ZCQ" secondAttribute="bottom" constant="8" id="ed8-EE-UcZ"/>
                                     <constraint firstItem="MJs-PJ-0bC" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="mFq-zf-KBh"/>
                                     <constraint firstItem="oCn-B8-ZCQ" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="nF6-g5-I2e"/>
-                                    <constraint firstItem="Cz1-RF-aFY" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="rMn-FJ-sA1"/>
                                     <constraint firstItem="oCn-B8-ZCQ" firstAttribute="top" secondItem="94q-rI-JXU" secondAttribute="top" constant="40" id="sR0-N6-JMH"/>
                                     <constraint firstAttribute="trailing" secondItem="oCn-B8-ZCQ" secondAttribute="trailing" id="uey-Pr-EIJ"/>
-                                    <constraint firstItem="Cz1-RF-aFY" firstAttribute="top" secondItem="4Lv-ok-2j0" secondAttribute="bottom" id="z7K-LO-8AJ"/>
+                                    <constraint firstItem="4Lv-ok-2j0" firstAttribute="centerX" secondItem="94q-rI-JXU" secondAttribute="centerX" id="ws3-O7-jXd"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="syP-4v-6T1" secondAttribute="bottom" id="510-ul-Hzh"/>
                             <constraint firstItem="94q-rI-JXU" firstAttribute="leading" secondItem="BOG-bq-cQM" secondAttribute="leading" constant="40" id="6Av-KN-qF6"/>
+                            <constraint firstItem="syP-4v-6T1" firstAttribute="top" secondItem="StV-7S-r3c" secondAttribute="top" id="9Wu-vf-5KC"/>
+                            <constraint firstItem="syP-4v-6T1" firstAttribute="leading" secondItem="StV-7S-r3c" secondAttribute="leading" id="Hsp-sU-zjY"/>
+                            <constraint firstAttribute="trailing" secondItem="syP-4v-6T1" secondAttribute="trailing" id="NcB-96-LNd"/>
                             <constraint firstItem="94q-rI-JXU" firstAttribute="top" secondItem="BOG-bq-cQM" secondAttribute="top" id="Vb4-62-QO8"/>
                             <constraint firstItem="BOG-bq-cQM" firstAttribute="bottom" secondItem="94q-rI-JXU" secondAttribute="bottom" id="g47-ks-RY8"/>
                             <constraint firstItem="BOG-bq-cQM" firstAttribute="trailing" secondItem="94q-rI-JXU" secondAttribute="trailing" constant="40" id="qJs-tk-EiO"/>
@@ -225,4 +250,7 @@
             <point key="canvasLocation" x="116" y="143"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tutorial_background" width="375" height="667"/>
+    </resources>
 </document>

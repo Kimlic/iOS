@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="sdz-m6-ycN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAQ-OC-sbT" userLabel="ContentView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
@@ -42,8 +45,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sdz-m6-ycN" secondAttribute="trailing" id="6Cs-aZ-j18"/>
+                            <constraint firstItem="sdz-m6-ycN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="L3n-DT-PeV"/>
                             <constraint firstItem="VAQ-OC-sbT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LkQ-P5-PPC"/>
                             <constraint firstItem="VAQ-OC-sbT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TKG-yi-qyK"/>
+                            <constraint firstItem="sdz-m6-ycN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UN6-a9-ozN"/>
+                            <constraint firstAttribute="bottom" secondItem="sdz-m6-ycN" secondAttribute="bottom" id="fnK-DF-tUK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VAQ-OC-sbT" secondAttribute="trailing" id="s5Y-q1-9N4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VAQ-OC-sbT" secondAttribute="bottom" id="uQF-hY-CuT"/>
                         </constraints>
@@ -62,5 +69,6 @@
     </scenes>
     <resources>
         <image name="kimlic_shield_logo" width="131" height="156"/>
+        <image name="tutorial_background" width="375" height="667"/>
     </resources>
 </document>

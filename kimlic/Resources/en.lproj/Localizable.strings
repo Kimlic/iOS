@@ -57,14 +57,24 @@
 //*********** Common Message *********************
 
 // Title
-"congratulation" = "Congratulation!";
-"idSecured" = "Your ID Secured !";
+"congratulation" = "Congratulations!";
+"identitySecured" = "Your Identity is Secured!";
+"touchIDEnabled" = "Your Touch ID Enabled";
+"newAccount" = "New Account Linked!";
 
 // Desc
-"successPhoneNumber" = "Your decentralized identity successfully created.";
-"successMnemonic" = "Your mnemonic passphrase matched.";
+"successAddress" = "Your address added successfuly.";
+"successPassphrase" = "Mnemonic Passphrase created.";
 "successPasscode" = "Your account passcode created successfully.";
-"successTouchID" = "Your Touch ID Enabled.";
+"successTouchID" = "Now, You can use your Touch ID to open kimlic app.";
+"successVerified" = "Your Identity have been verified.";
+"successPhoneNumber" = "Your Phone Number have been verified.";
+"successEmail" = "Your Email have been verified.";
+"successAccount" = "You have an access";
+"successFullname" = "Full name added to your Identity successfully.";
+
+
+
 //*******************************************************
 
 

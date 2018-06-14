@@ -105,7 +105,11 @@ class VerificationVC: UIViewController {
     
     private func verifyAndNavigate() {
         if self.codeVerify() {
-            UIUtils.navigateToMessage(self, messageType: .successPhoneNumber)
+            if email != nil {
+                UIUtils.navigateToMessage(self, message: Constants.StaticMessage.emailSuccessfull)
+            }else {
+                UIUtils.navigateToMessage(self, message: Constants.StaticMessage.phoneNumberSuccessfull)
+            }
         }else {
             PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "incorrectCodeTitle".localized, message: "incorrectCodeMessage".localized, buttonTitle: "incorrectCodeButtonTitle".localized))
         }

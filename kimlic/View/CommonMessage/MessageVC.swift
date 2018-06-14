@@ -14,8 +14,6 @@ class MessageVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     
-    
-    var messageType: MessageType = .successPhoneNumber
     var message: Message?
 
     override func viewDidLoad() {
@@ -32,28 +30,8 @@ class MessageVC: UIViewController {
     }
     
     private func setupView() {
-        switch messageType {
-        case .none:
-            iconImageView.image = message?.icon
-            titleLabel.text = message?.title
-            descLabel.text = message?.desc
-        case .successPhoneNumber:
-            iconImageView.image = #imageLiteral(resourceName: "Success_popup_illustration")
-            titleLabel.text = Constants.Message.congratulation
-            descLabel.text = Constants.Message.successPhoneNumber
-        case .successMnenomic:
-            iconImageView.image = #imageLiteral(resourceName: "Success_popup_illustration")
-            titleLabel.text = Constants.Message.congratulation
-            descLabel.text = Constants.Message.successMnemonic
-        case .successPasscode:
-            iconImageView.image = #imageLiteral(resourceName: "tutorial_3_illustration")
-            titleLabel.text = Constants.Message.idSecured
-            descLabel.text = Constants.Message.successPasscode
-        case .successTouchID:
-            iconImageView.image = #imageLiteral(resourceName: "touch_ID_popup_illustration")
-            titleLabel.text = Constants.Message.congratulation
-            descLabel.text = Constants.Message.successTouchID
-        
-        }
+        iconImageView.image = message?.icon
+        titleLabel.text = message?.title
+        descLabel.text = message?.desc
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ConfirmPassphraseVC.swift
+//  VerifyPassphraseVC.swift
 //  kimlic
 //
 //  Created by paltimoz on 10.06.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConfirmPassphraseVC: UIViewController {
+class VerifyPassphraseVC: UIViewController {
     
     
     @IBOutlet weak var firstPassphraseTextField: UITextField!

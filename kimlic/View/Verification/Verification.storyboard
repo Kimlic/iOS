@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,264 +9,195 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--VerificationVC-->
         <scene sceneID="OhW-s4-u0X">
             <objects>
                 <viewController storyboardIdentifier="VerificationVC" id="iNw-St-gwC" customClass="VerificationVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nBD-gc-aEc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="nhP-l5-TLG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fw-hf-VFB" userLabel="ContentView">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="40" y="20" width="240" height="548"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czb-g5-rff" userLabel="BodyView">
-                                        <rect key="frame" x="40" y="0.0" width="334" height="716"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone_verify_message_illustration" translatesAutoresizingMaskIntoConstraints="NO" id="GLl-j3-m5J">
+                                        <rect key="frame" x="93" y="40" width="54" height="79"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="3Bq-EL-Pqn"/>
+                                            <constraint firstAttribute="height" constant="79" id="PlD-r6-E1m"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hdD-ab-ByJ">
+                                        <rect key="frame" x="4" y="159" width="233" height="21.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone_verify_message_illustration" translatesAutoresizingMaskIntoConstraints="NO" id="GLl-j3-m5J">
-                                                <rect key="frame" x="140" y="30" width="54" height="79"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code sent to" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vpL-0n-DNw">
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="21.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="54" id="BpB-ea-4WZ"/>
-                                                    <constraint firstAttribute="height" constant="79" id="OIp-1Q-yf2"/>
+                                                    <constraint firstAttribute="height" constant="21.5" id="ail-WZ-Nl0"/>
                                                 </constraints>
-                                            </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hdD-ab-ByJ">
-                                                <rect key="frame" x="0.0" y="139" width="334" height="21.666666666666657"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code sent to" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vpL-0n-DNw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="145.33333333333334" height="21.666666666666668"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21.5" id="ail-WZ-Nl0"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="555 653 49 59" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gGE-mf-j6J">
-                                                        <rect key="frame" x="150.33333333333337" y="0.0" width="183.66666666666663" height="21.666666666666668"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21.5" id="Ltv-B9-gjJ"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
+                                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="555 653 49 59" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gGE-mf-j6J">
+                                                <rect key="frame" x="110" y="0.0" width="123" height="21.5"/>
                                                 <constraints>
-                                                    <constraint firstItem="vpL-0n-DNw" firstAttribute="leading" secondItem="hdD-ab-ByJ" secondAttribute="leading" id="5yf-o3-eP8"/>
-                                                    <constraint firstAttribute="bottom" secondItem="gGE-mf-j6J" secondAttribute="bottom" id="AQu-8t-zXk"/>
-                                                    <constraint firstAttribute="bottom" secondItem="vpL-0n-DNw" secondAttribute="bottom" id="NMl-OL-Tgi"/>
-                                                    <constraint firstAttribute="trailing" secondItem="gGE-mf-j6J" secondAttribute="trailing" id="RmV-uj-Dsq"/>
-                                                    <constraint firstAttribute="height" constant="21.5" id="eyO-BD-QiO"/>
-                                                    <constraint firstItem="gGE-mf-j6J" firstAttribute="top" secondItem="hdD-ab-ByJ" secondAttribute="top" id="mKd-EU-8HE"/>
-                                                    <constraint firstItem="vpL-0n-DNw" firstAttribute="top" secondItem="hdD-ab-ByJ" secondAttribute="top" id="pPu-aK-Hwe"/>
+                                                    <constraint firstAttribute="height" constant="21.5" id="Ltv-B9-gjJ"/>
                                                 </constraints>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bj7-eC-Kz9">
-                                                <rect key="frame" x="62" y="225.66666666666666" width="210" height="44.999999999999972"/>
-                                                <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ih-FK-COq" userLabel="codeFirstNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <accessibility key="accessibilityConfiguration">
-                                                            <accessibilityTraits key="traits" selected="YES"/>
-                                                        </accessibility>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="45" id="Fgc-6Q-6Nv"/>
-                                                        </constraints>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
-                                                                <real key="value" value="0.69999999999999996"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="NO"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                                                <integer key="value" value="2"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="didEditingBegin:" destination="iNw-St-gwC" eventType="editingDidBegin" id="dNf-Ky-Y5d"/>
-                                                            <action selector="didEditingEnd:" destination="iNw-St-gwC" eventType="editingDidEnd" id="QMN-7v-FyK"/>
-                                                            <action selector="textFieldDidChange:" destination="iNw-St-gwC" eventType="editingChanged" id="wPk-vY-8Ja"/>
-                                                            <outlet property="delegate" destination="iNw-St-gwC" id="jCk-gH-07V"/>
-                                                        </connections>
-                                                    </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mK5-2x-IM2" userLabel="codeSecondNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
-                                                        <rect key="frame" x="55" y="0.0" width="45" height="45"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <accessibility key="accessibilityConfiguration">
-                                                            <accessibilityTraits key="traits" selected="YES"/>
-                                                        </accessibility>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
-                                                                <real key="value" value="0.69999999999999996"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="NO"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                                                <integer key="value" value="2"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="didEditingBegin:" destination="iNw-St-gwC" eventType="editingDidBegin" id="k0u-mG-eTi"/>
-                                                            <action selector="didEditingEnd:" destination="iNw-St-gwC" eventType="editingDidEnd" id="bvw-Rm-4jZ"/>
-                                                            <action selector="textFieldDidChange:" destination="iNw-St-gwC" eventType="editingChanged" id="Kxw-YS-mDI"/>
-                                                            <outlet property="delegate" destination="iNw-St-gwC" id="wtS-fa-2Ee"/>
-                                                        </connections>
-                                                    </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KKm-uJ-gSe" userLabel="codeThirdNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
-                                                        <rect key="frame" x="110" y="0.0" width="45" height="45"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <accessibility key="accessibilityConfiguration">
-                                                            <accessibilityTraits key="traits" selected="YES"/>
-                                                        </accessibility>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
-                                                                <real key="value" value="0.69999999999999996"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="NO"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                                                <integer key="value" value="2"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="didEditingBegin:" destination="iNw-St-gwC" eventType="editingDidBegin" id="Dcm-UT-keE"/>
-                                                            <action selector="didEditingEnd:" destination="iNw-St-gwC" eventType="editingDidEnd" id="4F6-bf-ebK"/>
-                                                            <action selector="textFieldDidChange:" destination="iNw-St-gwC" eventType="editingChanged" id="M72-dG-b3v"/>
-                                                            <outlet property="delegate" destination="iNw-St-gwC" id="Ikr-bB-7U8"/>
-                                                        </connections>
-                                                    </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AG1-N9-QqC" userLabel="codeFourthNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
-                                                        <rect key="frame" x="165" y="0.0" width="45" height="45"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <accessibility key="accessibilityConfiguration">
-                                                            <accessibilityTraits key="traits" selected="YES"/>
-                                                        </accessibility>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
-                                                                <real key="value" value="0.69999999999999996"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="NO"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                                                <integer key="value" value="2"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                                                <color key="value" red="0.16078431369999999" green="0.62352941179999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="didEditingBegin:" destination="iNw-St-gwC" eventType="editingDidBegin" id="LvM-es-NZT"/>
-                                                            <action selector="didEditingEnd:" destination="iNw-St-gwC" eventType="editingDidEnd" id="qYE-Zj-uWX"/>
-                                                            <action selector="textFieldDidChange:" destination="iNw-St-gwC" eventType="editingChanged" id="SZb-mI-5FD"/>
-                                                            <outlet property="delegate" destination="iNw-St-gwC" id="xIc-mB-GRd"/>
-                                                        </connections>
-                                                    </textField>
-                                                </subviews>
+                                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdb-ev-h14">
+                                        <rect key="frame" x="35.5" y="180.5" width="169" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Sf6-Gw-JQs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
+                                        <state key="normal" title="Change phone number">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changePhoneButtonPressed:" destination="iNw-St-gwC" eventType="touchUpInside" id="tKe-wB-uIg"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bj7-eC-Kz9">
+                                        <rect key="frame" x="15" y="250.5" width="210" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ih-FK-COq" userLabel="codeFirstNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" selected="YES"/>
+                                                </accessibility>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="Yky-fG-ybQ"/>
+                                                    <constraint firstAttribute="width" constant="45" id="Fgc-6Q-6Nv"/>
                                                 </constraints>
-                                            </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-Tf-7Ld">
-                                                <rect key="frame" x="0.0" y="290.66666666666669" width="334" height="50"/>
-                                                <color key="backgroundColor" red="0.59607843140000005" green="0.85098039219999999" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="Pml-wb-BrA"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                                <state key="normal" title="Verify Number">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="26"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                 <connections>
-                                                    <action selector="verifyButtonPressed:" destination="iNw-St-gwC" eventType="touchUpInside" id="TdS-2z-Qxz"/>
+                                                    <action selector="didEditingBegin:" destination="iNw-St-gwC" eventType="editingDidBegin" id="dNf-Ky-Y5d"/>
+                                                    <action selector="didEditingEnd:" destination="iNw-St-gwC" eventType="editingDidEnd" id="QMN-7v-FyK"/>
+                                                    <action selector="textFieldDidChange:" destination="iNw-St-gwC" eventType="editingChanged" id="wPk-vY-8Ja"/>
+                                                    <outlet property="delegate" destination="iNw-St-gwC" id="jCk-gH-07V"/>
                                                 </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdb-ev-h14">
-                                                <rect key="frame" x="89" y="160.66666666666666" width="157" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="4Pq-12-K1z"/>
-                                                </constraints>
-                                                <state key="normal" title="Change phone number">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mK5-2x-IM2" userLabel="codeSecondNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
+                                                <rect key="frame" x="55" y="0.0" width="45" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" selected="YES"/>
+                                                </accessibility>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                 <connections>
-                                                    <action selector="changePhoneButtonPressed:" destination="iNw-St-gwC" eventType="touchUpInside" id="tKe-wB-uIg"/>
+                                                    <action selector="didEditingBegin:" destination="iNw-St-gwC" eventType="editingDidBegin" id="k0u-mG-eTi"/>
+                                                    <action selector="didEditingEnd:" destination="iNw-St-gwC" eventType="editingDidEnd" id="bvw-Rm-4jZ"/>
+                                                    <action selector="textFieldDidChange:" destination="iNw-St-gwC" eventType="editingChanged" id="Kxw-YS-mDI"/>
+                                                    <outlet property="delegate" destination="iNw-St-gwC" id="wtS-fa-2Ee"/>
                                                 </connections>
-                                            </button>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KKm-uJ-gSe" userLabel="codeThirdNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
+                                                <rect key="frame" x="110" y="0.0" width="45" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" selected="YES"/>
+                                                </accessibility>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                <connections>
+                                                    <action selector="didEditingBegin:" destination="iNw-St-gwC" eventType="editingDidBegin" id="Dcm-UT-keE"/>
+                                                    <action selector="didEditingEnd:" destination="iNw-St-gwC" eventType="editingDidEnd" id="4F6-bf-ebK"/>
+                                                    <action selector="textFieldDidChange:" destination="iNw-St-gwC" eventType="editingChanged" id="M72-dG-b3v"/>
+                                                    <outlet property="delegate" destination="iNw-St-gwC" id="Ikr-bB-7U8"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AG1-N9-QqC" userLabel="codeFourthNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
+                                                <rect key="frame" x="165" y="0.0" width="45" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" selected="YES"/>
+                                                </accessibility>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                <connections>
+                                                    <action selector="didEditingBegin:" destination="iNw-St-gwC" eventType="editingDidBegin" id="LvM-es-NZT"/>
+                                                    <action selector="didEditingEnd:" destination="iNw-St-gwC" eventType="editingDidEnd" id="qYE-Zj-uWX"/>
+                                                    <action selector="textFieldDidChange:" destination="iNw-St-gwC" eventType="editingChanged" id="SZb-mI-5FD"/>
+                                                    <outlet property="delegate" destination="iNw-St-gwC" id="xIc-mB-GRd"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="kFq-Tf-7Ld" secondAttribute="trailing" id="423-0w-gIB"/>
-                                            <constraint firstItem="Jdb-ev-h14" firstAttribute="centerX" secondItem="czb-g5-rff" secondAttribute="centerX" id="4mz-qC-aUl"/>
-                                            <constraint firstItem="GLl-j3-m5J" firstAttribute="centerX" secondItem="czb-g5-rff" secondAttribute="centerX" id="7KX-9h-klN"/>
-                                            <constraint firstItem="GLl-j3-m5J" firstAttribute="top" secondItem="czb-g5-rff" secondAttribute="top" constant="30" id="Ae4-Vd-YFW"/>
-                                            <constraint firstItem="hdD-ab-ByJ" firstAttribute="leading" secondItem="czb-g5-rff" secondAttribute="leading" id="QyU-r3-GXl"/>
-                                            <constraint firstAttribute="trailing" secondItem="hdD-ab-ByJ" secondAttribute="trailing" id="Rwb-AX-Ylt"/>
-                                            <constraint firstItem="hdD-ab-ByJ" firstAttribute="top" secondItem="GLl-j3-m5J" secondAttribute="bottom" constant="30" id="fV0-lT-CRD"/>
-                                            <constraint firstItem="bj7-eC-Kz9" firstAttribute="top" secondItem="Jdb-ev-h14" secondAttribute="bottom" constant="25" id="lL7-9d-NMU"/>
-                                            <constraint firstItem="kFq-Tf-7Ld" firstAttribute="leading" secondItem="czb-g5-rff" secondAttribute="leading" id="mXp-a9-7er"/>
-                                            <constraint firstItem="bj7-eC-Kz9" firstAttribute="centerX" secondItem="czb-g5-rff" secondAttribute="centerX" id="oHJ-Hk-FlI"/>
-                                            <constraint firstItem="Jdb-ev-h14" firstAttribute="top" secondItem="hdD-ab-ByJ" secondAttribute="bottom" id="pxr-rR-7FA"/>
-                                            <constraint firstItem="kFq-Tf-7Ld" firstAttribute="top" secondItem="bj7-eC-Kz9" secondAttribute="bottom" constant="20" id="rfJ-gJ-b60"/>
+                                            <constraint firstAttribute="height" constant="50" id="dbP-jJ-bLN"/>
                                         </constraints>
-                                    </view>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-Tf-7Ld" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="331" width="240" height="50"/>
+                                        <color key="backgroundColor" red="0.59607843140000005" green="0.85098039219999999" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="rTN-uH-8ay"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                        <state key="normal" title="Verify Number">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="verifyButtonPressed:" destination="iNw-St-gwC" eventType="touchUpInside" id="TdS-2z-Qxz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="czb-g5-rff" firstAttribute="top" secondItem="8Fw-hf-VFB" secondAttribute="top" id="02z-fc-sKN"/>
-                                    <constraint firstAttribute="trailing" secondItem="czb-g5-rff" secondAttribute="trailing" constant="40" id="0cK-QO-UHB"/>
-                                    <constraint firstAttribute="bottom" secondItem="czb-g5-rff" secondAttribute="bottom" id="mLh-f0-4sf"/>
-                                    <constraint firstItem="czb-g5-rff" firstAttribute="leading" secondItem="8Fw-hf-VFB" secondAttribute="leading" constant="40" id="naM-Ei-ftB"/>
+                                    <constraint firstItem="kFq-Tf-7Ld" firstAttribute="top" secondItem="bj7-eC-Kz9" secondAttribute="bottom" constant="30" id="2Fy-Ed-cVb"/>
+                                    <constraint firstAttribute="trailing" secondItem="kFq-Tf-7Ld" secondAttribute="trailing" id="HsI-Ki-Sd0"/>
+                                    <constraint firstItem="GLl-j3-m5J" firstAttribute="top" secondItem="8Fw-hf-VFB" secondAttribute="top" constant="40" id="X3l-OD-M9W"/>
+                                    <constraint firstItem="Jdb-ev-h14" firstAttribute="top" secondItem="hdD-ab-ByJ" secondAttribute="bottom" id="b6J-Pr-nYI"/>
+                                    <constraint firstItem="Jdb-ev-h14" firstAttribute="centerX" secondItem="8Fw-hf-VFB" secondAttribute="centerX" id="d0N-cq-0yz"/>
+                                    <constraint firstItem="hdD-ab-ByJ" firstAttribute="top" secondItem="GLl-j3-m5J" secondAttribute="bottom" constant="40" id="fSx-x6-cMl"/>
+                                    <constraint firstItem="hdD-ab-ByJ" firstAttribute="centerX" secondItem="8Fw-hf-VFB" secondAttribute="centerX" id="nMi-l3-40I"/>
+                                    <constraint firstItem="kFq-Tf-7Ld" firstAttribute="leading" secondItem="8Fw-hf-VFB" secondAttribute="leading" id="oCo-If-G3O"/>
+                                    <constraint firstItem="bj7-eC-Kz9" firstAttribute="top" secondItem="Jdb-ev-h14" secondAttribute="bottom" constant="30" id="pHv-v3-5vD"/>
+                                    <constraint firstItem="GLl-j3-m5J" firstAttribute="centerX" secondItem="8Fw-hf-VFB" secondAttribute="centerX" id="v1W-mK-cH8"/>
+                                    <constraint firstItem="bj7-eC-Kz9" firstAttribute="centerX" secondItem="8Fw-hf-VFB" secondAttribute="centerX" id="xQO-xE-JrK"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.25098039220000001" green="0.71372549019999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8Fw-hf-VFB" firstAttribute="leading" secondItem="NOB-X3-46e" secondAttribute="leading" id="E4K-zh-al7"/>
-                            <constraint firstItem="8Fw-hf-VFB" firstAttribute="trailing" secondItem="NOB-X3-46e" secondAttribute="trailing" id="YA4-zi-dAa"/>
-                            <constraint firstItem="NOB-X3-46e" firstAttribute="bottom" secondItem="8Fw-hf-VFB" secondAttribute="bottom" id="fJP-4z-1Yi"/>
-                            <constraint firstItem="8Fw-hf-VFB" firstAttribute="top" secondItem="NOB-X3-46e" secondAttribute="top" id="mbv-LP-9oq"/>
+                            <constraint firstAttribute="trailing" secondItem="nhP-l5-TLG" secondAttribute="trailing" id="7eP-dR-of9"/>
+                            <constraint firstItem="NOB-X3-46e" firstAttribute="trailing" secondItem="8Fw-hf-VFB" secondAttribute="trailing" constant="40" id="Esw-xO-eMo"/>
+                            <constraint firstItem="nhP-l5-TLG" firstAttribute="leading" secondItem="nBD-gc-aEc" secondAttribute="leading" id="M2Y-qw-gmT"/>
+                            <constraint firstItem="8Fw-hf-VFB" firstAttribute="top" secondItem="NOB-X3-46e" secondAttribute="top" id="emq-Pc-0RL"/>
+                            <constraint firstAttribute="bottom" secondItem="nhP-l5-TLG" secondAttribute="bottom" id="jNP-Cq-bM8"/>
+                            <constraint firstItem="8Fw-hf-VFB" firstAttribute="bottom" secondItem="NOB-X3-46e" secondAttribute="bottom" id="kbs-vM-mi6"/>
+                            <constraint firstItem="nhP-l5-TLG" firstAttribute="top" secondItem="nBD-gc-aEc" secondAttribute="top" id="oPi-1k-B3H"/>
+                            <constraint firstItem="8Fw-hf-VFB" firstAttribute="leading" secondItem="NOB-X3-46e" secondAttribute="leading" constant="40" id="ulx-JT-F84"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NOB-X3-46e"/>
                     </view>
@@ -281,10 +212,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbf-6B-bcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4743.1999999999998" y="111.99400299850076"/>
+            <point key="canvasLocation" x="4741.875" y="110.91549295774648"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Phone_verify_message_illustration" width="119" height="158"/>
+        <image name="Phone_verify_message_illustration" width="119" height="159"/>
+        <image name="tutorial_background" width="375" height="667"/>
     </resources>
 </document>
