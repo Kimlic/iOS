@@ -57,5 +57,13 @@
 		<key>ClientSecret</key>
 		<string>${CLIENT_SECRET}</string>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Muli-SemiBold.ttf</string>
+		<string>Muli-Regular.ttf</string>
+		<string>Muli-Light.ttf</string>
+		<string>Muli-Bold.ttf</string>
+		<string>Muli-Italic.ttf</string>
+	</array>
 </dict>
 </plist>

@@ -19,6 +19,8 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func recoverIdentityButtonPressed(_ sender: Any) {
-        UIUtils.navigateToTerms(self, nextPage: .accountRecovery)
+//        UIUtils.navigateToTerms(self, nextPage: .accountRecovery)
+//        UIUtils.navigateToEmail(self)
+        UIUtils.navigateToUserInfo(self)
     }
 }

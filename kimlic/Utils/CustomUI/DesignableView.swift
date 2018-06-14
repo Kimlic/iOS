@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TextFieldEffects
 
 @IBDesignable
 class CustomView: UIView {
@@ -20,8 +21,28 @@ class CustomButton: UIButton {
 class CustomLabel: UILabel {
 }
 
+private var __maxLengths = [UITextField: Int]()
+
 @IBDesignable
-class CustomTextField: UITextField {
+class CustomTextField: HoshiTextField {
+    
+    @IBInspectable var maxLength: Int {
+        get {
+            guard let l = __maxLengths[self] else {
+                return 150 // (global default-limit. or just, Int.max)
+            }
+            return l
+        }
+        set {
+            __maxLengths[self] = newValue
+            addTarget(self, action: #selector(fix), for: .editingChanged)
+        }
+    }
+    
+    @objc func fix(textField: UITextField) {
+        let text = textField.text
+        textField.text = text?.safelyLimitedTo(length: maxLength)
+    }
     
     @IBInspectable
     var placeHolderColor: UIColor? {
@@ -75,7 +96,7 @@ class CustomTextView: UITextView, UITextViewDelegate {
     /// - Parameter textView: The UITextView that got updated
     public func textViewDidChange(_ textView: UITextView) {
         if let placeholderLabel = self.viewWithTag(100) as? UILabel {
-            placeholderLabel.isHidden = self.text.characters.count > 0
+            placeholderLabel.isHidden = self.text.count > 0
         }
     }
     
@@ -102,7 +123,7 @@ class CustomTextView: UITextView, UITextViewDelegate {
         placeholderLabel.textColor = UIColor.lightGray
         placeholderLabel.tag = 100
         
-        placeholderLabel.isHidden = self.text.characters.count > 0
+        placeholderLabel.isHidden = self.text.count > 0
         
         self.addSubview(placeholderLabel)
         self.resizePlaceholder()
@@ -111,7 +132,7 @@ class CustomTextView: UITextView, UITextViewDelegate {
     
 }
 
-extension CustomView {
+extension UIView {
     
     @IBInspectable
     var cornerRadius: CGFloat {

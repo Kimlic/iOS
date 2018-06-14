@@ -61,6 +61,12 @@
 		7C7FC46B20CC07D100AC8F8F /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7FC46A20CC07D100AC8F8F /* DesignableView.swift */; };
 		7C8272C51FC583C600054277 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8272C41FC583C600054277 /* UIImageExt.swift */; };
 		7C842B9F1FC2B8CC0010F98A /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C842B9E1FC2B8CC0010F98A /* UIUtils.swift */; };
+		7C8437EC20D2259400DD754D /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8437DE20D2258D00DD754D /* Muli-Regular.ttf */; };
+		7C8437EE20D2259400DD754D /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8437E020D2258F00DD754D /* Muli-SemiBold.ttf */; };
+		7C8437F020D2259400DD754D /* Muli-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8437E220D2259000DD754D /* Muli-Italic.ttf */; };
+		7C8437F120D2259400DD754D /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8437E320D2259000DD754D /* Muli-Bold.ttf */; };
+		7C8437F820D2259400DD754D /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8437EA20D2259400DD754D /* Muli-Light.ttf */; };
+		7C8437FC20D226C800DD754D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C48385D1FB5F62500FC864A /* Info.plist */; };
 		7C882B0A1FC3FD1B0064DF7F /* ScanCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C882B091FC3FD1B0064DF7F /* ScanCodeVC.swift */; };
 		7C8A80CD1FBD668D009E74F9 /* PermissionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8A80CC1FBD668D009E74F9 /* PermissionDetailVC.swift */; };
 		7C8A80CF1FBD839E009E74F9 /* PermissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8A80CE1FBD839E009E74F9 /* PermissionCell.swift */; };
@@ -160,6 +166,11 @@
 		7C7FC46A20CC07D100AC8F8F /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		7C8272C41FC583C600054277 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		7C842B9E1FC2B8CC0010F98A /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
+		7C8437DE20D2258D00DD754D /* Muli-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Regular.ttf"; sourceTree = "<group>"; };
+		7C8437E020D2258F00DD754D /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-SemiBold.ttf"; sourceTree = "<group>"; };
+		7C8437E220D2259000DD754D /* Muli-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Italic.ttf"; sourceTree = "<group>"; };
+		7C8437E320D2259000DD754D /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
+		7C8437EA20D2259400DD754D /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Light.ttf"; sourceTree = "<group>"; };
 		7C882B091FC3FD1B0064DF7F /* ScanCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCodeVC.swift; sourceTree = "<group>"; };
 		7C8A80CC1FBD668D009E74F9 /* PermissionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionDetailVC.swift; sourceTree = "<group>"; };
 		7C8A80CE1FBD839E009E74F9 /* PermissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionCell.swift; sourceTree = "<group>"; };
@@ -432,6 +443,18 @@
 			path = Mnemonic;
 			sourceTree = "<group>";
 		};
+		7C8437DD20D222D800DD754D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7C8437E320D2259000DD754D /* Muli-Bold.ttf */,
+				7C8437E220D2259000DD754D /* Muli-Italic.ttf */,
+				7C8437EA20D2259400DD754D /* Muli-Light.ttf */,
+				7C8437DE20D2258D00DD754D /* Muli-Regular.ttf */,
+				7C8437E020D2258F00DD754D /* Muli-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7C85966F20D0FEF0005F774A /* Verification */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,6 +534,7 @@
 		7CF6556C1FBACF0D00CA9C1A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7C8437DD20D222D800DD754D /* Fonts */,
 				7CDBFE3C1FC9AA020073D70A /* CountryCode.json */,
 				7CF655731FBAF19F00CA9C1A /* Localizable.strings */,
 			);
@@ -604,22 +628,28 @@
 				79AD4C8F20CE24E700EE9160 /* UserEmail.storyboard in Resources */,
 				7C7FC46920CBFDA700AC8F8F /* MnemonicImport.storyboard in Resources */,
 				7C48385C1FB5F62500FC864A /* LaunchScreen.storyboard in Resources */,
+				7C8437F820D2259400DD754D /* Muli-Light.ttf in Resources */,
 				79AF1D2720C48BE300CCA150 /* PhoneNumber.storyboard in Resources */,
 				7C2F326520C0301700AEB314 /* SignUp.storyboard in Resources */,
 				79AF1D2D20C4A3D300CCA150 /* Verification.storyboard in Resources */,
+				7C8437EE20D2259400DD754D /* Muli-SemiBold.ttf in Resources */,
 				7CDBFE3D1FC9AA020073D70A /* CountryCode.json in Resources */,
 				0F8F2B5E1FC5D66200BEF5B2 /* PermissionCell.xib in Resources */,
 				7C90C4B720C811BA006EEF87 /* TouchID.storyboard in Resources */,
+				7C8437EC20D2259400DD754D /* Muli-Regular.ttf in Resources */,
 				7CF655711FBAF19F00CA9C1A /* Localizable.strings in Resources */,
 				7C6FC84D20CE72EE0026AF1C /* Profile.storyboard in Resources */,
 				7C4838591FB5F62500FC864A /* Assets.xcassets in Resources */,
 				7C30A62220C04A1B00EC69F7 /* TermsAndConditions.storyboard in Resources */,
 				7C4838571FB5F62500FC864A /* Main.storyboard in Resources */,
 				7C7A7FCA20C53B7200BDE95C /* Message.storyboard in Resources */,
+				7C8437FC20D226C800DD754D /* Info.plist in Resources */,
 				7CB516FB20D00DC0006FF06D /* UserInfo.storyboard in Resources */,
+				7C8437F020D2259400DD754D /* Muli-Italic.ttf in Resources */,
 				79AD4C8020CD051800EE9160 /* MnemonicCreate.storyboard in Resources */,
 				7C75E8A020C9141E00EEB053 /* Passcode.storyboard in Resources */,
 				7C3023E320C012B10093598E /* SplashScreen.storyboard in Resources */,
+				7C8437F120D2259400DD754D /* Muli-Bold.ttf in Resources */,
 				79AD4C8420CD183800EE9160 /* ConfirmPassphrase.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
