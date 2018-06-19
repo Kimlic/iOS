@@ -23,6 +23,10 @@ class SignUpVC: UIViewController {
 //        UIUtils.navigateToEmail(self)
 //        UIUtils.navigateToUserInfo(self)
 //        UIUtils.navigateToVerification(self, email: "izzeto@ratel.com.tr")
+//        UIUtils.navigateToTutorial(self)
+//        UIUtils.navigateToProfile(self)
+//        UIUtils.navigateToPhoneNumber(self)
+//        UIUtils.navigateToMnemonicCreate(self)
         UIUtils.navigateToTutorial(self)
     }
 }

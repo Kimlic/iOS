@@ -39,8 +39,20 @@ extension MnemonicCreateVC: UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PassCell", for: indexPath)
-        let passLabel = cell.viewWithTag(100) as! UILabel
-        passLabel.text = "\(indexPath.row + 1). \(tmpPassphrase[indexPath.row])"
+        let passLabel = cell.viewWithTag(101) as! UILabel
+        let numberLabel = cell.viewWithTag(100) as! UILabel
+        passLabel.text = "\(tmpPassphrase[indexPath.row])"
+        numberLabel.text = "\(indexPath.row + 1)"
         return cell
     }
+}
+
+extension MnemonicCreateVC: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let padding: CGFloat =  30
+        let collectionViewSize = collectionView.frame.size.width - padding
+        return CGSize(width: collectionViewSize/2, height: 30)
+    }
+    
 }

@@ -28,7 +28,7 @@ class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
         
         
         // Setting the size of PageViewContrller
-        self.pageViewController.view.frame = CGRect(x: 0, y: 30, width: self.view.frame.size.width, height: self.view.frame.size.height - 40)
+        self.pageViewController.view.frame = CGRect(x: 0, y: 30, width: self.view.frame.size.width, height: self.view.frame.size.height - 90)
         
         // Adding the PageViewContrller to the Parent View
         self.addChildViewController(self.pageViewController)
@@ -113,4 +113,9 @@ class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
         }        
         return contentVC
     }
+    
+    @IBAction func skipButtonPressed(_ sender: Any) {
+        UIUtils.navigateToPhoneNumber(self)
+    }
+    
 }
