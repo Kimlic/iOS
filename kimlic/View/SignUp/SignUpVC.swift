@@ -11,6 +11,8 @@ import UIKit
 class SignUpVC: UIViewController {
 
     @IBOutlet weak var newIdentityButton: UIButton!
+    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var logo: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,7 @@ class SignUpVC: UIViewController {
     
     private func setupView() {
         newIdentityButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: newIdentityButton.frame, type: .topBottom).color
+        
     }
     
     @IBAction func newIdentityButtonPressed(_ sender: Any) {

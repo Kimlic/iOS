@@ -8,6 +8,7 @@ import Foundation
 import UIKit
 
 public class Animz: UIView{
+    static var time1:Double = 1.0
     static var time08:Double = 0.8
     static var time06:Double = 0.6
     static var time04:Double = 0.4

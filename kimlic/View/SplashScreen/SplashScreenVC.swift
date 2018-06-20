@@ -10,7 +10,6 @@ import SwiftyUserDefaults
 class SplashScreenVC: BaseVC {
     
     @IBOutlet weak var imgShield: UIImageView!
-    @IBOutlet weak var labelLogo: UILabel!
     @IBOutlet weak var viewImageContainer: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +23,8 @@ class SplashScreenVC: BaseVC {
             })
         }
         //Splash screen animation
-        Animz.rotateY(layer: self.viewImageContainer.layer, angleFrom: 180, duration: Animz.time06) {
-            UIView.animate(withDuration: Animz.time08 , animations: {
-                self.labelLogo.alpha = 1.0
+        Animz.rotateY(layer: self.viewImageContainer.layer, angleFrom: 360, duration: Animz.time1) {
+            UIView.animate(withDuration: Animz.time1 , animations: {
             },completion: {
                 (finished: Bool) -> Void in
                 let _ = UIUtils.setSignUpScreenAsRoot()

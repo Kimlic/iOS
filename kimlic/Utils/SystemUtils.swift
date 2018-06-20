@@ -51,6 +51,20 @@ public class SystemUtils {
             popup.buttonTitle = "OK, Thanks"
             PopupGenerator.createPopup(controller: root, type: .success, popup: popup)
         })
-    }   
+    }
+    
+    static func drawCircleShapes(rootView: UIView, count: Int, incSize: Int) -> UIView {
+        let startSize = rootView.frame.size.width
+        rootView.layer.cornerRadius = CGFloat(startSize/2)
+        for index in 1...count {
+            let childSize = startSize + CGFloat(incSize * index)
+                let childView = UIView(frame: CGRect(x: rootView.frame.origin.x - CGFloat(incSize), y: rootView.frame.origin.y - CGFloat(incSize), width: childSize, height: childSize))
+                childView.layer.cornerRadius = CGFloat(childSize/2)
+                childView.backgroundColor = rootView.backgroundColor
+                childView.alpha = rootView.alpha - ((rootView.alpha * CGFloat(index)) / 10)
+                rootView.addSubview(childView)
+        }        
+        return rootView
+    }
     
 }
