@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="naR-Rt-6bz">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="naR-Rt-6bz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTj-8P-mNt" userLabel="ContentView">
@@ -111,7 +111,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N10-XZ-kQ5" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="389" width="295" height="50"/>
-                                        <color key="backgroundColor" red="0.59607843140000005" green="0.85098039219999999" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="a7H-ti-CMt"/>
                                         </constraints>
@@ -170,7 +170,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.25098039220000001" green="0.71372549019999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="naR-Rt-6bz" secondAttribute="bottom" id="OIh-QE-h5B"/>
                             <constraint firstItem="nTj-8P-mNt" firstAttribute="bottom" secondItem="aVv-Cz-XHU" secondAttribute="bottom" id="Sbb-8e-ThU"/>
@@ -186,12 +186,13 @@
                     <connections>
                         <outlet property="countryTextField" destination="R1Z-OR-nS3" id="OS3-OL-VsE"/>
                         <outlet property="imgHexagonContent" destination="bHe-PM-CjI" id="PSD-h5-EKS"/>
+                        <outlet property="nextButton" destination="N10-XZ-kQ5" id="mAc-eA-Icr"/>
                         <outlet property="phoneNumberTextField" destination="vew-43-kEh" id="vPw-Fc-Q5w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZG-To-jBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2762" y="46"/>
+            <point key="canvasLocation" x="2364" y="-204"/>
         </scene>
     </scenes>
     <resources>

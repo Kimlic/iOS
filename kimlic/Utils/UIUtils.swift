@@ -136,9 +136,9 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
-    static func navigateToVerifyPassphrase(_ vc: UIViewController){
-        let storyboard = AppStoryboard.VerifyPassphrase.instance
-        let tarVC = storyboard.instantiateViewController(withIdentifier: VerifyPassphraseVC.className) as! VerifyPassphraseVC
+    static func navigateToMnemonicVerification(_ vc: UIViewController){
+        let storyboard = AppStoryboard.MnemonicVerification.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: MnemonicVerificationVC.className) as! MnemonicVerificationVC
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     

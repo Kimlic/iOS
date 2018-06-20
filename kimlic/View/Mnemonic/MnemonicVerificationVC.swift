@@ -1,5 +1,5 @@
 //
-//  VerifyPassphraseVC.swift
+//  MnemonicVerificationVC.swift
 //  kimlic
 //
 //  Created by paltimoz on 10.06.2018.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class VerifyPassphraseVC: UIViewController {
+class MnemonicVerificationVC: UIViewController {
     
     
     @IBOutlet weak var firstPassphraseTextField: UITextField!
     @IBOutlet weak var secondPassphraseTextField: UITextField!
     @IBOutlet weak var thirdPassphraseTextField: UITextField!
     @IBOutlet weak var fourthPassphraseTextField: UITextField!
+    @IBOutlet weak var verifyButton: CustomButton!
     
     var tmpPassphrase = ["broken", "travel", "apology", "observe", "perfect", "prevent",
                          "steel", "warrior", "cherry", "trial", "season", "column"]
@@ -24,11 +25,18 @@ class VerifyPassphraseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set default display
+        setupView()
+        
         // Set text field array
         textFieldList = [firstPassphraseTextField, secondPassphraseTextField, thirdPassphraseTextField, fourthPassphraseTextField]
 
         // Set random passphrase
         setRandomPassphrase()
+    }
+    
+    private func setupView() {
+        verifyButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: verifyButton.frame, type: .topBottom).color
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {

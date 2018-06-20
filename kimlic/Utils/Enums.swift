@@ -39,7 +39,7 @@ enum PasscodePageType {
 enum AppStoryboard : String {
     // Must be the same as storyboard name
     case SplashScreen, SignUp, Tutorial, TermsAndConditions, PhoneNumber, Verification, Message, TouchID, Passcode,
-    MnemonicImport, MnemonicCreate, VerifyPassphrase, Settings, UserEmail, Profile, UserInfo
+    MnemonicImport, MnemonicCreate, MnemonicVerification, Settings, UserEmail, Profile, UserInfo
     var instance : UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
     }

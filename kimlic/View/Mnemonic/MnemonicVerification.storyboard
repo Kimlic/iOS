@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,34 +18,34 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Verify PassphraseVC-->
+        <!--Mnemonic VerificationVC-->
         <scene sceneID="KvP-jE-wfz">
             <objects>
-                <viewController storyboardIdentifier="VerifyPassphraseVC" id="X5a-Sb-VcU" customClass="VerifyPassphraseVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MnemonicVerificationVC" id="X5a-Sb-VcU" customClass="MnemonicVerificationVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="StV-7S-r3c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="syP-4v-6T1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="syP-4v-6T1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94q-rI-JXU" userLabel="ContentView">
-                                <rect key="frame" x="40" y="20" width="295" height="647"/>
+                                <rect key="frame" x="40" y="20" width="240" height="548"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Passphrase" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oCn-B8-ZCQ">
-                                        <rect key="frame" x="0.0" y="40" width="295" height="38"/>
+                                        <rect key="frame" x="0.0" y="40" width="240" height="38"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the mising words from your mnemonic passphrase" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bU9-yo-WhL">
-                                        <rect key="frame" x="0.0" y="86" width="295" height="45.5"/>
-                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                        <rect key="frame" x="0.0" y="86" width="240" height="50.5"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2nd Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R9A-Ih-sEH" customClass="CustomTextField" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="161.5" width="295" height="45"/>
+                                        <rect key="frame" x="0.0" y="166.5" width="240" height="45"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>
                                         </accessibility>
@@ -74,7 +74,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cz1-RF-aFY" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="517" width="295" height="50"/>
+                                        <rect key="frame" x="0.0" y="418" width="240" height="50"/>
                                         <color key="backgroundColor" red="0.59607843140000005" green="0.85098039219999999" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Ofi-Av-pfJ"/>
@@ -93,7 +93,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lv-ok-2j0" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="108" y="567" width="79" height="50"/>
+                                        <rect key="frame" x="81" y="468" width="79" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="bmO-zs-kmB"/>
                                         </constraints>
@@ -111,7 +111,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="4th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-7p-jBy" customClass="CustomTextField" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="221.5" width="295" height="45"/>
+                                        <rect key="frame" x="0.0" y="226.5" width="240" height="45"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>
                                         </accessibility>
@@ -140,7 +140,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="5th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dhp-AS-4xw" customClass="CustomTextField" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="281.5" width="295" height="45"/>
+                                        <rect key="frame" x="0.0" y="286.5" width="240" height="45"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>
                                         </accessibility>
@@ -169,7 +169,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="12th Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJs-PJ-0bC" customClass="CustomTextField" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="341.5" width="295" height="45"/>
+                                        <rect key="frame" x="0.0" y="346.5" width="240" height="45"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>
                                         </accessibility>
@@ -225,7 +225,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="syP-4v-6T1" secondAttribute="bottom" id="510-ul-Hzh"/>
                             <constraint firstItem="94q-rI-JXU" firstAttribute="leading" secondItem="BOG-bq-cQM" secondAttribute="leading" constant="40" id="6Av-KN-qF6"/>
@@ -243,6 +243,7 @@
                         <outlet property="fourthPassphraseTextField" destination="MJs-PJ-0bC" id="ffV-GV-4lx"/>
                         <outlet property="secondPassphraseTextField" destination="ieo-7p-jBy" id="eVr-Zo-IZB"/>
                         <outlet property="thirdPassphraseTextField" destination="Dhp-AS-4xw" id="Tgm-TQ-lCR"/>
+                        <outlet property="verifyButton" destination="Cz1-RF-aFY" id="Ee4-PX-sM3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f5d-Xv-h0R" userLabel="First Responder" sceneMemberID="firstResponder"/>

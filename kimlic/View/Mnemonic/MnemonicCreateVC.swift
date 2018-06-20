@@ -11,6 +11,7 @@ import UIKit
 class MnemonicCreateVC: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var saveButton: CustomButton!
     
     var tmpPassphrase = ["broken", "travel", "apology", "observe", "perfect", "prevent",
                          "steel", "warrior", "cherry", "trial", "season", "column"]
@@ -18,6 +19,13 @@ class MnemonicCreateVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set default display
+        setupView()
+    }
+    
+    private func setupView() {
+        saveButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: saveButton.frame, type: .topBottom).color
     }
 
     @IBAction func cancelButtonPressed(_ sender: Any) {

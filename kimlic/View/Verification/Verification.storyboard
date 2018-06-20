@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -26,24 +26,24 @@
             <objects>
                 <viewController storyboardIdentifier="VerificationVC" id="iNw-St-gwC" customClass="VerificationVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nBD-gc-aEc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="nhP-l5-TLG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="nhP-l5-TLG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fw-hf-VFB" userLabel="ContentView">
-                                <rect key="frame" x="40" y="20" width="240" height="548"/>
+                                <rect key="frame" x="40" y="20" width="295" height="647"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone_verify_message_illustration" translatesAutoresizingMaskIntoConstraints="NO" id="GLl-j3-m5J">
-                                        <rect key="frame" x="93" y="40" width="54" height="79"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_phone_icon_large" translatesAutoresizingMaskIntoConstraints="NO" id="GLl-j3-m5J">
+                                        <rect key="frame" x="101" y="40" width="93" height="93"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="54" id="3Bq-EL-Pqn"/>
-                                            <constraint firstAttribute="height" constant="79" id="PlD-r6-E1m"/>
+                                            <constraint firstAttribute="width" constant="93" id="3Bq-EL-Pqn"/>
+                                            <constraint firstAttribute="height" constant="93" id="PlD-r6-E1m"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hdD-ab-ByJ">
-                                        <rect key="frame" x="4" y="159" width="233" height="21.5"/>
+                                        <rect key="frame" x="31.5" y="173" width="233" height="21.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code sent to" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vpL-0n-DNw">
                                                 <rect key="frame" x="0.0" y="0.0" width="105" height="21.5"/>
@@ -66,7 +66,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdb-ev-h14">
-                                        <rect key="frame" x="35.5" y="180.5" width="169" height="40"/>
+                                        <rect key="frame" x="63" y="194.5" width="169" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Sf6-Gw-JQs"/>
                                         </constraints>
@@ -79,7 +79,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bj7-eC-Kz9">
-                                        <rect key="frame" x="15" y="250.5" width="210" height="50"/>
+                                        <rect key="frame" x="42.5" y="264.5" width="210" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ih-FK-COq" userLabel="codeFirstNumber" customClass="PinTextField" customModule="kimlic" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="50"/>
@@ -153,13 +153,13 @@
                                             <constraint firstAttribute="height" constant="50" id="dbP-jJ-bLN"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-Tf-7Ld" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="331" width="240" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-Tf-7Ld" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="344.5" width="295" height="50"/>
                                         <color key="backgroundColor" red="0.59607843140000005" green="0.85098039219999999" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="rTN-uH-8ay"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
                                         <state key="normal" title="Verify Number">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -188,7 +188,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.25098039220000001" green="0.71372549019999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nhP-l5-TLG" secondAttribute="trailing" id="7eP-dR-of9"/>
                             <constraint firstItem="NOB-X3-46e" firstAttribute="trailing" secondItem="8Fw-hf-VFB" secondAttribute="trailing" constant="40" id="Esw-xO-eMo"/>
@@ -206,8 +206,10 @@
                         <outlet property="changeButton" destination="Jdb-ev-h14" id="hjD-1h-Gum"/>
                         <outlet property="firstNumberTextField" destination="7ih-FK-COq" id="K2j-Ry-uaK"/>
                         <outlet property="fourthNumberTextField" destination="AG1-N9-QqC" id="zgj-0f-UyU"/>
+                        <outlet property="icon" destination="GLl-j3-m5J" id="PZC-5B-9Qo"/>
                         <outlet property="secondNumberTextField" destination="mK5-2x-IM2" id="4HT-Ab-0su"/>
                         <outlet property="thirdNumberTextField" destination="KKm-uJ-gSe" id="wOh-4k-rqE"/>
+                        <outlet property="verifyButton" destination="kFq-Tf-7Ld" id="IwQ-JU-0El"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbf-6B-bcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -216,7 +218,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Phone_verify_message_illustration" width="119" height="159"/>
         <image name="tutorial_background" width="375" height="667"/>
+        <image name="white_phone_icon_large" width="385" height="366"/>
     </resources>
 </document>

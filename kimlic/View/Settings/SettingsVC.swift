@@ -10,8 +10,19 @@ import UIKit
 
 class SettingsVC: UIViewController {
     
+    @IBOutlet weak var signOutButton: CustomButton!
+    @IBOutlet weak var deleteIdentityButton: CustomButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set default display
+        setupView()
+    }
+    
+    private func setupView() {
+        signOutButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: signOutButton.frame, type: .topBottom).color
+        deleteIdentityButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.orangeGradianteColors, frame: deleteIdentityButton.frame, type: .topBottom).color
     }
 
     @IBAction func cancelButtonPressed(_ sender: Any) {

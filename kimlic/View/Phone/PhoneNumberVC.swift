@@ -15,6 +15,7 @@ class PhoneNumberVC: UIViewController {
     @IBOutlet weak var imgHexagonContent: UIImageView!
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var nextButton: CustomButton!
     
     var country = [Country]()
     var selectedCode = "+90"
@@ -24,7 +25,15 @@ class PhoneNumberVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set default view
+        setupView()
+        
+        // Set default country data
         self.setupPickerViews()
+    }
+    
+    private func setupView() {
+        nextButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: nextButton.frame, type: .topBottom).color
     }
     
     private func setupPickerViews(){

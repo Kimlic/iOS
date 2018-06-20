@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Jr-oC-NRl">
-    <device id="retina4_0" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Jr-oC-NRl">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,38 +9,50 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--TouchIDVC-->
         <scene sceneID="zVg-yH-3t2">
             <objects>
                 <viewController storyboardIdentifier="TouchIDVC" id="8Jr-oC-NRl" customClass="TouchIDVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bJN-wy-KgD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="4Wn-Sj-uYh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2x-hB-TWl" userLabel="ContentView">
-                                <rect key="frame" x="40" y="40" width="240" height="528"/>
+                                <rect key="frame" x="40" y="40" width="334" height="696"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place your Finger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAv-SS-tAD" userLabel="tutorialTitle">
-                                        <rect key="frame" x="0.0" y="10" width="240" height="31.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <rect key="frame" x="0.0" y="40" width="334" height="38"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lift and rest the edge of your finger on the Home button repeatedly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="WLa-Qv-hBV" userLabel="tutorialTitle">
-                                        <rect key="frame" x="10" y="51.5" width="220" height="43"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lift and rest the edge of your finger on the Home button repeatedly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="WLa-Qv-hBV" userLabel="tutorialTitle">
+                                        <rect key="frame" x="10" y="98" width="314" height="50.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yd9-Ch-Xf0" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="448" width="240" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="135" y="616" width="64" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="sIq-tt-AIK"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
-                                        <state key="normal" title="Cancel"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="13"/>
@@ -50,31 +62,37 @@
                                             <action selector="cancelButtonPressed:" destination="8Jr-oC-NRl" eventType="touchUpInside" id="Llv-6h-0an"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touch_ID_popup_illustration" translatesAutoresizingMaskIntoConstraints="NO" id="Ib5-wg-gc7">
-                                        <rect key="frame" x="1.5" y="130" width="237" height="208"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touch_ID_success_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ib5-wg-gc7">
+                                        <rect key="frame" x="107" y="248" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="BUe-r0-Bjt"/>
+                                            <constraint firstAttribute="width" constant="120" id="idX-v2-0lQ"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Ib5-wg-gc7" firstAttribute="centerX" secondItem="j2x-hB-TWl" secondAttribute="centerX" id="67j-vQ-btm"/>
                                     <constraint firstAttribute="trailing" secondItem="eAv-SS-tAD" secondAttribute="trailing" id="GAt-np-U4c"/>
                                     <constraint firstAttribute="bottom" secondItem="yd9-Ch-Xf0" secondAttribute="bottom" constant="30" id="L4c-Np-P9b"/>
-                                    <constraint firstItem="WLa-Qv-hBV" firstAttribute="top" secondItem="eAv-SS-tAD" secondAttribute="bottom" constant="10" id="L5c-AN-aFf"/>
+                                    <constraint firstItem="WLa-Qv-hBV" firstAttribute="top" secondItem="eAv-SS-tAD" secondAttribute="bottom" constant="20" id="L5c-AN-aFf"/>
                                     <constraint firstItem="WLa-Qv-hBV" firstAttribute="leading" secondItem="j2x-hB-TWl" secondAttribute="leading" constant="10" id="LzQ-XH-Kqg"/>
                                     <constraint firstItem="eAv-SS-tAD" firstAttribute="leading" secondItem="j2x-hB-TWl" secondAttribute="leading" id="NbN-yv-fc7"/>
                                     <constraint firstAttribute="trailing" secondItem="WLa-Qv-hBV" secondAttribute="trailing" constant="10" id="Ozj-wb-G9x"/>
                                     <constraint firstItem="yd9-Ch-Xf0" firstAttribute="centerX" secondItem="j2x-hB-TWl" secondAttribute="centerX" id="SO5-So-kSc"/>
-                                    <constraint firstItem="Ib5-wg-gc7" firstAttribute="centerY" secondItem="j2x-hB-TWl" secondAttribute="centerY" constant="-30" id="aIW-p3-xht"/>
-                                    <constraint firstAttribute="trailing" secondItem="yd9-Ch-Xf0" secondAttribute="trailing" id="dDs-hV-c3z"/>
-                                    <constraint firstItem="eAv-SS-tAD" firstAttribute="top" secondItem="j2x-hB-TWl" secondAttribute="top" constant="10" id="eoB-qc-cKj"/>
-                                    <constraint firstItem="yd9-Ch-Xf0" firstAttribute="leading" secondItem="j2x-hB-TWl" secondAttribute="leading" id="w9W-wB-TlK"/>
+                                    <constraint firstItem="Ib5-wg-gc7" firstAttribute="centerY" secondItem="j2x-hB-TWl" secondAttribute="centerY" constant="-40" id="Ywz-s4-Ebx"/>
+                                    <constraint firstItem="eAv-SS-tAD" firstAttribute="top" secondItem="j2x-hB-TWl" secondAttribute="top" constant="40" id="eoB-qc-cKj"/>
+                                    <constraint firstItem="Ib5-wg-gc7" firstAttribute="centerX" secondItem="j2x-hB-TWl" secondAttribute="centerX" id="rvM-k4-BdD"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.54901960780000003" green="0.67450980390000004" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4Wn-Sj-uYh" secondAttribute="bottom" id="1Ux-kE-8LL"/>
+                            <constraint firstItem="4Wn-Sj-uYh" firstAttribute="top" secondItem="bJN-wy-KgD" secondAttribute="top" id="XHL-Xq-q71"/>
                             <constraint firstItem="frt-lr-2FK" firstAttribute="bottom" secondItem="j2x-hB-TWl" secondAttribute="bottom" id="YYs-wI-sbq"/>
                             <constraint firstItem="j2x-hB-TWl" firstAttribute="leading" secondItem="frt-lr-2FK" secondAttribute="leading" constant="40" id="eMW-as-O6T"/>
+                            <constraint firstItem="4Wn-Sj-uYh" firstAttribute="leading" secondItem="bJN-wy-KgD" secondAttribute="leading" id="fSu-bH-QCf"/>
                             <constraint firstItem="frt-lr-2FK" firstAttribute="trailing" secondItem="j2x-hB-TWl" secondAttribute="trailing" constant="40" id="fiq-nL-f6g"/>
+                            <constraint firstAttribute="trailing" secondItem="4Wn-Sj-uYh" secondAttribute="trailing" id="q8k-Xa-FLk"/>
                             <constraint firstItem="j2x-hB-TWl" firstAttribute="top" secondItem="frt-lr-2FK" secondAttribute="top" constant="20" id="yeU-yi-Noz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="frt-lr-2FK"/>
@@ -82,10 +100,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ccg-WA-GSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-194" y="93"/>
+            <point key="canvasLocation" x="-195.6521739130435" y="92.934782608695656"/>
         </scene>
     </scenes>
     <resources>
-        <image name="touch_ID_popup_illustration" width="237" height="208"/>
+        <image name="touch_ID_success_icon" width="402" height="402"/>
+        <image name="tutorial_background" width="375" height="667"/>
     </resources>
 </document>

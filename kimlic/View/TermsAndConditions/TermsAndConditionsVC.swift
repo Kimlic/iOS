@@ -26,6 +26,8 @@ class TermsAndConditionsVC: UIViewController {
         
         if nextPage == TermsNavigateTarget.none {
             acceptButton.isHidden = true
+        }else {
+            acceptButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: acceptButton.frame, type: .topBottom).color
         }
     }
     

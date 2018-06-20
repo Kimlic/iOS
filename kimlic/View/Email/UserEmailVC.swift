@@ -12,9 +12,17 @@ class UserEmailVC: UIViewController {
 
     
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var nextButton: CustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set default display
+        setupView()
+    }
+    
+    private func setupView() {
+        nextButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: nextButton.frame, type: .topBottom).color
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {

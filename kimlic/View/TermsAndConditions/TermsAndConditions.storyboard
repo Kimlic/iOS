@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rxu-dC-R6U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rxu-dC-R6U">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="bIz-iB-UzK">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="bIz-iB-UzK">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uo6-qB-HL7" userLabel="ContentView">
@@ -51,7 +51,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQH-Xu-rlE" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="598" width="334" height="50"/>
+                                        <rect key="frame" x="40" y="606" width="334" height="50"/>
                                         <color key="backgroundColor" red="0.59607843140000005" green="0.85098039219999999" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="RW9-5d-YAM"/>
@@ -70,7 +70,7 @@
                                         </connections>
                                     </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv6-2s-MJd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="598"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="606"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FBB-wT-nSy">
                                                 <rect key="frame" x="41" y="50" width="331" height="37.666666666666657"/>
@@ -85,13 +85,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMPORTANT NOTICE: THIS AGREEMENTIS SUBJECT TO BINDING ARBITRATION AND A WAIVER OF CLASS ACTION RIGHTS AS DETAILED IN SECTION" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUx-xn-YwH">
-                                                <rect key="frame" x="40" y="124.33333333333331" width="334" height="85.666666666666686"/>
+                                                <rect key="frame" x="40" y="139.33333333333334" width="334" height="85.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Du6-N8-9mk">
-                                                <rect key="frame" x="40" y="225" width="334" height="811"/>
+                                                <rect key="frame" x="40" y="240" width="334" height="811"/>
                                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat sapien magna, congue varius ligula mattis aliquet. Praesent ut tortor sit amet arcu dignissim consequat at sit amet orci. Ut ex neque, egestas nec vehicula vitae, facilisis eu nisi. Etiam in erat quis mauris porta facilisis. Vestibulum consectetur vitae nulla sit amet vehicula. Sed magna urna, porta vel tincidunt eu, tempor ac massa. Vestibulum quis cursus orci. Quisque nec purus tellus. Vivamus sapien libero, consectetur id dignissim eu, fermentum id magna. Donec nec vestibulum metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce ante tellus, imperdiet vitae semper in, pellentesque a ante. In convallis ullamcorper nisi, a suscipit dolor luctus at. In imperdiet quam vel consectetur tempor.
 
 Vestibulum ac accumsan lorem. Mauris a pretium lacus. Etiam a dictum ligula. Fusce ultricies vitae quam scelerisque efficitur. Vivamus ultrices ipsum ac pulvinar tincidunt. Cras tincidunt lectus vel leo viverra, consequat posuere massa luctus. Integer luctus ac arcu id semper. Sed quis ligula molestie, ultricies est quis, imperdiet diam. Ut quis efficitur neque, ac dapibus sapien. Duis facilisis ultricies dui eget ornare. Mauris quis sem viverra ex gravida faucibus accumsan ut magna. Vestibulum vitae massa eu neque iaculis interdum. Curabitur suscipit mollis odio ut sollicitudin. Phasellus vitae neque eu odio porttitor egestas.</string>
@@ -110,7 +110,7 @@ Vestibulum ac accumsan lorem. Mauris a pretium lacus. Etiam a dictum ligula. Fus
                                             <constraint firstAttribute="trailing" secondItem="Du6-N8-9mk" secondAttribute="trailing" constant="40" id="TfZ-wj-gyX"/>
                                             <constraint firstItem="OtM-1U-0ni" firstAttribute="top" secondItem="FBB-wT-nSy" secondAttribute="bottom" id="bgL-CJ-uGE"/>
                                             <constraint firstAttribute="bottom" secondItem="Du6-N8-9mk" secondAttribute="bottom" id="ldR-7k-HmA"/>
-                                            <constraint firstItem="xUx-xn-YwH" firstAttribute="top" secondItem="OtM-1U-0ni" secondAttribute="bottom" constant="15" id="oNF-Sq-6yV"/>
+                                            <constraint firstItem="xUx-xn-YwH" firstAttribute="top" secondItem="OtM-1U-0ni" secondAttribute="bottom" constant="30" id="oNF-Sq-6yV"/>
                                             <constraint firstAttribute="trailing" secondItem="xUx-xn-YwH" secondAttribute="trailing" constant="40" id="t30-J4-if6"/>
                                             <constraint firstItem="OtM-1U-0ni" firstAttribute="width" secondItem="FBB-wT-nSy" secondAttribute="width" id="t4R-fh-jro"/>
                                             <constraint firstItem="OtM-1U-0ni" firstAttribute="centerX" secondItem="FBB-wT-nSy" secondAttribute="centerX" id="tAT-Y7-d40"/>
@@ -120,7 +120,7 @@ Vestibulum ac accumsan lorem. Mauris a pretium lacus. Etiam a dictum ligula. Fus
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="MsD-gP-N1C" secondAttribute="bottom" constant="30" id="Giw-Jv-fPh"/>
-                                    <constraint firstItem="MsD-gP-N1C" firstAttribute="top" secondItem="fQH-Xu-rlE" secondAttribute="bottom" constant="8" id="Jxd-5I-TdV"/>
+                                    <constraint firstItem="MsD-gP-N1C" firstAttribute="top" secondItem="fQH-Xu-rlE" secondAttribute="bottom" id="Jxd-5I-TdV"/>
                                     <constraint firstItem="Kv6-2s-MJd" firstAttribute="top" secondItem="uo6-qB-HL7" secondAttribute="top" id="NT2-Av-ave"/>
                                     <constraint firstItem="fQH-Xu-rlE" firstAttribute="leading" secondItem="uo6-qB-HL7" secondAttribute="leading" constant="40" id="T1R-cF-EMS"/>
                                     <constraint firstAttribute="trailing" secondItem="fQH-Xu-rlE" secondAttribute="trailing" constant="40" id="cgo-qk-Elj"/>
@@ -131,7 +131,7 @@ Vestibulum ac accumsan lorem. Mauris a pretium lacus. Etiam a dictum ligula. Fus
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.25098039215686274" green="0.71372549019607845" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="uo6-qB-HL7" secondAttribute="bottom" id="AfB-Ii-F0o"/>
                             <constraint firstAttribute="trailing" secondItem="uo6-qB-HL7" secondAttribute="trailing" id="Ala-TI-Lw5"/>

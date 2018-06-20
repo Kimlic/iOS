@@ -11,12 +11,14 @@ import PhoneNumberKit
 
 class VerificationVC: UIViewController {
     
+    @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var firstNumberTextField: PinTextField!
     @IBOutlet weak var secondNumberTextField: PinTextField!
     @IBOutlet weak var thirdNumberTextField: PinTextField!
     @IBOutlet weak var fourthNumberTextField: PinTextField!
     @IBOutlet weak var changeButton: UIButton!
+    @IBOutlet weak var verifyButton: CustomButton!
     
     var phoneNumber: String?
     var email: String?
@@ -29,11 +31,15 @@ class VerificationVC: UIViewController {
     }
     
     private func setupView() {
+        
+        verifyButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: verifyButton.frame, type: .topBottom).color
+        
         let address = email ?? "\(PartialFormatter().formatPartial(phoneNumber ?? ""))"
         addressLabel.text = address
         
         if email != nil {
             changeButton.setTitle("Change email address", for: .normal)
+            icon.image = #imageLiteral(resourceName: "white_email_icon_sml")
         }else {
             changeButton.setTitle("Change phone number", for: .normal)
         }
@@ -80,7 +86,7 @@ class VerificationVC: UIViewController {
         }
     }
     @IBAction func didEditingBegin(_ sender: UITextField) {
-        sender.backgroundColor = UIColor.blue
+        sender.backgroundColor = UIColor.pinCheckBlue
         sender.layer.borderColor = UIColor.white.cgColor
         sender.layer.borderWidth = 2
         sender.layer.cornerRadius = 5

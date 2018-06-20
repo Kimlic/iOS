@@ -10,8 +10,17 @@ import UIKit
 
 class SignUpVC: UIViewController {
 
+    @IBOutlet weak var newIdentityButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set default views
+        setupView()
+    }
+    
+    private func setupView() {
+        newIdentityButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: newIdentityButton.frame, type: .topBottom).color
     }
     
     @IBAction func newIdentityButtonPressed(_ sender: Any) {
@@ -27,6 +36,11 @@ class SignUpVC: UIViewController {
 //        UIUtils.navigateToProfile(self)
 //        UIUtils.navigateToPhoneNumber(self)
 //        UIUtils.navigateToMnemonicCreate(self)
-        UIUtils.navigateToTutorial(self)
+//        UIUtils.navigateToTutorial(self)
+//        UIUtils.navigateToProfile(self)
+//        UIUtils.navigateToTouchID(self)
+//        UIUtils.navigateToMnemonicVerification(self)
+//        UIUtils.navigateToSettings(self)
+        UIUtils.showPasscodeVC(vc: self, pageType: .confirm)
     }
 }

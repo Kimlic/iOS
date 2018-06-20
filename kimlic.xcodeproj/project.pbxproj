@@ -17,8 +17,8 @@
 		3FA05207AA63FC037BD17670 /* Pods_kimlic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4839EE1351BF59D4372E9EB /* Pods_kimlic.framework */; };
 		79AD4C7E20CD050200EE9160 /* MnemonicCreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD4C7D20CD050200EE9160 /* MnemonicCreateVC.swift */; };
 		79AD4C8020CD051800EE9160 /* MnemonicCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD4C7F20CD051800EE9160 /* MnemonicCreate.storyboard */; };
-		79AD4C8220CD182500EE9160 /* VerifyPassphraseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD4C8120CD182500EE9160 /* VerifyPassphraseVC.swift */; };
-		79AD4C8420CD183800EE9160 /* VerifyPassphrase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD4C8320CD183800EE9160 /* VerifyPassphrase.storyboard */; };
+		79AD4C8220CD182500EE9160 /* MnemonicVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD4C8120CD182500EE9160 /* MnemonicVerificationVC.swift */; };
+		79AD4C8420CD183800EE9160 /* MnemonicVerification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD4C8320CD183800EE9160 /* MnemonicVerification.storyboard */; };
 		79AD4C8720CD55DC00EE9160 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD4C8620CD55DC00EE9160 /* Settings.storyboard */; };
 		79AD4C8920CD55F000EE9160 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD4C8820CD55F000EE9160 /* SettingsVC.swift */; };
 		79AD4C8D20CE24D100EE9160 /* UserEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD4C8C20CE24D100EE9160 /* UserEmailVC.swift */; };
@@ -49,6 +49,9 @@
 		7C4838591FB5F62500FC864A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4838581FB5F62500FC864A /* Assets.xcassets */; };
 		7C48385C1FB5F62500FC864A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C48385A1FB5F62500FC864A /* LaunchScreen.storyboard */; };
 		7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */; };
+		7C68A83220DA11D5001DDDC8 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68A83120DA11D5001DDDC8 /* GradientColor.swift */; };
+		7C68A83620DA1267001DDDC8 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68A83520DA1267001DDDC8 /* UIColorExt.swift */; };
+		7C68A83820DA12A1001DDDC8 /* UIFontExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68A83720DA12A1001DDDC8 /* UIFontExt.swift */; };
 		7C6FC84D20CE72EE0026AF1C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C6FC84C20CE72EE0026AF1C /* Profile.storyboard */; };
 		7C6FC84F20CE730E0026AF1C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6FC84E20CE730E0026AF1C /* ProfileVC.swift */; };
 		7C6FC85320CEA9530026AF1C /* UITableViewCellExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6FC85220CEA9530026AF1C /* UITableViewCellExt.swift */; };
@@ -120,8 +123,8 @@
 		0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupGenerator.swift; sourceTree = "<group>"; };
 		79AD4C7D20CD050200EE9160 /* MnemonicCreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicCreateVC.swift; sourceTree = "<group>"; };
 		79AD4C7F20CD051800EE9160 /* MnemonicCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MnemonicCreate.storyboard; sourceTree = "<group>"; };
-		79AD4C8120CD182500EE9160 /* VerifyPassphraseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPassphraseVC.swift; sourceTree = "<group>"; };
-		79AD4C8320CD183800EE9160 /* VerifyPassphrase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VerifyPassphrase.storyboard; sourceTree = "<group>"; };
+		79AD4C8120CD182500EE9160 /* MnemonicVerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicVerificationVC.swift; sourceTree = "<group>"; };
+		79AD4C8320CD183800EE9160 /* MnemonicVerification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MnemonicVerification.storyboard; sourceTree = "<group>"; };
 		79AD4C8620CD55DC00EE9160 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		79AD4C8820CD55F000EE9160 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		79AD4C8C20CE24D100EE9160 /* UserEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEmailVC.swift; sourceTree = "<group>"; };
@@ -154,6 +157,9 @@
 		7C48385B1FB5F62500FC864A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C48385D1FB5F62500FC864A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateExt.swift; sourceTree = "<group>"; };
+		7C68A83120DA11D5001DDDC8 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColor.swift; sourceTree = "<group>"; };
+		7C68A83520DA1267001DDDC8 /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
+		7C68A83720DA12A1001DDDC8 /* UIFontExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExt.swift; sourceTree = "<group>"; };
 		7C6FC84C20CE72EE0026AF1C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		7C6FC84E20CE730E0026AF1C /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		7C6FC85220CEA9530026AF1C /* UITableViewCellExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExt.swift; sourceTree = "<group>"; };
@@ -313,6 +319,7 @@
 				7C161A241FBDB526004FD9A0 /* Enums.swift */,
 				0F359D8E1FC07EDD007E07DC /* Animz.swift */,
 				7C842B9E1FC2B8CC0010F98A /* UIUtils.swift */,
+				7C68A83120DA11D5001DDDC8 /* GradientColor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -320,18 +327,8 @@
 		7C379AA51FB9DEE100D005CC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				7CF6556A1FBACC1400CA9C1A /* ColorExtension.swift */,
-				0F359D931FC098F7007E07DC /* NSObjectExt.swift */,
-				7CF6556F1FBAF15D00CA9C1A /* StringExt.swift */,
-				7C8272C41FC583C600054277 /* UIImageExt.swift */,
-				7C161A4A1FBDEA05004FD9A0 /* UITextFieldExt.swift */,
-				0F1E43C31FC0A5A500B0B631 /* UserDefaultsExt.swift */,
-				7C99D6E61FC8108300A593C5 /* BundleExt.swift */,
-				7C99D6EA1FC842B700A593C5 /* UINavigationControllerExt.swift */,
-				7C4441B41FCD664F00DB551C /* UIImageViewExt.swift */,
-				7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */,
-				7C36C6E31FD153AC00D4501D /* AnimatedImageViewExt.swift */,
-				7C6FC85220CEA9530026AF1C /* UITableViewCellExt.swift */,
+				7C68A83420DA1206001DDDC8 /* UI */,
+				7C68A83320DA11FC001DDDC8 /* Primitive */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -412,6 +409,34 @@
 			path = UserInfo;
 			sourceTree = "<group>";
 		};
+		7C68A83320DA11FC001DDDC8 /* Primitive */ = {
+			isa = PBXGroup;
+			children = (
+				0F359D931FC098F7007E07DC /* NSObjectExt.swift */,
+				7CF6556F1FBAF15D00CA9C1A /* StringExt.swift */,
+				0F1E43C31FC0A5A500B0B631 /* UserDefaultsExt.swift */,
+				7C99D6E61FC8108300A593C5 /* BundleExt.swift */,
+			);
+			path = Primitive;
+			sourceTree = "<group>";
+		};
+		7C68A83420DA1206001DDDC8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7CF6556A1FBACC1400CA9C1A /* ColorExtension.swift */,
+				7C8272C41FC583C600054277 /* UIImageExt.swift */,
+				7C161A4A1FBDEA05004FD9A0 /* UITextFieldExt.swift */,
+				7C99D6EA1FC842B700A593C5 /* UINavigationControllerExt.swift */,
+				7C4441B41FCD664F00DB551C /* UIImageViewExt.swift */,
+				7C6FC85220CEA9530026AF1C /* UITableViewCellExt.swift */,
+				7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */,
+				7C36C6E31FD153AC00D4501D /* AnimatedImageViewExt.swift */,
+				7C68A83520DA1267001DDDC8 /* UIColorExt.swift */,
+				7C68A83720DA12A1001DDDC8 /* UIFontExt.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		7C75E89C20C913DC00EEB053 /* Passcode */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,8 +462,8 @@
 				7C7FC46820CBFDA700AC8F8F /* MnemonicImport.storyboard */,
 				79AD4C7D20CD050200EE9160 /* MnemonicCreateVC.swift */,
 				79AD4C7F20CD051800EE9160 /* MnemonicCreate.storyboard */,
-				79AD4C8120CD182500EE9160 /* VerifyPassphraseVC.swift */,
-				79AD4C8320CD183800EE9160 /* VerifyPassphrase.storyboard */,
+				79AD4C8120CD182500EE9160 /* MnemonicVerificationVC.swift */,
+				79AD4C8320CD183800EE9160 /* MnemonicVerification.storyboard */,
 			);
 			path = Mnemonic;
 			sourceTree = "<group>";
@@ -501,9 +526,9 @@
 				7C5DE2D320D1237800B75B41 /* UserInfo */,
 				7C5DE2D220D1236600B75B41 /* Settings */,
 				7C5DE2D120D1234100B75B41 /* Email */,
+				7C85966F20D0FEF0005F774A /* Verification */,
 				79AF1D1B20C489E800CCA150 /* Phone */,
 				79AD4C8520CD55AD00EE9160 /* UserProfile */,
-				7C85966F20D0FEF0005F774A /* Verification */,
 				7C7FC46520CBE73900AC8F8F /* Mnemonic */,
 				7C75E89C20C913DC00EEB053 /* Passcode */,
 				7C90C4B520C8119C006EEF87 /* TouchID */,
@@ -650,7 +675,7 @@
 				7C75E8A020C9141E00EEB053 /* Passcode.storyboard in Resources */,
 				7C3023E320C012B10093598E /* SplashScreen.storyboard in Resources */,
 				7C8437F120D2259400DD754D /* Muli-Bold.ttf in Resources */,
-				79AD4C8420CD183800EE9160 /* VerifyPassphrase.storyboard in Resources */,
+				79AD4C8420CD183800EE9160 /* MnemonicVerification.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,9 +763,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C161A211FBDB4E3004FD9A0 /* Popup.swift in Sources */,
+				7C68A83820DA12A1001DDDC8 /* UIFontExt.swift in Sources */,
 				7C36C6E41FD153AC00D4501D /* AnimatedImageViewExt.swift in Sources */,
 				7CB5674F1FB9C28E00F03D24 /* TutorialsVC.swift in Sources */,
 				7C99D6E11FC7FF8E00A593C5 /* TokenWebServiceRequest.swift in Sources */,
+				7C68A83220DA11D5001DDDC8 /* GradientColor.swift in Sources */,
 				79AD4C7E20CD050200EE9160 /* MnemonicCreateVC.swift in Sources */,
 				7C7FC46720CBFAA000AC8F8F /* MnemonicImportVC.swift in Sources */,
 				7C2F326720C0303900AEB314 /* SignUpVC.swift in Sources */,
@@ -754,7 +781,7 @@
 				7C99D6CD1FC7FDFD00A593C5 /* UserResponse.swift in Sources */,
 				7C8272C51FC583C600054277 /* UIImageExt.swift in Sources */,
 				7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */,
-				79AD4C8220CD182500EE9160 /* VerifyPassphraseVC.swift in Sources */,
+				79AD4C8220CD182500EE9160 /* MnemonicVerificationVC.swift in Sources */,
 				7C02B3111FD7F238005C55E3 /* PasscodeVC.swift in Sources */,
 				7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */,
 				7C842B9F1FC2B8CC0010F98A /* UIUtils.swift in Sources */,
@@ -785,6 +812,7 @@
 				7CB567511FB9C2CA00F03D24 /* TutorialsContentVC.swift in Sources */,
 				79AD4C8D20CE24D100EE9160 /* UserEmailVC.swift in Sources */,
 				7C2F326920C0424700AEB314 /* TermsAndConditionsVC.swift in Sources */,
+				7C68A83620DA1267001DDDC8 /* UIColorExt.swift in Sources */,
 				7C99D6D91FC7FE8D00A593C5 /* WrappedRootResponse.swift in Sources */,
 				7C7A7FCC20C5440700BDE95C /* Message.swift in Sources */,
 				79AF1D2B20C4A16000CCA150 /* PickerTextField.swift in Sources */,

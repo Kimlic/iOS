@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="e0K-Op-yHX">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="e0K-Op-yHX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QmX-Ys-2nV" userLabel="ContentView">
@@ -151,7 +151,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QmX-Ys-2nV" firstAttribute="top" secondItem="Uqx-Ix-W3i" secondAttribute="top" id="9wz-RM-9sX"/>
                             <constraint firstItem="e0K-Op-yHX" firstAttribute="leading" secondItem="JGv-dE-R2b" secondAttribute="leading" id="VoM-Jb-c2R"/>
@@ -166,6 +166,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="tlo-B0-SrY" id="4Sv-QC-tAW"/>
+                        <outlet property="saveButton" destination="ByR-dN-kU3" id="e5S-us-cDD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3IV-PX-cvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
