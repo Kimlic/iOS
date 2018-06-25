@@ -11,6 +11,7 @@ import UIKit
 class MnemonicImportVC: UIViewController {
 
     @IBOutlet weak var passTextView: CustomTextView!
+    @IBOutlet weak var verifyButton: CustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class MnemonicImportVC: UIViewController {
     
     private func setupView() {
         passTextView.textContainerInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+        verifyButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: verifyButton.frame, type: .topBottom).color
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -27,7 +29,7 @@ class MnemonicImportVC: UIViewController {
     }
     
     @IBAction func verifyButtonPressed(_ sender: Any) {
-        UIUtils.navigateToMessage(self, message: Constants.StaticMessage.passphraseSuccessfull)
+        UIUtils.navigateToMessage(self, message: Constants.StaticMessage.passMatchSuccessfull)
     }
     
     

@@ -45,6 +45,7 @@ class Constants {
     struct StaticMessage {
         static let addressSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "congratulation".localized, desc: "successAddress".localized)
         static let passphraseSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "identitySecured".localized, desc: "successPassphrase".localized)
+        static let passMatchSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "congratulation".localized, desc: "successPassMatch".localized)
         static let pascodeSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "identitySecured".localized, desc: "successPasscode".localized)
         static let touchIDSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "touchIDEnabled".localized, desc: "successTouchID".localized)
         static let verifyIDSuccessfull = Message(icon: #imageLiteral(resourceName: "Success_popup_illustration"), title: "congratulation".localized, desc: "successVerified".localized)

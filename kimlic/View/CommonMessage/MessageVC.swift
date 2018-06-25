@@ -22,7 +22,7 @@ class MessageVC: UIViewController {
         // Set default value
         setupView()
         
-        let _ = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(MessageVC.redirectHome), userInfo: nil, repeats: false)
+        let _ = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(MessageVC.redirectHome), userInfo: nil, repeats: false)
     }
     
     @objc func redirectHome() {

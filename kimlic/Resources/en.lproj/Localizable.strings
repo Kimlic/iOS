@@ -65,6 +65,7 @@
 // Desc
 "successAddress" = "Your address added successfuly.";
 "successPassphrase" = "Mnemonic Passphrase created.";
+"successPassMatch" = "Your mnemonic passphrase matched.";
 "successPasscode" = "Your account passcode created successfully.";
 "successTouchID" = "Now, You can use your Touch ID to open kimlic app.";
 "successVerified" = "Your Identity have been verified.";

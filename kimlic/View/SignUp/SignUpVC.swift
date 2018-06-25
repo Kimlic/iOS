@@ -31,7 +31,7 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func recoverIdentityButtonPressed(_ sender: Any) {
-//        UIUtils.navigateToTerms(self, nextPage: .accountRecovery)
+        UIUtils.navigateToTerms(self, nextPage: .accountRecovery)
 //        UIUtils.navigateToEmail(self)
 //        UIUtils.navigateToUserInfo(self)
 //        UIUtils.navigateToVerification(self, email: "izzeto@ratel.com.tr")
@@ -44,6 +44,6 @@ class SignUpVC: UIViewController {
 //        UIUtils.navigateToTouchID(self)
 //        UIUtils.navigateToMnemonicVerification(self)
 //        UIUtils.navigateToSettings(self)
-        UIUtils.showPasscodeVC(vc: self, pageType: .confirm)
+//        UIUtils.showPasscodeVC(vc: self, pageType: .confirm)
     }
 }
