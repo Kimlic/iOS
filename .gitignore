@@ -6,6 +6,12 @@
 build/
 DerivedData/
 
+## Added Later
+.xcodeproject
+.lock
+.DS_Store
+
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
