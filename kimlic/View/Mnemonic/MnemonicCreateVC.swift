@@ -11,7 +11,7 @@ import UIKit
 class MnemonicCreateVC: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var saveButton: CustomButton!
+    @IBOutlet weak var saveButton: UIButton!
     
     var tmpPassphrase = ["broken", "travel", "apology", "observe", "perfect", "prevent",
                          "steel", "warrior", "cherry", "trial", "season", "column"]

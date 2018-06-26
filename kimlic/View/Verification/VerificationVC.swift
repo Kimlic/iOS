@@ -18,7 +18,7 @@ class VerificationVC: UIViewController {
     @IBOutlet weak var thirdNumberTextField: PinTextField!
     @IBOutlet weak var fourthNumberTextField: PinTextField!
     @IBOutlet weak var changeButton: UIButton!
-    @IBOutlet weak var verifyButton: CustomButton!
+    @IBOutlet weak var verifyButton: UIButton!
     
     var phoneNumber: String?
     var email: String?

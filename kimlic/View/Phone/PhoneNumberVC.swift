@@ -15,7 +15,7 @@ class PhoneNumberVC: UIViewController {
     @IBOutlet weak var imgHexagonContent: UIImageView!
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
-    @IBOutlet weak var nextButton: CustomButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     var country = [Country]()
     var selectedCode = "+90"
@@ -34,6 +34,7 @@ class PhoneNumberVC: UIViewController {
     
     private func setupView() {
         nextButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: nextButton.frame, type: .topBottom).color
+        
     }
     
     private func setupPickerViews(){
@@ -45,6 +46,8 @@ class PhoneNumberVC: UIViewController {
         countryPickerView.delegate = self
         countryPickerView.dataSource = self
         countryTextField.inputView = countryPickerView
+        
+        countryPickerView.backgroundColor = countryPickerView.keyboardToolbar.backgroundColor
         
         // Set default value
         self.pickerView(countryPickerView, didSelectRow: defaultSelectedIndex, inComponent: 0)
@@ -114,5 +117,8 @@ extension PhoneNumberVC: UIPickerViewDelegate, UIPickerViewDataSource {
         self.phoneNumberTextField.text = self.selectedCode
     }
     
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        return NSAttributedString(string: self.country[row].name, attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+    }
     
 }

@@ -15,7 +15,7 @@ class MnemonicVerificationVC: UIViewController {
     @IBOutlet weak var secondPassphraseTextField: UITextField!
     @IBOutlet weak var thirdPassphraseTextField: UITextField!
     @IBOutlet weak var fourthPassphraseTextField: UITextField!
-    @IBOutlet weak var verifyButton: CustomButton!
+    @IBOutlet weak var verifyButton: UIButton!
     
     var tmpPassphrase = ["broken", "travel", "apology", "observe", "perfect", "prevent",
                          "steel", "warrior", "cherry", "trial", "season", "column"]

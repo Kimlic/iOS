@@ -10,8 +10,8 @@ import UIKit
 
 class MnemonicImportVC: UIViewController {
 
-    @IBOutlet weak var passTextView: CustomTextView!
-    @IBOutlet weak var verifyButton: CustomButton!
+    @IBOutlet weak var passTextView: UITextView!
+    @IBOutlet weak var verifyButton: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

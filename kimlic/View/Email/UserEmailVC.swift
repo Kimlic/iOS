@@ -12,7 +12,7 @@ class UserEmailVC: UIViewController {
 
     
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var nextButton: CustomButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

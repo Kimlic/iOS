@@ -10,8 +10,8 @@ import UIKit
 
 class SettingsVC: UIViewController {
     
-    @IBOutlet weak var signOutButton: CustomButton!
-    @IBOutlet weak var deleteIdentityButton: CustomButton!
+    @IBOutlet weak var signOutButton: UIButton!
+    @IBOutlet weak var deleteIdentityButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

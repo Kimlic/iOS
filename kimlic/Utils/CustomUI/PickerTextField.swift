@@ -11,6 +11,21 @@ import TextFieldEffects
 
 class PickerTextField: HoshiTextField {
     
+    
+    let padding = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0);
+    
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return UIEdgeInsetsInsetRect(bounds, padding)
+    }
+    
+    override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return UIEdgeInsetsInsetRect(bounds, padding)
+    }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return UIEdgeInsetsInsetRect(bounds, padding)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
