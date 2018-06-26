@@ -70,18 +70,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2Q-sy-8yM" userLabel="FooterView">
                                 <rect key="frame" x="0.0" y="545" width="375" height="122"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_background_new_fix" translatesAutoresizingMaskIntoConstraints="NO" id="djX-5O-k7f">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_background" translatesAutoresizingMaskIntoConstraints="NO" id="djX-5O-k7f">
                                         <rect key="frame" x="0.0" y="56" width="375" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="66" id="C3p-g0-FEK"/>
                                         </constraints>
                                     </imageView>
-                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBq-F6-uqh" userLabel="profileButton">
-                                        <rect key="frame" x="0.0" y="56" width="124" height="66"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="66" id="q6V-Lo-g9H"/>
-                                        </constraints>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scx-FV-yIc" userLabel="permissionListButton">
                                         <rect key="frame" x="260" y="56" width="115" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -92,9 +86,16 @@
                                             <constraint firstAttribute="width" constant="110" id="LpI-bJ-hcd"/>
                                             <constraint firstAttribute="height" constant="101" id="xEk-bu-luc"/>
                                         </constraints>
-                                        <state key="normal" image="Scan_button"/>
+                                        <state key="normal" image="Scan_button_new"/>
+                                    </button>
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBq-F6-uqh" userLabel="profileButton">
+                                        <rect key="frame" x="0.0" y="56" width="124" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="q6V-Lo-g9H"/>
+                                        </constraints>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="jBq-F6-uqh" secondAttribute="bottom" id="0ft-x6-WwG"/>
                                     <constraint firstAttribute="height" constant="122" id="2S5-Ux-Qwy"/>
@@ -131,9 +132,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Scan_button" width="319" height="293"/>
+        <image name="Scan_button_new" width="160" height="147"/>
         <image name="add_image_frame" width="186" height="172"/>
-        <image name="menu_background_new_fix" width="540" height="96"/>
+        <image name="menu_background" width="376" height="81"/>
         <image name="profile_settings_button" width="68" height="72"/>
     </resources>
 </document>
