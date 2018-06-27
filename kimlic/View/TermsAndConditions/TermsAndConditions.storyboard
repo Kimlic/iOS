@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rxu-dC-R6U">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,46 +23,41 @@
             <objects>
                 <viewController storyboardIdentifier="TermsAndConditionsVC" id="Rxu-dC-R6U" customClass="TermsAndConditionsVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WwI-6L-Azi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="bIz-iB-UzK">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fingerprint_background" translatesAutoresizingMaskIntoConstraints="NO" id="bIz-iB-UzK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uo6-qB-HL7" userLabel="ContentView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsD-gP-N1C" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="175" y="656" width="64" height="50"/>
+                                        <rect key="frame" x="152.5" y="607" width="70" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Ffo-xZ-IyX"/>
+                                            <constraint firstAttribute="height" constant="30" id="Ffo-xZ-IyX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="13"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="cancelButtonPressed:" destination="Rxu-dC-R6U" eventType="touchUpInside" id="fAm-fp-31F"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQH-Xu-rlE" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="606" width="334" height="50"/>
+                                        <rect key="frame" x="40" y="537" width="295" height="56"/>
                                         <color key="backgroundColor" red="0.59607843140000005" green="0.85098039219999999" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="RW9-5d-YAM"/>
+                                            <constraint firstAttribute="height" constant="56" id="RW9-5d-YAM"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
                                         <state key="normal" title="Accept">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="13"/>
+                                                <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -70,32 +65,32 @@
                                         </connections>
                                     </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv6-2s-MJd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="606"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="537"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FBB-wT-nSy">
-                                                <rect key="frame" x="41" y="50" width="331" height="37.666666666666657"/>
+                                                <rect key="frame" x="41" y="40" width="292" height="38"/>
                                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last modified 23 July 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OtM-1U-0ni">
-                                                <rect key="frame" x="41" y="87.666666666666671" width="331" height="21.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                                <rect key="frame" x="41" y="78" width="292" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMPORTANT NOTICE: THIS AGREEMENTIS SUBJECT TO BINDING ARBITRATION AND A WAIVER OF CLASS ACTION RIGHTS AS DETAILED IN SECTION" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUx-xn-YwH">
-                                                <rect key="frame" x="40" y="139.33333333333334" width="334" height="85.666666666666657"/>
-                                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                                <rect key="frame" x="40" y="148.5" width="295" height="100.5"/>
+                                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Du6-N8-9mk">
-                                                <rect key="frame" x="40" y="240" width="334" height="811"/>
-                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat sapien magna, congue varius ligula mattis aliquet. Praesent ut tortor sit amet arcu dignissim consequat at sit amet orci. Ut ex neque, egestas nec vehicula vitae, facilisis eu nisi. Etiam in erat quis mauris porta facilisis. Vestibulum consectetur vitae nulla sit amet vehicula. Sed magna urna, porta vel tincidunt eu, tempor ac massa. Vestibulum quis cursus orci. Quisque nec purus tellus. Vivamus sapien libero, consectetur id dignissim eu, fermentum id magna. Donec nec vestibulum metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce ante tellus, imperdiet vitae semper in, pellentesque a ante. In convallis ullamcorper nisi, a suscipit dolor luctus at. In imperdiet quam vel consectetur tempor.
+                                                <rect key="frame" x="40" y="269" width="295" height="602.5"/>
+                                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet aliquet purus. Etiam aliquet tempor rhoncus. Sed consectetur justo non dolor aliquam ullamcorper. Vestibulum nisi quam, iaculis ac felis ut, laoreet finibus nunc. Morbi gravida, turpis et vulputate semper, arcu nisl lacinia massa, eget vestibulum turpis lectus a mauris. Morbi quis est non ligula varius ullamcorper. Integer tristique enim magna, a pellentesque dui elementum id. Morbi nec porttitor sem, vitae varius risus. Aliquam volutpat, magna ut aliquet placerat, augue purus fermentum diam, quis pulvinar augue lorem eu est. Vestibulum tincidunt pharetra lectus at consectetur.
 
-Vestibulum ac accumsan lorem. Mauris a pretium lacus. Etiam a dictum ligula. Fusce ultricies vitae quam scelerisque efficitur. Vivamus ultrices ipsum ac pulvinar tincidunt. Cras tincidunt lectus vel leo viverra, consequat posuere massa luctus. Integer luctus ac arcu id semper. Sed quis ligula molestie, ultricies est quis, imperdiet diam. Ut quis efficitur neque, ac dapibus sapien. Duis facilisis ultricies dui eget ornare. Mauris quis sem viverra ex gravida faucibus accumsan ut magna. Vestibulum vitae massa eu neque iaculis interdum. Curabitur suscipit mollis odio ut sollicitudin. Phasellus vitae neque eu odio porttitor egestas.</string>
-                                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+Phasellus in tellus et est accumsan faucibus. Praesent cursus neque sed erat dictum malesuada. Suspendisse convallis id erat ac efficitur. Pellentesque id porta sem. Cras at cursus nibh, vitae feugiat dui. Proin eget rhoncus lectus. Aenean consequat justo quis elit euismod gravida. Cras fermentum, tortor eget luctus hendrerit, metus diam luctus risus, vulputate cursus erat justo sit amet nulla.</mutableString>
+                                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -104,13 +99,13 @@ Vestibulum ac accumsan lorem. Mauris a pretium lacus. Etiam a dictum ligula. Fus
                                             <constraint firstItem="xUx-xn-YwH" firstAttribute="leading" secondItem="Kv6-2s-MJd" secondAttribute="leading" constant="40" id="3X8-fF-pXk"/>
                                             <constraint firstItem="Du6-N8-9mk" firstAttribute="leading" secondItem="Kv6-2s-MJd" secondAttribute="leading" constant="40" id="3qy-H8-BDT"/>
                                             <constraint firstItem="FBB-wT-nSy" firstAttribute="centerX" secondItem="Kv6-2s-MJd" secondAttribute="centerX" id="7xz-yA-lnn"/>
-                                            <constraint firstItem="Du6-N8-9mk" firstAttribute="top" secondItem="xUx-xn-YwH" secondAttribute="bottom" constant="15" id="9c2-Jb-I6q"/>
+                                            <constraint firstItem="Du6-N8-9mk" firstAttribute="top" secondItem="xUx-xn-YwH" secondAttribute="bottom" constant="20" id="9c2-Jb-I6q"/>
                                             <constraint firstItem="FBB-wT-nSy" firstAttribute="leading" secondItem="Kv6-2s-MJd" secondAttribute="leading" constant="41" id="E9U-xY-OFb"/>
-                                            <constraint firstItem="FBB-wT-nSy" firstAttribute="top" secondItem="Kv6-2s-MJd" secondAttribute="top" constant="50" id="Qma-WP-RxV"/>
+                                            <constraint firstItem="FBB-wT-nSy" firstAttribute="top" secondItem="Kv6-2s-MJd" secondAttribute="top" constant="40" id="Qma-WP-RxV"/>
                                             <constraint firstAttribute="trailing" secondItem="Du6-N8-9mk" secondAttribute="trailing" constant="40" id="TfZ-wj-gyX"/>
                                             <constraint firstItem="OtM-1U-0ni" firstAttribute="top" secondItem="FBB-wT-nSy" secondAttribute="bottom" id="bgL-CJ-uGE"/>
                                             <constraint firstAttribute="bottom" secondItem="Du6-N8-9mk" secondAttribute="bottom" id="ldR-7k-HmA"/>
-                                            <constraint firstItem="xUx-xn-YwH" firstAttribute="top" secondItem="OtM-1U-0ni" secondAttribute="bottom" constant="30" id="oNF-Sq-6yV"/>
+                                            <constraint firstItem="xUx-xn-YwH" firstAttribute="top" secondItem="OtM-1U-0ni" secondAttribute="bottom" constant="50" id="oNF-Sq-6yV"/>
                                             <constraint firstAttribute="trailing" secondItem="xUx-xn-YwH" secondAttribute="trailing" constant="40" id="t30-J4-if6"/>
                                             <constraint firstItem="OtM-1U-0ni" firstAttribute="width" secondItem="FBB-wT-nSy" secondAttribute="width" id="t4R-fh-jro"/>
                                             <constraint firstItem="OtM-1U-0ni" firstAttribute="centerX" secondItem="FBB-wT-nSy" secondAttribute="centerX" id="tAT-Y7-d40"/>
@@ -120,7 +115,7 @@ Vestibulum ac accumsan lorem. Mauris a pretium lacus. Etiam a dictum ligula. Fus
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="MsD-gP-N1C" secondAttribute="bottom" constant="30" id="Giw-Jv-fPh"/>
-                                    <constraint firstItem="MsD-gP-N1C" firstAttribute="top" secondItem="fQH-Xu-rlE" secondAttribute="bottom" id="Jxd-5I-TdV"/>
+                                    <constraint firstItem="MsD-gP-N1C" firstAttribute="top" secondItem="fQH-Xu-rlE" secondAttribute="bottom" constant="14" id="Jxd-5I-TdV"/>
                                     <constraint firstItem="Kv6-2s-MJd" firstAttribute="top" secondItem="uo6-qB-HL7" secondAttribute="top" id="NT2-Av-ave"/>
                                     <constraint firstItem="fQH-Xu-rlE" firstAttribute="leading" secondItem="uo6-qB-HL7" secondAttribute="leading" constant="40" id="T1R-cF-EMS"/>
                                     <constraint firstAttribute="trailing" secondItem="fQH-Xu-rlE" secondAttribute="trailing" constant="40" id="cgo-qk-Elj"/>
@@ -131,7 +126,6 @@ Vestibulum ac accumsan lorem. Mauris a pretium lacus. Etiam a dictum ligula. Fus
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="uo6-qB-HL7" secondAttribute="bottom" id="AfB-Ii-F0o"/>
                             <constraint firstAttribute="trailing" secondItem="uo6-qB-HL7" secondAttribute="trailing" id="Ala-TI-Lw5"/>
@@ -154,10 +148,10 @@ Vestibulum ac accumsan lorem. Mauris a pretium lacus. Etiam a dictum ligula. Fus
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dT-Mn-hma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-595.6521739130435" y="338.31521739130437"/>
+            <point key="canvasLocation" x="-596" y="337.78110944527737"/>
         </scene>
     </scenes>
     <resources>
-        <image name="tutorial_background" width="375" height="667"/>
+        <image name="Fingerprint_background" width="377" height="668"/>
     </resources>
 </document>

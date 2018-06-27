@@ -24,11 +24,13 @@ class TermsAndConditionsVC: UIViewController {
         scrollView.alwaysBounceVertical = true
         self.scrollView.isDirectionalLockEnabled = true
         
-        if nextPage == TermsNavigateTarget.none {
-            acceptButton.isHidden = true
-        }else {
-            acceptButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: acceptButton.frame, type: .topBottom).color
-        }
+        acceptButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: acceptButton.frame, type: .topBottom).color
+        
+//        if nextPage == TermsNavigateTarget.none {
+//            acceptButton.isHidden = true
+//        }else {
+//            acceptButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: acceptButton.frame, type: .topBottom).color
+//        }
     }
     
     @IBAction func acceptButtonPressed(_ sender: Any) {
