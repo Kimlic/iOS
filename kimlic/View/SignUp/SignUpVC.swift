@@ -38,11 +38,12 @@ class SignUpVC: UIViewController {
 //        UIUtils.navigateToProfile(self)
 //        UIUtils.navigateToPhoneNumber(self)
 //        UIUtils.navigateToMnemonicCreate(self)
+//        UIUtils.navigateToMnemonicImport(self)
 //        UIUtils.navigateToTutorial(self)
 //        UIUtils.navigateToProfile(self)
-//        UIUtils.navigateToTouchID(self)
+        UIUtils.navigateToTouchID(self)
 //        UIUtils.navigateToMnemonicVerification(self)
-        UIUtils.navigateToSettings(self)
+//        UIUtils.navigateToSettings(self)
 //        UIUtils.showPasscodeVC(vc: self, pageType: .confirm)
     }
 }

@@ -39,10 +39,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXc-SG-pU1" customClass="CustomTextField" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="248" width="295" height="45"/>
+                                        <rect key="frame" x="0.0" y="248" width="295" height="56"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="LRs-A7-Tvs"/>
+                                            <constraint firstAttribute="height" constant="56" id="LRs-A7-Tvs"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="22"/>
@@ -66,10 +66,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pOC-dj-gmQ" customClass="CustomTextField" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="308" width="295" height="45"/>
+                                        <rect key="frame" x="0.0" y="319" width="295" height="56"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="gmi-lm-EqY"/>
+                                            <constraint firstAttribute="height" constant="56" id="gmi-lm-EqY"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="22"/>

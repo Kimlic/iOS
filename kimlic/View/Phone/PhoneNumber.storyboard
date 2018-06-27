@@ -26,76 +26,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="naR-Rt-6bz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fingerprint_background" translatesAutoresizingMaskIntoConstraints="NO" id="naR-Rt-6bz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTj-8P-mNt" userLabel="ContentView">
                                 <rect key="frame" x="40" y="20" width="295" height="647"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_phone_icon_large" translatesAutoresizingMaskIntoConstraints="NO" id="bHe-PM-CjI">
-                                        <rect key="frame" x="100.5" y="40" width="93" height="93"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone_with_circle" translatesAutoresizingMaskIntoConstraints="NO" id="bHe-PM-CjI">
+                                        <rect key="frame" x="57" y="0.0" width="180" height="180"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="93" id="w0C-XF-SCF"/>
-                                            <constraint firstAttribute="height" constant="93" id="y4X-vG-Znj"/>
+                                            <constraint firstAttribute="width" constant="180" id="w0C-XF-SCF"/>
+                                            <constraint firstAttribute="height" constant="180" id="y4X-vG-Znj"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ivk-ba-RbY">
-                                        <rect key="frame" x="0.0" y="173" width="295" height="38"/>
+                                        <rect key="frame" x="0.0" y="180" width="295" height="38"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why we need your phone number?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Cv8-Sx-PAQ">
-                                        <rect key="frame" x="0.0" y="211" width="295" height="23"/>
-                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                        <rect key="frame" x="0.0" y="218" width="295" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                         <color key="textColor" red="0.59999999999999998" green="0.83137254900000002" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R1Z-OR-nS3" customClass="PickerTextField" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="264" width="295" height="45"/>
+                                        <rect key="frame" x="0.0" y="259.5" width="295" height="56"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>
                                         </accessibility>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="bnc-I0-iI9"/>
+                                            <constraint firstAttribute="height" constant="56" id="bnc-I0-iI9"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                                <color key="value" red="0.81960784310000001" green="0.90980392160000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
-                                                <real key="value" value="0.80000000000000004"/>
+                                                <real key="value" value="0.69999999999999996"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                 <color key="value" red="0.59999999999999998" green="0.83137254901960778" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                                <color key="value" red="0.81960784310000001" green="0.90980392160000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vew-43-kEh" customClass="CustomTextField" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="324" width="295" height="45"/>
+                                        <rect key="frame" x="0.0" y="330.5" width="295" height="56"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>
                                         </accessibility>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="gMT-de-Rd3"/>
+                                            <constraint firstAttribute="height" constant="56" id="gMT-de-Rd3"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                                <color key="value" red="0.81960784310000001" green="0.90980392160000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
-                                                <real key="value" value="0.80000000000000004"/>
+                                                <real key="value" value="0.69999999999999996"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                 <color key="value" red="0.59999999999999998" green="0.83137254901960778" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
@@ -104,7 +104,7 @@
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                                <color key="value" red="0.81960784310000001" green="0.90980392160000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -112,19 +112,28 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N10-XZ-kQ5" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="389" width="295" height="50"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="406.5" width="295" height="56"/>
+                                        <color key="backgroundColor" red="0.043137254899999998" green="0.41960784309999999" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="a7H-ti-CMt"/>
+                                            <constraint firstAttribute="height" constant="56" id="a7H-ti-CMt"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
                                         <state key="normal" title="Next">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="13"/>
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -132,17 +141,17 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvY-Cq-Bkn" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="115.5" y="447" width="64" height="50"/>
+                                        <rect key="frame" x="112.5" y="462.5" width="70" height="56"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="S56-E8-Qbo"/>
+                                            <constraint firstAttribute="height" constant="56" id="S56-E8-Qbo"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="13"/>
+                                                <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -151,17 +160,17 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ivk-ba-RbY" firstAttribute="top" secondItem="bHe-PM-CjI" secondAttribute="bottom" constant="40" id="8AQ-Qe-Bjy"/>
+                                    <constraint firstItem="ivk-ba-RbY" firstAttribute="top" secondItem="bHe-PM-CjI" secondAttribute="bottom" id="8AQ-Qe-Bjy"/>
                                     <constraint firstItem="Cv8-Sx-PAQ" firstAttribute="top" secondItem="ivk-ba-RbY" secondAttribute="bottom" id="BHo-XQ-kCZ"/>
                                     <constraint firstItem="vew-43-kEh" firstAttribute="top" secondItem="R1Z-OR-nS3" secondAttribute="bottom" constant="15" id="F57-nV-6pA"/>
                                     <constraint firstItem="R1Z-OR-nS3" firstAttribute="leading" secondItem="nTj-8P-mNt" secondAttribute="leading" id="GiW-nA-Aae"/>
                                     <constraint firstItem="N10-XZ-kQ5" firstAttribute="top" secondItem="vew-43-kEh" secondAttribute="bottom" constant="20" id="Lrc-q2-N8D"/>
                                     <constraint firstAttribute="trailing" secondItem="vew-43-kEh" secondAttribute="trailing" id="P4y-ma-kdg"/>
-                                    <constraint firstItem="hvY-Cq-Bkn" firstAttribute="top" secondItem="N10-XZ-kQ5" secondAttribute="bottom" constant="8" id="Rsl-6Y-sCa"/>
+                                    <constraint firstItem="hvY-Cq-Bkn" firstAttribute="top" secondItem="N10-XZ-kQ5" secondAttribute="bottom" id="Rsl-6Y-sCa"/>
                                     <constraint firstAttribute="trailing" secondItem="N10-XZ-kQ5" secondAttribute="trailing" id="W3R-Vm-jOA"/>
-                                    <constraint firstItem="R1Z-OR-nS3" firstAttribute="top" secondItem="Cv8-Sx-PAQ" secondAttribute="bottom" constant="30" id="YIq-lC-af3"/>
+                                    <constraint firstItem="R1Z-OR-nS3" firstAttribute="top" secondItem="Cv8-Sx-PAQ" secondAttribute="bottom" constant="20" id="YIq-lC-af3"/>
                                     <constraint firstAttribute="trailing" secondItem="Cv8-Sx-PAQ" secondAttribute="trailing" id="dpR-lk-BTn"/>
-                                    <constraint firstItem="bHe-PM-CjI" firstAttribute="top" secondItem="nTj-8P-mNt" secondAttribute="top" constant="40" id="eu1-xd-kiJ"/>
+                                    <constraint firstItem="bHe-PM-CjI" firstAttribute="top" secondItem="nTj-8P-mNt" secondAttribute="top" id="eu1-xd-kiJ"/>
                                     <constraint firstItem="ivk-ba-RbY" firstAttribute="leading" secondItem="nTj-8P-mNt" secondAttribute="leading" id="fqR-qJ-iFM"/>
                                     <constraint firstItem="Cv8-Sx-PAQ" firstAttribute="leading" secondItem="nTj-8P-mNt" secondAttribute="leading" id="jzO-d4-Uh0"/>
                                     <constraint firstItem="vew-43-kEh" firstAttribute="leading" secondItem="nTj-8P-mNt" secondAttribute="leading" id="lIt-7J-TtZ"/>
@@ -173,7 +182,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="naR-Rt-6bz" secondAttribute="bottom" id="OIh-QE-h5B"/>
                             <constraint firstItem="nTj-8P-mNt" firstAttribute="bottom" secondItem="aVv-Cz-XHU" secondAttribute="bottom" id="Sbb-8e-ThU"/>
@@ -199,7 +207,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tutorial_background" width="375" height="667"/>
-        <image name="white_phone_icon_large" width="385" height="366"/>
+        <image name="Fingerprint_background" width="377" height="668"/>
+        <image name="phone_with_circle" width="181" height="181"/>
     </resources>
 </document>

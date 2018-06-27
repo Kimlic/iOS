@@ -21,7 +21,7 @@ class MnemonicImportVC: UIViewController {
     
     private func setupView() {
         passTextView.textContainerInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
-        verifyButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: verifyButton.frame, type: .topBottom).color
+        verifyButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: verifyButton.frame, type: .topBottom).color
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
