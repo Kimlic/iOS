@@ -39,7 +39,7 @@ class VerificationVC: UIViewController {
         
         if email != nil {
             changeButton.setTitle("Change email address", for: .normal)
-            icon.image = #imageLiteral(resourceName: "white_email_icon_sml")
+            icon.image = #imageLiteral(resourceName: "email_with_circle")
         }else {
             changeButton.setTitle("Change phone number", for: .normal)
         }
@@ -65,7 +65,8 @@ class VerificationVC: UIViewController {
             case thirdNumberTextField:
                 fourthNumberTextField.becomeFirstResponder()
             case fourthNumberTextField:
-                self.verifyAndNavigate()
+                break
+//                self.verifyAndNavigate()
             default:
                 break
             }

@@ -11,7 +11,6 @@ import UIKit
 class SignUpVC: UIViewController {
 
     @IBOutlet weak var newIdentityButton: UIButton!
-    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var logo: UIImageView!
     
     override func viewDidLoad() {
@@ -31,10 +30,10 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func recoverIdentityButtonPressed(_ sender: Any) {
-        UIUtils.navigateToTerms(self, nextPage: .accountRecovery)
+//        UIUtils.navigateToTerms(self, nextPage: .accountRecovery)
 //        UIUtils.navigateToEmail(self)
 //        UIUtils.navigateToUserInfo(self)
-//        UIUtils.navigateToVerification(self, email: "izzeto@ratel.com.tr")
+        UIUtils.navigateToVerification(self, email: "izzeto@ratel.com.tr")
 //        UIUtils.navigateToTutorial(self)
 //        UIUtils.navigateToProfile(self)
 //        UIUtils.navigateToPhoneNumber(self)

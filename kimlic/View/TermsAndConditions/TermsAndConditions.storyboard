@@ -59,6 +59,12 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="acceptButtonPressed:" destination="Rxu-dC-R6U" eventType="touchUpInside" id="b93-U2-dWQ"/>
@@ -87,9 +93,9 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Du6-N8-9mk">
                                                 <rect key="frame" x="40" y="269" width="295" height="602.5"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet aliquet purus. Etiam aliquet tempor rhoncus. Sed consectetur justo non dolor aliquam ullamcorper. Vestibulum nisi quam, iaculis ac felis ut, laoreet finibus nunc. Morbi gravida, turpis et vulputate semper, arcu nisl lacinia massa, eget vestibulum turpis lectus a mauris. Morbi quis est non ligula varius ullamcorper. Integer tristique enim magna, a pellentesque dui elementum id. Morbi nec porttitor sem, vitae varius risus. Aliquam volutpat, magna ut aliquet placerat, augue purus fermentum diam, quis pulvinar augue lorem eu est. Vestibulum tincidunt pharetra lectus at consectetur.
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet aliquet purus. Etiam aliquet tempor rhoncus. Sed consectetur justo non dolor aliquam ullamcorper. Vestibulum nisi quam, iaculis ac felis ut, laoreet finibus nunc. Morbi gravida, turpis et vulputate semper, arcu nisl lacinia massa, eget vestibulum turpis lectus a mauris. Morbi quis est non ligula varius ullamcorper. Integer tristique enim magna, a pellentesque dui elementum id. Morbi nec porttitor sem, vitae varius risus. Aliquam volutpat, magna ut aliquet placerat, augue purus fermentum diam, quis pulvinar augue lorem eu est. Vestibulum tincidunt pharetra lectus at consectetur.
 
-Phasellus in tellus et est accumsan faucibus. Praesent cursus neque sed erat dictum malesuada. Suspendisse convallis id erat ac efficitur. Pellentesque id porta sem. Cras at cursus nibh, vitae feugiat dui. Proin eget rhoncus lectus. Aenean consequat justo quis elit euismod gravida. Cras fermentum, tortor eget luctus hendrerit, metus diam luctus risus, vulputate cursus erat justo sit amet nulla.</mutableString>
+Phasellus in tellus et est accumsan faucibus. Praesent cursus neque sed erat dictum malesuada. Suspendisse convallis id erat ac efficitur. Pellentesque id porta sem. Cras at cursus nibh, vitae feugiat dui. Proin eget rhoncus lectus. Aenean consequat justo quis elit euismod gravida. Cras fermentum, tortor eget luctus hendrerit, metus diam luctus risus, vulputate cursus erat justo sit amet nulla.</string>
                                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>

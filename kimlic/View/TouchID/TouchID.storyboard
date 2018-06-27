@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="4Wn-Sj-uYh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fingerprint_background" translatesAutoresizingMaskIntoConstraints="NO" id="4Wn-Sj-uYh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2x-hB-TWl" userLabel="ContentView">
@@ -45,11 +45,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yd9-Ch-Xf0" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="135" y="616" width="64" height="50"/>
+                                        <rect key="frame" x="132.33333333333334" y="616" width="70" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="sIq-tt-AIK"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -84,7 +84,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="4Wn-Sj-uYh" secondAttribute="bottom" id="1Ux-kE-8LL"/>
                             <constraint firstItem="4Wn-Sj-uYh" firstAttribute="top" secondItem="bJN-wy-KgD" secondAttribute="top" id="XHL-Xq-q71"/>
@@ -104,7 +103,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="touch_ID_success_icon" width="402" height="402"/>
-        <image name="tutorial_background" width="375" height="667"/>
+        <image name="Fingerprint_background" width="377" height="668"/>
+        <image name="touch_ID_success_icon" width="201" height="201"/>
     </resources>
 </document>
