@@ -33,7 +33,7 @@ class SignUpVC: UIViewController {
 //        UIUtils.navigateToTerms(self, nextPage: .accountRecovery)
 //        UIUtils.navigateToEmail(self)
 //        UIUtils.navigateToUserInfo(self)
-        UIUtils.navigateToVerification(self, email: "izzeto@ratel.com.tr")
+//        UIUtils.navigateToVerification(self, email: "izzeto@ratel.com.tr")
 //        UIUtils.navigateToTutorial(self)
 //        UIUtils.navigateToProfile(self)
 //        UIUtils.navigateToPhoneNumber(self)
@@ -42,7 +42,7 @@ class SignUpVC: UIViewController {
 //        UIUtils.navigateToProfile(self)
 //        UIUtils.navigateToTouchID(self)
 //        UIUtils.navigateToMnemonicVerification(self)
-//        UIUtils.navigateToSettings(self)
+        UIUtils.navigateToSettings(self)
 //        UIUtils.showPasscodeVC(vc: self, pageType: .confirm)
     }
 }
