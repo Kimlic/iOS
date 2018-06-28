@@ -32,6 +32,11 @@ class PhoneNumberVC: UIViewController {
         self.setupPickerViews()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        phoneNumberTextField.becomeFirstResponder()
+    }
+    
     private func setupView() {
         nextButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: nextButton.frame, type: .topBottom).color
         
@@ -74,6 +79,7 @@ class PhoneNumberVC: UIViewController {
             phoneNumberTextField.text = selectedCode
             return
         }
+        phoneNumberTextField.text = PartialFormatter().formatPartial(str!)
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {

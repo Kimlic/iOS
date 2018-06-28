@@ -110,6 +110,10 @@ class VerificationVC: UIViewController {
         self.verifyAndNavigate()
     }
     
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     private func verifyAndNavigate() {
         if self.codeVerify() {
             if email != nil {

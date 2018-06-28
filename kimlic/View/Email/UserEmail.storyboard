@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,30 +23,30 @@
             <objects>
                 <viewController storyboardIdentifier="UserEmailVC" id="mu1-Ak-Swy" customClass="UserEmailVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TWI-Q8-Gg7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fingerprint_background" translatesAutoresizingMaskIntoConstraints="NO" id="AA8-zF-epq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HdT-dy-AHl" userLabel="ContentView">
-                                <rect key="frame" x="40" y="20" width="295" height="647"/>
+                                <rect key="frame" x="40" y="20" width="240" height="548"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email_with_circle" translatesAutoresizingMaskIntoConstraints="NO" id="3ZR-Z2-6Sa">
-                                        <rect key="frame" x="57.5" y="0.0" width="180" height="180"/>
+                                        <rect key="frame" x="30" y="0.0" width="180" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="Jgk-fq-ZDU"/>
                                             <constraint firstAttribute="width" constant="180" id="Nry-dg-QDK"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Kdk-j0-95c">
-                                        <rect key="frame" x="0.0" y="180" width="295" height="38"/>
+                                        <rect key="frame" x="0.0" y="180" width="240" height="38"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dMX-01-dtp" customClass="CustomTextField" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="248" width="295" height="56"/>
+                                        <rect key="frame" x="0.0" y="248" width="240" height="56"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>
                                         </accessibility>
@@ -75,7 +75,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaW-JW-5pV" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="324" width="295" height="56"/>
+                                        <rect key="frame" x="0.0" y="324" width="240" height="56"/>
                                         <color key="backgroundColor" red="0.29411764709999999" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="bdp-q1-bbV"/>
@@ -103,7 +103,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQY-fG-lXD" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="113" y="380" width="70" height="56"/>
+                                        <rect key="frame" x="85.5" y="380" width="70" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="aEH-Oa-A8x"/>
                                         </constraints>
@@ -162,6 +162,6 @@
     </scenes>
     <resources>
         <image name="Fingerprint_background" width="377" height="668"/>
-        <image name="email_with_circle" width="63" height="63"/>
+        <image name="email_with_circle" width="181" height="181"/>
     </resources>
 </document>

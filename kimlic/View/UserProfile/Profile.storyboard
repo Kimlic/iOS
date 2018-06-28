@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileVC" id="x7F-pS-psq" customClass="ProfileVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B9P-iR-LTx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ar-Pi-K7k" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="202"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erh-Wi-EWE" userLabel="selectImage">
                                         <rect key="frame" x="30" y="40" width="186" height="172"/>
@@ -38,7 +38,7 @@
                                         <rect key="frame" x="30" y="40" width="186" height="172"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBX-rw-Gi8" userLabel="settingsButton">
-                                        <rect key="frame" x="335" y="30" width="28" height="29"/>
+                                        <rect key="frame" x="280" y="30" width="28" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="uQm-Wx-aZJ"/>
                                             <constraint firstAttribute="width" constant="28" id="vfn-vY-FPA"/>
@@ -68,10 +68,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2Q-sy-8yM" userLabel="FooterView">
-                                <rect key="frame" x="0.0" y="545" width="375" height="122"/>
+                                <rect key="frame" x="0.0" y="446" width="320" height="122"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_background" translatesAutoresizingMaskIntoConstraints="NO" id="djX-5O-k7f">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="66"/>
+                                        <rect key="frame" x="0.0" y="56" width="320" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="66" id="C3p-g0-FEK"/>
                                         </constraints>
@@ -81,7 +81,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQF-6s-EHo">
-                                        <rect key="frame" x="132" y="0.0" width="110" height="101"/>
+                                        <rect key="frame" x="104.5" y="0.0" width="110" height="101"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="110" id="LpI-bJ-hcd"/>
                                             <constraint firstAttribute="height" constant="101" id="xEk-bu-luc"/>
@@ -89,7 +89,7 @@
                                         <state key="normal" image="Scan_button_new"/>
                                     </button>
                                     <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBq-F6-uqh" userLabel="profileButton">
-                                        <rect key="frame" x="0.0" y="56" width="124" height="66"/>
+                                        <rect key="frame" x="0.0" y="56" width="96.5" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="66" id="q6V-Lo-g9H"/>
                                         </constraints>
@@ -132,9 +132,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Scan_button_new" width="160" height="147"/>
+        <image name="Scan_button_new" width="111" height="102"/>
         <image name="add_image_frame" width="186" height="172"/>
         <image name="menu_background" width="376" height="81"/>
-        <image name="profile_settings_button" width="68" height="72"/>
+        <image name="profile_settings_button" width="24" height="25"/>
     </resources>
 </document>
