@@ -210,21 +210,22 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ieo-7p-jBy" firstAttribute="top" secondItem="R9A-Ih-sEH" secondAttribute="bottom" constant="15" id="065-kM-Bzj"/>
-                                    <constraint firstAttribute="trailing" secondItem="Cz1-RF-aFY" secondAttribute="trailing" id="2bT-DK-Jmm"/>
                                     <constraint firstAttribute="trailing" secondItem="bU9-yo-WhL" secondAttribute="trailing" id="2kh-rK-UbR"/>
                                     <constraint firstAttribute="trailing" secondItem="ieo-7p-jBy" secondAttribute="trailing" id="4cr-sd-a4U"/>
                                     <constraint firstItem="Dhp-AS-4xw" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="794-fu-F3Y"/>
                                     <constraint firstItem="bU9-yo-WhL" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="8IU-O2-nnL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cz1-RF-aFY" secondAttribute="trailing" id="ACV-MI-Yls"/>
                                     <constraint firstAttribute="trailing" secondItem="R9A-Ih-sEH" secondAttribute="trailing" id="Eaw-vm-eY7"/>
-                                    <constraint firstItem="Cz1-RF-aFY" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="Hzd-yc-l59"/>
                                     <constraint firstItem="MJs-PJ-0bC" firstAttribute="top" secondItem="Dhp-AS-4xw" secondAttribute="bottom" constant="15" id="I2o-UM-wfv"/>
                                     <constraint firstAttribute="bottom" secondItem="4Lv-ok-2j0" secondAttribute="bottom" constant="30" id="KTs-lS-0Fs"/>
                                     <constraint firstItem="4Lv-ok-2j0" firstAttribute="top" secondItem="Cz1-RF-aFY" secondAttribute="bottom" id="Lmm-j7-FsE"/>
                                     <constraint firstAttribute="trailing" secondItem="MJs-PJ-0bC" secondAttribute="trailing" id="OO2-j0-GqT"/>
                                     <constraint firstItem="ieo-7p-jBy" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="OQD-Wx-5jU"/>
+                                    <constraint firstItem="Cz1-RF-aFY" firstAttribute="centerX" secondItem="94q-rI-JXU" secondAttribute="centerX" id="ORt-o5-blN"/>
                                     <constraint firstItem="Dhp-AS-4xw" firstAttribute="top" secondItem="ieo-7p-jBy" secondAttribute="bottom" constant="15" id="Pd3-Xl-cM0"/>
                                     <constraint firstAttribute="trailing" secondItem="Dhp-AS-4xw" secondAttribute="trailing" id="Qor-ly-YBd"/>
                                     <constraint firstItem="R9A-Ih-sEH" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="R3O-aC-7YZ"/>
+                                    <constraint firstItem="Cz1-RF-aFY" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="aeF-ht-8bb"/>
                                     <constraint firstItem="R9A-Ih-sEH" firstAttribute="top" secondItem="bU9-yo-WhL" secondAttribute="bottom" constant="30" id="cXC-O0-OB8"/>
                                     <constraint firstItem="bU9-yo-WhL" firstAttribute="top" secondItem="oCn-B8-ZCQ" secondAttribute="bottom" constant="8" id="ed8-EE-UcZ"/>
                                     <constraint firstItem="MJs-PJ-0bC" firstAttribute="leading" secondItem="94q-rI-JXU" secondAttribute="leading" id="mFq-zf-KBh"/>
@@ -262,6 +263,6 @@
     </scenes>
     <resources>
         <image name="Fingerprint_background" width="377" height="668"/>
-        <image name="verify_lock_icon" width="29" height="38"/>
+        <image name="verify_lock_icon" width="21" height="27"/>
     </resources>
 </document>

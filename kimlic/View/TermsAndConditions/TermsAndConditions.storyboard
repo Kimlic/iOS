@@ -120,12 +120,13 @@ Phasellus in tellus et est accumsan faucibus. Praesent cursus neque sed erat dic
                                     </scrollView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fQH-Xu-rlE" secondAttribute="trailing" constant="40" id="3Af-fQ-SfN"/>
                                     <constraint firstAttribute="bottom" secondItem="MsD-gP-N1C" secondAttribute="bottom" constant="30" id="Giw-Jv-fPh"/>
                                     <constraint firstItem="MsD-gP-N1C" firstAttribute="top" secondItem="fQH-Xu-rlE" secondAttribute="bottom" constant="14" id="Jxd-5I-TdV"/>
                                     <constraint firstItem="Kv6-2s-MJd" firstAttribute="top" secondItem="uo6-qB-HL7" secondAttribute="top" id="NT2-Av-ave"/>
-                                    <constraint firstItem="fQH-Xu-rlE" firstAttribute="leading" secondItem="uo6-qB-HL7" secondAttribute="leading" constant="40" id="T1R-cF-EMS"/>
-                                    <constraint firstAttribute="trailing" secondItem="fQH-Xu-rlE" secondAttribute="trailing" constant="40" id="cgo-qk-Elj"/>
                                     <constraint firstItem="fQH-Xu-rlE" firstAttribute="top" secondItem="Kv6-2s-MJd" secondAttribute="bottom" id="fHl-cZ-5OD"/>
+                                    <constraint firstItem="fQH-Xu-rlE" firstAttribute="leading" secondItem="uo6-qB-HL7" secondAttribute="leading" constant="40" id="gpa-g0-VWc"/>
+                                    <constraint firstItem="fQH-Xu-rlE" firstAttribute="centerX" secondItem="uo6-qB-HL7" secondAttribute="centerX" id="hgC-Od-zme"/>
                                     <constraint firstItem="Kv6-2s-MJd" firstAttribute="leading" secondItem="uo6-qB-HL7" secondAttribute="leading" id="nug-z6-RAT"/>
                                     <constraint firstAttribute="trailing" secondItem="Kv6-2s-MJd" secondAttribute="trailing" id="qhv-tQ-8lq"/>
                                     <constraint firstItem="MsD-gP-N1C" firstAttribute="centerX" secondItem="uo6-qB-HL7" secondAttribute="centerX" id="v2q-ZV-Nff"/>

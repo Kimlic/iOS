@@ -9,18 +9,21 @@ import UIKit
 class TutorialsContentVC: UIViewController {
     
     @IBOutlet weak var tutorialImage: UIImageView!
+    @IBOutlet weak var tutorialIcon: UIImageView!
     @IBOutlet weak var tutorialTitle: UILabel!
     @IBOutlet weak var tutorialDesc: UILabel!
-    @IBOutlet weak var viewContent: UIView!
-
+    @IBOutlet weak var verticalConstraint: NSLayoutConstraint!
+    
     var tutTitle: String!
     var tutDesc: String!
     var image: UIImage!
+    var icon: UIImage!
     var pageIndex:Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
         setTutorialFieldsValue()
     }
     
@@ -29,14 +32,20 @@ class TutorialsContentVC: UIViewController {
         Animz.fadeIn(image: tutorialImage, duration: Animz.time06)
     }
     
-    func setTutorialFieldsValue() {
-        tutorialImage.image = image
-        tutorialTitle.text = tutTitle
-        tutorialDesc.text = tutDesc
+    fileprivate func setupView() {
+        if AppDelegate.isIPhone5s() {
+            DispatchQueue.main.async {
+                self.verticalConstraint.constant = -75
+            }
+        }
+        self.view.backgroundColor = UIColor.clear
     }
     
-    @IBAction func skipButtonPressed(_ sender: Any) {
-        UIUtils.navigateToTerms(self, nextPage: .phoneNumber)
+    func setTutorialFieldsValue() {
+        tutorialImage.image = image
+        tutorialIcon.image = icon
+        tutorialTitle.text = tutTitle
+        tutorialDesc.text = tutDesc
     }
     
 }

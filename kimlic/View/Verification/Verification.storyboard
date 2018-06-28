@@ -189,13 +189,13 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="kFq-Tf-7Ld" firstAttribute="top" secondItem="bj7-eC-Kz9" secondAttribute="bottom" constant="30" id="2Fy-Ed-cVb"/>
-                                    <constraint firstAttribute="trailing" secondItem="kFq-Tf-7Ld" secondAttribute="trailing" id="HsI-Ki-Sd0"/>
+                                    <constraint firstItem="kFq-Tf-7Ld" firstAttribute="leading" secondItem="8Fw-hf-VFB" secondAttribute="leading" id="6Av-ng-cbP"/>
                                     <constraint firstItem="Jdb-ev-h14" firstAttribute="top" secondItem="hdD-ab-ByJ" secondAttribute="bottom" id="b6J-Pr-nYI"/>
                                     <constraint firstItem="Jdb-ev-h14" firstAttribute="centerX" secondItem="8Fw-hf-VFB" secondAttribute="centerX" id="d0N-cq-0yz"/>
+                                    <constraint firstAttribute="trailing" secondItem="kFq-Tf-7Ld" secondAttribute="trailing" id="em1-9F-PuN"/>
                                     <constraint firstItem="hdD-ab-ByJ" firstAttribute="top" secondItem="GLl-j3-m5J" secondAttribute="bottom" constant="8" id="fSx-x6-cMl"/>
                                     <constraint firstItem="GLl-j3-m5J" firstAttribute="top" secondItem="8Fw-hf-VFB" secondAttribute="top" id="gIg-Ai-hPj"/>
                                     <constraint firstItem="hdD-ab-ByJ" firstAttribute="centerX" secondItem="8Fw-hf-VFB" secondAttribute="centerX" id="nMi-l3-40I"/>
-                                    <constraint firstItem="kFq-Tf-7Ld" firstAttribute="leading" secondItem="8Fw-hf-VFB" secondAttribute="leading" id="oCo-If-G3O"/>
                                     <constraint firstItem="bj7-eC-Kz9" firstAttribute="top" secondItem="Jdb-ev-h14" secondAttribute="bottom" constant="30" id="pHv-v3-5vD"/>
                                     <constraint firstItem="GLl-j3-m5J" firstAttribute="centerX" secondItem="8Fw-hf-VFB" secondAttribute="centerX" id="v1W-mK-cH8"/>
                                     <constraint firstItem="bj7-eC-Kz9" firstAttribute="centerX" secondItem="8Fw-hf-VFB" secondAttribute="centerX" id="xQO-xE-JrK"/>
@@ -232,7 +232,7 @@
     </scenes>
     <resources>
         <image name="Fingerprint_background" width="377" height="668"/>
-        <image name="phone_with_circle" width="181" height="181"/>
-        <image name="verify_lock_icon" width="29" height="38"/>
+        <image name="phone_with_circle" width="63" height="63"/>
+        <image name="verify_lock_icon" width="21" height="27"/>
     </resources>
 </document>

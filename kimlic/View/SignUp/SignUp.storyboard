@@ -92,12 +92,12 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="5yX-uf-yJA" secondAttribute="bottom" constant="30" id="1Ja-l3-Gmz"/>
                                     <constraint firstItem="HQT-ld-sfm" firstAttribute="centerX" secondItem="5yX-uf-yJA" secondAttribute="centerX" id="2dN-Zl-Qnx"/>
-                                    <constraint firstAttribute="trailing" secondItem="5yX-uf-yJA" secondAttribute="trailing" id="CJH-ot-h3g"/>
+                                    <constraint firstAttribute="trailing" secondItem="5yX-uf-yJA" secondAttribute="trailing" id="6Pc-Cr-v6Q"/>
                                     <constraint firstItem="HQT-ld-sfm" firstAttribute="width" secondItem="5yX-uf-yJA" secondAttribute="width" id="YeA-hd-FfB"/>
                                     <constraint firstItem="q9i-OY-LqL" firstAttribute="top" secondItem="otX-Zn-SMk" secondAttribute="top" constant="80" id="dE9-qp-lBf"/>
                                     <constraint firstItem="q9i-OY-LqL" firstAttribute="centerX" secondItem="otX-Zn-SMk" secondAttribute="centerX" id="fo9-Am-sQi"/>
                                     <constraint firstItem="5yX-uf-yJA" firstAttribute="top" secondItem="HQT-ld-sfm" secondAttribute="bottom" constant="15" id="n9y-r0-8Sm"/>
-                                    <constraint firstItem="5yX-uf-yJA" firstAttribute="leading" secondItem="otX-Zn-SMk" secondAttribute="leading" id="tHs-YW-BC9"/>
+                                    <constraint firstItem="5yX-uf-yJA" firstAttribute="leading" secondItem="otX-Zn-SMk" secondAttribute="leading" id="oPk-JO-oI4"/>
                                     <constraint firstItem="5yX-uf-yJA" firstAttribute="centerX" secondItem="otX-Zn-SMk" secondAttribute="centerX" id="udu-j2-M4G"/>
                                 </constraints>
                             </view>
@@ -125,7 +125,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="kimlic_logo_with_text" width="195" height="266"/>
+        <image name="kimlic_logo_with_text" width="135" height="185"/>
         <image name="simple_background" width="375" height="667"/>
     </resources>
 </document>

@@ -111,20 +111,19 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="UfB-R4-tuI" firstAttribute="leading" secondItem="GTR-oH-hUu" secondAttribute="leading" id="26D-Ag-egJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="bb5-MX-ZAq" secondAttribute="trailing" id="5LQ-0M-8HD"/>
                                     <constraint firstAttribute="trailing" secondItem="P0z-Go-c90" secondAttribute="trailing" id="8Tv-KO-JbQ"/>
                                     <constraint firstItem="naf-nH-iBb" firstAttribute="top" secondItem="P0z-Go-c90" secondAttribute="bottom" constant="20" id="AQg-oa-W0X"/>
                                     <constraint firstAttribute="trailing" secondItem="naf-nH-iBb" secondAttribute="trailing" id="Mzi-s6-rG8"/>
-                                    <constraint firstItem="bb5-MX-ZAq" firstAttribute="leading" secondItem="GTR-oH-hUu" secondAttribute="leading" id="QqE-Pj-797"/>
-                                    <constraint firstAttribute="trailing" secondItem="bb5-MX-ZAq" secondAttribute="trailing" id="RgY-na-mJL"/>
                                     <constraint firstItem="naf-nH-iBb" firstAttribute="leading" secondItem="GTR-oH-hUu" secondAttribute="leading" id="S8B-11-ccN"/>
                                     <constraint firstItem="UfB-R4-tuI" firstAttribute="top" secondItem="GTR-oH-hUu" secondAttribute="top" constant="40" id="eAp-HL-JOa"/>
                                     <constraint firstItem="bb5-MX-ZAq" firstAttribute="top" secondItem="naf-nH-iBb" secondAttribute="bottom" constant="40" id="gIW-9Q-i2l"/>
                                     <constraint firstItem="NW8-DZ-GDi" firstAttribute="top" secondItem="bb5-MX-ZAq" secondAttribute="bottom" id="gka-nv-lYq"/>
                                     <constraint firstItem="NW8-DZ-GDi" firstAttribute="centerX" secondItem="GTR-oH-hUu" secondAttribute="centerX" id="hIV-kO-2wd"/>
                                     <constraint firstItem="P0z-Go-c90" firstAttribute="top" secondItem="UfB-R4-tuI" secondAttribute="bottom" constant="8" id="iEy-4I-N2G"/>
+                                    <constraint firstItem="bb5-MX-ZAq" firstAttribute="leading" secondItem="GTR-oH-hUu" secondAttribute="leading" id="l56-44-gZ7"/>
                                     <constraint firstAttribute="trailing" secondItem="UfB-R4-tuI" secondAttribute="trailing" id="m7X-S1-MTW"/>
                                     <constraint firstAttribute="bottom" secondItem="NW8-DZ-GDi" secondAttribute="bottom" constant="30" id="mW4-Sh-CQO"/>
-                                    <constraint firstItem="bb5-MX-ZAq" firstAttribute="centerX" secondItem="GTR-oH-hUu" secondAttribute="centerX" id="mx2-eo-Ckp"/>
                                     <constraint firstItem="P0z-Go-c90" firstAttribute="leading" secondItem="GTR-oH-hUu" secondAttribute="leading" id="vz1-dz-yxr"/>
                                 </constraints>
                             </view>

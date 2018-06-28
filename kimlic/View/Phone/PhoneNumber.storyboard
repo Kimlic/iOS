@@ -167,15 +167,15 @@
                                     <constraint firstItem="N10-XZ-kQ5" firstAttribute="top" secondItem="vew-43-kEh" secondAttribute="bottom" constant="20" id="Lrc-q2-N8D"/>
                                     <constraint firstAttribute="trailing" secondItem="vew-43-kEh" secondAttribute="trailing" id="P4y-ma-kdg"/>
                                     <constraint firstItem="hvY-Cq-Bkn" firstAttribute="top" secondItem="N10-XZ-kQ5" secondAttribute="bottom" id="Rsl-6Y-sCa"/>
-                                    <constraint firstAttribute="trailing" secondItem="N10-XZ-kQ5" secondAttribute="trailing" id="W3R-Vm-jOA"/>
                                     <constraint firstItem="R1Z-OR-nS3" firstAttribute="top" secondItem="Cv8-Sx-PAQ" secondAttribute="bottom" constant="20" id="YIq-lC-af3"/>
                                     <constraint firstAttribute="trailing" secondItem="Cv8-Sx-PAQ" secondAttribute="trailing" id="dpR-lk-BTn"/>
+                                    <constraint firstAttribute="trailing" secondItem="N10-XZ-kQ5" secondAttribute="trailing" id="dun-Y3-3Hx"/>
                                     <constraint firstItem="bHe-PM-CjI" firstAttribute="top" secondItem="nTj-8P-mNt" secondAttribute="top" id="eu1-xd-kiJ"/>
                                     <constraint firstItem="ivk-ba-RbY" firstAttribute="leading" secondItem="nTj-8P-mNt" secondAttribute="leading" id="fqR-qJ-iFM"/>
+                                    <constraint firstItem="N10-XZ-kQ5" firstAttribute="leading" secondItem="nTj-8P-mNt" secondAttribute="leading" id="h9w-Ey-PQW"/>
                                     <constraint firstItem="Cv8-Sx-PAQ" firstAttribute="leading" secondItem="nTj-8P-mNt" secondAttribute="leading" id="jzO-d4-Uh0"/>
                                     <constraint firstItem="vew-43-kEh" firstAttribute="leading" secondItem="nTj-8P-mNt" secondAttribute="leading" id="lIt-7J-TtZ"/>
                                     <constraint firstAttribute="trailing" secondItem="R1Z-OR-nS3" secondAttribute="trailing" id="lYr-8T-lfg"/>
-                                    <constraint firstItem="N10-XZ-kQ5" firstAttribute="leading" secondItem="nTj-8P-mNt" secondAttribute="leading" id="oXX-WD-KFB"/>
                                     <constraint firstItem="bHe-PM-CjI" firstAttribute="centerX" secondItem="nTj-8P-mNt" secondAttribute="centerX" id="pdb-Jb-6yX"/>
                                     <constraint firstItem="hvY-Cq-Bkn" firstAttribute="centerX" secondItem="nTj-8P-mNt" secondAttribute="centerX" id="rj5-30-jnY"/>
                                     <constraint firstAttribute="trailing" secondItem="ivk-ba-RbY" secondAttribute="trailing" id="rk8-pb-nIY"/>
@@ -208,6 +208,6 @@
     </scenes>
     <resources>
         <image name="Fingerprint_background" width="377" height="668"/>
-        <image name="phone_with_circle" width="181" height="181"/>
+        <image name="phone_with_circle" width="63" height="63"/>
     </resources>
 </document>

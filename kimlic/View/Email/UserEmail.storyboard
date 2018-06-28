@@ -122,16 +122,16 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="DaW-JW-5pV" firstAttribute="leading" secondItem="HdT-dy-AHl" secondAttribute="leading" id="1hP-0x-UWi"/>
                                     <constraint firstItem="3ZR-Z2-6Sa" firstAttribute="top" secondItem="HdT-dy-AHl" secondAttribute="top" id="2Tw-KM-wRJ"/>
                                     <constraint firstItem="3ZR-Z2-6Sa" firstAttribute="centerX" secondItem="HdT-dy-AHl" secondAttribute="centerX" id="2dt-Uq-syg"/>
                                     <constraint firstAttribute="trailing" secondItem="Kdk-j0-95c" secondAttribute="trailing" id="59w-4m-Tfa"/>
                                     <constraint firstItem="xQY-fG-lXD" firstAttribute="centerX" secondItem="HdT-dy-AHl" secondAttribute="centerX" id="AhO-qC-1o1"/>
                                     <constraint firstItem="dMX-01-dtp" firstAttribute="top" secondItem="Kdk-j0-95c" secondAttribute="bottom" constant="30" id="MqV-XU-WNx"/>
+                                    <constraint firstAttribute="trailing" secondItem="DaW-JW-5pV" secondAttribute="trailing" id="RhF-cP-kwY"/>
                                     <constraint firstItem="Kdk-j0-95c" firstAttribute="leading" secondItem="HdT-dy-AHl" secondAttribute="leading" id="Sgl-Kv-fFG"/>
-                                    <constraint firstAttribute="trailing" secondItem="DaW-JW-5pV" secondAttribute="trailing" id="TwQ-5s-5iC"/>
                                     <constraint firstItem="dMX-01-dtp" firstAttribute="leading" secondItem="HdT-dy-AHl" secondAttribute="leading" id="Zji-xL-1Qm"/>
                                     <constraint firstItem="xQY-fG-lXD" firstAttribute="top" secondItem="DaW-JW-5pV" secondAttribute="bottom" id="ceh-qI-ukR"/>
+                                    <constraint firstItem="DaW-JW-5pV" firstAttribute="leading" secondItem="HdT-dy-AHl" secondAttribute="leading" id="pym-VT-489"/>
                                     <constraint firstItem="DaW-JW-5pV" firstAttribute="top" secondItem="dMX-01-dtp" secondAttribute="bottom" constant="20" id="vir-da-Fj0"/>
                                     <constraint firstItem="Kdk-j0-95c" firstAttribute="top" secondItem="3ZR-Z2-6Sa" secondAttribute="bottom" id="x3O-hF-isi"/>
                                     <constraint firstAttribute="trailing" secondItem="dMX-01-dtp" secondAttribute="trailing" id="zWx-Sk-ouI"/>
@@ -162,6 +162,6 @@
     </scenes>
     <resources>
         <image name="Fingerprint_background" width="377" height="668"/>
-        <image name="email_with_circle" width="181" height="181"/>
+        <image name="email_with_circle" width="63" height="63"/>
     </resources>
 </document>

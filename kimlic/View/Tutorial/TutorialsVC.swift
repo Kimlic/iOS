@@ -10,32 +10,43 @@ class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
     
     var pageViewController: UIPageViewController!
     var pageCount = 3
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+        super.viewDidLoad()        
+        setupPageViewController()
+    }
+    
+    /*
+     * @discussion Pager and PageVC set default value
+     * @param
+     * @return
+     */
+    fileprivate func setupPageViewController() {
         
         // Registering PageViewController from StoryBoard
-        self.pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as! UIPageViewController
+        pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as! UIPageViewController
+        
+        let pageControl: UIPageControl = UIPageControl.appearance(whenContainedInInstancesOf: [UIPageViewController.self])
+        pageControl.pageIndicatorTintColor = UIColor.pagerBlue
+        pageControl.currentPageIndicatorTintColor = UIColor.white
         
         // PageViewContrller DataSource Method
-        self.pageViewController.dataSource = self
-        
-        
+        pageViewController.dataSource = self
         
         // Initialising the ViewController and setting ViewController to PageViewContrller
         let initialVC = self.contentViewAtIndex(0) as TutorialsContentVC
-        self.pageViewController.setViewControllers([initialVC], direction: .forward, animated: true, completion: nil)
-        
+        pageViewController.setViewControllers([initialVC], direction: .forward, animated: true, completion: nil)
         
         // Setting the size of PageViewContrller
-        self.pageViewController.view.frame = CGRect(x: 0, y: 30, width: self.view.frame.size.width, height: self.view.frame.size.height - 90)
+        pageViewController.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height - 60)
         
         // Adding the PageViewContrller to the Parent View
-        self.addChildViewController(self.pageViewController)
-        self.view.addSubview(self.pageViewController.view)
-        self.pageViewController.didMove(toParentViewController: self)
-        
+        addChildViewController(self.pageViewController)
+        view.addSubview(self.pageViewController.view)
+        pageViewController.didMove(toParentViewController: self)
     }
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
 
         let contentVC = viewController as! TutorialsContentVC
@@ -97,19 +108,23 @@ class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
         case 0:
             contentVC.tutTitle = "tutorial1Title".localized
             contentVC.tutDesc = "tutorial1Desc".localized
-            contentVC.image = #imageLiteral(resourceName: "scan_QR_iilustration")
+            contentVC.image = #imageLiteral(resourceName: "tutorial_1_illustration")
+            contentVC.icon = #imageLiteral(resourceName: "profile_icon_for_tutorial")
         case 1:
             contentVC.tutTitle = "tutorial2Title".localized
             contentVC.tutDesc = "tutorial2Desc".localized
-            contentVC.image = #imageLiteral(resourceName: "scan_QR_iilustration")
+            contentVC.image = #imageLiteral(resourceName: "tutorial_2_illustration")
+            contentVC.icon = #imageLiteral(resourceName: "scan_icon_for_tutorial")
         case 2:
             contentVC.tutTitle = "tutorial3Title".localized
             contentVC.tutDesc = "tutorial3Desc".localized
-            contentVC.image = #imageLiteral(resourceName: "scan_QR_iilustration")
+            contentVC.image = #imageLiteral(resourceName: "tutorial_3_illustration")
+            contentVC.icon = #imageLiteral(resourceName: "account_icon_for_tutorial")
         default:
             contentVC.tutTitle = "tutorial1Title".localized
             contentVC.tutDesc = "tutorial1Desc".localized
-            contentVC.image = #imageLiteral(resourceName: "scan_QR_iilustration")
+            contentVC.image = #imageLiteral(resourceName: "tutorial_1_illustration")
+            contentVC.icon = #imageLiteral(resourceName: "profile_icon_for_tutorial")
         }        
         return contentVC
     }

@@ -143,6 +143,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="vRT-kC-pXJ" secondAttribute="trailing" id="2gE-m9-NBb"/>
+                                    <constraint firstAttribute="trailing" secondItem="ByR-dN-kU3" secondAttribute="trailing" id="3a1-8N-gjs"/>
                                     <constraint firstItem="vRT-kC-pXJ" firstAttribute="top" secondItem="QmX-Ys-2nV" secondAttribute="top" constant="40" id="6jo-mn-ZMV"/>
                                     <constraint firstItem="1fR-Sf-h8j" firstAttribute="centerX" secondItem="ByR-dN-kU3" secondAttribute="centerX" id="9qG-xi-2zo"/>
                                     <constraint firstItem="ByR-dN-kU3" firstAttribute="top" secondItem="tlo-B0-SrY" secondAttribute="bottom" constant="8" id="BTX-Y6-zeF"/>
@@ -150,12 +151,12 @@
                                     <constraint firstAttribute="trailing" secondItem="tlo-B0-SrY" secondAttribute="trailing" id="IGM-YW-bfZ"/>
                                     <constraint firstItem="5FH-E8-Nok" firstAttribute="top" secondItem="vRT-kC-pXJ" secondAttribute="bottom" constant="8" id="K5E-LJ-7iV"/>
                                     <constraint firstAttribute="bottom" secondItem="1fR-Sf-h8j" secondAttribute="bottom" constant="30" id="NAr-2e-F5n"/>
-                                    <constraint firstItem="ByR-dN-kU3" firstAttribute="leading" secondItem="QmX-Ys-2nV" secondAttribute="leading" id="RK4-9Q-oq3"/>
+                                    <constraint firstItem="ByR-dN-kU3" firstAttribute="centerX" secondItem="QmX-Ys-2nV" secondAttribute="centerX" id="NzQ-bl-Fgj"/>
+                                    <constraint firstItem="ByR-dN-kU3" firstAttribute="leading" secondItem="QmX-Ys-2nV" secondAttribute="leading" id="OGj-tH-wj8"/>
                                     <constraint firstItem="tlo-B0-SrY" firstAttribute="leading" secondItem="QmX-Ys-2nV" secondAttribute="leading" id="Tfy-pG-57j"/>
                                     <constraint firstItem="tlo-B0-SrY" firstAttribute="top" secondItem="5FH-E8-Nok" secondAttribute="bottom" constant="30" id="cTf-0o-DYr"/>
                                     <constraint firstItem="5FH-E8-Nok" firstAttribute="leading" secondItem="QmX-Ys-2nV" secondAttribute="leading" id="d4O-Z0-9O2"/>
                                     <constraint firstAttribute="trailing" secondItem="5FH-E8-Nok" secondAttribute="trailing" id="hn7-m2-8po"/>
-                                    <constraint firstAttribute="trailing" secondItem="ByR-dN-kU3" secondAttribute="trailing" id="mtQ-zc-fD5"/>
                                     <constraint firstItem="vRT-kC-pXJ" firstAttribute="leading" secondItem="QmX-Ys-2nV" secondAttribute="leading" id="t36-bY-Tg0"/>
                                 </constraints>
                             </view>

@@ -145,10 +145,11 @@
                                     <constraint firstItem="HYH-tA-tJw" firstAttribute="top" secondItem="DSh-uM-IGD" secondAttribute="bottom" id="1gP-6M-7Dk"/>
                                     <constraint firstItem="pOC-dj-gmQ" firstAttribute="leading" secondItem="noi-2p-zbg" secondAttribute="leading" id="3Ny-oN-HR4"/>
                                     <constraint firstItem="HYH-tA-tJw" firstAttribute="centerX" secondItem="noi-2p-zbg" secondAttribute="centerX" id="6w2-Mz-J6h"/>
+                                    <constraint firstItem="fQw-nF-poe" firstAttribute="leading" secondItem="noi-2p-zbg" secondAttribute="leading" id="Cac-5j-Oo3"/>
                                     <constraint firstItem="pOC-dj-gmQ" firstAttribute="leading" secondItem="noi-2p-zbg" secondAttribute="leading" id="Eqd-7F-FOv"/>
-                                    <constraint firstItem="fQw-nF-poe" firstAttribute="leading" secondItem="noi-2p-zbg" secondAttribute="leading" id="FUA-0j-mkD"/>
                                     <constraint firstItem="DSh-uM-IGD" firstAttribute="centerX" secondItem="noi-2p-zbg" secondAttribute="centerX" id="Hvg-w8-ax5"/>
                                     <constraint firstItem="fXc-SG-pU1" firstAttribute="top" secondItem="HYH-tA-tJw" secondAttribute="bottom" constant="30" id="QHQ-kN-sly"/>
+                                    <constraint firstAttribute="trailing" secondItem="fQw-nF-poe" secondAttribute="trailing" id="RGh-m3-ZM7"/>
                                     <constraint firstAttribute="trailing" secondItem="fXc-SG-pU1" secondAttribute="trailing" id="SL0-C2-QdD"/>
                                     <constraint firstAttribute="trailing" secondItem="pOC-dj-gmQ" secondAttribute="trailing" id="VAH-KR-kFP"/>
                                     <constraint firstAttribute="trailing" secondItem="pOC-dj-gmQ" secondAttribute="trailing" id="Zhz-ia-XtQ"/>
@@ -160,7 +161,6 @@
                                     <constraint firstItem="pOC-dj-gmQ" firstAttribute="leading" secondItem="noi-2p-zbg" secondAttribute="leading" id="ryq-1F-s2C"/>
                                     <constraint firstItem="fXc-SG-pU1" firstAttribute="leading" secondItem="noi-2p-zbg" secondAttribute="leading" id="u3S-wF-Dvg"/>
                                     <constraint firstItem="DSh-uM-IGD" firstAttribute="top" secondItem="noi-2p-zbg" secondAttribute="top" id="uDS-Zy-9Df"/>
-                                    <constraint firstAttribute="trailing" secondItem="fQw-nF-poe" secondAttribute="trailing" id="uS6-Sb-CeH"/>
                                     <constraint firstItem="pOC-dj-gmQ" firstAttribute="top" secondItem="fXc-SG-pU1" secondAttribute="bottom" constant="15" id="v02-Do-Zv7"/>
                                     <constraint firstItem="HYH-tA-tJw" firstAttribute="leading" secondItem="noi-2p-zbg" secondAttribute="leading" id="xB5-Ev-D8P"/>
                                 </constraints>
@@ -193,6 +193,6 @@
     </scenes>
     <resources>
         <image name="Fingerprint_background" width="377" height="668"/>
-        <image name="name_icon_with_circle" width="181" height="181"/>
+        <image name="name_icon_with_circle" width="63" height="63"/>
     </resources>
 </document>

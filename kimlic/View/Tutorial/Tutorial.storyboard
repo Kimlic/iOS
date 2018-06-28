@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Muli-Light.ttf">
+            <string>Muli-Light</string>
+        </array>
         <array key="Muli-Regular.ttf">
             <string>Muli-Regular</string>
         </array>
@@ -31,12 +34,15 @@
             <objects>
                 <viewController storyboardIdentifier="TutorialsVC" id="T2U-Wc-WLd" customClass="TutorialsVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JOU-Wo-pNC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="simple_background" translatesAutoresizingMaskIntoConstraints="NO" id="S6o-cQ-IdJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xX-21-Odp">
-                                <rect key="frame" x="186.66666666666666" y="668" width="41" height="38"/>
-                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                <rect key="frame" x="165" y="597" width="45" height="40"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
                                 <state key="normal" title="Skip">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -44,11 +50,24 @@
                                     <action selector="skipButtonPressed:" destination="T2U-Wc-WLd" eventType="touchUpInside" id="Hiy-i4-LfV"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_clouds_effect" translatesAutoresizingMaskIntoConstraints="NO" id="w0G-AU-8lG">
+                                <rect key="frame" x="-15" y="183.5" width="405" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="zy3-qb-f47"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2xX-21-Odp" firstAttribute="centerX" secondItem="JOU-Wo-pNC" secondAttribute="centerX" id="0NG-05-O32"/>
+                            <constraint firstItem="w0G-AU-8lG" firstAttribute="centerY" secondItem="JOU-Wo-pNC" secondAttribute="centerY" id="2Pk-Cy-ZBX"/>
+                            <constraint firstItem="S6o-cQ-IdJ" firstAttribute="leading" secondItem="JOU-Wo-pNC" secondAttribute="leading" id="AhK-j7-F5R"/>
                             <constraint firstItem="ND6-0L-hQE" firstAttribute="bottom" secondItem="2xX-21-Odp" secondAttribute="bottom" constant="30" id="J4S-xK-GoC"/>
+                            <constraint firstAttribute="trailing" secondItem="w0G-AU-8lG" secondAttribute="trailing" constant="-15" id="cVQ-5d-d9E"/>
+                            <constraint firstAttribute="bottom" secondItem="S6o-cQ-IdJ" secondAttribute="bottom" id="cbZ-gJ-XZd"/>
+                            <constraint firstItem="w0G-AU-8lG" firstAttribute="leading" secondItem="JOU-Wo-pNC" secondAttribute="leading" constant="-15" id="d8Q-Sk-Xxs"/>
+                            <constraint firstItem="S6o-cQ-IdJ" firstAttribute="top" secondItem="JOU-Wo-pNC" secondAttribute="top" id="qtw-hR-Ipa"/>
+                            <constraint firstItem="w0G-AU-8lG" firstAttribute="centerX" secondItem="JOU-Wo-pNC" secondAttribute="centerX" id="sPB-kT-ZWq"/>
+                            <constraint firstAttribute="trailing" secondItem="S6o-cQ-IdJ" secondAttribute="trailing" id="ysL-iQ-JCt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ND6-0L-hQE"/>
                     </view>
@@ -62,65 +81,68 @@
             <objects>
                 <viewController storyboardIdentifier="TutorialsContentVC" id="PW4-g8-CNn" customClass="TutorialsContentVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5WO-Gi-CYu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2y2-B5-Lhi" userLabel="Content">
-                                <rect key="frame" x="20" y="70" width="374" height="666"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UdY-fV-lIV" userLabel="tutorialTitle">
-                                        <rect key="frame" x="20" y="261" width="334" height="36.666666666666686"/>
-                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Close auto-starting apps keep your phone works smoothly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Zr-l0-JYF" userLabel="tutorialDesc">
-                                        <rect key="frame" x="20" y="312.66666666666669" width="334" height="50.333333333333314"/>
-                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan_QR_iilustration" translatesAutoresizingMaskIntoConstraints="NO" id="X3r-Tv-9rz">
-                                        <rect key="frame" x="35" y="8" width="304" height="233"/>
-                                    </imageView>
-                                </subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_icon_for_tutorial" translatesAutoresizingMaskIntoConstraints="NO" id="POU-Ym-4Yx">
+                                <rect key="frame" x="169.5" y="408" width="36" height="43"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_1_illustration" translatesAutoresizingMaskIntoConstraints="NO" id="7FR-gx-bB3">
+                                <rect key="frame" x="34.5" y="137" width="306" height="263"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="X3r-Tv-9rz" secondAttribute="trailing" constant="35" id="0uB-4B-PP5"/>
-                                    <constraint firstItem="UdY-fV-lIV" firstAttribute="top" secondItem="X3r-Tv-9rz" secondAttribute="bottom" constant="20" id="1Wd-nS-QnJ"/>
-                                    <constraint firstItem="4Zr-l0-JYF" firstAttribute="leading" secondItem="2y2-B5-Lhi" secondAttribute="leading" constant="20" id="Ggl-bo-hy3"/>
-                                    <constraint firstItem="X3r-Tv-9rz" firstAttribute="leading" secondItem="2y2-B5-Lhi" secondAttribute="leading" constant="35" id="LDb-S8-ual"/>
-                                    <constraint firstItem="X3r-Tv-9rz" firstAttribute="top" secondItem="2y2-B5-Lhi" secondAttribute="top" constant="8" id="NDD-u2-vv8"/>
-                                    <constraint firstItem="4Zr-l0-JYF" firstAttribute="top" secondItem="UdY-fV-lIV" secondAttribute="bottom" constant="15" id="XtE-c1-3dZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="4Zr-l0-JYF" secondAttribute="trailing" constant="20" id="Y0C-1q-96q"/>
-                                    <constraint firstAttribute="trailing" secondItem="UdY-fV-lIV" secondAttribute="trailing" constant="20" id="jGJ-B4-uqe"/>
-                                    <constraint firstItem="X3r-Tv-9rz" firstAttribute="centerX" secondItem="2y2-B5-Lhi" secondAttribute="centerX" id="vNy-el-m54"/>
-                                    <constraint firstItem="UdY-fV-lIV" firstAttribute="leading" secondItem="2y2-B5-Lhi" secondAttribute="leading" constant="20" id="xCW-AO-B84"/>
+                                    <constraint firstAttribute="width" constant="306" id="MhW-3L-rW4"/>
+                                    <constraint firstAttribute="height" constant="263" id="SNT-Ip-Im3"/>
                                 </constraints>
-                            </view>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decentrlized identity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="apK-Ne-Rsq">
+                                <rect key="frame" x="30" y="488" width="315" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All your credentials stored in private blockchain" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WqL-eN-JrB">
+                                <rect key="frame" x="40" y="529" width="295" height="55.5"/>
+                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.043137254899999998" green="0.41960784309999999" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2y2-B5-Lhi" firstAttribute="top" secondItem="5QG-fv-tks" secondAttribute="top" constant="50" id="OvM-MC-l0q"/>
-                            <constraint firstItem="5QG-fv-tks" firstAttribute="bottom" secondItem="2y2-B5-Lhi" secondAttribute="bottom" id="Q8w-6e-bbE"/>
-                            <constraint firstItem="5QG-fv-tks" firstAttribute="trailing" secondItem="2y2-B5-Lhi" secondAttribute="trailing" constant="20" id="ZXY-XA-gTT"/>
-                            <constraint firstItem="2y2-B5-Lhi" firstAttribute="leading" secondItem="5QG-fv-tks" secondAttribute="leading" constant="20" id="qLE-2a-uCp"/>
+                            <constraint firstItem="5QG-fv-tks" firstAttribute="trailing" secondItem="WqL-eN-JrB" secondAttribute="trailing" constant="40" id="3ld-Jx-lKV"/>
+                            <constraint firstItem="WqL-eN-JrB" firstAttribute="top" secondItem="apK-Ne-Rsq" secondAttribute="bottom" id="8Jj-C4-vQy"/>
+                            <constraint firstItem="apK-Ne-Rsq" firstAttribute="centerX" secondItem="5WO-Gi-CYu" secondAttribute="centerX" id="8ML-VG-hvh"/>
+                            <constraint firstItem="POU-Ym-4Yx" firstAttribute="centerX" secondItem="5WO-Gi-CYu" secondAttribute="centerX" id="JLH-SH-VtP"/>
+                            <constraint firstItem="apK-Ne-Rsq" firstAttribute="leading" secondItem="5QG-fv-tks" secondAttribute="leading" constant="30" id="SRe-He-3mR"/>
+                            <constraint firstItem="7FR-gx-bB3" firstAttribute="centerX" secondItem="5WO-Gi-CYu" secondAttribute="centerX" id="aH8-iB-5AX"/>
+                            <constraint firstItem="7FR-gx-bB3" firstAttribute="centerY" secondItem="5WO-Gi-CYu" secondAttribute="centerY" constant="-65" id="bDt-GM-Adr"/>
+                            <constraint firstItem="5QG-fv-tks" firstAttribute="trailing" secondItem="apK-Ne-Rsq" secondAttribute="trailing" constant="30" id="bYn-DG-u05"/>
+                            <constraint firstItem="POU-Ym-4Yx" firstAttribute="top" secondItem="7FR-gx-bB3" secondAttribute="bottom" constant="8" id="d2v-iA-nQK"/>
+                            <constraint firstItem="WqL-eN-JrB" firstAttribute="leading" secondItem="5QG-fv-tks" secondAttribute="leading" constant="40" id="fWN-Xs-xki"/>
+                            <constraint firstItem="apK-Ne-Rsq" firstAttribute="top" secondItem="POU-Ym-4Yx" secondAttribute="bottom" constant="37" id="iKe-vg-Kby"/>
+                            <constraint firstItem="7FR-gx-bB3" firstAttribute="centerX" secondItem="5WO-Gi-CYu" secondAttribute="centerX" id="tIE-oe-Ezn"/>
+                            <constraint firstItem="apK-Ne-Rsq" firstAttribute="centerX" secondItem="5WO-Gi-CYu" secondAttribute="centerX" id="vXl-PB-OgB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5QG-fv-tks"/>
                     </view>
                     <navigationItem key="navigationItem" id="zW8-gR-fAL"/>
                     <connections>
-                        <outlet property="tutorialDesc" destination="4Zr-l0-JYF" id="vek-o1-rWU"/>
-                        <outlet property="tutorialImage" destination="X3r-Tv-9rz" id="Zhh-0t-Cok"/>
-                        <outlet property="tutorialTitle" destination="UdY-fV-lIV" id="440-a9-GBB"/>
-                        <outlet property="viewContent" destination="2y2-B5-Lhi" id="g1Z-7y-Nz4"/>
+                        <outlet property="tutorialDesc" destination="WqL-eN-JrB" id="E9t-IW-6Fm"/>
+                        <outlet property="tutorialIcon" destination="POU-Ym-4Yx" id="VyC-r8-raF"/>
+                        <outlet property="tutorialImage" destination="7FR-gx-bB3" id="ME9-mY-0Ko"/>
+                        <outlet property="tutorialTitle" destination="apK-Ne-Rsq" id="cJn-gD-5sX"/>
+                        <outlet property="verticalConstraint" destination="bDt-GM-Adr" id="Ach-Bu-dHy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFh-QM-Puk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-281" y="-799"/>
+            <point key="canvasLocation" x="-282.60869565217394" y="-801.35869565217399"/>
         </scene>
     </scenes>
     <resources>
-        <image name="scan_QR_iilustration" width="331" height="233"/>
+        <image name="profile_icon_for_tutorial" width="36" height="43"/>
+        <image name="simple_background" width="375" height="667"/>
+        <image name="tutorial_1_illustration" width="306" height="263"/>
+        <image name="tutorial_clouds_effect" width="396" height="267"/>
     </resources>
 </document>
