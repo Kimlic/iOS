@@ -10,7 +10,7 @@ import UIKit
 
 typealias GradientType = (x: CGPoint, y: CGPoint)
 
-enum GradientPoint {
+public enum GradientPoint {
     case leftRight
     case rightLeft
     case topBottom
@@ -64,5 +64,3 @@ class GradiantColor {
     }
     
 }
-
-

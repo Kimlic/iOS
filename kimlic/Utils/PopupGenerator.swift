@@ -9,8 +9,24 @@ import PopupDialog
 
 public class PopupGenerator {
     
-    static func createPopup(controller: UIViewController, type: PopupType, popup: Popup, btnClickCompletion: (() -> ())? = nil) {
+    static func createPopupNew(controller: UIViewController, type: PopupType, popup: Popup) {
         
+        // Create Content View Controller
+        let content = CustomPopupVC()
+        
+        // Customize the container view appearance
+        let pcv = PopupDialogContainerView.appearance()
+        pcv.backgroundColor = UIColor.clear
+        
+        
+        // Create the dialog
+        let popup = PopupDialog(viewController: content)
+        
+        // Present popup
+        controller.present(popup, animated: true, completion: nil)
+    }
+    
+    static func createPopup(controller: UIViewController, type: PopupType, popup: Popup, btnClickCompletion: (() -> ())? = nil) {        
         
         var popupDialog: PopupDialog!
         var button: DefaultButton!
@@ -178,4 +194,6 @@ public class PopupGenerator {
         controller.present(popupDialog, animated: true, completion: nil)
 
     }
+    
+    
 }

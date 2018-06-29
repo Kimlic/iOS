@@ -53,4 +53,12 @@ extension UIColor {
         UIColor(red: 244.0 / 255.0, green: 87.0 / 255.0, blue: 17.0 / 255.0, alpha: 1.0),
         UIColor(red: 221.0 / 255.0, green: 68.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)]
     }
+    @nonobjc class var popupBlueGradianteColors: [UIColor] {
+        return [popupButtonLightBlue, popupButtonDarkBlue]
+    }
+    @nonobjc class var popupGrayGradianteColors: [UIColor] {
+        return [UIColor(red: 255.0 / 255.0, green: 255.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0),
+                UIColor(red: 246.0 / 255.0, green: 246.0 / 255.0, blue: 246.0 / 255.0, alpha: 1.0),
+                UIColor(red: 229.0 / 255.0, green: 229.0 / 255.0, blue: 229.0 / 255.0, alpha: 1.0)]
+    }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Ew-4g-Iex">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,17 +20,20 @@
             <objects>
                 <viewController storyboardIdentifier="SignUpVC" id="1Ew-4g-Iex" customClass="SignUpVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zdO-HN-w5N">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="simple_background" translatesAutoresizingMaskIntoConstraints="NO" id="nXc-9z-Jf3">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup_circles" translatesAutoresizingMaskIntoConstraints="NO" id="Hg7-cw-Bwj">
+                                <rect key="frame" x="-230.66666666666666" y="-244" width="875.33333333333337" height="875"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otX-Zn-SMk" userLabel="ContentView">
-                                <rect key="frame" x="40" y="20" width="240" height="548"/>
+                                <rect key="frame" x="40" y="20" width="334" height="716"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQT-ld-sfm" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="391" width="240" height="56"/>
+                                        <rect key="frame" x="0.0" y="559" width="334" height="56"/>
                                         <color key="backgroundColor" red="0.25098039220000001" green="0.71372549019999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="khq-wy-5pK"/>
@@ -58,7 +61,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yX-uf-yJA" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="462" width="240" height="56"/>
+                                        <rect key="frame" x="0.0" y="630" width="334" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="3IM-ss-jkb"/>
                                         </constraints>
@@ -82,10 +85,10 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kimlic_logo_with_text" translatesAutoresizingMaskIntoConstraints="NO" id="q9i-OY-LqL">
-                                        <rect key="frame" x="62.5" y="80" width="115" height="176"/>
+                                        <rect key="frame" x="104.33333333333334" y="80" width="126" height="187"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="176" id="39u-kP-cjz"/>
-                                            <constraint firstAttribute="width" constant="115" id="Fg2-yo-t0b"/>
+                                            <constraint firstAttribute="height" constant="187" id="39u-kP-cjz"/>
+                                            <constraint firstAttribute="width" constant="126" id="Fg2-yo-t0b"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -103,12 +106,14 @@
                             </view>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="Hg7-cw-Bwj" firstAttribute="centerY" secondItem="q9i-OY-LqL" secondAttribute="centerY" id="0p1-4K-R0w"/>
                             <constraint firstItem="gNy-jL-JE8" firstAttribute="bottom" secondItem="otX-Zn-SMk" secondAttribute="bottom" id="3tm-NB-4vg"/>
                             <constraint firstAttribute="bottom" secondItem="nXc-9z-Jf3" secondAttribute="bottom" id="Ha6-Uc-gua"/>
                             <constraint firstItem="nXc-9z-Jf3" firstAttribute="top" secondItem="zdO-HN-w5N" secondAttribute="top" id="OKR-pF-UqU"/>
                             <constraint firstItem="nXc-9z-Jf3" firstAttribute="leading" secondItem="zdO-HN-w5N" secondAttribute="leading" id="cKW-rb-qqH"/>
                             <constraint firstItem="otX-Zn-SMk" firstAttribute="leading" secondItem="gNy-jL-JE8" secondAttribute="leading" constant="40" id="g0x-Fv-Npi"/>
                             <constraint firstItem="gNy-jL-JE8" firstAttribute="trailing" secondItem="otX-Zn-SMk" secondAttribute="trailing" constant="40" id="hYT-xR-EWF"/>
+                            <constraint firstItem="Hg7-cw-Bwj" firstAttribute="centerX" secondItem="q9i-OY-LqL" secondAttribute="centerX" id="jQY-Py-bl8"/>
                             <constraint firstAttribute="trailing" secondItem="nXc-9z-Jf3" secondAttribute="trailing" id="qlt-RL-idt"/>
                             <constraint firstItem="otX-Zn-SMk" firstAttribute="top" secondItem="gNy-jL-JE8" secondAttribute="top" id="rkv-sl-Jbq"/>
                         </constraints>
@@ -121,11 +126,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ks8-Sy-hUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3000.0000000000005" y="-1806.521739130435"/>
+            <point key="canvasLocation" x="-3002.898550724638" y="-1808.1521739130437"/>
         </scene>
     </scenes>
     <resources>
         <image name="kimlic_logo_with_text" width="135" height="185"/>
+        <image name="signup_circles" width="875" height="875"/>
         <image name="simple_background" width="375" height="667"/>
     </resources>
 </document>

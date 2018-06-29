@@ -62,7 +62,7 @@
                                             <action selector="cancelButtonPressed:" destination="8Jr-oC-NRl" eventType="touchUpInside" id="Llv-6h-0an"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="address_icon_with_circle" translatesAutoresizingMaskIntoConstraints="NO" id="Ib5-wg-gc7">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touchID_white_with_circles" translatesAutoresizingMaskIntoConstraints="NO" id="Ib5-wg-gc7">
                                         <rect key="frame" x="30" y="134" width="180" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="BUe-r0-Bjt"/>
@@ -104,6 +104,6 @@
     </scenes>
     <resources>
         <image name="Fingerprint_background" width="377" height="668"/>
-        <image name="address_icon_with_circle" width="181" height="181"/>
+        <image name="touchID_white_with_circles" width="283" height="283"/>
     </resources>
 </document>

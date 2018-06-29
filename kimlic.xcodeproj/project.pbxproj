@@ -70,6 +70,9 @@
 		7C8437F120D2259400DD754D /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8437E320D2259000DD754D /* Muli-Bold.ttf */; };
 		7C8437F820D2259400DD754D /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8437EA20D2259400DD754D /* Muli-Light.ttf */; };
 		7C8437FC20D226C800DD754D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C48385D1FB5F62500FC864A /* Info.plist */; };
+		7C85BC0520E625870000A4BA /* CustomPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C85BC0320E625870000A4BA /* CustomPopupVC.swift */; };
+		7C85BC0620E625870000A4BA /* CustomPopupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C85BC0420E625870000A4BA /* CustomPopupVC.xib */; };
+		7C85BC0A20E649380000A4BA /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C85BC0920E649380000A4BA /* UIViewExt.swift */; };
 		7C882B0A1FC3FD1B0064DF7F /* ScanCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C882B091FC3FD1B0064DF7F /* ScanCodeVC.swift */; };
 		7C8A80CD1FBD668D009E74F9 /* PermissionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8A80CC1FBD668D009E74F9 /* PermissionDetailVC.swift */; };
 		7C8A80CF1FBD839E009E74F9 /* PermissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8A80CE1FBD839E009E74F9 /* PermissionCell.swift */; };
@@ -177,6 +180,9 @@
 		7C8437E220D2259000DD754D /* Muli-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Italic.ttf"; sourceTree = "<group>"; };
 		7C8437E320D2259000DD754D /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
 		7C8437EA20D2259400DD754D /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Light.ttf"; sourceTree = "<group>"; };
+		7C85BC0320E625870000A4BA /* CustomPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupVC.swift; sourceTree = "<group>"; };
+		7C85BC0420E625870000A4BA /* CustomPopupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPopupVC.xib; sourceTree = "<group>"; };
+		7C85BC0920E649380000A4BA /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		7C882B091FC3FD1B0064DF7F /* ScanCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCodeVC.swift; sourceTree = "<group>"; };
 		7C8A80CC1FBD668D009E74F9 /* PermissionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionDetailVC.swift; sourceTree = "<group>"; };
 		7C8A80CE1FBD839E009E74F9 /* PermissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionCell.swift; sourceTree = "<group>"; };
@@ -433,6 +439,7 @@
 				7C36C6E31FD153AC00D4501D /* AnimatedImageViewExt.swift */,
 				7C68A83520DA1267001DDDC8 /* UIColorExt.swift */,
 				7C68A83720DA12A1001DDDC8 /* UIFontExt.swift */,
+				7C85BC0920E649380000A4BA /* UIViewExt.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -489,6 +496,15 @@
 			path = Verification;
 			sourceTree = "<group>";
 		};
+		7C85BC0220E624F80000A4BA /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				7C85BC0320E625870000A4BA /* CustomPopupVC.swift */,
+				7C85BC0420E625870000A4BA /* CustomPopupVC.xib */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
 		7C90C4B520C8119C006EEF87 /* TouchID */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +539,7 @@
 		7CB5674C1FB9B54700F03D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7C85BC0220E624F80000A4BA /* Popup */,
 				7C5DE2D320D1237800B75B41 /* UserInfo */,
 				7C5DE2D220D1236600B75B41 /* Settings */,
 				7C5DE2D120D1234100B75B41 /* Email */,
@@ -655,6 +672,7 @@
 				7C48385C1FB5F62500FC864A /* LaunchScreen.storyboard in Resources */,
 				7C8437F820D2259400DD754D /* Muli-Light.ttf in Resources */,
 				79AF1D2720C48BE300CCA150 /* PhoneNumber.storyboard in Resources */,
+				7C85BC0620E625870000A4BA /* CustomPopupVC.xib in Resources */,
 				7C2F326520C0301700AEB314 /* SignUp.storyboard in Resources */,
 				79AF1D2D20C4A3D300CCA150 /* Verification.storyboard in Resources */,
 				7C8437EE20D2259400DD754D /* Muli-SemiBold.ttf in Resources */,
@@ -789,6 +807,7 @@
 				79AD4C8920CD55F000EE9160 /* SettingsVC.swift in Sources */,
 				7C90C4B920C811CC006EEF87 /* TouchIDVC.swift in Sources */,
 				7C99D6D71FC7FE7A00A593C5 /* WrappedResponseCollection.swift in Sources */,
+				7C85BC0A20E649380000A4BA /* UIViewExt.swift in Sources */,
 				7C99D6EF1FC84C5200A593C5 /* WrappedRootResponseCollection.swift in Sources */,
 				7CF655781FBAFA4600CA9C1A /* UserBasicProfileInfoVC.swift in Sources */,
 				7C929D681FCC583F001B9E22 /* QrCodeWebServiceRequest.swift in Sources */,
@@ -822,6 +841,7 @@
 				79AF1D2F20C4BCD100CCA150 /* PinTextField.swift in Sources */,
 				7C99D6D11FC7FE3C00A593C5 /* PhoneResponse.swift in Sources */,
 				0F359D8F1FC07EDD007E07DC /* Animz.swift in Sources */,
+				7C85BC0520E625870000A4BA /* CustomPopupVC.swift in Sources */,
 				7CDED00E1FBC7DD8006FB0AC /* PhoneNumberVC.swift in Sources */,
 				7C4838521FB5F62400FC864A /* AppDelegate.swift in Sources */,
 				7C7A7FC820C53B6400BDE95C /* MessageVC.swift in Sources */,

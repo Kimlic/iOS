@@ -30,6 +30,7 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func recoverIdentityButtonPressed(_ sender: Any) {
+        PopupGenerator.createPopupNew(controller: self, type: .error, popup: Popup())
 //        UIUtils.navigateToTerms(self, nextPage: .accountRecovery)
 //        UIUtils.navigateToEmail(self)
 //        UIUtils.navigateToUserInfo(self)
@@ -37,7 +38,7 @@ class SignUpVC: UIViewController {
 //        UIUtils.navigateToTutorial(self)
 //        UIUtils.navigateToProfile(self)
 //        UIUtils.navigateToPhoneNumber(self)
-        UIUtils.navigateToMnemonicCreate(self)
+//        UIUtils.navigateToMnemonicCreate(self)
 //        UIUtils.navigateToMnemonicImport(self)
 //        UIUtils.navigateToTutorial(self)
 //        UIUtils.navigateToProfile(self)
