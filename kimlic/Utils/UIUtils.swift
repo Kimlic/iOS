@@ -41,21 +41,18 @@ public class UIUtils {
         return homeVC
     }
     
-    static func setUserProfileScreenAsRoot() -> UserProfileVC{
+    static func setUserProfileScreenAsRoot() -> ProfileVC{
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let window :UIWindow = appDelegate.window!
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let homeVC = storyboard.instantiateViewController(withIdentifier: UserProfileVC.className) as! UserProfileVC
+        let window: UIWindow = appDelegate.window!
+        let storyboard = AppStoryboard.Profile.instance
+        let homeVC = storyboard.instantiateViewController(withIdentifier: ProfileVC.className) as! ProfileVC
         let navVc = UINavigationController(rootViewController: homeVC)
         navVc.isNavigationBarHidden = true
-        
-        
         UIView.transition(with: appDelegate.window!, duration: 0.3, options: .transitionFlipFromRight, animations: {
             window.rootViewController = navVc
         }, completion: { completed in
             // maybe do something here
         })
-        
         return homeVC
     }
     
@@ -117,10 +114,51 @@ public class UIUtils {
     }
     
     // Message = Constants > StaticMessage
-    static func navigateToMessage(_ vc: UIViewController, message: Message){
+    static func navigateToMessage(_ vc: UIViewController, messageType: MessageType, message: Message? = nil){
         let storyboard = AppStoryboard.Message.instance
         let tarVC = storyboard.instantiateViewController(withIdentifier: MessageVC.className) as! MessageVC
-        tarVC.message = message
+        switch messageType {
+        case .addressSuccessfull:
+            tarVC.message.icon = message?.icon ?? Constants.StaticMessage.addressSuccessfull.icon
+            tarVC.message.title = message?.title ?? Constants.StaticMessage.addressSuccessfull.title
+            tarVC.message.desc = message?.desc ?? Constants.StaticMessage.addressSuccessfull.desc
+        case .passphraseSuccessfull:
+            tarVC.message.icon = message?.icon ?? Constants.StaticMessage.passphraseSuccessfull.icon
+            tarVC.message.title = message?.title ?? Constants.StaticMessage.passphraseSuccessfull.title
+            tarVC.message.desc = message?.desc ?? Constants.StaticMessage.passphraseSuccessfull.desc
+        case .passMatchSuccessfull:
+            tarVC.message.icon = message?.icon ?? Constants.StaticMessage.passMatchSuccessfull.icon
+            tarVC.message.title = message?.title ?? Constants.StaticMessage.passMatchSuccessfull.title
+            tarVC.message.desc = message?.desc ?? Constants.StaticMessage.passMatchSuccessfull.desc
+        case .pascodeSuccessfull:
+            tarVC.message.icon = message?.icon ?? Constants.StaticMessage.pascodeSuccessfull.icon
+            tarVC.message.title = message?.title ?? Constants.StaticMessage.pascodeSuccessfull.title
+            tarVC.message.desc = message?.desc ?? Constants.StaticMessage.pascodeSuccessfull.desc
+        case .touchIDSuccessfull:
+            tarVC.message.icon = message?.icon ?? Constants.StaticMessage.touchIDSuccessfull.icon
+            tarVC.message.title = message?.title ?? Constants.StaticMessage.touchIDSuccessfull.title
+            tarVC.message.desc = message?.desc ?? Constants.StaticMessage.touchIDSuccessfull.desc
+        case .verifyIDSuccessfull:
+            tarVC.message.icon = message?.icon ?? Constants.StaticMessage.verifyIDSuccessfull.icon
+            tarVC.message.title = message?.title ?? Constants.StaticMessage.verifyIDSuccessfull.title
+            tarVC.message.desc = message?.desc ?? Constants.StaticMessage.verifyIDSuccessfull.desc
+        case .phoneNumberSuccessfull:
+            tarVC.message.icon = message?.icon ?? Constants.StaticMessage.phoneNumberSuccessfull.icon
+            tarVC.message.title = message?.title ?? Constants.StaticMessage.phoneNumberSuccessfull.title
+            tarVC.message.desc = message?.desc ?? Constants.StaticMessage.phoneNumberSuccessfull.desc
+        case .emailSuccessfull:
+            tarVC.message.icon = message?.icon ?? Constants.StaticMessage.emailSuccessfull.icon
+            tarVC.message.title = message?.title ?? Constants.StaticMessage.emailSuccessfull.title
+            tarVC.message.desc = message?.desc ?? Constants.StaticMessage.emailSuccessfull.desc
+        case .accountLinkSuccessfull:
+            tarVC.message.icon = message?.icon ?? Constants.StaticMessage.accountLinkSuccessfull.icon
+            tarVC.message.title = message?.title ?? Constants.StaticMessage.accountLinkSuccessfull.title
+            tarVC.message.desc = message?.desc ?? Constants.StaticMessage.accountLinkSuccessfull.desc
+        case .fullNameSuccessfull:
+            tarVC.message.icon = message?.icon ?? Constants.StaticMessage.fullNameSuccessfull.icon
+            tarVC.message.title = message?.title ?? Constants.StaticMessage.fullNameSuccessfull.title
+            tarVC.message.desc = message?.desc ?? Constants.StaticMessage.fullNameSuccessfull.desc
+        }
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     

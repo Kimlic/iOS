@@ -25,12 +25,6 @@ class TermsAndConditionsVC: UIViewController {
         self.scrollView.isDirectionalLockEnabled = true
         
         acceptButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: acceptButton.frame, type: .topBottom).color
-        
-//        if nextPage == TermsNavigateTarget.none {
-//            acceptButton.isHidden = true
-//        }else {
-//            acceptButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: acceptButton.frame, type: .topBottom).color
-//        }
     }
     
     @IBAction func acceptButtonPressed(_ sender: Any) {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -34,23 +34,23 @@
             <objects>
                 <viewController storyboardIdentifier="TutorialsVC" id="T2U-Wc-WLd" customClass="TutorialsVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="JOU-Wo-pNC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="simple_background" translatesAutoresizingMaskIntoConstraints="NO" id="S6o-cQ-IdJ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup_circles" translatesAutoresizingMaskIntoConstraints="NO" id="jAy-vR-0R2">
-                                <rect key="frame" x="-250" y="-224.5" width="875" height="875"/>
+                                <rect key="frame" x="-277.5" y="-273.5" width="875" height="875"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_clouds_effect" translatesAutoresizingMaskIntoConstraints="NO" id="w0G-AU-8lG">
-                                <rect key="frame" x="-15" y="183.5" width="405" height="300"/>
+                                <rect key="frame" x="-15" y="134" width="350" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="zy3-qb-f47"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xX-21-Odp">
-                                <rect key="frame" x="165" y="597" width="45" height="40"/>
+                                <rect key="frame" x="137.5" y="498" width="45" height="40"/>
                                 <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
                                 <state key="normal" title="Skip">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pX5-1G-WdR">
-                                <rect key="frame" x="34.5" y="82" width="306" height="263"/>
+                                <rect key="frame" x="7" y="32.5" width="306" height="263"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="263" id="9m5-kf-Usr"/>
                                     <constraint firstAttribute="width" constant="306" id="USL-tg-dfL"/>
@@ -95,26 +95,26 @@
             <objects>
                 <viewController storyboardIdentifier="TutorialsContentVC" id="PW4-g8-CNn" customClass="TutorialsContentVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5WO-Gi-CYu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_icon_for_tutorial" translatesAutoresizingMaskIntoConstraints="NO" id="POU-Ym-4Yx">
-                                <rect key="frame" x="169.5" y="408.5" width="36" height="43"/>
+                                <rect key="frame" x="142" y="359" width="36" height="43"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decentrlized identity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="apK-Ne-Rsq">
-                                <rect key="frame" x="30" y="488.5" width="315" height="40.5"/>
+                                <rect key="frame" x="30" y="439" width="260" height="40.5"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All your credentials stored in private blockchain" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WqL-eN-JrB">
-                                <rect key="frame" x="40" y="529.5" width="295" height="55.5"/>
+                                <rect key="frame" x="40" y="480" width="240" height="55.5"/>
                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_1_illustration" translatesAutoresizingMaskIntoConstraints="NO" id="7FR-gx-bB3">
-                                <rect key="frame" x="34.5" y="137" width="306" height="263"/>
+                                <rect key="frame" x="7" y="87.5" width="306" height="263"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="306" id="MhW-3L-rW4"/>
                                     <constraint firstAttribute="height" constant="263" id="SNT-Ip-Im3"/>

@@ -10,11 +10,12 @@ import UIKit
 
 
 struct Message {
-    var icon: UIImage
-    var title: String
-    var desc: String
     
-    init(icon: UIImage, title: String, desc: String) {
+    var icon: UIImage?
+    var title: String?
+    var desc: String?
+    
+    init(icon: UIImage? = nil, title: String? = nil, desc: String? = nil) {
         self.icon = icon
         self.title = title
         self.desc = desc

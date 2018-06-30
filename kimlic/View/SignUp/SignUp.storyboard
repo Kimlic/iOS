@@ -26,7 +26,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="simple_background" translatesAutoresizingMaskIntoConstraints="NO" id="nXc-9z-Jf3">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup_circles" translatesAutoresizingMaskIntoConstraints="NO" id="Hg7-cw-Bwj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_circles" translatesAutoresizingMaskIntoConstraints="NO" id="Hg7-cw-Bwj">
                                 <rect key="frame" x="-230.66666666666666" y="-244" width="875.33333333333337" height="875"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otX-Zn-SMk" userLabel="ContentView">
@@ -130,8 +130,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background_circles" width="875" height="875"/>
         <image name="kimlic_logo_with_text" width="135" height="185"/>
-        <image name="signup_circles" width="875" height="875"/>
         <image name="simple_background" width="375" height="667"/>
     </resources>
 </document>

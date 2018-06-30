@@ -77,13 +77,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="626"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kimlic is your Secure Identity on your phone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="U3H-2p-kaG" userLabel="tutorialTitle">
-                                        <rect key="frame" x="20" y="236.00000000000003" width="334" height="62.333333333333343"/>
+                                        <rect key="frame" x="20" y="291" width="334" height="62.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Kimlic ID gives you easy and secure access to online services with the tap of a button." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iuN-J9-deq" userLabel="tutorialDesc">
-                                        <rect key="frame" x="20" y="313.33333333333331" width="334" height="64.666666666666686"/>
+                                        <rect key="frame" x="20" y="368.33333333333331" width="334" height="64.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <color key="textColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -101,7 +101,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_1_illustration" translatesAutoresizingMaskIntoConstraints="NO" id="Jfy-WR-2dF">
-                                        <rect key="frame" x="35" y="8" width="304" height="208"/>
+                                        <rect key="frame" x="35" y="8" width="304" height="263"/>
                                     </imageView>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3S-Qs-ORu">
                                         <rect key="frame" x="40" y="588" width="294" height="30"/>
@@ -19200,7 +19200,7 @@ mQAPdZ4AD3WmAA91qQAPdbsAD3W+AA91wwAAAAAAAAQBAAAAAAAAAFkAAAAAAAAAAAAAAAAAD3XFA
         <image name="logout_button" width="30" height="27"/>
         <image name="menu_background" width="376" height="81"/>
         <image name="scan_action_button" width="66" height="66"/>
-        <image name="tutorial_1_illustration" width="237" height="208"/>
+        <image name="tutorial_1_illustration" width="306" height="263"/>
         <image name="tutorial_background" width="375" height="667"/>
         <image name="tutorial_popup_background" width="309" height="514"/>
         <image name="white_back_button" width="14" height="24"/>

@@ -7,6 +7,11 @@
 import Foundation
 import UIKit
 
+enum MessageType {
+    case addressSuccessfull, passphraseSuccessfull, passMatchSuccessfull, pascodeSuccessfull, touchIDSuccessfull,
+    verifyIDSuccessfull, phoneNumberSuccessfull, emailSuccessfull, accountLinkSuccessfull, fullNameSuccessfull
+}
+
 enum PopupType {
     case error
     case warning

@@ -46,5 +46,6 @@ class SignUpVC: UIViewController {
 //        UIUtils.navigateToMnemonicVerification(self)
 //        UIUtils.navigateToSettings(self)
 //        UIUtils.showPasscodeVC(vc: self, pageType: .confirm)
+//        UIUtils.navigateToMessage(self, messageType: .accountLinkSuccessfull, message: Message(icon: nil, title: nil, desc: "Burasıda mesaj alanı bakalım nasıl olacak"))
     }
 }

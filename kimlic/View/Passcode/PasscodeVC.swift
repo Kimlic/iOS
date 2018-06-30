@@ -49,15 +49,13 @@ class PasscodeVC: UIViewController {
         passwordContainerView.delegate = self
         passwordContainerView.deleteButtonLocalizedTitle = "delete"
         passwordContainerView.touchAuthenticationEnabled = false
-        
-//        //customize password UI
-        passwordContainerView.tintColor = UIColor.white
-        passwordContainerView.highlightedColor = UIColor.white
+        passwordContainerView.isVibrancyEffect = true
         
         // Change label color
         for view in passwordContainerView.passwordInputViews {
             view.label.textColor = UIColor.white
-            view.label.backgroundColor = UIColor(red: 75/255, green: 193/255, blue: 255/255, alpha: 1)
+            view.highlightBackgroundColor = UIColor.passcodeLightBlue
+            view.layer.borderColor = UIColor.passcodeLightBlue.cgColor
             view.label.font = UIFont.boldSystemFont(ofSize: view.label.font.pointSize)
         }
         

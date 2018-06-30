@@ -29,7 +29,7 @@ class MnemonicImportVC: UIViewController {
     }
     
     @IBAction func verifyButtonPressed(_ sender: Any) {
-        UIUtils.navigateToMessage(self, message: Constants.StaticMessage.passMatchSuccessfull)
+        UIUtils.navigateToMessage(self, messageType: .passMatchSuccessfull)
     }
     
     

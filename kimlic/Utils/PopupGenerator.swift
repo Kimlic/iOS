@@ -16,11 +16,19 @@ public class PopupGenerator {
         
         // Customize the container view appearance
         let pcv = PopupDialogContainerView.appearance()
-        pcv.backgroundColor = UIColor.clear
+        pcv.backgroundColor = UIColor.red
+        
+        // Customize background overlay
+        let overlayAppearance = PopupDialogOverlayView.appearance()
+        overlayAppearance.color       = UIColor.black
+        overlayAppearance.blurEnabled = false
+        overlayAppearance.liveBlur    = false
+        overlayAppearance.opacity     = 0.4
         
         
         // Create the dialog
         let popup = PopupDialog(viewController: content)
+        popup.view.backgroundColor = UIColor.clear
         
         // Present popup
         controller.present(popup, animated: true, completion: nil)

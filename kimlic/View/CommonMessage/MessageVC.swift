@@ -14,7 +14,7 @@ class MessageVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     
-    var message: Message?
+    var message: Message = Message()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +26,12 @@ class MessageVC: UIViewController {
     }
     
     @objc func redirectHome() {
-        UIUtils.navigateToProfile(self)
+        let _ = UIUtils.setUserProfileScreenAsRoot()
     }
     
     private func setupView() {
-        iconImageView.image = message?.icon
-        titleLabel.text = message?.title
-        descLabel.text = message?.desc
+        iconImageView.image = message.icon
+        titleLabel.text = message.title
+        descLabel.text = message.desc
     }
 }

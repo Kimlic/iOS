@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,17 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileVC" id="x7F-pS-psq" customClass="ProfileVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B9P-iR-LTx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ar-Pi-K7k" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="simple_background" translatesAutoresizingMaskIntoConstraints="NO" id="org-8G-Hjl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_background" translatesAutoresizingMaskIntoConstraints="NO" id="e1l-47-u8e">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                            </imageView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ar-Pi-K7k" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="202"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erh-Wi-EWE" userLabel="selectImage">
                                         <rect key="frame" x="30" y="40" width="186" height="172"/>
@@ -38,7 +44,7 @@
                                         <rect key="frame" x="30" y="40" width="186" height="172"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBX-rw-Gi8" userLabel="settingsButton">
-                                        <rect key="frame" x="280" y="30" width="28" height="29"/>
+                                        <rect key="frame" x="335" y="30" width="28" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="uQm-Wx-aZJ"/>
                                             <constraint firstAttribute="width" constant="28" id="vfn-vY-FPA"/>
@@ -67,56 +73,19 @@
                                     <constraint firstItem="pL6-e6-q9T" firstAttribute="top" secondItem="6ar-Pi-K7k" secondAttribute="top" constant="40" id="z7R-5X-Rnt"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2Q-sy-8yM" userLabel="FooterView">
-                                <rect key="frame" x="0.0" y="446" width="320" height="122"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_background" translatesAutoresizingMaskIntoConstraints="NO" id="djX-5O-k7f">
-                                        <rect key="frame" x="0.0" y="56" width="320" height="66"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="66" id="C3p-g0-FEK"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scx-FV-yIc" userLabel="permissionListButton">
-                                        <rect key="frame" x="260" y="56" width="115" height="66"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQF-6s-EHo">
-                                        <rect key="frame" x="104.5" y="0.0" width="110" height="101"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="110" id="LpI-bJ-hcd"/>
-                                            <constraint firstAttribute="height" constant="101" id="xEk-bu-luc"/>
-                                        </constraints>
-                                        <state key="normal" image="Scan_button_new"/>
-                                    </button>
-                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBq-F6-uqh" userLabel="profileButton">
-                                        <rect key="frame" x="0.0" y="56" width="96.5" height="66"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="66" id="q6V-Lo-g9H"/>
-                                        </constraints>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="jBq-F6-uqh" secondAttribute="bottom" id="0ft-x6-WwG"/>
-                                    <constraint firstAttribute="height" constant="122" id="2S5-Ux-Qwy"/>
-                                    <constraint firstItem="jBq-F6-uqh" firstAttribute="leading" secondItem="V2Q-sy-8yM" secondAttribute="leading" id="51T-bi-Du7"/>
-                                    <constraint firstItem="XQF-6s-EHo" firstAttribute="centerX" secondItem="V2Q-sy-8yM" secondAttribute="centerX" id="Bpg-jD-hvd"/>
-                                    <constraint firstItem="XQF-6s-EHo" firstAttribute="leading" secondItem="jBq-F6-uqh" secondAttribute="trailing" constant="8" id="Wq5-4b-Pf8"/>
-                                    <constraint firstAttribute="trailing" secondItem="djX-5O-k7f" secondAttribute="trailing" id="bdR-mG-my8"/>
-                                    <constraint firstItem="djX-5O-k7f" firstAttribute="leading" secondItem="V2Q-sy-8yM" secondAttribute="leading" id="lBZ-C3-BGw"/>
-                                    <constraint firstItem="XQF-6s-EHo" firstAttribute="top" secondItem="V2Q-sy-8yM" secondAttribute="top" id="mg2-L8-WrH"/>
-                                    <constraint firstAttribute="bottom" secondItem="djX-5O-k7f" secondAttribute="bottom" id="mr5-Vf-evt"/>
-                                </constraints>
-                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.29411764709999999" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="V2Q-sy-8yM" firstAttribute="leading" secondItem="B9P-iR-LTx" secondAttribute="leading" id="Eh4-YG-Npg"/>
+                            <constraint firstAttribute="bottom" secondItem="org-8G-Hjl" secondAttribute="bottom" id="43e-zY-GU6"/>
+                            <constraint firstItem="org-8G-Hjl" firstAttribute="top" secondItem="B9P-iR-LTx" secondAttribute="top" id="IaH-sC-gbI"/>
+                            <constraint firstAttribute="trailing" secondItem="e1l-47-u8e" secondAttribute="trailing" id="JXl-Z9-9i9"/>
+                            <constraint firstItem="org-8G-Hjl" firstAttribute="leading" secondItem="B9P-iR-LTx" secondAttribute="leading" id="Pt9-0j-d6m"/>
                             <constraint firstItem="6ar-Pi-K7k" firstAttribute="top" secondItem="B9P-iR-LTx" secondAttribute="top" id="QiK-L6-95h"/>
-                            <constraint firstItem="h6B-Kf-L2q" firstAttribute="trailing" secondItem="V2Q-sy-8yM" secondAttribute="trailing" id="ewm-hi-f4b"/>
+                            <constraint firstAttribute="bottom" secondItem="e1l-47-u8e" secondAttribute="bottom" id="V5i-vr-aFX"/>
+                            <constraint firstItem="e1l-47-u8e" firstAttribute="top" secondItem="h6B-Kf-L2q" secondAttribute="top" id="chK-kt-Kvu"/>
+                            <constraint firstAttribute="trailing" secondItem="org-8G-Hjl" secondAttribute="trailing" id="d2M-qY-QTZ"/>
                             <constraint firstItem="6ar-Pi-K7k" firstAttribute="trailing" secondItem="h6B-Kf-L2q" secondAttribute="trailing" id="gvE-Rz-NGW"/>
                             <constraint firstItem="6ar-Pi-K7k" firstAttribute="leading" secondItem="h6B-Kf-L2q" secondAttribute="leading" id="om2-mF-enq"/>
-                            <constraint firstItem="h6B-Kf-L2q" firstAttribute="bottom" secondItem="V2Q-sy-8yM" secondAttribute="bottom" id="xoV-Re-8nH"/>
+                            <constraint firstItem="e1l-47-u8e" firstAttribute="leading" secondItem="B9P-iR-LTx" secondAttribute="leading" id="uWF-aH-PZf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h6B-Kf-L2q"/>
                     </view>
@@ -128,13 +97,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NvO-ko-C0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2434.4000000000001" y="94.902548725637189"/>
+            <point key="canvasLocation" x="2432.8000000000002" y="93.842364532019715"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Scan_button_new" width="111" height="102"/>
         <image name="add_image_frame" width="186" height="172"/>
-        <image name="menu_background" width="376" height="81"/>
+        <image name="profile_background" width="379" height="668"/>
         <image name="profile_settings_button" width="24" height="25"/>
+        <image name="simple_background" width="375" height="667"/>
     </resources>
 </document>

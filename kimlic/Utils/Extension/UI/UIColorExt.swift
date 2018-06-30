@@ -27,6 +27,9 @@ extension UIColor {
     @nonobjc class var popupButtonLightBlue: UIColor {
         return UIColor(red: 70.0 / 255.0, green: 191.0 / 255.0, blue: 1.0, alpha: 1.0)
     }
+    @nonobjc class var passcodeLightBlue: UIColor {
+        return UIColor(red: 75.0 / 255.0, green: 193.0 / 255.0, blue: 1.0, alpha: 1.0)
+    }
     @nonobjc class var popupButtonDarkBlue: UIColor {
         return UIColor(red: 0.0, green: 148.0 / 255.0, blue: 226.0 / 255.0, alpha: 1.0)
     }

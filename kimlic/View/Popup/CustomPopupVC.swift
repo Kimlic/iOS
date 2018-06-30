@@ -14,6 +14,8 @@ class CustomPopupVC: UIViewController {
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var createPasscodeButton: UIButton!
+    @IBOutlet weak var enableRecoveryButton: UIButton!
     
     fileprivate var popupIcon: UIImage!
     fileprivate var popupTitle: String!
@@ -34,6 +36,8 @@ class CustomPopupVC: UIViewController {
     
     fileprivate func setupView() {
         rootView.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.popupGrayGradianteColors, frame: rootView.frame, type: .topBottom).color
+//        createPasscodeButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.popupBlueGradianteColors, frame: createPasscodeButton.frame, type: .topBottom).color
+//        enableRecoveryButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.popupBlueGradianteColors, frame: enableRecoveryButton.frame, type: .topBottom).color
 //        pinBackground(backgroundView, to: buttonStackView)
         
     }
