@@ -11,7 +11,6 @@ import UIKit
 class ProfileVC: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var profileImageFrame: UIImageView!
     
     let imagePicker = UIImagePickerController()
     
@@ -23,6 +22,7 @@ class ProfileVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        PopupGenerator.createPopupNew(controller: self, type: .security, popup: Popup())
     }
     
     @IBAction func settingsButtonPressed(_ sender: Any) {
@@ -30,7 +30,7 @@ class ProfileVC: UIViewController {
     }
     
     //Opens the camera when profile picture is clicked
-    @IBAction func selectProfileImage(_ sender: Any) {
+    @IBAction func addPhotoButtonPressed(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             //Camera settings are made
             imagePicker.allowsEditing = false
@@ -55,7 +55,6 @@ extension ProfileVC: UIImagePickerControllerDelegate, UINavigationControllerDele
         let myImageSize = CGSize(width: 559, height: 516)
         let resizeChosenImage: UIImage = chosenImage.resizeImage(size: myImageSize)
         profileImage.image = resizeChosenImage.profileImageMask()
-        profileImageFrame.image = #imageLiteral(resourceName: "profile_image_frame_blue")
         dismiss(animated:true, completion: nil)
     }
     

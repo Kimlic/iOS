@@ -4,7 +4,7 @@ platform :ios, '9.0'
 target 'kimlic' do
   use_frameworks!
 
- pod 'PopupDialog', '~> 0.6'
+ pod 'PopupDialog', '~> 0.7'
  pod 'TextFieldEffects', '~> 1.4'
  pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
  pod 'SwiftyJSON', '3.1.0'

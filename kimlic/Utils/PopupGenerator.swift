@@ -14,15 +14,10 @@ public class PopupGenerator {
         // Create Content View Controller
         let content = CustomPopupVC()
         
-        // Customize the container view appearance
-        let pcv = PopupDialogContainerView.appearance()
-        pcv.backgroundColor = UIColor.red
-        
         // Customize background overlay
         let overlayAppearance = PopupDialogOverlayView.appearance()
         overlayAppearance.color       = UIColor.black
         overlayAppearance.blurEnabled = false
-        overlayAppearance.liveBlur    = false
         overlayAppearance.opacity     = 0.4
         
         
@@ -196,6 +191,7 @@ public class PopupGenerator {
             
             break
             
+        default: break
         }
         popupDialog.transitionStyle = PopupDialogTransitionStyle.zoomIn
         

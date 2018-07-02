@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rxu-dC-R6U">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,55 +23,17 @@
             <objects>
                 <viewController storyboardIdentifier="TermsAndConditionsVC" id="Rxu-dC-R6U" customClass="TermsAndConditionsVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WwI-6L-Azi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fingerprint_background" translatesAutoresizingMaskIntoConstraints="NO" id="bIz-iB-UzK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uo6-qB-HL7" userLabel="ContentView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsD-gP-N1C" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="152.5" y="607" width="70" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Ffo-xZ-IyX"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cancelButtonPressed:" destination="Rxu-dC-R6U" eventType="touchUpInside" id="fAm-fp-31F"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQH-Xu-rlE" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="537" width="295" height="56"/>
-                                        <color key="backgroundColor" red="0.59607843140000005" green="0.85098039219999999" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="RW9-5d-YAM"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
-                                        <state key="normal" title="Accept">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="6"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                <size key="value" width="0.0" height="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="acceptButtonPressed:" destination="Rxu-dC-R6U" eventType="touchUpInside" id="b93-U2-dWQ"/>
-                                        </connections>
-                                    </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv6-2s-MJd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="537"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="682"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FBB-wT-nSy">
                                                 <rect key="frame" x="41" y="40" width="292" height="38"/>
@@ -80,19 +42,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last modified 23 July 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OtM-1U-0ni">
-                                                <rect key="frame" x="41" y="78" width="292" height="20.5"/>
+                                                <rect key="frame" x="41" y="78" width="292" height="20.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMPORTANT NOTICE: THIS AGREEMENTIS SUBJECT TO BINDING ARBITRATION AND A WAIVER OF CLASS ACTION RIGHTS AS DETAILED IN SECTION" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUx-xn-YwH">
-                                                <rect key="frame" x="40" y="148.5" width="295" height="100.5"/>
+                                                <rect key="frame" x="40" y="148.66666666666666" width="295" height="100.66666666666666"/>
                                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Du6-N8-9mk">
-                                                <rect key="frame" x="40" y="269" width="295" height="602.5"/>
+                                                <rect key="frame" x="40" y="269.33333333333331" width="295" height="602.66666666666674"/>
                                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet aliquet purus. Etiam aliquet tempor rhoncus. Sed consectetur justo non dolor aliquam ullamcorper. Vestibulum nisi quam, iaculis ac felis ut, laoreet finibus nunc. Morbi gravida, turpis et vulputate semper, arcu nisl lacinia massa, eget vestibulum turpis lectus a mauris. Morbi quis est non ligula varius ullamcorper. Integer tristique enim magna, a pellentesque dui elementum id. Morbi nec porttitor sem, vitae varius risus. Aliquam volutpat, magna ut aliquet placerat, augue purus fermentum diam, quis pulvinar augue lorem eu est. Vestibulum tincidunt pharetra lectus at consectetur.
 
 Phasellus in tellus et est accumsan faucibus. Praesent cursus neque sed erat dictum malesuada. Suspendisse convallis id erat ac efficitur. Pellentesque id porta sem. Cras at cursus nibh, vitae feugiat dui. Proin eget rhoncus lectus. Aenean consequat justo quis elit euismod gravida. Cras fermentum, tortor eget luctus hendrerit, metus diam luctus risus, vulputate cursus erat justo sit amet nulla.</string>
@@ -118,16 +80,63 @@ Phasellus in tellus et est accumsan faucibus. Praesent cursus neque sed erat dic
                                             <constraint firstAttribute="trailing" secondItem="FBB-wT-nSy" secondAttribute="trailing" constant="42" id="wHX-HK-Pat"/>
                                         </constraints>
                                     </scrollView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="yze-d4-g59">
+                                        <rect key="frame" x="0.0" y="582" width="375" height="230"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="230" id="3Po-zF-vSO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsD-gP-N1C" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="152.66666666666666" y="752" width="70" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Ffo-xZ-IyX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="Rxu-dC-R6U" eventType="touchUpInside" id="fAm-fp-31F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQH-Xu-rlE" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="682" width="295" height="56"/>
+                                        <color key="backgroundColor" red="0.59607843140000005" green="0.85098039219999999" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="RW9-5d-YAM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
+                                        <state key="normal" title="Accept">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="acceptButtonPressed:" destination="Rxu-dC-R6U" eventType="touchUpInside" id="b93-U2-dWQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="fQH-Xu-rlE" secondAttribute="trailing" constant="40" id="3Af-fQ-SfN"/>
+                                    <constraint firstItem="yze-d4-g59" firstAttribute="leading" secondItem="uo6-qB-HL7" secondAttribute="leading" id="Dxh-Yy-HYu"/>
                                     <constraint firstAttribute="bottom" secondItem="MsD-gP-N1C" secondAttribute="bottom" constant="30" id="Giw-Jv-fPh"/>
                                     <constraint firstItem="MsD-gP-N1C" firstAttribute="top" secondItem="fQH-Xu-rlE" secondAttribute="bottom" constant="14" id="Jxd-5I-TdV"/>
                                     <constraint firstItem="Kv6-2s-MJd" firstAttribute="top" secondItem="uo6-qB-HL7" secondAttribute="top" id="NT2-Av-ave"/>
                                     <constraint firstItem="fQH-Xu-rlE" firstAttribute="top" secondItem="Kv6-2s-MJd" secondAttribute="bottom" id="fHl-cZ-5OD"/>
                                     <constraint firstItem="fQH-Xu-rlE" firstAttribute="leading" secondItem="uo6-qB-HL7" secondAttribute="leading" constant="40" id="gpa-g0-VWc"/>
+                                    <constraint firstAttribute="bottom" secondItem="yze-d4-g59" secondAttribute="bottom" id="hDh-76-3RN"/>
                                     <constraint firstItem="fQH-Xu-rlE" firstAttribute="centerX" secondItem="uo6-qB-HL7" secondAttribute="centerX" id="hgC-Od-zme"/>
                                     <constraint firstItem="Kv6-2s-MJd" firstAttribute="leading" secondItem="uo6-qB-HL7" secondAttribute="leading" id="nug-z6-RAT"/>
+                                    <constraint firstAttribute="trailing" secondItem="yze-d4-g59" secondAttribute="trailing" id="o0T-cL-Zug"/>
                                     <constraint firstAttribute="trailing" secondItem="Kv6-2s-MJd" secondAttribute="trailing" id="qhv-tQ-8lq"/>
                                     <constraint firstItem="MsD-gP-N1C" firstAttribute="centerX" secondItem="uo6-qB-HL7" secondAttribute="centerX" id="v2q-ZV-Nff"/>
                                 </constraints>
@@ -160,5 +169,6 @@ Phasellus in tellus et est accumsan faucibus. Praesent cursus neque sed erat dic
     </scenes>
     <resources>
         <image name="Fingerprint_background" width="377" height="668"/>
+        <image name="footer_shadow" width="376" height="186"/>
     </resources>
 </document>

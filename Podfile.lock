@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.5.1)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
+  - DynamicBlurView (2.0.2)
   - FSPagerView (0.7.1)
   - IQKeyboardManagerSwift (5.0.6)
   - NVActivityIndicatorView (4.0.0):
@@ -14,7 +15,8 @@ PODS:
   - PhoneNumberKit/PhoneNumberKitCore (2.1.0)
   - PhoneNumberKit/UIKit (2.1.0):
     - PhoneNumberKit/PhoneNumberKitCore
-  - PopupDialog (0.6.0)
+  - PopupDialog (0.7.1):
+    - DynamicBlurView (~> 2.0)
   - SmileLock (3.0.0)
   - SwiftyJSON (3.1.0)
   - SwiftyUserDefaults (4.0.0-alpha.1)
@@ -27,7 +29,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView (~> 4.0)
   - ObjectMapper (~> 3.0.0)
   - PhoneNumberKit (~> 2.1)
-  - PopupDialog (~> 0.6)
+  - PopupDialog (~> 0.7)
   - SmileLock (~> 3.0)
   - SwiftyJSON (= 3.1.0)
   - SwiftyUserDefaults (= 4.0.0-alpha.1)
@@ -36,17 +38,18 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
   FSPagerView: 958aba39684e1573755ddcfcc29f7eebb8413cee
   IQKeyboardManagerSwift: 02bfbb0dff71c66d0ab77d80d25dfce0c3717735
   NVActivityIndicatorView: 54c9b93b6f25a4f467512680c0c90c09a1095cf2
   ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
   PhoneNumberKit: 62003f40ff75315fd3738286558bc365365ac222
-  PopupDialog: 687af43af0f7b89948cd411ac701865f931bd6dc
+  PopupDialog: 39598b7d41719f5c025b4b70e62728bae7734fef
   SmileLock: 94289220d5e1fbfd774115b605d3c0371024df59
   SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
   TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
 
-PODFILE CHECKSUM: 04dcec2ecac82109f54a9b52146c8aaf66c8e539
+PODFILE CHECKSUM: e8f6a7e4a18a8ade3c552bf304aae1cb70790913
 
 COCOAPODS: 1.4.0

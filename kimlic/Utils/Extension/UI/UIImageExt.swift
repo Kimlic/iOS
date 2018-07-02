@@ -8,7 +8,7 @@ import UIKit
 
 public extension UIImage {
     func profileImageMask() -> UIImage {
-        return maskedImage(mask: UIImage(named:"black_profile_mask")!)
+        return maskedImage(mask: #imageLiteral(resourceName: "black_profile_mask"))
     }
     
     // This function cuts according to the picture sent

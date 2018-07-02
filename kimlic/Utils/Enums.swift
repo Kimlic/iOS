@@ -13,10 +13,12 @@ enum MessageType {
 }
 
 enum PopupType {
+    case none
     case error
     case warning
     case success
     case qrcode
+    case security
 }
 
 enum TouchIDNavigateTarget {
