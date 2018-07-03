@@ -12,7 +12,7 @@ public class PopupGenerator {
     static func createPopupNew(controller: UIViewController, type: PopupType, popup: Popup) {
         
         // Create Content View Controller
-        let content = CustomPopupVC()
+        let content = CustomPopupVC(popupType: .none, popup: Popup(title: "", message: "", buttonTitle: ""))
         
         // Customize background overlay
         let overlayAppearance = PopupDialogOverlayView.appearance()

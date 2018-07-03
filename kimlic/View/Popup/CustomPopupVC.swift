@@ -15,10 +15,10 @@ class CustomPopupVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var buttonStackView: UIStackView!
+    @IBOutlet weak var closeButton: UIButton!
     
-    fileprivate var popupIcon: UIImage!
-    fileprivate var popupTitle: String!
-    fileprivate var popupDesc: String!
+    fileprivate var popup: Popup!
+    fileprivate var popupType: PopupType = .none
     private lazy var backgroundView: UIView = {
         let view = UIView()
         return view
@@ -29,6 +29,15 @@ class CustomPopupVC: UIViewController {
 
         // Set defautl view
         setupView()
+        
+        // Set popup value
+//        setValue()
+    }
+    
+    fileprivate func setValue() {
+        icon.image = popup.image
+        titleLabel.text = popup.title
+        descLabel.text = popup.message
     }
     
     fileprivate func setupView() {
@@ -47,11 +56,10 @@ class CustomPopupVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    convenience required init(popupIcon: UIImage, popupTitle: String, popupDesc: String) {
+    convenience required init(popupType: PopupType, popup: Popup? = nil) {
         self.init()
-        self.popupIcon = popupIcon
-        self.popupTitle = popupTitle
-        self.popupDesc = popupDesc
+        self.popupType = popupType
+        self.popup = popup
     }
     
     private func pinBackground(_ view: UIView, to stackView: UIStackView) {
