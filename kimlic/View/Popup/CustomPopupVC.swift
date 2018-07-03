@@ -66,7 +66,6 @@ class CustomPopupVC: UIViewController {
     }
     
     fileprivate func createButtons() {
-        buttonStackView.frame.size.height = CGFloat(buttons.count * 54)
         for buttonModel in buttons {
             let button = UIButton()
             button.setTitle(buttonModel.title, for: .normal)
@@ -74,6 +73,8 @@ class CustomPopupVC: UIViewController {
             button.titleLabel?.font = UIFont.popupButtonText
             button.titleLabel?.textColor = UIColor.white
             button.backgroundColor = UIColor.clear
+            let buttonHeightConstraint = button.heightAnchor.constraint(equalToConstant: 54.0)
+            buttonHeightConstraint.isActive = true
             buttonStackView.addArrangedSubview(button)
         }
     }
