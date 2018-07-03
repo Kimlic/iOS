@@ -43,10 +43,10 @@ extension UIColor {
         return UIColor(red: 206.0 / 255.0, green: 226.0 / 255.0, blue: 240.0 / 255.0, alpha: 1.0)
     }
     @nonobjc class var blueGradianteColors: [UIColor] {
-        return [self.popupButtonLightBlue, self.popupButtonDarkBlue]
+        return [popupButtonLightBlue, popupButtonDarkBlue]
     }
     @nonobjc class var greenGradianteColors: [UIColor] {
-        return [self.buttonLightGreen, self.buttonDarkGreen]
+        return [buttonLightGreen, buttonDarkGreen]
     }
     @nonobjc class var pagerBlue: UIColor {
         return UIColor(red: 3.0 / 255.0, green: 82.0 / 255.0, blue: 162.0 / 255.0, alpha: 1.0)
@@ -55,9 +55,6 @@ extension UIColor {
         return [UIColor(red: 255.0 / 255.0, green: 130.0 / 255.0, blue: 74.0 / 255.0, alpha: 1.0),
         UIColor(red: 244.0 / 255.0, green: 87.0 / 255.0, blue: 17.0 / 255.0, alpha: 1.0),
         UIColor(red: 221.0 / 255.0, green: 68.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)]
-    }
-    @nonobjc class var popupBlueGradianteColors: [UIColor] {
-        return [popupButtonLightBlue, popupButtonDarkBlue]
     }
     @nonobjc class var popupGrayGradianteColors: [UIColor] {
         return [UIColor(red: 255.0 / 255.0, green: 255.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0),

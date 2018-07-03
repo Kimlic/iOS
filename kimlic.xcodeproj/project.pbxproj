@@ -618,6 +618,7 @@
 				7C48384B1FB5F62400FC864A /* Frameworks */,
 				7C48384C1FB5F62400FC864A /* Resources */,
 				DB2BEA7B75DD495A223EDDA9 /* [CP] Embed Pods Frameworks */,
+				23BF8865AC1A9AD92CFD9B94 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -702,6 +703,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		23BF8865AC1A9AD92CFD9B94 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kimlic/Pods-kimlic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B57742B9AE9B38580FF3DAD4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

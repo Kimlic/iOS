@@ -24,14 +24,34 @@ class CustomPopupVC: UIViewController {
         return view
     }()
     
+    typealias ButtonModel = (tag: Int, title: String)
+    private var buttons: [ButtonModel] = [
+        (tag: 100, title: "Create Passcode"),
+        (tag: 101, title: "Enable Account Recovery")
+    ]
+    
+    convenience required init(popupType: PopupType, popup: Popup? = nil) {
+        self.init()
+        self.popupType = popupType
+        self.popup = popup
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Create popup buttons
+        createButtons()
+        
         // Set defautl view
         setupView()
         
         // Set popup value
 //        setValue()
+    }
+    
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     fileprivate func setValue() {
@@ -43,29 +63,25 @@ class CustomPopupVC: UIViewController {
     fileprivate func setupView() {
         rootView.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.popupGrayGradianteColors, frame: rootView.frame, type: .topBottom).color
         pinBackground(backgroundView, to: buttonStackView)
-        
     }
     
-    @IBAction func createPasscodeButtonPressed(_ sender: Any) {
-        UIUtils.showPasscodeVC(vc: self, pageType: .create) {
-            UIUtils.navigateToMessage(self, messageType: .pascodeSuccessfull)
+    fileprivate func createButtons() {
+        buttonStackView.frame.size.height = CGFloat(buttons.count * 54)
+        for buttonModel in buttons {
+            let button = UIButton()
+            button.setTitle(buttonModel.title, for: .normal)
+            button.tag = buttonModel.tag
+            button.titleLabel?.font = UIFont.popupButtonText
+            button.titleLabel?.textColor = UIColor.white
+            button.backgroundColor = UIColor.clear
+            buttonStackView.addArrangedSubview(button)
         }
     }
     
-    @IBAction func closeButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    convenience required init(popupType: PopupType, popup: Popup? = nil) {
-        self.init()
-        self.popupType = popupType
-        self.popup = popup
-    }
-    
-    private func pinBackground(_ view: UIView, to stackView: UIStackView) {
+    fileprivate func pinBackground(_ view: UIView, to stackView: UIStackView) {
         view.translatesAutoresizingMaskIntoConstraints = false
         stackView.insertSubview(view, at: 0)
-        view.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.popupBlueGradianteColors, frame: self.buttonStackView.bounds, type: .topBottom).color
+        view.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: stackView.frame, type: .topBottom).color
         view.pin(to: stackView)
     }
 

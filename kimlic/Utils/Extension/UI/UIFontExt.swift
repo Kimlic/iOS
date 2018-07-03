@@ -9,19 +9,13 @@
 import UIKit
 
 extension UIFont {
-    class var headline: UIFont {
-        return UIFont(name: "Muli-Regular", size: 42.0)!
-    }
-    class var popupHeader: UIFont {
-        return UIFont(name: "Muli-Regular", size: 36.0)!
-    }
-    class var popupButtonText: UIFont {
-        return UIFont(name: "Muli-SemiBold", size: 28.0)!
-    }
-    class var bodyText: UIFont {
+    class var popupTitle: UIFont {
         return UIFont(name: "Muli-Regular", size: 24.0)!
     }
     class var popupText: UIFont {
-        return UIFont(name: "Muli-Light", size: 24.0)!
+        return UIFont(name: "Muli-Light", size: 18.0)!
+    }
+    class var popupButtonText: UIFont {
+        return UIFont(name: "Muli-SemiBold", size: 20.0)!
     }
 }
