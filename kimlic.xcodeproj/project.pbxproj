@@ -79,7 +79,6 @@
 		7C90C4B720C811BA006EEF87 /* TouchID.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C90C4B620C811BA006EEF87 /* TouchID.storyboard */; };
 		7C90C4B920C811CC006EEF87 /* TouchIDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C90C4B820C811CC006EEF87 /* TouchIDVC.swift */; };
 		7C90C4BD20C8290B006EEF87 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C90C4BC20C8290B006EEF87 /* LocalAuthentication.framework */; };
-		7C925D0120EA1C1600FAA099 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C925D0020EA1C1600FAA099 /* Test.swift */; };
 		7C929D661FCC53E6001B9E22 /* PermissionDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929D651FCC53E6001B9E22 /* PermissionDetailResponse.swift */; };
 		7C929D681FCC583F001B9E22 /* QrCodeWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929D671FCC583F001B9E22 /* QrCodeWebServiceRequest.swift */; };
 		7C96874D1FBC949200DF4AB8 /* AllPermissionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C96874C1FBC949200DF4AB8 /* AllPermissionsVC.swift */; };
@@ -190,7 +189,6 @@
 		7C90C4B620C811BA006EEF87 /* TouchID.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TouchID.storyboard; sourceTree = "<group>"; };
 		7C90C4B820C811CC006EEF87 /* TouchIDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDVC.swift; sourceTree = "<group>"; };
 		7C90C4BC20C8290B006EEF87 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
-		7C925D0020EA1C1600FAA099 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		7C929D651FCC53E6001B9E22 /* PermissionDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionDetailResponse.swift; sourceTree = "<group>"; };
 		7C929D671FCC583F001B9E22 /* QrCodeWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeWebServiceRequest.swift; sourceTree = "<group>"; };
 		7C96874C1FBC949200DF4AB8 /* AllPermissionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPermissionsVC.swift; sourceTree = "<group>"; };
@@ -442,7 +440,6 @@
 				7C68A83520DA1267001DDDC8 /* UIColorExt.swift */,
 				7C68A83720DA12A1001DDDC8 /* UIFontExt.swift */,
 				7C85BC0920E649380000A4BA /* UIViewExt.swift */,
-				7C925D0020EA1C1600FAA099 /* Test.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -618,6 +615,7 @@
 				7C48384B1FB5F62400FC864A /* Frameworks */,
 				7C48384C1FB5F62400FC864A /* Resources */,
 				DB2BEA7B75DD495A223EDDA9 /* [CP] Embed Pods Frameworks */,
+				BD6C78F9D6993CD3CC57BE7B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -718,6 +716,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD6C78F9D6993CD3CC57BE7B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kimlic/Pods-kimlic-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DB2BEA7B75DD495A223EDDA9 /* [CP] Embed Pods Frameworks */ = {
@@ -830,7 +843,6 @@
 				79AF1D2F20C4BCD100CCA150 /* PinTextField.swift in Sources */,
 				7C99D6D11FC7FE3C00A593C5 /* PhoneResponse.swift in Sources */,
 				0F359D8F1FC07EDD007E07DC /* Animz.swift in Sources */,
-				7C925D0120EA1C1600FAA099 /* Test.swift in Sources */,
 				7C85BC0520E625870000A4BA /* CustomPopupVC.swift in Sources */,
 				7CDED00E1FBC7DD8006FB0AC /* PhoneNumberVC.swift in Sources */,
 				7C4838521FB5F62400FC864A /* AppDelegate.swift in Sources */,

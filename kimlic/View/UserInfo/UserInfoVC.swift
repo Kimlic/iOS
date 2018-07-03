@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 class UserInfoVC: UIViewController {
 
@@ -21,15 +22,23 @@ class UserInfoVC: UIViewController {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        firstNameTextField.text = Defaults[.firstName] ?? ""
+        lastNameTextField.text = Defaults[.lastName] ?? ""
+    }
+    
     private func setupView() {
         saveButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: saveButton.frame, type: .topBottom).color
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         if formControl() {
-            print("Form succes save")
+            Defaults[.firstName] = firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            Defaults[.lastName] = lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            UIUtils.navigateToMessage(self, messageType: .fullNameSuccessfull)
         }else {
-            print("Form valid")
+            PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "fieldsRequiredTitle".localized, message: "fieldsRequiredMessage".localized, buttonTitle: "fieldsRequiredButtonTitle".localized))
         }
     }
     

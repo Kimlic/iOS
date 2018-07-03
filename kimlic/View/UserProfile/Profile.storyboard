@@ -168,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="-2730.4000000000001" y="-1196.8515742128936"/>
         </scene>
-        <!--Settings TableVC-->
+        <!--Body TableVC-->
         <scene sceneID="Sec-HI-BE1">
             <objects>
-                <tableViewController id="sd5-NB-y59" customClass="SettingsTableVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="sd5-NB-y59" customClass="BodyTableVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="agG-Bi-LYC">
                         <rect key="frame" x="0.0" y="0.0" width="315" height="291"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -346,6 +346,9 @@
                             <outlet property="delegate" destination="sd5-NB-y59" id="ohn-VV-qVn"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="bodyTableView" destination="agG-Bi-LYC" id="USW-IC-1cf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Fc-Gd-sDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 class UserEmailVC: UIViewController {
 
@@ -19,6 +20,11 @@ class UserEmailVC: UIViewController {
         
         // Set default display
         setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        emailTextField.text = Defaults[.email] ?? ""
     }
     
     private func setupView() {

@@ -106,6 +106,9 @@
                                                 <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signOutButtonPressed:" destination="s1r-J5-3Yy" eventType="touchUpInside" id="IRS-gT-FhK"/>
+                                        </connections>
                                     </button>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOg-aM-jaP">
                                         <rect key="frame" x="30" y="113" width="315" height="374"/>
@@ -152,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5N-FZ-tu6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2202" y="-159"/>
+            <point key="canvasLocation" x="-2570" y="-160"/>
         </scene>
         <!--Settings TableVC-->
         <scene sceneID="TWu-N1-NSR">
@@ -407,7 +410,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIv-OG-BEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1398.75" y="-159.50704225352112"/>
+            <point key="canvasLocation" x="-1724" y="-155"/>
         </scene>
     </scenes>
     <resources>

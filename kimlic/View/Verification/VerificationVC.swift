@@ -117,8 +117,10 @@ class VerificationVC: UIViewController {
     private func verifyAndNavigate() {
         if self.codeVerify() {
             if email != nil {
+                Defaults[.email] = email
                 UIUtils.navigateToMessage(self, messageType: .emailSuccessfull)
             }else {
+                Defaults[.phone] = phoneNumber
                 UIUtils.navigateToMessage(self, messageType: .phoneNumberSuccessfull)
             }
         }else {

@@ -130,7 +130,7 @@ public class UIUtils {
             tarVC.message.icon = message?.icon ?? Constants.StaticMessage.passMatchSuccessfull.icon
             tarVC.message.title = message?.title ?? Constants.StaticMessage.passMatchSuccessfull.title
             tarVC.message.desc = message?.desc ?? Constants.StaticMessage.passMatchSuccessfull.desc
-        case .pascodeSuccessfull:
+        case .passcodeSuccessfull:
             tarVC.message.icon = message?.icon ?? Constants.StaticMessage.pascodeSuccessfull.icon
             tarVC.message.title = message?.title ?? Constants.StaticMessage.pascodeSuccessfull.title
             tarVC.message.desc = message?.desc ?? Constants.StaticMessage.pascodeSuccessfull.desc

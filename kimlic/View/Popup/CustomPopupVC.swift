@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 class CustomPopupVC: UIViewController {
     
@@ -25,6 +26,7 @@ class CustomPopupVC: UIViewController {
     }()
     
     typealias ButtonModel = (tag: Int, title: String)
+    // Tüm popup butonları gruplanarak tanımlanacak, daha sonra düzenlenecek
     private var buttons: [ButtonModel] = [
         (tag: 100, title: "Create Passcode"),
         (tag: 101, title: "Enable Account Recovery")
@@ -75,7 +77,25 @@ class CustomPopupVC: UIViewController {
             button.backgroundColor = UIColor.clear
             let buttonHeightConstraint = button.heightAnchor.constraint(equalToConstant: 54.0)
             buttonHeightConstraint.isActive = true
+            button.addTarget(self, action: #selector(popupButtonPressed), for: .touchUpInside)
+//            button.addBottomBorderWithColor(color: UIColor.popupButtonBorderBlue, width: 0.5)
+            button.layer.borderColor = UIColor.popupButtonBorderBlue.cgColor
+            button.layer.borderWidth = 0.5
             buttonStackView.addArrangedSubview(button)
+        }
+    }
+    
+    // develop - Metod içi button işlevlerine göre düzenlenecek
+    @objc func popupButtonPressed(sender: UIButton) {
+        switch sender.tag {
+        case 100:
+            UIUtils.showPasscodeVC(vc: self, pageType: .create, tmpCode: nil) {
+                UIUtils.navigateToMessage(self, messageType: .passcodeSuccessfull)
+            }
+        case 101:
+            UIUtils.navigateToSettings(self)
+        default:
+            print("Default Tag")
         }
     }
     

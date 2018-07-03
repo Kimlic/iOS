@@ -27,7 +27,13 @@ class SplashScreenVC: BaseVC {
             UIView.animate(withDuration: Animz.time1 , animations: {
             },completion: {
                 (finished: Bool) -> Void in
-                let _ = UIUtils.setSignUpScreenAsRoot()
+                
+                // kullanıcı token bilgisine göre düzenlenecek
+                if Defaults[.firstName] != nil {
+                    let _ = UIUtils.setUserProfileScreenAsRoot()
+                }else {
+                     let _ = UIUtils.setSignUpScreenAsRoot()
+                }
 //                if Defaults[.userToken] == nil {
 //                    let _ = UIUtils.setSignUpScreenAsRoot()
 //                }else {

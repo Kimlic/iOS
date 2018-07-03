@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 class SignUpVC: UIViewController {
 
@@ -15,7 +16,6 @@ class SignUpVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Set default views
         setupView()
     }
@@ -30,23 +30,6 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func recoverIdentityButtonPressed(_ sender: Any) {
-        PopupGenerator.createPopupNew(controller: self, type: .error, popup: Popup(title: "ABC", message: "TEst", buttonTitle: nil))
-//        PopupGenerator.createPopupNew(controller: self, type: .error, popup: Popup())
-//        UIUtils.navigateToTerms(self, nextPage: .accountRecovery)
-//        UIUtils.navigateToEmail(self)
-//        UIUtils.navigateToUserInfo(self)
-//        UIUtils.navigateToVerification(self, email: "izzeto@ratel.com.tr")
-//        UIUtils.navigateToTutorial(self)
-//        UIUtils.navigateToProfile(self)
-//        UIUtils.navigateToPhoneNumber(self)
-//        UIUtils.navigateToMnemonicCreate(self)
-//        UIUtils.navigateToMnemonicImport(self)
-//        UIUtils.navigateToTutorial(self)
-//        UIUtils.navigateToProfile(self)
-//        UIUtils.navigateToTouchID(self)
-//        UIUtils.navigateToMnemonicVerification(self)
-//        UIUtils.navigateToSettings(self)
-//        UIUtils.showPasscodeVC(vc: self, pageType: .confirm)
-//        UIUtils.navigateToMessage(self, messageType: .accountLinkSuccessfull, message: Message(icon: nil, title: nil, desc: "Burasıda mesaj alanı bakalım nasıl olacak"))
+        UIUtils.navigateToTerms(self, nextPage: .accountRecovery)
     }
 }

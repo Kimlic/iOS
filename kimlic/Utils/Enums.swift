@@ -8,7 +8,7 @@ import Foundation
 import UIKit
 
 enum MessageType {
-    case addressSuccessfull, passphraseSuccessfull, passMatchSuccessfull, pascodeSuccessfull, touchIDSuccessfull,
+    case addressSuccessfull, passphraseSuccessfull, passMatchSuccessfull, passcodeSuccessfull, touchIDSuccessfull,
     verifyIDSuccessfull, phoneNumberSuccessfull, emailSuccessfull, accountLinkSuccessfull, fullNameSuccessfull
 }
 

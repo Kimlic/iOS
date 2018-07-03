@@ -28,6 +28,11 @@ class SettingsVC: UIViewController {
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
+    @IBAction func signOutButtonPressed(_ sender: Any) {
+        SystemUtils.logout(controller: self)
+    }
 }
 
 class SettingsTableVC: UITableViewController {
@@ -73,6 +78,8 @@ class SettingsTableVC: UITableViewController {
     @IBAction func passcodeSwitchChange(_ sender: UISwitch) {
         warningIconPasscode.isHidden = sender.isOn
     }
+    
+    
     
     
 }

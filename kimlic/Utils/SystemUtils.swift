@@ -42,15 +42,7 @@ public class SystemUtils {
         Defaults[.userToken] = nil
         Defaults[.passcode] = nil
         Defaults.synchronize()
-//        let root = UIUtils.setTutorialScreenAsRoot()
-        let root = UIUtils.setTutorialScreenAsRoot()
-        controller.navigationController?.popRootViewControllerWithHandler(completion: {
-            let popup = Popup()
-            popup.title = "Success logout"
-            popup.message = "You have successfully logged out!"
-            popup.buttonTitle = "OK, Thanks"
-            PopupGenerator.createPopup(controller: root, type: .success, popup: popup)
-        })
+        let root = UIUtils.setSignUpScreenAsRoot()
     }
     
     static func drawCircleShapes(rootView: UIView, count: Int, incSize: Int) -> UIView {

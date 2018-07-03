@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 class ProfileVC: UIViewController {
     
@@ -72,23 +73,46 @@ class BodyTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bodyTableView.tableFooterView = UIView(frame: .zero)
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: bodyTableView.frame.size.width, height: 50))
+        footerView.backgroundColor = UIColor.clear
+        bodyTableView.tableFooterView = footerView
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        cell.disclosureIndicatorColor = UIColor.red
+        cell.backgroundColor = UIColor.clear
+        cell.selectionStyle = .none
+        switch indexPath.row {
+        case 0: // first name, last name page
+            if Defaults[.firstName] != nil, Defaults[.lastName] != nil {
+                cell.textLabel?.text = "\(Defaults[.firstName]!) \(Defaults[.lastName]!)"
+            }else {
+                cell.textLabel?.text = "Add your name"
+            }
+        case 1: // security status
+            cell.textLabel?.text = "You have 2 Security"
+        case 2: // balance
+            cell.textLabel?.text = "Balance 3 KIM"
+        case 3: // phone number
+            cell.textLabel?.text = Defaults[.phone] ?? "Add your phone"
+        case 4: // email
+            cell.textLabel?.text = Defaults[.email] ?? "Add your email"
+        default:
+            print("Add your full name")
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0: // first name, last name page
             UIUtils.navigateToUserInfo(self)
-        case 1: // user phone number page
+        case 1: // security status
+            print("Security Status")
+        case 2: // balance
+            print("Balance Status")
+        case 3: // phone number
             UIUtils.navigateToPhoneNumber(self)
-        case 2: // user email page
+        case 4: // email
             UIUtils.navigateToEmail(self)
-        case 3: // verify ID
-            print("Add verify ID")
         default:
             print("Add your full name")
         }
