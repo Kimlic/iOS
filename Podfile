@@ -15,4 +15,6 @@ target 'kimlic' do
  pod 'IQKeyboardManagerSwift', '~> 5.0.6'
  pod 'ObjectMapper', '~> 3.0.0'
  pod 'SmileLock', '~> 3.0'
+ pod 'web3swift', :git => 'https://github.com/Kimlic/web3swift', :branch => 'master'
+ pod 'Quorum', :git => 'https://github.com/Kimlic/Quorum-iOS'
 end

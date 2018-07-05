@@ -1,10 +1,16 @@
 PODS:
   - Alamofire (4.7.2)
+  - Alamofire-Synchronous (4.0.0):
+    - Alamofire (~> 4.0)
   - AlamofireImage (3.3.1):
     - Alamofire (~> 4.5)
+  - BigInt (3.1.0):
+    - SipHash (~> 1.2)
+  - CryptoSwift (0.10.0)
   - DynamicBlurView (2.0.2)
   - FSPagerView (0.7.1)
   - IQKeyboardManagerSwift (5.0.8)
+  - libsodium (1.0.12)
   - NVActivityIndicatorView (4.2.1):
     - NVActivityIndicatorView/Presenter (= 4.2.1)
   - NVActivityIndicatorView/Presenter (4.2.1)
@@ -17,10 +23,30 @@ PODS:
     - PhoneNumberKit/PhoneNumberKitCore
   - PopupDialog (0.7.1):
     - DynamicBlurView (~> 2.0)
+  - Quorum (0.1.0):
+    - Alamofire (~> 4.7)
+    - Alamofire-Synchronous (~> 4.0)
+    - BigInt (~> 3.0)
+    - CryptoSwift
+    - libsodium (~> 1.0)
+    - Result (~> 3.0)
+    - secp256k1_ios (~> 0.1)
+    - web3swift
+  - Result (3.2.4)
+  - secp256k1_ios (0.1.3)
+  - SipHash (1.2.2)
   - SmileLock (3.0.3)
   - SwiftyJSON (3.1.0)
   - SwiftyUserDefaults (4.0.0-alpha.1)
   - TextFieldEffects (1.4.0)
+  - web3swift (0.8.2):
+    - Alamofire (~> 4.7)
+    - Alamofire-Synchronous (~> 4.0)
+    - BigInt (~> 3.0)
+    - CryptoSwift (~> 0.10)
+    - libsodium (~> 1.0)
+    - Result (~> 3.0)
+    - secp256k1_ios (~> 0.1)
 
 DEPENDENCIES:
   - AlamofireImage (~> 3.3)
@@ -30,26 +56,75 @@ DEPENDENCIES:
   - ObjectMapper (~> 3.0.0)
   - PhoneNumberKit (~> 2.1)
   - PopupDialog (~> 0.7)
+  - Quorum (from `https://github.com/Kimlic/Quorum-iOS`)
   - SmileLock (~> 3.0)
   - SwiftyJSON (= 3.1.0)
   - SwiftyUserDefaults (= 4.0.0-alpha.1)
   - TextFieldEffects (~> 1.4)
+  - web3swift (from `https://github.com/Kimlic/web3swift`, branch `master`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Alamofire-Synchronous
+    - AlamofireImage
+    - BigInt
+    - CryptoSwift
+    - DynamicBlurView
+    - FSPagerView
+    - IQKeyboardManagerSwift
+    - libsodium
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - PhoneNumberKit
+    - PopupDialog
+    - Result
+    - secp256k1_ios
+    - SipHash
+    - SmileLock
+    - SwiftyJSON
+    - SwiftyUserDefaults
+    - TextFieldEffects
+
+EXTERNAL SOURCES:
+  Quorum:
+    :git: https://github.com/Kimlic/Quorum-iOS
+  web3swift:
+    :branch: master
+    :git: https://github.com/Kimlic/web3swift
+
+CHECKOUT OPTIONS:
+  Quorum:
+    :commit: 93c928b0205e353255cb65c82b3440c16eeec6fc
+    :git: https://github.com/Kimlic/Quorum-iOS
+  web3swift:
+    :commit: 5ac8665d7b464d1eb60448d1b80f85b2905adac5
+    :git: https://github.com/Kimlic/web3swift
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Alamofire-Synchronous: eedf1e6e961c3795a63c74990b3f7d9fbfac7e50
   AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
+  CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
   DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
   FSPagerView: 958aba39684e1573755ddcfcc29f7eebb8413cee
   IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
+  libsodium: 9a8faa5ef2fa0d2d57bd7f7d79bf8fb7c1a9f0ea
   NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
   ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
   PhoneNumberKit: 62003f40ff75315fd3738286558bc365365ac222
   PopupDialog: 39598b7d41719f5c025b4b70e62728bae7734fef
+  Quorum: b80b244e9cbde3ab0b63a520a5e14016d8c57119
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  secp256k1_ios: ac9ef04e761f43c58012b28548afa91493761f17
+  SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
   SmileLock: 247b62849cedca324e70ccfad5d01714602d739e
   SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
   TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
+  web3swift: ac26245dc6921900992dd773bdf0ffc693855997
 
-PODFILE CHECKSUM: e8f6a7e4a18a8ade3c552bf304aae1cb70790913
+PODFILE CHECKSUM: a8e1f67629e6d84226d212faae234b998d036802
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
