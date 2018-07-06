@@ -37,7 +37,7 @@ PODS:
   - SipHash (1.2.2)
   - SmileLock (3.0.3)
   - SwiftyJSON (3.1.0)
-  - SwiftyUserDefaults (4.0.0-alpha.1)
+  - SwiftyUserDefaults (3.0.1)
   - TextFieldEffects (1.4.0)
   - web3swift (0.8.2):
     - Alamofire (~> 4.7)
@@ -50,6 +50,7 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireImage (~> 3.3)
+  - CryptoSwift
   - FSPagerView (~> 0.7)
   - IQKeyboardManagerSwift (~> 5.0.6)
   - NVActivityIndicatorView (~> 4.0)
@@ -59,7 +60,7 @@ DEPENDENCIES:
   - Quorum (from `https://github.com/Kimlic/Quorum-iOS`)
   - SmileLock (~> 3.0)
   - SwiftyJSON (= 3.1.0)
-  - SwiftyUserDefaults (= 4.0.0-alpha.1)
+  - SwiftyUserDefaults (= 3.0.1)
   - TextFieldEffects (~> 1.4)
   - web3swift (from `https://github.com/Kimlic/web3swift`, branch `master`)
 
@@ -121,10 +122,10 @@ SPEC CHECKSUMS:
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
   SmileLock: 247b62849cedca324e70ccfad5d01714602d739e
   SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
-  SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
+  SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
   TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
   web3swift: ac26245dc6921900992dd773bdf0ffc693855997
 
-PODFILE CHECKSUM: a8e1f67629e6d84226d212faae234b998d036802
+PODFILE CHECKSUM: 204b304bcf304bff25a44ec0aed4d013c6015f8b
 
 COCOAPODS: 1.5.3

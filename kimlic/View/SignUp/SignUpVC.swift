@@ -15,7 +15,7 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var newIdentityButton: UIButton!
     @IBOutlet weak var logo: UIImageView!
     
-    private lazy var accountStorageAdapterContract = AccountStorageAdapterContract()
+    private lazy var accountStorageAdapterManager = AccountStorageAdapterManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class SignUpVC: UIViewController {
     
     private func setAccountFieldMainData() {
         do {
-            _ = try accountStorageAdapterContract.setAccountFieldMainData()
+            _ = try accountStorageAdapterManager.setAccountFieldMainData()
         } catch let err {
             print("CATCH: ", err, "\n")
         }

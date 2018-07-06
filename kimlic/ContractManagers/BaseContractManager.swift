@@ -10,11 +10,13 @@ import Foundation
 import Quorum
 
 
-class BaseContract{
-    private let configCustom = Web3Config(scheme: "http", host: "127.0.0.1", port: 22000, path:"/api/proxy", networkId: 10)
+class BaseContractManager{
+    public let cons = Constants.Contracts()
+    private var configCustom: Web3Config
     public var quorumManager: Quorum
     
     init(){
+        configCustom = Web3Config(scheme: cons.BaseHTTP, host: cons.BaseURL, port: cons.BasePort, path: cons.BasePath, networkId: 10)
         quorumManager = Quorum(configCustom)
         initMnemonic()
     }
@@ -23,6 +25,14 @@ class BaseContract{
         let mnemonic = try! Quorum.mnemonic()
         print("MNEMONIC: ", mnemonic, "\n")
         try! Quorum.keystoreWith(mnemonic: mnemonic)
+    }
+    
+    private struct ContractAddressProduction {
+        static let appBlue = "123"
+    }
+    
+    private struct ContractAddressDebug {
+        static let appBlue = "456"
     }
 
 }

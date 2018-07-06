@@ -13,8 +13,8 @@
 		0F359D911FC095C9007E07DC /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F359D901FC095C9007E07DC /* BaseVC.swift */; };
 		0F359D941FC098F7007E07DC /* NSObjectExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F359D931FC098F7007E07DC /* NSObjectExt.swift */; };
 		0F4AB22120EE6B7300F941D1 /* AccountStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22020EE6B7300F941D1 /* AccountStorageAdapter.swift */; };
-		0F4AB22320EEB92E00F941D1 /* AccountStorageAdapterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22220EEB92E00F941D1 /* AccountStorageAdapterContract.swift */; };
-		0F4AB22520EEB9A400F941D1 /* BaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22420EEB9A400F941D1 /* BaseContract.swift */; };
+		0F4AB22320EEB92E00F941D1 /* AccountStorageAdapterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22220EEB92E00F941D1 /* AccountStorageAdapterManager.swift */; };
+		0F4AB22520EEB9A400F941D1 /* BaseContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22420EEB9A400F941D1 /* BaseContractManager.swift */; };
 		0F8F2B5E1FC5D66200BEF5B2 /* PermissionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8F2B5D1FC5D66200BEF5B2 /* PermissionCell.xib */; };
 		0FBA58F01FC0A81D00DF593F /* PopupGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */; };
 		3FA05207AA63FC037BD17670 /* Pods_kimlic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4839EE1351BF59D4372E9EB /* Pods_kimlic.framework */; };
@@ -126,8 +126,8 @@
 		0F359D901FC095C9007E07DC /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		0F359D931FC098F7007E07DC /* NSObjectExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExt.swift; sourceTree = "<group>"; };
 		0F4AB22020EE6B7300F941D1 /* AccountStorageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStorageAdapter.swift; sourceTree = "<group>"; };
-		0F4AB22220EEB92E00F941D1 /* AccountStorageAdapterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStorageAdapterContract.swift; sourceTree = "<group>"; };
-		0F4AB22420EEB9A400F941D1 /* BaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContract.swift; sourceTree = "<group>"; };
+		0F4AB22220EEB92E00F941D1 /* AccountStorageAdapterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStorageAdapterManager.swift; sourceTree = "<group>"; };
+		0F4AB22420EEB9A400F941D1 /* BaseContractManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContractManager.swift; sourceTree = "<group>"; };
 		0F8F2B5D1FC5D66200BEF5B2 /* PermissionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionCell.xib; sourceTree = "<group>"; };
 		0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupGenerator.swift; sourceTree = "<group>"; };
 		79AD4C7D20CD050200EE9160 /* MnemonicCreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicCreateVC.swift; sourceTree = "<group>"; };
@@ -246,12 +246,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F4AB21F20EE6AF600F941D1 /* Contracts */ = {
+		0F4AB21F20EE6AF600F941D1 /* ContractManagers */ = {
+			isa = PBXGroup;
+			children = (
+				0F4AB22620EF44E900F941D1 /* Contracts */,
+				0F4AB22220EEB92E00F941D1 /* AccountStorageAdapterManager.swift */,
+				0F4AB22420EEB9A400F941D1 /* BaseContractManager.swift */,
+			);
+			path = ContractManagers;
+			sourceTree = "<group>";
+		};
+		0F4AB22620EF44E900F941D1 /* Contracts */ = {
 			isa = PBXGroup;
 			children = (
 				0F4AB22020EE6B7300F941D1 /* AccountStorageAdapter.swift */,
-				0F4AB22220EEB92E00F941D1 /* AccountStorageAdapterContract.swift */,
-				0F4AB22420EEB9A400F941D1 /* BaseContract.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -389,7 +397,7 @@
 		7C4838501FB5F62400FC864A /* kimlic */ = {
 			isa = PBXGroup;
 			children = (
-				0F4AB21F20EE6AF600F941D1 /* Contracts */,
+				0F4AB21F20EE6AF600F941D1 /* ContractManagers */,
 				7CB5674B1FB9B53400F03D24 /* Model */,
 				7CB5674C1FB9B54700F03D24 /* View */,
 				7CB5674D1FB9B55600F03D24 /* Controller */,
@@ -821,7 +829,7 @@
 				7C8272C51FC583C600054277 /* UIImageExt.swift in Sources */,
 				7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */,
 				79AD4C8220CD182500EE9160 /* MnemonicVerificationVC.swift in Sources */,
-				0F4AB22520EEB9A400F941D1 /* BaseContract.swift in Sources */,
+				0F4AB22520EEB9A400F941D1 /* BaseContractManager.swift in Sources */,
 				7C02B3111FD7F238005C55E3 /* PasscodeVC.swift in Sources */,
 				7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */,
 				7C842B9F1FC2B8CC0010F98A /* UIUtils.swift in Sources */,
@@ -878,7 +886,7 @@
 				0F359D941FC098F7007E07DC /* NSObjectExt.swift in Sources */,
 				7C8A80CF1FBD839E009E74F9 /* PermissionCell.swift in Sources */,
 				7C96874D1FBC949200DF4AB8 /* AllPermissionsVC.swift in Sources */,
-				0F4AB22320EEB92E00F941D1 /* AccountStorageAdapterContract.swift in Sources */,
+				0F4AB22320EEB92E00F941D1 /* AccountStorageAdapterManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

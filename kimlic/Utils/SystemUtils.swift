@@ -27,6 +27,7 @@ public class SystemUtils {
     
     //Acces_token does not reset after user logs out
     static func logout(controller: UIViewController!) {
+/*
         Defaults[.firstName] = nil
         Defaults[.lastName] = nil
         Defaults[.email] = nil
@@ -42,7 +43,9 @@ public class SystemUtils {
         Defaults[.userToken] = nil
         Defaults[.passcode] = nil
         Defaults.synchronize()
-        let root = UIUtils.setSignUpScreenAsRoot()
+ */
+        Defaults.removeAll()
+        _ = UIUtils.setSignUpScreenAsRoot()
     }
     
     static func drawCircleShapes(rootView: UIView, count: Int, incSize: Int) -> UIView {

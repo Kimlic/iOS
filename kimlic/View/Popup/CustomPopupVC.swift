@@ -93,7 +93,7 @@ class CustomPopupVC: UIViewController {
                 UIUtils.navigateToMessage(self, messageType: .passcodeSuccessfull)
             }
         case 101:
-            UIUtils.navigateToSettings(self)
+            UIUtils.navigateToMnemonicCreate(self.rootView.topMostController()!)
         default:
             print("Default Tag")
         }

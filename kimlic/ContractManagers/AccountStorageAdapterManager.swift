@@ -7,12 +7,19 @@
 //
 
 import Foundation
+import SwiftyUserDefaults
+import CryptoSwift
 
-class AccountStorageAdapterContract: BaseContract {
-    private lazy var accountStorageAdapter = AccountStorageAdapter(address: "0xd63a61238cfc86db6dbb4ab4484f33b3d56b249c")
+class AccountStorageAdapterManager: BaseContractManager {
+    private lazy var accountStorageAdapter = AccountStorageAdapter(address: cons.AccountStorageAdapterAddress)
 
     func setAccountFieldMainData() throws -> [String: Any] {
-        let myParams = ["8C16561DFE998D2811A4BC8A2E97693526847D522E14FB5D20A5BA09F10F1902",quorumManager.accountAddress()!]
+        if(Defaults[.deviceId] == nil){
+            let uuid = UUID().uuidString
+            Defaults[.deviceId] = uuid.sha256()
+        }
+
+        let myParams = [Defaults[.deviceId], quorumManager.accountAddress()!]
         let receiptSet = try quorumManager.send(contract: accountStorageAdapter, method: accountStorageAdapter.transactions.setAccountFieldMainData, params: myParams)
         print("RECEIPT SET: ", receiptSet, "\n")
         return receiptSet

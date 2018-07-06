@@ -13,7 +13,7 @@ class SplashScreenVC: BaseVC {
     @IBOutlet weak var viewImageContainer: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         //a new access token is taken if the access token is not taken
         if Defaults[.accessToken] == nil {
             TokenWebServiceRequest().clientCredentialsRequest(completion: { (tokenResponse) in
@@ -29,16 +29,11 @@ class SplashScreenVC: BaseVC {
                 (finished: Bool) -> Void in
                 
                 // kullanıcı token bilgisine göre düzenlenecek
-                if Defaults[.firstName] != nil {
+                if Defaults[.phone] != nil {
                     let _ = UIUtils.setUserProfileScreenAsRoot()
                 }else {
                      let _ = UIUtils.setSignUpScreenAsRoot()
                 }
-//                if Defaults[.userToken] == nil {
-//                    let _ = UIUtils.setSignUpScreenAsRoot()
-//                }else {
-//                    let _ = UIUtils.setUserProfileScreenAsRoot()
-//                }
             })
         }
     }

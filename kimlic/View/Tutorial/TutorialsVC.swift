@@ -130,7 +130,7 @@ class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
     }
     
     @IBAction func skipButtonPressed(_ sender: Any) {
-        UIUtils.navigateToPhoneNumber(self)
+        UIUtils.navigateToTerms(self, nextPage: .phoneNumber)
     }
     
 }

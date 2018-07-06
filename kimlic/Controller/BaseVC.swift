@@ -6,6 +6,8 @@
 //  Copyright © 2017 Ratel. All rights reserved.
 import Foundation
 import UIKit
+import SwiftyUserDefaults
+
 
 class BaseVC: UIViewController {
     

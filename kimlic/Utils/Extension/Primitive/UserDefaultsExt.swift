@@ -26,4 +26,7 @@ extension DefaultsKeys {
     
     //if the user wishes to generate a confirmation code for entry permits
     static let passcode = DefaultsKey<String?>("passcode")
+    
+    
+    static let deviceId = DefaultsKey<String?>("deviceId")
 }
