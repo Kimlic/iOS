@@ -8,8 +8,15 @@
 import UIKit
 import SwiftyUserDefaults
 import PhoneNumberKit
+import Alamofire
+import Quorum
 
 class VerificationVC: UIViewController {
+
+    enum VerificationType: String {
+        case email = "email"
+        case phone = "phone"
+    }
     
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var addressLabel: UILabel!
@@ -115,43 +122,76 @@ class VerificationVC: UIViewController {
     }
     
     private func verifyAndNavigate() {
-        if self.codeVerify() {
+        if let code = codeVerify() {
             if email != nil {
-                Defaults[.email] = email
-                UIUtils.navigateToMessage(self, messageType: .emailSuccessfull)
-            }else {
-                Defaults[.phone] = phoneNumber
-                UIUtils.navigateToMessage(self, messageType: .phoneNumberSuccessfull)
+                serverRequest(code, type: .email)
+            } else {
+                serverRequest(code, type: .phone)
             }
         }else {
-            PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "incorrectCodeTitle".localized, message: "incorrectCodeMessage".localized, buttonTitle: "incorrectCodeButtonTitle".localized))
+            showCodeError()
         }
     }
     
-    private func codeVerify() -> Bool {
+    private func showCodeError() {
+        PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "incorrectCodeTitle".localized, message: "incorrectCodeMessage".localized, buttonTitle: "incorrectCodeButtonTitle".localized))
+    }
+    
+    private func serverRequest(_ code: String, type: VerificationType) {
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            guard let strongSelf = self else { return }
+            let accountStorageAdapterManager = AccountStorageAdapterManager()
+            guard let quorumAddress = accountStorageAdapterManager.quorumManager.accountAddress() else { fatalError("No quorum address found") }
+            let url = "http://mobile-api-dev.kimlic.com/api/verifications/\(type.rawValue)/approve"
+            
+            guard let response = Alamofire.request(
+                url,
+                method: .post,
+                parameters: ["code": code],
+                encoding: URLEncoding.queryString,
+                headers: ["account-address": quorumAddress.lowercased(), "content-type": "application/json"])
+                .responseJSON().value as? [String: [String: AnyObject]] else { strongSelf.showCodeError(); return }
+            guard let code = response["meta"]?["code"] as? Int, code == 200 else { strongSelf.showCodeError(); return }
+            
+            switch type {
+            case .email:
+                Defaults[.email] = strongSelf.email
+                
+                DispatchQueue.main.async { [weak self] in
+                    guard let strongSelf = self else { return }
+                    UIUtils.navigateToMessage(strongSelf, messageType: .emailSuccessfull)
+                }
+                
+            case .phone:
+                Defaults[.phone] = strongSelf.phoneNumber
+                
+                DispatchQueue.main.async {
+                    UIUtils.navigateToMessage(strongSelf, messageType: .phoneNumberSuccessfull)
+                }
+            }
+        }
+    }
+    
+    private func codeVerify() -> String? {
         var code = ""
         guard let firstText = firstNumberTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !firstText.isEmpty else {
-            return false
+            return nil
         }
         code += firstText
         guard let secondText = secondNumberTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !secondText.isEmpty else {
-            return false
+            return nil
         }
         code += secondText
         guard let thirdText = thirdNumberTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !thirdText.isEmpty else {
-            return false
+            return nil
         }
         code += thirdText
         guard let fourthText = fourthNumberTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !fourthText.isEmpty else {
-            return false
+            return nil
         }
         code += fourthText
-        
-        guard code == "1234" else {
-            return false
-        }
-        
-        return true
+
+        return code
     }
     
 }

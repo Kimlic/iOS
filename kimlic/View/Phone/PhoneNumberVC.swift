@@ -9,6 +9,8 @@ import UIKit
 import PhoneNumberKit
 import SwiftyUserDefaults
 import SwiftyJSON
+import web3swift
+import Alamofire
 
 class PhoneNumberVC: UIViewController {
     
@@ -21,6 +23,7 @@ class PhoneNumberVC: UIViewController {
     var selectedCode = "+90"
     var defaultSelectedIndex = 215 //  Set default Turkey phone code
     let phoneNumberKit = PhoneNumberKit()
+    private lazy var accountStorageAdapterManager = AccountStorageAdapterManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +76,33 @@ class PhoneNumberVC: UIViewController {
         }
     }
     
+    private func serverRequest(_ phone: String) {
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            guard let strongSelf = self else { return }
+            do {
+                guard let quorumAddress = strongSelf.accountStorageAdapterManager.quorumManager.accountAddress() else { fatalError("No quorum address found") }
+                let result = try strongSelf.accountStorageAdapterManager.setAccountFieldMainData(type: .phone, value: phone)
+                guard let receipt = result["receipt"] as? TransactionReceipt, receipt.status == .ok else { strongSelf.showPhoneError(); return }
+
+                guard let response = Alamofire.request(
+                    "http://mobile-api-dev.kimlic.com/api/verifications/phone",
+                    method: .post,
+                    parameters: ["phone": phone],
+                    encoding: URLEncoding.queryString,
+                    headers: ["account-address": quorumAddress.lowercased(), "content-type": "application/json"])
+                .responseJSON().value as? [String: [String: AnyObject]] else { strongSelf.showPhoneError(); return }
+
+                guard let code = response["meta"]?["code"] as? Int, code == 201 else { strongSelf.showPhoneError(); return }
+                
+                DispatchQueue.main.async {
+                    UIUtils.navigateToVerification(strongSelf, phoneNumber: phone)
+                }
+            } catch _ {
+                strongSelf.showPhoneError()
+            }
+        }
+    }
+    
     @IBAction func phoneNumberTextFieldChanged(_ sender: Any) {
         let str = phoneNumberTextField.text
         guard (str?.range(of: selectedCode)) != nil else {
@@ -95,11 +125,17 @@ class PhoneNumberVC: UIViewController {
         
         do {
             let verificatePhone = try phoneNumberKit.parse(phoneNumber)
-            UIUtils.navigateToVerification(self, phoneNumber: verificatePhone.numberString)
-        }catch {
-            PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "phoneNotValidTitle".localized, message: "phoneNotValidMessage".localized, buttonTitle: "phoneNotValidButtonTitle".localized))
+            serverRequest(verificatePhone.numberString.replacingOccurrences(of: " ", with: ""))
+        } catch {
+            showPhoneError()
         }
-        
+    }
+    
+    private func showPhoneError() {
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            PopupGenerator.createPopup(controller: strongSelf, type: .warning, popup: Popup(title: "phoneNotValidTitle".localized, message: "phoneNotValidMessage".localized, buttonTitle: "phoneNotValidButtonTitle".localized))
+        }
     }
 }
 

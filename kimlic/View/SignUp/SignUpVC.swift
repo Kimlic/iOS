@@ -8,14 +8,11 @@
 
 import UIKit
 import SwiftyUserDefaults
-import Quorum
 
 
 class SignUpVC: UIViewController {
     @IBOutlet weak var newIdentityButton: UIButton!
     @IBOutlet weak var logo: UIImageView!
-    
-    private lazy var accountStorageAdapterManager = AccountStorageAdapterManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,18 +25,9 @@ class SignUpVC: UIViewController {
         
     }
     
-    private func setAccountFieldMainData() {
-        do {
-            _ = try accountStorageAdapterManager.setAccountFieldMainData()
-        } catch let err {
-            print("CATCH: ", err, "\n")
-        }
-    }
-    
     @IBAction func newIdentityButtonPressed(_ sender: Any) {
         UIUtils.navigateToTutorial(self)
         //ibrahim - we should call this before phone or email verification
-        setAccountFieldMainData()
     }
     
     @IBAction func recoverIdentityButtonPressed(_ sender: Any) {

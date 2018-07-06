@@ -67,21 +67,28 @@ class Constants {
         let AccountStorageAdapterAddress: String
         
         init() {
-            if(Constants.Environment.debug){
-                BaseHTTP = "http"
-                BaseURL = "127.0.0.1"
-                BasePort = 22000
-                BasePath = "/api/proxy"
-                
-                AccountStorageAdapterAddress = "0xd63a61238cfc86db6dbb4ab4484f33b3d56b249c"
-            }else{
-                BaseHTTP = "http"
-                BaseURL = "mobile-api-dev.kimlic.com"
-                BasePort = 80
-                BasePath = "/api/quorum"
-                
-                AccountStorageAdapterAddress = "0xd37debc7b53d678788661c74c94f265b62a412ac"
-            }
+            BaseHTTP = "http"
+            BaseURL = "40.115.43.126"
+            BasePort = 22000
+            BasePath = ""
+            
+            AccountStorageAdapterAddress = "0xd37debc7b53d678788661c74c94f265b62a412ac"
+            
+//            if(Constants.Environment.debug){
+//                BaseHTTP = "http"
+//                BaseURL = "127.0.0.1"
+//                BasePort = 22000
+//                BasePath = "/api/proxy"
+//
+//                AccountStorageAdapterAddress = "0xd63a61238cfc86db6dbb4ab4484f33b3d56b249c"
+//            }else{
+//                BaseHTTP = "http"
+//                BaseURL = "mobile-api-dev.kimlic.com"
+//                BasePort = 80
+//                BasePath = "/api/quorum"
+//
+//                AccountStorageAdapterAddress = "0xd37debc7b53d678788661c74c94f265b62a412ac"
+//            }
         }
     }
 }
