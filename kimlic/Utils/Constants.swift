@@ -77,7 +77,7 @@ class Constants {
             }else{
                 BaseHTTP = "http"
                 BaseURL = "mobile-api-dev.kimlic.com"
-                BasePort = 22000
+                BasePort = 80
                 BasePath = "/api/quorum"
                 
                 AccountStorageAdapterAddress = "0xd37debc7b53d678788661c74c94f265b62a412ac"
