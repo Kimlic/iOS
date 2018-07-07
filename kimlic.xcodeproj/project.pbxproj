@@ -640,6 +640,7 @@
 				7C48384B1FB5F62400FC864A /* Frameworks */,
 				7C48384C1FB5F62400FC864A /* Resources */,
 				DB2BEA7B75DD495A223EDDA9 /* [CP] Embed Pods Frameworks */,
+				1795117020EFEBEA0071772D /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -724,6 +725,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1795117020EFEBEA0071772D /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" a5f149222cca55fee6eb72b0c20f2347242e97a2 9c7ac6de592142ce47659d630934008db27cfb2a6b378c6d3a753a1b95f69a47";
+		};
 		B57742B9AE9B38580FF3DAD4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1039,9 +1054,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z9WP434U24;
+				DEVELOPMENT_TEAM = V768S46E57;
 				INFOPLIST_FILE = kimlic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1060,9 +1074,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z9WP434U24;
+				DEVELOPMENT_TEAM = V768S46E57;
 				INFOPLIST_FILE = kimlic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
