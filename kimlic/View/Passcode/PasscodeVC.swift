@@ -84,6 +84,7 @@ extension PasscodeVC: PasswordInputCompleteProtocol {
         case .createConfirm:
             if tmpCode == input {
                 Defaults[.passcode] = input
+                UIUtils.navigateToMessage(self.rootVC, messageType: .passcodeSuccessfull)
                 dismiss(animated: true, completion: nil)
             }else {
                 passwordContainerView.wrongPassword()

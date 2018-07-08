@@ -25,6 +25,8 @@ class CustomPopupVC: UIViewController {
         return view
     }()
     
+    private var rootVC: UIViewController!
+    
     typealias ButtonModel = (tag: Int, title: String)
     // Tüm popup butonları gruplanarak tanımlanacak, daha sonra düzenlenecek
     private var buttons: [ButtonModel] = [
@@ -32,8 +34,9 @@ class CustomPopupVC: UIViewController {
         (tag: 101, title: "Enable Account Recovery")
     ]
     
-    convenience required init(popupType: PopupType, popup: Popup? = nil) {
+    convenience required init(rootController: UIViewController, popupType: PopupType, popup: Popup? = nil) {
         self.init()
+        self.rootVC = rootController
         self.popupType = popupType
         self.popup = popup
     }
@@ -89,11 +92,13 @@ class CustomPopupVC: UIViewController {
     @objc func popupButtonPressed(sender: UIButton) {
         switch sender.tag {
         case 100:
-            UIUtils.showPasscodeVC(vc: self, pageType: .create, tmpCode: nil) {
-                UIUtils.navigateToMessage(self, messageType: .passcodeSuccessfull)
+            self.dismiss(animated: true)
+            UIUtils.showPasscodeVC(vc: self.rootVC, pageType: .create, tmpCode: nil) {
+                UIUtils.navigateToMessage(self.rootVC, messageType: .passcodeSuccessfull)
             }
         case 101:
-            UIUtils.navigateToMnemonicCreate(self.rootView.topMostController()!)
+            self.dismiss(animated: true)
+            UIUtils.navigateToMnemonicCreate(self.rootVC)
         default:
             print("Default Tag")
         }
