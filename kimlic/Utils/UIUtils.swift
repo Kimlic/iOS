@@ -113,6 +113,12 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
+    static func navigateToProfileCamera(_ vc: UIViewController){
+        let storyboard = AppStoryboard.ProfileCamera.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: ProfileCameraVC.className) as! ProfileCameraVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
     // Message = Constants > StaticMessage
     static func navigateToMessage(_ vc: UIViewController, messageType: MessageType, message: Message? = nil){
         let storyboard = AppStoryboard.Message.instance

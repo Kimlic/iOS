@@ -48,6 +48,8 @@ class ProfileVC: UIViewController {
     
     //Opens the camera when profile picture is clicked
     @IBAction func addPhotoButtonPressed(_ sender: Any) {
+        UIUtils.navigateToProfileCamera(self)
+        /*
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             //Camera settings are made
             imagePicker.allowsEditing = false
@@ -59,6 +61,7 @@ class ProfileVC: UIViewController {
             PopupGenerator.createPopup(controller: self, type: .error, popup: Popup(title: "noCameraTitle".localized, message: "noCameraMessage".localized, buttonTitle: "noCameraButtonTitle".localized))
             return
         }
+        */
         
     }
     
