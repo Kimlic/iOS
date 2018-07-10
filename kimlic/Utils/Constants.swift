@@ -54,7 +54,7 @@ class Constants {
         static let touchIDSuccessfull = Message(icon: #imageLiteral(resourceName: "phone_success_icon"), title: "touchIDEnabled".localized, desc: "successTouchID".localized)
         static let verifyIDSuccessfull = Message(icon: #imageLiteral(resourceName: "phone_success_icon"), title: "congratulation".localized, desc: "successVerified".localized)
         static let phoneNumberSuccessfull = Message(icon: #imageLiteral(resourceName: "phone_success_icon"), title: "congratulation".localized, desc: "successPhoneNumber".localized)
-        static let emailSuccessfull = Message(icon: #imageLiteral(resourceName: "phone_success_icon"), title: "congratulation".localized, desc: "successEmail".localized)
+        static let emailSuccessfull = Message(icon:  #imageLiteral(resourceName: "phone_success_icon"), title: "congratulation".localized, desc: "successEmail".localized)
         static let accountLinkSuccessfull = Message(icon: #imageLiteral(resourceName: "phone_success_icon"), title: "newAccount".localized, desc: "successAccount".localized)
         static let fullNameSuccessfull = Message(icon: #imageLiteral(resourceName: "phone_success_icon"), title: "congratulation".localized, desc: "successFullname".localized)
     }

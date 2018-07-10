@@ -84,15 +84,17 @@ class PhoneNumberVC: UIViewController {
                 let result = try strongSelf.accountStorageAdapterManager.setAccountFieldMainData(type: .phone, value: phone)
                 guard let receipt = result["receipt"] as? TransactionReceipt, receipt.status == .ok else { strongSelf.showPhoneError(); return }
 
-                guard let response = Alamofire.request(
+                let responsea = Alamofire.request(
                     "http://mobile-api-dev.kimlic.com/api/verifications/phone",
                     method: .post,
                     parameters: ["phone": phone],
                     encoding: URLEncoding.queryString,
                     headers: ["account-address": quorumAddress.lowercased(), "content-type": "application/json"])
-                .responseJSON().value as? [String: [String: AnyObject]] else { strongSelf.showPhoneError(); return }
+                .responseJSON().value
+                
+                guard let responsewww = responsea as? [String: [String: AnyObject]] else { strongSelf.showPhoneError(); return }
 
-                guard let code = response["meta"]?["code"] as? Int, code == 201 else { strongSelf.showPhoneError(); return }
+                guard let code = responsewww["meta"]?["code"] as? Int, code == 201 else { strongSelf.showPhoneError(); return }
                 
                 DispatchQueue.main.async {
                     UIUtils.navigateToVerification(strongSelf, phoneNumber: phone)

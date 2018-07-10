@@ -23,7 +23,23 @@ class ProfileVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        PopupGenerator.createPopupNew(controller: self, type: .security, popup: Popup())
+        controlRisks()
+    }
+    
+    func controlRisks() {
+        let passcode = Defaults[.passcode]
+        let recovery = Defaults[.recovery]
+        if passcode == nil && recovery == nil{
+            PopupGenerator.twoRisks(controller: self)
+        }else if passcode == nil{
+            PopupGenerator.passcodeRisk(controller: self)
+        }else if recovery == nil{
+            PopupGenerator.recoveryRisk(controller: self)
+        }
+    }
+    
+    @IBAction func scanButtonPressed(_ sender: Any) {
+           
     }
     
     @IBAction func settingsButtonPressed(_ sender: Any) {

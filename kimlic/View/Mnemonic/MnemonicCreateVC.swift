@@ -33,9 +33,7 @@ class MnemonicCreateVC: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
-        PopupGenerator.createPopup(controller: self, type: .success, popup: Popup()) {
-            self.cancelButtonPressed(sender)
-        }
+        UIUtils.navigateToMnemonicVerification(self)
     }
 }
 

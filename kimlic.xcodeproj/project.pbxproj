@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F1E43C21FC0A56700B0B631 /* SystemUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E43C11FC0A56600B0B631 /* SystemUtils.swift */; };
 		0F1E43C41FC0A5A500B0B631 /* UserDefaultsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E43C31FC0A5A500B0B631 /* UserDefaultsExt.swift */; };
+		0F31443A20F3BA41007B72F6 /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F31443920F3BA41007B72F6 /* ButtonModel.swift */; };
 		0F359D8F1FC07EDD007E07DC /* Animz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F359D8E1FC07EDD007E07DC /* Animz.swift */; };
 		0F359D911FC095C9007E07DC /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F359D901FC095C9007E07DC /* BaseVC.swift */; };
 		0F359D941FC098F7007E07DC /* NSObjectExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F359D931FC098F7007E07DC /* NSObjectExt.swift */; };
@@ -122,6 +123,7 @@
 		0ABE458C4440E15E0344ADF0 /* Pods-kimlic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kimlic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kimlic/Pods-kimlic.debug.xcconfig"; sourceTree = "<group>"; };
 		0F1E43C11FC0A56600B0B631 /* SystemUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemUtils.swift; sourceTree = "<group>"; };
 		0F1E43C31FC0A5A500B0B631 /* UserDefaultsExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExt.swift; sourceTree = "<group>"; };
+		0F31443920F3BA41007B72F6 /* ButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
 		0F359D8E1FC07EDD007E07DC /* Animz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animz.swift; sourceTree = "<group>"; };
 		0F359D901FC095C9007E07DC /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		0F359D931FC098F7007E07DC /* NSObjectExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExt.swift; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 				7C99D6DC1FC7FF4000A593C5 /* User.swift */,
 				79AF1D2820C4903400CCA150 /* Country.swift */,
 				7C7A7FCB20C5440700BDE95C /* Message.swift */,
+				0F31443920F3BA41007B72F6 /* ButtonModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -870,6 +873,7 @@
 				7C99D6D31FC7FE5000A593C5 /* EmailResponse.swift in Sources */,
 				7CB516FD20D00DE2006FF06D /* UserInfoVC.swift in Sources */,
 				7C4441B51FCD664F00DB551C /* UIImageViewExt.swift in Sources */,
+				0F31443A20F3BA41007B72F6 /* ButtonModel.swift in Sources */,
 				7CF6556B1FBACC1400CA9C1A /* ColorExtension.swift in Sources */,
 				7C99D6E31FC7FFDE00A593C5 /* UserWebServiceRequest.swift in Sources */,
 				7CF655701FBAF15D00CA9C1A /* StringExt.swift in Sources */,

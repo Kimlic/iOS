@@ -9,17 +9,35 @@ import PopupDialog
 
 public class PopupGenerator {
     
-    static func createPopupNew(controller: UIViewController, type: PopupType, popup: Popup) {
-        
+    private static let btnCreatePasscode = ButtonModel(tag: 100, title: "Create Passcode")
+    private static let btnEnableAccountRecovery = ButtonModel(tag: 101, title: "Enable Account Recovery")
+    
+    private static let icnWarning = UIImage(named: "warning_icon_with_circles")
+
+    static func twoRisks(controller: UIViewController) {
+        let myPopup = Popup(title: "Secure your Identity", message: "You have 2 security risks", image: icnWarning, buttons: [btnCreatePasscode, btnEnableAccountRecovery])
+        createPopupNew(controller: controller, type: .none, popup: myPopup)
+    }
+    
+    static func passcodeRisk(controller: UIViewController) {
+        let myPopup = Popup(title: "Secure your Identity", message: "You have 1 security risk", image: icnWarning, buttons: [btnCreatePasscode])
+        createPopupNew(controller: controller, type: .none, popup: myPopup)
+    }
+    
+    static func recoveryRisk(controller: UIViewController) {
+        let myPopup = Popup(title: "Secure your Identity", message: "You have 1 security risk", image: icnWarning, buttons: [btnEnableAccountRecovery])
+        createPopupNew(controller: controller, type: .none, popup: myPopup)
+    }
+    
+    private static func createPopupNew(controller: UIViewController, type: PopupType, popup: Popup) {
         // Create Content View Controller
-        let content = CustomPopupVC(rootController: controller, popupType: .none, popup: Popup(title: "", message: "", buttonTitle: ""))
+        let content = CustomPopupVC(rootController: controller, popupType: .none, popup: popup)
         
         // Customize background overlay
         let overlayAppearance = PopupDialogOverlayView.appearance()
         overlayAppearance.color       = UIColor.black
         overlayAppearance.blurEnabled = false
         overlayAppearance.opacity     = 0.4
-        
         
         // Create the dialog
         let popup = PopupDialog(viewController: content)
@@ -28,6 +46,8 @@ public class PopupGenerator {
         // Present popup
         controller.present(popup, animated: true, completion: nil)
     }
+    
+    
     
     static func createPopup(controller: UIViewController, type: PopupType, popup: Popup, btnClickCompletion: (() -> ())? = nil) {        
         

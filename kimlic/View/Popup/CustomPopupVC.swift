@@ -27,13 +27,6 @@ class CustomPopupVC: UIViewController {
     
     private var rootVC: UIViewController!
     
-    typealias ButtonModel = (tag: Int, title: String)
-    // Tüm popup butonları gruplanarak tanımlanacak, daha sonra düzenlenecek
-    private var buttons: [ButtonModel] = [
-        (tag: 100, title: "Create Passcode"),
-        (tag: 101, title: "Enable Account Recovery")
-    ]
-    
     convenience required init(rootController: UIViewController, popupType: PopupType, popup: Popup? = nil) {
         self.init()
         self.rootVC = rootController
@@ -52,7 +45,7 @@ class CustomPopupVC: UIViewController {
         setupView()
         
         // Set popup value
-//        setValue()
+        setValue()
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
@@ -71,7 +64,7 @@ class CustomPopupVC: UIViewController {
     }
     
     fileprivate func createButtons() {
-        for buttonModel in buttons {
+        for buttonModel in self.popup.buttons! {
             let button = UIButton()
             button.setTitle(buttonModel.title, for: .normal)
             button.tag = buttonModel.tag

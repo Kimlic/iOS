@@ -33,22 +33,22 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_circles" translatesAutoresizingMaskIntoConstraints="NO" id="ZPM-vC-cHG">
-                                        <rect key="frame" x="-227.66666666666666" y="-219" width="869.33333333333337" height="869"/>
+                                        <rect key="frame" x="-227.66666666666666" y="-262" width="869.33333333333337" height="869"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_clouds_effect" translatesAutoresizingMaskIntoConstraints="NO" id="W4u-px-UMD">
-                                        <rect key="frame" x="-10" y="224.66666666666663" width="434" height="267"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_clouds_effect" translatesAutoresizingMaskIntoConstraints="NO" id="W4u-px-UMD">
+                                        <rect key="frame" x="-10" y="181.66666666666666" width="434" height="351"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone_success_icon" translatesAutoresizingMaskIntoConstraints="NO" id="vgj-Rw-ua2">
-                                        <rect key="frame" x="134" y="146.66666666666666" width="147" height="137.99999999999997"/>
+                                        <rect key="frame" x="134" y="103.66666666666669" width="147" height="138"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="xnT-4l-tHV">
-                                        <rect key="frame" x="0.0" y="491.66666666666669" width="414" height="40.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="533.66666666666663" width="414" height="40.333333333333371"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Phone Number have been verified" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoC-a7-QxY">
-                                        <rect key="frame" x="30" y="532" width="354" height="55.333333333333371"/>
+                                        <rect key="frame" x="30" y="574" width="354" height="55.333333333333371"/>
                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -99,6 +99,6 @@
         <image name="message_circles" width="869" height="869"/>
         <image name="phone_success_icon" width="147" height="138"/>
         <image name="simple_background" width="375" height="667"/>
-        <image name="tutorial_clouds_effect" width="396" height="267"/>
+        <image name="tutorial_clouds_effect" width="415" height="351"/>
     </resources>
 </document>
