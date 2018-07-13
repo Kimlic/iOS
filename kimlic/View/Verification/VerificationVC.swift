@@ -163,8 +163,8 @@ class VerificationVC: UIViewController {
                 }
                 
             case .phone:
+                CoreDataHelper.initUser(phone: strongSelf.phoneNumber!)
                 Defaults[.phone] = strongSelf.phoneNumber
-                
                 DispatchQueue.main.async {
                     UIUtils.navigateToMessage(strongSelf, messageType: .phoneNumberSuccessfull)
                 }

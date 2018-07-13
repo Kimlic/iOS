@@ -12,12 +12,14 @@
 		0F31443A20F3BA41007B72F6 /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F31443920F3BA41007B72F6 /* ButtonModel.swift */; };
 		0F31443D20F4FD5A007B72F6 /* ProfileCamera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F31443C20F4FD5A007B72F6 /* ProfileCamera.storyboard */; };
 		0F31443F20F4FD6D007B72F6 /* ProfileCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F31443E20F4FD6D007B72F6 /* ProfileCameraVC.swift */; };
+		0F31444220F51D98007B72F6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F31444020F51D98007B72F6 /* Model.xcdatamodeld */; };
 		0F359D8F1FC07EDD007E07DC /* Animz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F359D8E1FC07EDD007E07DC /* Animz.swift */; };
 		0F359D911FC095C9007E07DC /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F359D901FC095C9007E07DC /* BaseVC.swift */; };
 		0F359D941FC098F7007E07DC /* NSObjectExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F359D931FC098F7007E07DC /* NSObjectExt.swift */; };
 		0F4AB22120EE6B7300F941D1 /* AccountStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22020EE6B7300F941D1 /* AccountStorageAdapter.swift */; };
 		0F4AB22320EEB92E00F941D1 /* AccountStorageAdapterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22220EEB92E00F941D1 /* AccountStorageAdapterManager.swift */; };
 		0F4AB22520EEB9A400F941D1 /* BaseContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22420EEB9A400F941D1 /* BaseContractManager.swift */; };
+		0F5608CF20F7BCC600A782A0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */; };
 		0F8F2B5E1FC5D66200BEF5B2 /* PermissionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8F2B5D1FC5D66200BEF5B2 /* PermissionCell.xib */; };
 		0FBA58F01FC0A81D00DF593F /* PopupGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */; };
 		3FA05207AA63FC037BD17670 /* Pods_kimlic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4839EE1351BF59D4372E9EB /* Pods_kimlic.framework */; };
@@ -128,12 +130,14 @@
 		0F31443920F3BA41007B72F6 /* ButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
 		0F31443C20F4FD5A007B72F6 /* ProfileCamera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileCamera.storyboard; sourceTree = "<group>"; };
 		0F31443E20F4FD6D007B72F6 /* ProfileCameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCameraVC.swift; sourceTree = "<group>"; };
+		0F31444120F51D98007B72F6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		0F359D8E1FC07EDD007E07DC /* Animz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animz.swift; sourceTree = "<group>"; };
 		0F359D901FC095C9007E07DC /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		0F359D931FC098F7007E07DC /* NSObjectExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExt.swift; sourceTree = "<group>"; };
 		0F4AB22020EE6B7300F941D1 /* AccountStorageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStorageAdapter.swift; sourceTree = "<group>"; };
 		0F4AB22220EEB92E00F941D1 /* AccountStorageAdapterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStorageAdapterManager.swift; sourceTree = "<group>"; };
 		0F4AB22420EEB9A400F941D1 /* BaseContractManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContractManager.swift; sourceTree = "<group>"; };
+		0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		0F8F2B5D1FC5D66200BEF5B2 /* PermissionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionCell.xib; sourceTree = "<group>"; };
 		0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupGenerator.swift; sourceTree = "<group>"; };
 		79AD4C7D20CD050200EE9160 /* MnemonicCreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicCreateVC.swift; sourceTree = "<group>"; };
@@ -365,6 +369,7 @@
 				0F359D8E1FC07EDD007E07DC /* Animz.swift */,
 				7C842B9E1FC2B8CC0010F98A /* UIUtils.swift */,
 				7C68A83120DA11D5001DDDC8 /* GradientColor.swift */,
+				0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 		7C4838451FB5F62400FC864A = {
 			isa = PBXGroup;
 			children = (
+				0F31444020F51D98007B72F6 /* Model.xcdatamodeld */,
 				7C4838501FB5F62400FC864A /* kimlic */,
 				7C48384F1FB5F62400FC864A /* Products */,
 				130904B38EF0A17D7598EFE3 /* Pods */,
@@ -847,6 +853,7 @@
 				7C36C6E41FD153AC00D4501D /* AnimatedImageViewExt.swift in Sources */,
 				7CB5674F1FB9C28E00F03D24 /* TutorialsVC.swift in Sources */,
 				7C99D6E11FC7FF8E00A593C5 /* TokenWebServiceRequest.swift in Sources */,
+				0F31444220F51D98007B72F6 /* Model.xcdatamodeld in Sources */,
 				7C68A83220DA11D5001DDDC8 /* GradientColor.swift in Sources */,
 				79AD4C7E20CD050200EE9160 /* MnemonicCreateVC.swift in Sources */,
 				7C7FC46720CBFAA000AC8F8F /* MnemonicImportVC.swift in Sources */,
@@ -895,6 +902,7 @@
 				7C7FC46B20CC07D100AC8F8F /* DesignableView.swift in Sources */,
 				7CB567511FB9C2CA00F03D24 /* TutorialsContentVC.swift in Sources */,
 				79AD4C8D20CE24D100EE9160 /* UserEmailVC.swift in Sources */,
+				0F5608CF20F7BCC600A782A0 /* CoreDataHelper.swift in Sources */,
 				7C2F326920C0424700AEB314 /* TermsAndConditionsVC.swift in Sources */,
 				7C68A83620DA1267001DDDC8 /* UIColorExt.swift in Sources */,
 				7C99D6D91FC7FE8D00A593C5 /* WrappedRootResponse.swift in Sources */,
@@ -1077,7 +1085,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V768S46E57;
 				INFOPLIST_FILE = kimlic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kimlic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1097,7 +1105,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V768S46E57;
 				INFOPLIST_FILE = kimlic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kimlic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1130,6 +1138,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0F31444020F51D98007B72F6 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0F31444120F51D98007B72F6 /* Model.xcdatamodel */,
+			);
+			currentVersion = 0F31444120F51D98007B72F6 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7C4838461FB5F62400FC864A /* Project object */;
 }

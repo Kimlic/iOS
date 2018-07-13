@@ -44,6 +44,7 @@ public class SystemUtils {
         Defaults[.passcode] = nil
         Defaults.synchronize()
  */
+        CoreDataHelper.destroy()
         Defaults.removeAll()
         _ = UIUtils.setSignUpScreenAsRoot()
     }

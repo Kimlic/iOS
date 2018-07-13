@@ -97,6 +97,7 @@ class PhoneNumberVC: UIViewController {
                 guard let code = responsewww["meta"]?["code"] as? Int, code == 201 else { strongSelf.showPhoneError(); return }
                 
                 DispatchQueue.main.async {
+                    CoreDataHelper.initUser(phone: phone)
                     UIUtils.navigateToVerification(strongSelf, phoneNumber: phone)
                 }
             } catch _ {

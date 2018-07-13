@@ -72,8 +72,9 @@ class Constants {
             BasePort = 22000
             BasePath = ""
             
-            AccountStorageAdapterAddress = "0xd37debc7b53d678788661c74c94f265b62a412ac"
-            
+           // AccountStorageAdapterAddress = "0xd37debc7b53d678788661c74c94f265b62a412ac"
+            AccountStorageAdapterAddress = "0xbc9ffee2c6d624aec69f1d325dbb2ee30d216b02"
+
 //            if(Constants.Environment.debug){
 //                BaseHTTP = "http"
 //                BaseURL = "127.0.0.1"
