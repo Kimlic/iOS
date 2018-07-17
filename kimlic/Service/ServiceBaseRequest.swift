@@ -1,19 +1,20 @@
 //
-//  WebServicesBaseRequest
-//  CustomTabBar
+//  ServiceBaseRequest.swift
+//  kimlic
 //
-//  Created by İzzet Öztürk on 23.11.2017.
-//  Copyright © 2017 Ratel. All rights reserved.
+//  Created by ibrahim özdemir on 13.07.2018.
+//  Copyright © 2018 Ratel. All rights reserved.
+//
+
 import Foundation
 import Alamofire
 import SwiftyJSON
 
-class WebServicesBaseRequest: NSObject {
+class ServicesBaseRequest: NSObject {
     
     func executeRequest(url: String, method: HTTPMethod, params : Parameters?, headers: HTTPHeaders?, completion : @escaping (String?) -> Void){
         
-        //JSONEncoding.default
-        Alamofire.request(url, method: method, parameters: params, encoding: URLEncoding.queryString, headers: headers).responseJSON { (response) in
+        Alamofire.request(url, method: method, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             switch response.result {
             case .success:
                 if response.response?.statusCode == 200 || response.response?.statusCode == 201{
@@ -33,6 +34,5 @@ class WebServicesBaseRequest: NSObject {
                 
             }
         }
-    }    
+    }
 }
-

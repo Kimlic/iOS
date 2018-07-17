@@ -9,13 +9,6 @@
 import Foundation
 
 class AccountStorageAdapterManager: BaseContractManager {
-
-    // MARK: - Types
-    
-    enum AccountFieldMainType: String {
-        case email = "email"
-        case phone = "phone"
-    }
     
     // MARK: - Variables
     

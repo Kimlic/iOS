@@ -40,6 +40,13 @@ class Constants {
         static let AllPermissions = Base + "/v1/access_grants"
     }
     
+    struct ServicesUrl {
+        private static let Base = "http://mobile-api-dev.kimlic.com/api"
+        static let Config = Base + "/config"
+        static let AddPhone = Base + "/verifications/phone"
+       
+    }
+    
     struct PermissionScope {
         static let Profile = "profile"
         static let Emails = "emails"

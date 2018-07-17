@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F1E43C21FC0A56700B0B631 /* SystemUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E43C11FC0A56600B0B631 /* SystemUtils.swift */; };
 		0F1E43C41FC0A5A500B0B631 /* UserDefaultsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E43C31FC0A5A500B0B631 /* UserDefaultsExt.swift */; };
+		0F26AC6820F9F9310001F95A /* BaseMetaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F26AC6720F9F9310001F95A /* BaseMetaResponse.swift */; };
 		0F31443A20F3BA41007B72F6 /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F31443920F3BA41007B72F6 /* ButtonModel.swift */; };
 		0F31443D20F4FD5A007B72F6 /* ProfileCamera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F31443C20F4FD5A007B72F6 /* ProfileCamera.storyboard */; };
 		0F31443F20F4FD6D007B72F6 /* ProfileCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F31443E20F4FD6D007B72F6 /* ProfileCameraVC.swift */; };
@@ -20,6 +21,11 @@
 		0F4AB22320EEB92E00F941D1 /* AccountStorageAdapterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22220EEB92E00F941D1 /* AccountStorageAdapterManager.swift */; };
 		0F4AB22520EEB9A400F941D1 /* BaseContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22420EEB9A400F941D1 /* BaseContractManager.swift */; };
 		0F5608CF20F7BCC600A782A0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */; };
+		0F5608D220F8CB2A00A782A0 /* ServiceBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5608D120F8CB2A00A782A0 /* ServiceBaseRequest.swift */; };
+		0F5608D420F8CB9800A782A0 /* PhoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5608D320F8CB9800A782A0 /* PhoneService.swift */; };
+		0F5608D620F8D42600A782A0 /* QuorumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5608D520F8D42600A782A0 /* QuorumService.swift */; };
+		0F5608D920F8D5FE00A782A0 /* HelperModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5608D820F8D5FE00A782A0 /* HelperModels.swift */; };
+		0F5608DB20F8DF4D00A782A0 /* ErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5608DA20F8DF4D00A782A0 /* ErrorHelper.swift */; };
 		0F8F2B5E1FC5D66200BEF5B2 /* PermissionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8F2B5D1FC5D66200BEF5B2 /* PermissionCell.xib */; };
 		0FBA58F01FC0A81D00DF593F /* PopupGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */; };
 		3FA05207AA63FC037BD17670 /* Pods_kimlic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4839EE1351BF59D4372E9EB /* Pods_kimlic.framework */; };
@@ -127,6 +133,7 @@
 		0ABE458C4440E15E0344ADF0 /* Pods-kimlic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kimlic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kimlic/Pods-kimlic.debug.xcconfig"; sourceTree = "<group>"; };
 		0F1E43C11FC0A56600B0B631 /* SystemUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemUtils.swift; sourceTree = "<group>"; };
 		0F1E43C31FC0A5A500B0B631 /* UserDefaultsExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExt.swift; sourceTree = "<group>"; };
+		0F26AC6720F9F9310001F95A /* BaseMetaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMetaResponse.swift; sourceTree = "<group>"; };
 		0F31443920F3BA41007B72F6 /* ButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
 		0F31443C20F4FD5A007B72F6 /* ProfileCamera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileCamera.storyboard; sourceTree = "<group>"; };
 		0F31443E20F4FD6D007B72F6 /* ProfileCameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCameraVC.swift; sourceTree = "<group>"; };
@@ -138,6 +145,11 @@
 		0F4AB22220EEB92E00F941D1 /* AccountStorageAdapterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStorageAdapterManager.swift; sourceTree = "<group>"; };
 		0F4AB22420EEB9A400F941D1 /* BaseContractManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContractManager.swift; sourceTree = "<group>"; };
 		0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		0F5608D120F8CB2A00A782A0 /* ServiceBaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBaseRequest.swift; sourceTree = "<group>"; };
+		0F5608D320F8CB9800A782A0 /* PhoneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneService.swift; sourceTree = "<group>"; };
+		0F5608D520F8D42600A782A0 /* QuorumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuorumService.swift; sourceTree = "<group>"; };
+		0F5608D820F8D5FE00A782A0 /* HelperModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperModels.swift; sourceTree = "<group>"; };
+		0F5608DA20F8DF4D00A782A0 /* ErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHelper.swift; sourceTree = "<group>"; };
 		0F8F2B5D1FC5D66200BEF5B2 /* PermissionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionCell.xib; sourceTree = "<group>"; };
 		0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupGenerator.swift; sourceTree = "<group>"; };
 		79AD4C7D20CD050200EE9160 /* MnemonicCreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicCreateVC.swift; sourceTree = "<group>"; };
@@ -256,6 +268,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F26AC6620F9F85E0001F95A /* KimlicModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F26AC6720F9F9310001F95A /* BaseMetaResponse.swift */,
+			);
+			path = KimlicModel;
+			sourceTree = "<group>";
+		};
 		0F31443B20F4FCEB007B72F6 /* ProfileCamera */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +288,7 @@
 		0F4AB21F20EE6AF600F941D1 /* ContractManagers */ = {
 			isa = PBXGroup;
 			children = (
+				0F5608D820F8D5FE00A782A0 /* HelperModels.swift */,
 				0F4AB22620EF44E900F941D1 /* Contracts */,
 				0F4AB22220EEB92E00F941D1 /* AccountStorageAdapterManager.swift */,
 				0F4AB22420EEB9A400F941D1 /* BaseContractManager.swift */,
@@ -281,6 +302,16 @@
 				0F4AB22020EE6B7300F941D1 /* AccountStorageAdapter.swift */,
 			);
 			path = Contracts;
+			sourceTree = "<group>";
+		};
+		0F5608D020F8CAE400A782A0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0F5608D120F8CB2A00A782A0 /* ServiceBaseRequest.swift */,
+				0F5608D320F8CB9800A782A0 /* PhoneService.swift */,
+				0F5608D520F8D42600A782A0 /* QuorumService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		130904B38EF0A17D7598EFE3 /* Pods */ = {
@@ -370,6 +401,7 @@
 				7C842B9E1FC2B8CC0010F98A /* UIUtils.swift */,
 				7C68A83120DA11D5001DDDC8 /* GradientColor.swift */,
 				0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */,
+				0F5608DA20F8DF4D00A782A0 /* ErrorHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -418,6 +450,8 @@
 		7C4838501FB5F62400FC864A /* kimlic */ = {
 			isa = PBXGroup;
 			children = (
+				0F26AC6620F9F85E0001F95A /* KimlicModel */,
+				0F5608D020F8CAE400A782A0 /* Service */,
 				0F4AB21F20EE6AF600F941D1 /* ContractManagers */,
 				7CB5674B1FB9B53400F03D24 /* Model */,
 				7CB5674C1FB9B54700F03D24 /* View */,
@@ -861,6 +895,7 @@
 				0F359D911FC095C9007E07DC /* BaseVC.swift in Sources */,
 				7C882B0A1FC3FD1B0064DF7F /* ScanCodeVC.swift in Sources */,
 				0FBA58F01FC0A81D00DF593F /* PopupGenerator.swift in Sources */,
+				0F5608D620F8D42600A782A0 /* QuorumService.swift in Sources */,
 				79AD4C9220CE307F00EE9160 /* CoreDataProtocol.swift in Sources */,
 				7C99D6EB1FC842B700A593C5 /* UINavigationControllerExt.swift in Sources */,
 				7C99D6C91FC7FC5B00A593C5 /* GenericResponseMappable.swift in Sources */,
@@ -868,6 +903,7 @@
 				7C99D6CD1FC7FDFD00A593C5 /* UserResponse.swift in Sources */,
 				7C8272C51FC583C600054277 /* UIImageExt.swift in Sources */,
 				7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */,
+				0F5608D420F8CB9800A782A0 /* PhoneService.swift in Sources */,
 				79AD4C8220CD182500EE9160 /* MnemonicVerificationVC.swift in Sources */,
 				0F4AB22520EEB9A400F941D1 /* BaseContractManager.swift in Sources */,
 				7C02B3111FD7F238005C55E3 /* PasscodeVC.swift in Sources */,
@@ -885,7 +921,9 @@
 				7C6FC85320CEA9530026AF1C /* UITableViewCellExt.swift in Sources */,
 				0F4AB22120EE6B7300F941D1 /* AccountStorageAdapter.swift in Sources */,
 				0F1E43C41FC0A5A500B0B631 /* UserDefaultsExt.swift in Sources */,
+				0F5608D920F8D5FE00A782A0 /* HelperModels.swift in Sources */,
 				0F1E43C21FC0A56700B0B631 /* SystemUtils.swift in Sources */,
+				0F26AC6820F9F9310001F95A /* BaseMetaResponse.swift in Sources */,
 				7C99D6CF1FC7FE2600A593C5 /* UserCreateResponse.swift in Sources */,
 				7C99D6ED1FC84A6400A593C5 /* EmailWebServiceRequest.swift in Sources */,
 				7C99D6DD1FC7FF4000A593C5 /* User.swift in Sources */,
@@ -930,6 +968,8 @@
 				7C8A80CF1FBD839E009E74F9 /* PermissionCell.swift in Sources */,
 				7C96874D1FBC949200DF4AB8 /* AllPermissionsVC.swift in Sources */,
 				0F4AB22320EEB92E00F941D1 /* AccountStorageAdapterManager.swift in Sources */,
+				0F5608DB20F8DF4D00A782A0 /* ErrorHelper.swift in Sources */,
+				0F5608D220F8CB2A00A782A0 /* ServiceBaseRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
