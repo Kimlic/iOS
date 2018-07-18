@@ -28,21 +28,21 @@ class PhoneWebServiceRequest: NSObject {
                 ]
             ]
         ]
-        
-        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .post, params: parameters, headers: headers) { (stringJson) in
-            if stringJson != nil {
-                let phoneCreateRes = WrappedRootResponse<PhoneResponse>(JSONString: stringJson!) // WrappedRootResponse.WrappedResponse.PhoneResponse -> data.attributes
-                if  phoneCreateRes != nil {
-                    let phone = phoneCreateRes?.data?.attributes
-                    Defaults[.phoneId] = phoneCreateRes?.data?.id
-                    completion(phone)
-                }else {
-                    completion(nil)
-                }
-            }else {
-                completion(nil)
-            }
-        }
+//        
+//        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .post, params: parameters, headers: headers, success: { (stringJson) in
+//            if stringJson != nil {
+//                let phoneCreateRes = WrappedRootResponse<PhoneResponse>(JSONString: stringJson!) // WrappedRootResponse.WrappedResponse.PhoneResponse -> data.attributes
+//                if  phoneCreateRes != nil {
+//                    let phone = phoneCreateRes?.data?.attributes
+//                    Defaults[.phoneId] = phoneCreateRes?.data?.id
+//                    completion(phone)
+//                }else {
+//                    completion(nil)
+//                }
+//            }else {
+//                completion(nil)
+//            }
+//        }, failure: { _ in })
         
     }
     
@@ -58,19 +58,19 @@ class PhoneWebServiceRequest: NSObject {
         ]
         
         
-        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .put, params: nil, headers: headers) { (stringJson) in
-            if stringJson != nil {
-                let phoneVerifyRes = WrappedRootResponse<PhoneResponse>(JSONString: stringJson!) // WrappedRootResponse.WrappedResponse.PhoneResponse -> data.attributes
-                if  phoneVerifyRes != nil {
-                    let phone = phoneVerifyRes?.data?.attributes
-                    completion(phone)
-                }else {
-                    completion(nil)
-                }
-            }else {
-                completion(nil)
-            }
-        }
+//        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .put, params: [:], headers: headers, success: { (stringJson) in
+//            if stringJson != nil {
+//                let phoneVerifyRes = WrappedRootResponse<PhoneResponse>(JSONString: stringJson!) // WrappedRootResponse.WrappedResponse.PhoneResponse -> data.attributes
+//                if  phoneVerifyRes != nil {
+//                    let phone = phoneVerifyRes?.data?.attributes
+//                    completion(phone)
+//                }else {
+//                    completion(nil)
+//                }
+//            }else {
+//                completion(nil)
+//            }
+//        }, failure: { _ in })
         
     }
     func resendVerifiyCode(completion: @escaping (PhoneResponse?) -> Void) {
@@ -84,19 +84,19 @@ class PhoneWebServiceRequest: NSObject {
         ]
         
         
-        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .post, params: nil, headers: headers) { (stringJson) in
-            if stringJson != nil {
-                let phoneVerifyRes = WrappedRootResponse<PhoneResponse>(JSONString: stringJson!) // WrappedRootResponse.WrappedResponse.PhoneResponse -> data.attributes
-                if  phoneVerifyRes != nil {
-                    let phone = phoneVerifyRes?.data?.attributes
-                    completion(phone)
-                }else {
-                    completion(nil)
-                }
-            }else {
-                completion(nil)
-            }
-        }
+//        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .post, params: [:], headers: headers, success: { (stringJson) in
+//            if stringJson != nil {
+//                let phoneVerifyRes = WrappedRootResponse<PhoneResponse>(JSONString: stringJson!) // WrappedRootResponse.WrappedResponse.PhoneResponse -> data.attributes
+//                if  phoneVerifyRes != nil {
+//                    let phone = phoneVerifyRes?.data?.attributes
+//                    completion(phone)
+//                }else {
+//                    completion(nil)
+//                }
+//            }else {
+//                completion(nil)
+//            }
+//        }, failure: { _ in })
         
     }
 }

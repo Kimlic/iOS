@@ -18,7 +18,7 @@ class UserEmailVC: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
-    private lazy var accountStorageAdapterManager = AccountStorageAdapterManager()
+//    private lazy var accountStorageAdapterManager = AccountStorageAdapterManager()
     
     // MARK: - Life
     
@@ -52,28 +52,25 @@ class UserEmailVC: UIViewController {
     }
     
     private func serverRequest(_ email: String) {
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            guard let strongSelf = self else { return }
-            do {
-                guard let quorumAddress = strongSelf.accountStorageAdapterManager.quorumManager.accountAddress() else { fatalError("No quorum address found") }
-                let result = try strongSelf.accountStorageAdapterManager.setAccountFieldMainData(type: .email, value: email)
-                guard let receipt = result["receipt"] as? TransactionReceipt, receipt.status == .ok else { strongSelf.showEmailError(); return }
-                
-                guard let response = Alamofire.request(
-                    "http://mobile-api-dev.kimlic.com/api/verifications/email",
-                    method: .post,
-                    parameters: ["email": email],
-                    encoding: URLEncoding.queryString,
-                    headers: ["account-address": quorumAddress.lowercased(), "content-type": "application/json"])
-                    .responseJSON().value as? [String: [String: AnyObject]] else { strongSelf.showEmailError(); return }
-                guard let code = response["meta"]?["code"] as? Int, code == 201 else { strongSelf.showEmailError(); return }
-                
-                DispatchQueue.main.async {
-                    UIUtils.navigateToVerification(strongSelf, email: email)
-                }
-            } catch _ {
-                strongSelf.showEmailError()
-            }
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        do {
+            let result = try appDelegate.quorumAPI?.setAccountFieldMainData(type: QuorumAPI.AccountFieldMainType.email, value: email)
+            print("RES: \(result)")
+            guard let receipt = result!["receipt"] as? TransactionReceipt, receipt.status == .ok else { showEmailError(); return }
+            
+            let url = Constants.APIEndpoint.emailVerification.url()
+            let headers = ["account-address": appDelegate.quorumManager!.accountAddress.lowercased()]
+            let params =  ["email": email]
+            let response = Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.queryString, headers: headers)
+                .responseJSON().value
+            
+            guard let json = response as? [String: [String: AnyObject]] else { showEmailError(); return }
+            guard let code = json["meta"]?["code"] as? Int, code == 201 else { showEmailError(); return }
+            
+            UIUtils.navigateToVerification(self, email: email)
+        } catch _ {
+            showEmailError()
         }
     }
     

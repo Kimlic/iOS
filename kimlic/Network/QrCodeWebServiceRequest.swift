@@ -55,20 +55,20 @@ class QrCodeWebServiceRequest: NSObject {
             "Authorization": "Bearer " + (Defaults[.userToken] ?? "")
         ]
         
-        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .get, params: nil, headers: headers) { (stringJson) in
-            if stringJson != nil {
-                // WrappedRootResponse.WrappedResponse.PermissionDetailResponse -> data.attributes
-                let permissionDetail = WrappedRootResponse<PermissionDetailResponse>(JSONString: stringJson!)
-                if  permissionDetail != nil {
-                    let permissionDetail = permissionDetail?.data?.attributes
-                    completion(permissionDetail)
-                }else {
-                    completion(nil)
-                }
-            }else {
-                completion(nil)
-            }
-        }
+//        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .get, params: [:], headers: headers, success: { (stringJson) in
+//            if stringJson != nil {
+//                // WrappedRootResponse.WrappedResponse.PermissionDetailResponse -> data.attributes
+//                let permissionDetail = WrappedRootResponse<PermissionDetailResponse>(JSONString: stringJson!)
+//                if  permissionDetail != nil {
+//                    let permissionDetail = permissionDetail?.data?.attributes
+//                    completion(permissionDetail)
+//                }else {
+//                    completion(nil)
+//                }
+//            }else {
+//                completion(nil)
+//            }
+//        }, failure: { _ in })
     }
     
     func getUserAllPermissions(completion: @escaping ([PermissionDetailResponse]?) -> Void) {
@@ -79,25 +79,25 @@ class QrCodeWebServiceRequest: NSObject {
             "Content-Type": "application/json",
             "Authorization": "Bearer " + (Defaults[.userToken] ?? "")
         ]
-        
-        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .get, params: nil, headers: headers) { (stringJson) in
-            if stringJson != nil {
-                // WrappedRootResponseCollection.[WrappedResponse].PermissionDetailResponse
-                let allPermissions = WrappedRootResponseCollection<PermissionDetailResponse>(JSONString: stringJson!)
-                if  allPermissions != nil && allPermissions?.included != nil{
-                    var permissionList = [PermissionDetailResponse]()
-                    allPermissions!.included!.forEach({ (wrapResponse) in
-                        if let permission = wrapResponse.attributes {
-                             permissionList.append(permission)
-                        }
-                    })
-                    completion(permissionList)
-                }else {
-                    completion(nil)
-                }
-            }else {
-                completion(nil)
-            }
-        }
+//        
+//        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .get, params: [:], headers: headers, success: { (stringJson) in
+//            if stringJson != nil {
+//                // WrappedRootResponseCollection.[WrappedResponse].PermissionDetailResponse
+//                let allPermissions = WrappedRootResponseCollection<PermissionDetailResponse>(JSONString: stringJson!)
+//                if  allPermissions != nil && allPermissions?.included != nil{
+//                    var permissionList = [PermissionDetailResponse]()
+//                    allPermissions!.included!.forEach({ (wrapResponse) in
+//                        if let permission = wrapResponse.attributes {
+//                             permissionList.append(permission)
+//                        }
+//                    })
+//                    completion(permissionList)
+//                }else {
+//                    completion(nil)
+//                }
+//            }else {
+//                completion(nil)
+//            }
+//        }, failure: { _ in })
     }
 }

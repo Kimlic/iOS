@@ -14,7 +14,8 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var quorumManager: QuorumManager?
+    var quorumAPI: QuorumAPI?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Fabric.with([Crashlytics.self])
@@ -53,6 +54,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    // MARK: - Quorum
+    
+    func createQuorum() {
+        guard quorumManager == nil else { return }
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.createQuorumWith(mnemonic: nil)
+        let accountAddress = appDelegate.quorumManager!.accountAddress
+        ConfigWebServiceRequest.execute(accountAddress: accountAddress, success: appDelegate.createQuorumAPI(_:), failure: { _ in })
+    }
+    
+    func createQuorumWith(mnemonic: String?) {
+        quorumManager = QuorumManager(mnemonic: mnemonic)
+    }
+    
+    func createQuorumAPI(_ addresses: [String: String]) {
+        quorumAPI = try! QuorumAPI(addresses: addresses, manager: quorumManager!)
+    }
     
     // MARK: - Core Data stack
     

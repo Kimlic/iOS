@@ -23,7 +23,7 @@ class PhoneNumberVC: UIViewController {
     var selectedCode = "+90"
     var defaultSelectedIndex = 215 //  Set default Turkey phone code
     let phoneNumberKit = PhoneNumberKit()
-    private lazy var accountStorageAdapterManager = AccountStorageAdapterManager()
+//    private lazy var accountStorageAdapterManager = AccountStorageAdapterManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,32 +77,25 @@ class PhoneNumberVC: UIViewController {
     }
     
     private func serverRequest(_ phone: String) {
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            guard let strongSelf = self else { return }
-            do {
-                guard let quorumAddress = strongSelf.accountStorageAdapterManager.quorumManager.accountAddress() else { fatalError("No quorum address found") }
-                let result = try strongSelf.accountStorageAdapterManager.setAccountFieldMainData(type: .phone, value: phone)
-                guard let receipt = result["receipt"] as? TransactionReceipt, receipt.status == .ok else { strongSelf.showPhoneError(); return }
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        do {
+            let result = try appDelegate.quorumAPI?.setAccountFieldMainData(type: QuorumAPI.AccountFieldMainType.phone, value: phone)
+            guard let receipt = result!["receipt"] as? TransactionReceipt, receipt.status == .ok else { showPhoneError(); return }
 
-                let responsea = Alamofire.request(
-                    "http://mobile-api-dev.kimlic.com/api/verifications/phone",
-                    method: .post,
-                    parameters: ["phone": phone],
-                    encoding: URLEncoding.queryString,
-                    headers: ["account-address": quorumAddress.lowercased(), "content-type": "application/json"])
+            let url = Constants.APIEndpoint.phoneVerification.url()
+            let headers = ["account-address": appDelegate.quorumManager!.accountAddress.lowercased()]
+            let params =  ["phone": phone]
+            let response = Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.queryString, headers: headers)
                 .responseJSON().value
-                
-                guard let responsewww = responsea as? [String: [String: AnyObject]] else { strongSelf.showPhoneError(); return }
 
-                guard let code = responsewww["meta"]?["code"] as? Int, code == 201 else { strongSelf.showPhoneError(); return }
-                
-                DispatchQueue.main.async {
-                    CoreDataHelper.initUser(phone: phone)
-                    UIUtils.navigateToVerification(strongSelf, phoneNumber: phone)
-                }
-            } catch _ {
-                strongSelf.showPhoneError()
-            }
+            guard let json = response as? [String: [String: AnyObject]] else { showPhoneError(); return }
+            guard let code = json["meta"]?["code"] as? Int, code == 201 else { showPhoneError(); return }
+
+            CoreDataHelper.initUser(phone: phone)
+            UIUtils.navigateToVerification(self, phoneNumber: phone)
+        } catch _ {
+            showPhoneError()
         }
     }
     

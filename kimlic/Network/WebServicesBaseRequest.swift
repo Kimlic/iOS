@@ -4,32 +4,24 @@
 //
 //  Created by İzzet Öztürk on 23.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
+//
+//  Changed by Dmytro Nasyrov on 18.07.2018.
+//  Copyright © 2018 Pharos Production Inc. All rights reserved.
+
 import Foundation
 import Alamofire
 import SwiftyJSON
 
 class WebServicesBaseRequest: NSObject {
     
-    func executeRequest(url: String, method: HTTPMethod, params : Parameters?, headers: HTTPHeaders?, completion : @escaping (String?) -> Void){
-        
-        Alamofire.request(url, method: method, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+    func executeRequest(url: String, method: HTTPMethod, params: Parameters?, headers: HTTPHeaders, success: @escaping ([String: Any]) -> Void, failure: @escaping (String?) -> Void) {
+        Alamofire.request(url, method: method, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON() { response in
             switch response.result {
+            case .failure(let error): failure(error.localizedDescription)
             case .success:
-                if response.response?.statusCode == 200 || response.response?.statusCode == 201{
-                    if let data = response.data, let utf8Json = String(data: data, encoding: .utf8) {
-                        completion(utf8Json)
-                    }else {
-                        completion(nil)
-                    }
-                }else {
-                    completion(nil)
-                }
-                break
-            case .failure(let error):
-                print(error)
-                completion(nil)
-                break
-                
+                guard let code = response.response?.statusCode, 200...299 ~= code else { failure(nil); return }
+                guard let json = response.value as? [String: Any] else { failure(nil); return }
+                success(json)
             }
         }
     }    

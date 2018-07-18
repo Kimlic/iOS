@@ -26,11 +26,16 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func newIdentityButtonPressed(_ sender: Any) {
+        createQuorum()
         UIUtils.navigateToTutorial(self)
-        //ibrahim - we should call this before phone or email verification
     }
     
     @IBAction func recoverIdentityButtonPressed(_ sender: Any) {
         UIUtils.navigateToTerms(self, nextPage: .accountRecovery)
+    }
+    
+    private func createQuorum() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.createQuorum()
     }
 }

@@ -19,6 +19,9 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.createQuorum()
     }
     
     override func viewWillAppear(_ animated: Bool) {

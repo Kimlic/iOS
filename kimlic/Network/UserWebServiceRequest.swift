@@ -30,19 +30,19 @@ class UserWebServiceRequest: NSObject {
             ]
         ]
         
-        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .post, params: parameters, headers: headers) { (stringJson) in
-            if stringJson != nil {
-                let userCreateRes = WrappedRootResponse<UserCreateResponse>(JSONString: stringJson!) // WrappedRootResponse.WrappedResponse.UserCreateResponse -> data.attributes
-                if  userCreateRes != nil {
-                    let user = userCreateRes?.data?.attributes
-                    completion(user)
-                }else {
-                    completion(nil)
-                }
-            }else {
-                completion(nil)
-            }
-        }
+//        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .post, params: parameters, headers: headers, success: { (stringJson) in
+//            if stringJson != nil {
+//                let userCreateRes = WrappedRootResponse<UserCreateResponse>(JSONString: stringJson!) // WrappedRootResponse.WrappedResponse.UserCreateResponse -> data.attributes
+//                if  userCreateRes != nil {
+//                    let user = userCreateRes?.data?.attributes
+//                    completion(user)
+//                }else {
+//                    completion(nil)
+//                }
+//            }else {
+//                completion(nil)
+//            }
+//        }, failure: { _ in })
         
     }
     
@@ -64,19 +64,19 @@ class UserWebServiceRequest: NSObject {
             ]
         ]
         
-        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .put, params: parameters, headers: headers) { (stringJson) in
-            if stringJson != nil {
-                let userCreateRes = WrappedRootResponse<UserResponse>(JSONString: stringJson!) // WrappedRootResponse.WrappedResponse.UserResponse -> data.attributes
-                if  userCreateRes != nil {
-                    let user = userCreateRes?.data?.attributes
-                    completion(user)
-                }else {
-                    completion(nil)
-                }
-            }else {
-                completion(nil)
-            }
-        }
+//        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .put, params: parameters, headers: headers, success: { (stringJson) in
+//            if stringJson != nil {
+//                let userCreateRes = WrappedRootResponse<UserResponse>(JSONString: stringJson!) // WrappedRootResponse.WrappedResponse.UserResponse -> data.attributes
+//                if  userCreateRes != nil {
+//                    let user = userCreateRes?.data?.attributes
+//                    completion(user)
+//                }else {
+//                    completion(nil)
+//                }
+//            }else {
+//                completion(nil)
+//            }
+//        }, failure: { _ in })
         
     }
 }

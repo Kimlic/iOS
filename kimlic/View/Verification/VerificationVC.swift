@@ -138,40 +138,34 @@ class VerificationVC: UIViewController {
     }
     
     private func serverRequest(_ code: String, type: VerificationType) {
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            guard let strongSelf = self else { return }
-            let accountStorageAdapterManager = AccountStorageAdapterManager()
-            guard let quorumAddress = accountStorageAdapterManager.quorumManager.accountAddress() else { fatalError("No quorum address found") }
-            let url = "http://mobile-api-dev.kimlic.com/api/verifications/\(type.rawValue)/approve"
-            
-            guard let response = Alamofire.request(
-                url,
-                method: .post,
-                parameters: ["code": code],
-                encoding: URLEncoding.queryString,
-                headers: ["account-address": quorumAddress.lowercased(), "content-type": "application/json"])
-                .responseJSON().value as? [String: [String: AnyObject]] else { strongSelf.showCodeError(); return }
-            guard let code = response["meta"]?["code"] as? Int, code == 200 else { strongSelf.showCodeError(); return }
-            
-            switch type {
-            case .email:
-                Defaults[.email] = strongSelf.email
-                
-                DispatchQueue.main.async { [weak self] in
-                    guard let strongSelf = self else { return }
-                    UIUtils.navigateToMessage(strongSelf, messageType: .emailSuccessfull)
-                }
-                
-            case .phone:
-                CoreDataHelper.initUser(phone: strongSelf.phoneNumber!)
-                Defaults[.phone] = strongSelf.phoneNumber
-                DispatchQueue.main.async {
-                    UIUtils.navigateToMessage(strongSelf, messageType: .phoneNumberSuccessfull)
-                }
-            }
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        var url: String
+        
+        switch type {
+        case .phone: url = Constants.APIEndpoint.phoneVerificationApprove.url()
+        case .email: url = Constants.APIEndpoint.emailVerificationApprove.url()
+        }
+
+        let headers = ["account-address": appDelegate.quorumManager!.accountAddress.lowercased()]
+        let params =  ["code": code]
+        let response = Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.queryString, headers: headers)
+            .responseJSON().value
+        
+        guard let json = response as? [String: [String: AnyObject]] else { showCodeError(); return }
+        guard let code = json["meta"]?["code"] as? Int, code == 200 else { showCodeError(); return }
+        
+        switch type {
+        case .email:
+            Defaults[.email] = email
+            UIUtils.navigateToMessage(self, messageType: .emailSuccessfull)
+
+        case .phone:
+            CoreDataHelper.initUser(phone: phoneNumber!)
+            Defaults[.phone] = phoneNumber
+            UIUtils.navigateToMessage(self, messageType: .phoneNumberSuccessfull)
         }
     }
-    
+
     private func codeVerify() -> String? {
         var code = ""
         guard let firstText = firstNumberTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !firstText.isEmpty else {

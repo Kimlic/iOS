@@ -17,11 +17,14 @@
 		0F359D911FC095C9007E07DC /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F359D901FC095C9007E07DC /* BaseVC.swift */; };
 		0F359D941FC098F7007E07DC /* NSObjectExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F359D931FC098F7007E07DC /* NSObjectExt.swift */; };
 		0F4AB22120EE6B7300F941D1 /* AccountStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22020EE6B7300F941D1 /* AccountStorageAdapter.swift */; };
-		0F4AB22320EEB92E00F941D1 /* AccountStorageAdapterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22220EEB92E00F941D1 /* AccountStorageAdapterManager.swift */; };
-		0F4AB22520EEB9A400F941D1 /* BaseContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22420EEB9A400F941D1 /* BaseContractManager.swift */; };
+		0F4AB22520EEB9A400F941D1 /* QuorumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22420EEB9A400F941D1 /* QuorumManager.swift */; };
 		0F5608CF20F7BCC600A782A0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */; };
 		0F8F2B5E1FC5D66200BEF5B2 /* PermissionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8F2B5D1FC5D66200BEF5B2 /* PermissionCell.xib */; };
 		0FBA58F01FC0A81D00DF593F /* PopupGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */; };
+		17D8B2A820FE293C00CEE289 /* ConfigWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B2A720FE293C00CEE289 /* ConfigWebServiceRequest.swift */; };
+		17D8B2AA20FE2DFB00CEE289 /* KimlicContractsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B2A920FE2DFB00CEE289 /* KimlicContractsContext.swift */; };
+		17D8B2AC20FF298D00CEE289 /* QuorumAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B2AB20FF298D00CEE289 /* QuorumAPI.swift */; };
+		17D8B2AE20FF3E1600CEE289 /* ConfigResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B2AD20FF3E1600CEE289 /* ConfigResponse.swift */; };
 		3FA05207AA63FC037BD17670 /* Pods_kimlic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4839EE1351BF59D4372E9EB /* Pods_kimlic.framework */; };
 		79AD4C7E20CD050200EE9160 /* MnemonicCreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD4C7D20CD050200EE9160 /* MnemonicCreateVC.swift */; };
 		79AD4C8020CD051800EE9160 /* MnemonicCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD4C7F20CD051800EE9160 /* MnemonicCreate.storyboard */; };
@@ -135,11 +138,14 @@
 		0F359D901FC095C9007E07DC /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		0F359D931FC098F7007E07DC /* NSObjectExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExt.swift; sourceTree = "<group>"; };
 		0F4AB22020EE6B7300F941D1 /* AccountStorageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStorageAdapter.swift; sourceTree = "<group>"; };
-		0F4AB22220EEB92E00F941D1 /* AccountStorageAdapterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStorageAdapterManager.swift; sourceTree = "<group>"; };
-		0F4AB22420EEB9A400F941D1 /* BaseContractManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContractManager.swift; sourceTree = "<group>"; };
+		0F4AB22420EEB9A400F941D1 /* QuorumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuorumManager.swift; sourceTree = "<group>"; };
 		0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		0F8F2B5D1FC5D66200BEF5B2 /* PermissionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionCell.xib; sourceTree = "<group>"; };
 		0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupGenerator.swift; sourceTree = "<group>"; };
+		17D8B2A720FE293C00CEE289 /* ConfigWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigWebServiceRequest.swift; sourceTree = "<group>"; };
+		17D8B2A920FE2DFB00CEE289 /* KimlicContractsContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KimlicContractsContext.swift; sourceTree = "<group>"; };
+		17D8B2AB20FF298D00CEE289 /* QuorumAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuorumAPI.swift; sourceTree = "<group>"; };
+		17D8B2AD20FF3E1600CEE289 /* ConfigResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigResponse.swift; sourceTree = "<group>"; };
 		79AD4C7D20CD050200EE9160 /* MnemonicCreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicCreateVC.swift; sourceTree = "<group>"; };
 		79AD4C7F20CD051800EE9160 /* MnemonicCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MnemonicCreate.storyboard; sourceTree = "<group>"; };
 		79AD4C8120CD182500EE9160 /* MnemonicVerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicVerificationVC.swift; sourceTree = "<group>"; };
@@ -265,19 +271,20 @@
 			path = ProfileCamera;
 			sourceTree = "<group>";
 		};
-		0F4AB21F20EE6AF600F941D1 /* ContractManagers */ = {
+		0F4AB21F20EE6AF600F941D1 /* Quorum */ = {
 			isa = PBXGroup;
 			children = (
 				0F4AB22620EF44E900F941D1 /* Contracts */,
-				0F4AB22220EEB92E00F941D1 /* AccountStorageAdapterManager.swift */,
-				0F4AB22420EEB9A400F941D1 /* BaseContractManager.swift */,
+				17D8B2AB20FF298D00CEE289 /* QuorumAPI.swift */,
+				0F4AB22420EEB9A400F941D1 /* QuorumManager.swift */,
 			);
-			path = ContractManagers;
+			path = Quorum;
 			sourceTree = "<group>";
 		};
 		0F4AB22620EF44E900F941D1 /* Contracts */ = {
 			isa = PBXGroup;
 			children = (
+				17D8B2A920FE2DFB00CEE289 /* KimlicContractsContext.swift */,
 				0F4AB22020EE6B7300F941D1 /* AccountStorageAdapter.swift */,
 			);
 			path = Contracts;
@@ -391,6 +398,7 @@
 				7C99D6E21FC7FFDE00A593C5 /* UserWebServiceRequest.swift */,
 				7C99D6E81FC8150E00A593C5 /* PhoneWebServiceRequest.swift */,
 				7C99D6EC1FC84A6400A593C5 /* EmailWebServiceRequest.swift */,
+				17D8B2A720FE293C00CEE289 /* ConfigWebServiceRequest.swift */,
 				7C929D671FCC583F001B9E22 /* QrCodeWebServiceRequest.swift */,
 			);
 			path = Network;
@@ -418,7 +426,7 @@
 		7C4838501FB5F62400FC864A /* kimlic */ = {
 			isa = PBXGroup;
 			children = (
-				0F4AB21F20EE6AF600F941D1 /* ContractManagers */,
+				0F4AB21F20EE6AF600F941D1 /* Quorum */,
 				7CB5674B1FB9B53400F03D24 /* Model */,
 				7CB5674C1FB9B54700F03D24 /* View */,
 				7CB5674D1FB9B55600F03D24 /* Controller */,
@@ -579,6 +587,7 @@
 				79AF1D2820C4903400CCA150 /* Country.swift */,
 				7C7A7FCB20C5440700BDE95C /* Message.swift */,
 				0F31443920F3BA41007B72F6 /* ButtonModel.swift */,
+				17D8B2AD20FF3E1600CEE289 /* ConfigResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -682,7 +691,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
-				ORGANIZATIONNAME = Ratel;
+				ORGANIZATIONNAME = Kimlic;
 				TargetAttributes = {
 					7C48384D1FB5F62400FC864A = {
 						CreatedOnToolsVersion = 9.1;
@@ -855,6 +864,7 @@
 				7C99D6E11FC7FF8E00A593C5 /* TokenWebServiceRequest.swift in Sources */,
 				0F31444220F51D98007B72F6 /* Model.xcdatamodeld in Sources */,
 				7C68A83220DA11D5001DDDC8 /* GradientColor.swift in Sources */,
+				17D8B2AE20FF3E1600CEE289 /* ConfigResponse.swift in Sources */,
 				79AD4C7E20CD050200EE9160 /* MnemonicCreateVC.swift in Sources */,
 				7C7FC46720CBFAA000AC8F8F /* MnemonicImportVC.swift in Sources */,
 				7C2F326720C0303900AEB314 /* SignUpVC.swift in Sources */,
@@ -869,7 +879,7 @@
 				7C8272C51FC583C600054277 /* UIImageExt.swift in Sources */,
 				7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */,
 				79AD4C8220CD182500EE9160 /* MnemonicVerificationVC.swift in Sources */,
-				0F4AB22520EEB9A400F941D1 /* BaseContractManager.swift in Sources */,
+				0F4AB22520EEB9A400F941D1 /* QuorumManager.swift in Sources */,
 				7C02B3111FD7F238005C55E3 /* PasscodeVC.swift in Sources */,
 				7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */,
 				7C842B9F1FC2B8CC0010F98A /* UIUtils.swift in Sources */,
@@ -882,6 +892,7 @@
 				7CF655781FBAFA4600CA9C1A /* UserBasicProfileInfoVC.swift in Sources */,
 				7C929D681FCC583F001B9E22 /* QrCodeWebServiceRequest.swift in Sources */,
 				7CDED0101FBC87AF006FB0AC /* VerificationVC.swift in Sources */,
+				17D8B2AA20FE2DFB00CEE289 /* KimlicContractsContext.swift in Sources */,
 				7C6FC85320CEA9530026AF1C /* UITableViewCellExt.swift in Sources */,
 				0F4AB22120EE6B7300F941D1 /* AccountStorageAdapter.swift in Sources */,
 				0F1E43C41FC0A5A500B0B631 /* UserDefaultsExt.swift in Sources */,
@@ -897,6 +908,7 @@
 				7C4441B51FCD664F00DB551C /* UIImageViewExt.swift in Sources */,
 				0F31443A20F3BA41007B72F6 /* ButtonModel.swift in Sources */,
 				7CF6556B1FBACC1400CA9C1A /* ColorExtension.swift in Sources */,
+				17D8B2AC20FF298D00CEE289 /* QuorumAPI.swift in Sources */,
 				7C99D6E31FC7FFDE00A593C5 /* UserWebServiceRequest.swift in Sources */,
 				7CF655701FBAF15D00CA9C1A /* StringExt.swift in Sources */,
 				7C7FC46B20CC07D100AC8F8F /* DesignableView.swift in Sources */,
@@ -915,6 +927,7 @@
 				79AF1D2F20C4BCD100CCA150 /* PinTextField.swift in Sources */,
 				7C99D6D11FC7FE3C00A593C5 /* PhoneResponse.swift in Sources */,
 				0F359D8F1FC07EDD007E07DC /* Animz.swift in Sources */,
+				17D8B2A820FE293C00CEE289 /* ConfigWebServiceRequest.swift in Sources */,
 				7C85BC0520E625870000A4BA /* CustomPopupVC.swift in Sources */,
 				7CDED00E1FBC7DD8006FB0AC /* PhoneNumberVC.swift in Sources */,
 				7C4838521FB5F62400FC864A /* AppDelegate.swift in Sources */,
@@ -929,7 +942,6 @@
 				0F359D941FC098F7007E07DC /* NSObjectExt.swift in Sources */,
 				7C8A80CF1FBD839E009E74F9 /* PermissionCell.swift in Sources */,
 				7C96874D1FBC949200DF4AB8 /* AllPermissionsVC.swift in Sources */,
-				0F4AB22320EEB92E00F941D1 /* AccountStorageAdapterManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

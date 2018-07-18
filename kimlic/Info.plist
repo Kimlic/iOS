@@ -46,7 +46,7 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>$(PRODUCT_NAME) use camera for user profile image.</string>
 	<key>ServerURL</key>
-	<string>https://kimlic.herokuapp.com</string>
+	<string>http://mobile-api-dev.kimlic.com/api</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Muli-SemiBold.ttf</string>

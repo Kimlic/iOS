@@ -20,18 +20,18 @@ class EmailWebServiceRequest: NSObject {
             "Authorization": "Bearer " + (Defaults[.userToken] ?? "")
         ]
         
-        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .get, params: nil, headers: headers) { (stringJson) in
-            if stringJson != nil {
-                let emailRes = WrappedRootResponseCollection<EmailResponse>(JSONString: stringJson!) // WrappedRootResponseCollection.[WrappedResponse].EmailResponse -> data[].attributes
-                if  emailRes != nil {
-                    let email = emailRes?.data?[0].attributes
-                    completion(email)
-                }else {
-                    completion(nil)
-                }
-            }else {
-                completion(nil)
-            }
-        }
+//        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .get, params: [:], headers: headers, success: { (stringJson) in
+//            if stringJson != nil {
+//                let emailRes = WrappedRootResponseCollection<EmailResponse>(JSONString: stringJson!) // WrappedRootResponseCollection.[WrappedResponse].EmailResponse -> data[].attributes
+//                if  emailRes != nil {
+//                    let email = emailRes?.data?[0].attributes
+//                    completion(email)
+//                }else {
+//                    completion(nil)
+//                }
+//            }else {
+//                completion(nil)
+//            }
+//        }, failure: { _ in })
     }    
 }

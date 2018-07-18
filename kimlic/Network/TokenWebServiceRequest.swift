@@ -25,17 +25,17 @@ class TokenWebServiceRequest: NSObject {
             "client_secret" : Bundle.main.clientSecret
         ]
         
-        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .post, params: parameters, headers: headers) { (stringJson) in
-            if stringJson != nil {
-                if let clientCredentials = TokenResponse(JSONString: stringJson!) {
-                    completion(clientCredentials)
-                }else {
-                    completion(nil)
-                }
-            }else {
-                completion(nil)
-            }
-        }
+//        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .post, params: parameters, headers: headers, success: { (stringJson) in
+//            if stringJson != nil {
+//                if let clientCredentials = TokenResponse(JSONString: stringJson!) {
+//                    completion(clientCredentials)
+//                }else {
+//                    completion(nil)
+//                }
+//            }else {
+//                completion(nil)
+//            }
+//        }, failure: { _ in })
     }
     func resourceOwnerRequest(walletAddress: String!, privateKey: String!, completion: @escaping (TokenResponse?) -> Void) {
         
@@ -52,17 +52,17 @@ class TokenWebServiceRequest: NSObject {
             "password" : privateKey
         ]
         
-        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .post, params: parameters, headers: headers) { (stringJson) in
-            if stringJson != nil {
-                if let clientCredentials = TokenResponse(JSONString: stringJson!) {
-                    completion(clientCredentials)
-                }else {
-                    completion(nil)
-                }
-            }else {
-                completion(nil)
-            }
-        }
+//        WebServicesBaseRequest().executeRequest(url: requestUrl, method: .post, params: parameters, headers: headers, success: { (stringJson) in
+//            if stringJson != nil {
+//                if let clientCredentials = TokenResponse(JSONString: stringJson!) {
+//                    completion(clientCredentials)
+//                }else {
+//                    completion(nil)
+//                }
+//            }else {
+//                completion(nil)
+//            }
+//        }, failure: { _ in })
     }    
 }
 
