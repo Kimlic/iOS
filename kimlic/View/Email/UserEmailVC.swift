@@ -64,7 +64,7 @@ class UserEmailVC: UIViewController {
             let params =  ["email": email]
             let response = Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.queryString, headers: headers)
                 .responseJSON().value
-            
+            print(response)
             guard let json = response as? [String: [String: AnyObject]] else { showEmailError(); return }
             guard let code = json["meta"]?["code"] as? Int, code == 201 else { showEmailError(); return }
             

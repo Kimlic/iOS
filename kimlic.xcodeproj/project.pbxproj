@@ -140,6 +140,7 @@
 		0F4AB22020EE6B7300F941D1 /* AccountStorageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStorageAdapter.swift; sourceTree = "<group>"; };
 		0F4AB22420EEB9A400F941D1 /* QuorumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuorumManager.swift; sourceTree = "<group>"; };
 		0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		0F5608DA20F8DF4D00A782A0 /* ErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHelper.swift; sourceTree = "<group>"; };
 		0F8F2B5D1FC5D66200BEF5B2 /* PermissionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionCell.xib; sourceTree = "<group>"; };
 		0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupGenerator.swift; sourceTree = "<group>"; };
 		17D8B2A720FE293C00CEE289 /* ConfigWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigWebServiceRequest.swift; sourceTree = "<group>"; };
@@ -377,6 +378,7 @@
 				7C842B9E1FC2B8CC0010F98A /* UIUtils.swift */,
 				7C68A83120DA11D5001DDDC8 /* GradientColor.swift */,
 				0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */,
+				0F5608DA20F8DF4D00A782A0 /* ErrorHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -412,6 +414,7 @@
 				7C48384F1FB5F62400FC864A /* Products */,
 				130904B38EF0A17D7598EFE3 /* Pods */,
 				819710C74CB57B34F052FD71 /* Frameworks */,
+				17D8B2AF20FFD08C00CEE289 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};

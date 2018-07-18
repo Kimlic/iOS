@@ -88,7 +88,7 @@ class PhoneNumberVC: UIViewController {
             let params =  ["phone": phone]
             let response = Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.queryString, headers: headers)
                 .responseJSON().value
-
+            print(response)
             guard let json = response as? [String: [String: AnyObject]] else { showPhoneError(); return }
             guard let code = json["meta"]?["code"] as? Int, code == 201 else { showPhoneError(); return }
 
