@@ -59,10 +59,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func createQuorum() {
         guard quorumManager == nil else { return }
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.createQuorumWith(mnemonic: nil)
-        let accountAddress = appDelegate.quorumManager!.accountAddress
-        ConfigWebServiceRequest.execute(accountAddress: accountAddress, success: appDelegate.createQuorumAPI(_:), failure: { _ in })
+        createQuorumWith(mnemonic: nil)
+        let accountAddress = quorumManager!.accountAddress
+        ConfigWebServiceRequest.execute(accountAddress: accountAddress, success: createQuorumAPI(_:), failure: { _ in })
     }
     
     func createQuorumWith(mnemonic: String?) {
