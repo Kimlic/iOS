@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vVE-Wi-QPL">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,48 +9,66 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Profile CameraVC-->
         <scene sceneID="bRS-Oe-JsE">
             <objects>
                 <viewController storyboardIdentifier="ProfileCameraVC" id="vVE-Wi-QPL" customClass="ProfileCameraVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T0c-Ab-NmZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogp-hu-0Yc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adV-Ye-msJ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTc-TI-P43">
-                                        <rect key="frame" x="69" y="411" width="237" height="218"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button" image="ID_badge_black"/>
-                                        <connections>
-                                            <action selector="TakePhoto:" destination="vVE-Wi-QPL" eventType="touchUpInside" id="cyy-Qi-tG5"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Face_masked_cam_background" translatesAutoresizingMaskIntoConstraints="NO" id="BQz-5e-k26">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-0s-iZN">
+                                <rect key="frame" x="20" y="28" width="25" height="25"/>
+                                <state key="normal" image="white_close_button"/>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="vVE-Wi-QPL" eventType="touchUpInside" id="frf-9h-diH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2T-40-KlF">
+                                <rect key="frame" x="175" y="652" width="64" height="64"/>
+                                <state key="normal" image="shutter_button"/>
+                                <connections>
+                                    <action selector="takePhotoButtonPressed:" destination="vVE-Wi-QPL" eventType="touchUpInside" id="brt-uz-qAT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take Your Portrait Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ua6-i1-xK0">
+                                <rect key="frame" x="117.33333333333333" y="623.66666666666663" width="179.66666666666669" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_Screen_portrait_photo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="jwi-RT-tlb">
+                                <rect key="frame" x="189.66666666666666" y="551.66666666666663" width="35" height="64"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zOu-MB-RQa" firstAttribute="bottom" secondItem="ogp-hu-0Yc" secondAttribute="bottom" id="0Dy-1J-42l"/>
-                            <constraint firstItem="ogp-hu-0Yc" firstAttribute="leading" secondItem="zOu-MB-RQa" secondAttribute="leading" id="Fxq-RC-ayu"/>
-                            <constraint firstItem="zOu-MB-RQa" firstAttribute="bottom" secondItem="adV-Ye-msJ" secondAttribute="bottom" id="L3X-hW-DgV"/>
-                            <constraint firstItem="zOu-MB-RQa" firstAttribute="trailing" secondItem="adV-Ye-msJ" secondAttribute="trailing" id="PYx-A9-5z3"/>
-                            <constraint firstItem="adV-Ye-msJ" firstAttribute="top" secondItem="zOu-MB-RQa" secondAttribute="top" id="Xph-11-pwh"/>
-                            <constraint firstItem="ogp-hu-0Yc" firstAttribute="top" secondItem="T0c-Ab-NmZ" secondAttribute="top" id="ieD-wU-eNE"/>
-                            <constraint firstItem="adV-Ye-msJ" firstAttribute="leading" secondItem="zOu-MB-RQa" secondAttribute="leading" id="zg4-sl-3Ku"/>
-                            <constraint firstItem="ogp-hu-0Yc" firstAttribute="trailing" secondItem="zOu-MB-RQa" secondAttribute="trailing" id="zpK-c8-5J1"/>
+                            <constraint firstItem="zOu-MB-RQa" firstAttribute="bottom" secondItem="Y2T-40-KlF" secondAttribute="bottom" constant="20" id="1HW-GA-2BY"/>
+                            <constraint firstAttribute="trailing" secondItem="BQz-5e-k26" secondAttribute="trailing" id="4Sh-v5-nDN"/>
+                            <constraint firstItem="Ua6-i1-xK0" firstAttribute="centerX" secondItem="Y2T-40-KlF" secondAttribute="centerX" id="Mqf-Hj-Woh"/>
+                            <constraint firstItem="Y2T-40-KlF" firstAttribute="top" secondItem="Ua6-i1-xK0" secondAttribute="bottom" constant="8" id="Tvj-AA-iQt"/>
+                            <constraint firstItem="YyF-0s-iZN" firstAttribute="leading" secondItem="zOu-MB-RQa" secondAttribute="leading" constant="20" id="Wir-sa-jFc"/>
+                            <constraint firstItem="jwi-RT-tlb" firstAttribute="centerX" secondItem="Ua6-i1-xK0" secondAttribute="centerX" id="Xpk-jP-R0u"/>
+                            <constraint firstItem="BQz-5e-k26" firstAttribute="top" secondItem="T0c-Ab-NmZ" secondAttribute="top" id="gd3-4T-2wS"/>
+                            <constraint firstItem="Ua6-i1-xK0" firstAttribute="top" secondItem="jwi-RT-tlb" secondAttribute="bottom" constant="8" id="k9h-RS-Ert"/>
+                            <constraint firstItem="Y2T-40-KlF" firstAttribute="centerX" secondItem="T0c-Ab-NmZ" secondAttribute="centerX" id="mfx-o8-oC9"/>
+                            <constraint firstItem="YyF-0s-iZN" firstAttribute="top" secondItem="zOu-MB-RQa" secondAttribute="top" constant="8" id="niv-5v-xup"/>
+                            <constraint firstAttribute="bottom" secondItem="BQz-5e-k26" secondAttribute="bottom" id="rEh-yo-pFC"/>
+                            <constraint firstItem="BQz-5e-k26" firstAttribute="leading" secondItem="T0c-Ab-NmZ" secondAttribute="leading" id="sRA-KE-0H7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zOu-MB-RQa"/>
                     </view>
                     <connections>
-                        <outlet property="cameraView" destination="ogp-hu-0Yc" id="aql-Nh-ggJ"/>
+                        <outlet property="backgroundImage" destination="BQz-5e-k26" id="qi4-tZ-yb6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLg-kt-F5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -59,6 +77,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ID_badge_black" width="237" height="218"/>
+        <image name="Face_masked_cam_background" width="376" height="669"/>
+        <image name="camera_Screen_portrait_photo_icon" width="35" height="64"/>
+        <image name="shutter_button" width="64" height="64"/>
+        <image name="white_close_button" width="25" height="25"/>
     </resources>
 </document>

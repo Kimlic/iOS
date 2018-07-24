@@ -28,6 +28,7 @@ extension DefaultsKeys {
     static let passcode = DefaultsKey<String?>("passcode")
     static let recovery = DefaultsKey<String?>("recovery")
     
+    static let userPhoto = DefaultsKey<Data?>("userPhoto")
     
     static let deviceId = DefaultsKey<String?>("deviceId")
 }

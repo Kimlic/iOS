@@ -28,14 +28,16 @@ class SplashScreenVC: BaseVC {
             },completion: {
                 (finished: Bool) -> Void in
                 
-                let currentUser = CoreDataHelper.getUser()
+                let _ = UIUtils.setUserProfileScreenAsRoot()
                 
-                // kullanıcı token bilgisine göre düzenlenecek
-                if currentUser != nil {
-                    let _ = UIUtils.setUserProfileScreenAsRoot()
-                }else {
-                     let _ = UIUtils.setSignUpScreenAsRoot()
-                }
+//                let currentUser = CoreDataHelper.getUser()
+//
+//                // kullanıcı token bilgisine göre düzenlenecek
+//                if currentUser != nil {
+//                    let _ = UIUtils.setUserProfileScreenAsRoot()
+//                }else {
+//                     let _ = UIUtils.setSignUpScreenAsRoot()
+//                }
             })
         }
     }

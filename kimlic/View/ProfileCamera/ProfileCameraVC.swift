@@ -5,106 +5,130 @@
 //  Created by ibrahim özdemir on 10.07.2018.
 //  Copyright © 2018 Ratel. All rights reserved.
 //
-
 import UIKit
 import AVFoundation
+import SwiftyUserDefaults
 
-
-class ProfileCameraVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate  {
-   
-    @IBOutlet weak var cameraView: UIView!
+class ProfileCameraVC: UIViewController {
     
-    var video = AVCaptureVideoPreviewLayer()
-    let session = AVCaptureSession()
-    let photoOutput = AVCapturePhotoOutput()
-
+    @IBOutlet weak var backgroundImage: UIImageView!
     
-    @IBAction func TakePhoto(_ sender: Any) {
-    }
+    // MARK: Local Variables
+    var captureSession = AVCaptureSession()
+    var backCamera: AVCaptureDevice?
+    var frontCamera: AVCaptureDevice?
+    var currentCamrera: AVCaptureDevice?
+    
+    var photoOutput: AVCapturePhotoOutput?
+    var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
+    var image: UIImage?
+    
+    // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
-        do{
-           let videoDevices = AVCaptureDevice.devices(for: AVMediaType.video)
-            var captureDevice: AVCaptureDevice?
-            for device in videoDevices {
-                if device.position == AVCaptureDevice.Position.front {
-                    captureDevice = device
-                    break
-                }
-            }
-            
-            let input  = try AVCaptureDeviceInput(device: captureDevice!)
-            self.session.addInput(input)
-        }catch {
-            print("Error")
-        }
-        let output = AVCaptureMetadataOutput()
-        self.session.addOutput(output)
-        self.video = AVCaptureVideoPreviewLayer(session: self.session)
-        self.video.frame = self.view.layer.bounds
-        self.cameraView.layer.addSublayer(self.video)
-        
-        output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-        output.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
-        self.session.startRunning()
-        
+        setupCaptureSession()
+        setupDevice()
+        setupInputOutput()
+        setupPreviewLayer()
+        startRunningCaptureSession()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        if !session.isRunning {
-            session.startRunning()
-        }
-    }
-    
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        
-        UIUtils.showLoading()
-        guard let object = metadataObjects[0] as? AVMetadataMachineReadableCodeObject else {
-            UIUtils.stopLoading()
-            session.stopRunning()
-            PopupGenerator.createPopup(controller: self, type: .error, popup: Popup(), btnClickCompletion: {
-                self.session.startRunning()
-            })
-            return
-        }
-        guard object.type == AVMetadataObject.ObjectType.qr else {
-            UIUtils.stopLoading()
-            session.stopRunning()
-            PopupGenerator.createPopup(controller: self, type: .error, popup: Popup(), btnClickCompletion: {
-                self.session.startRunning()
-            })
-            return
-        }
-        if let value = object.stringValue {
-            
-            session.stopRunning()
-            guard let appId = value.getAppIdFromQrCode(), let _ = Int(appId), let token = value.getToken(), token.count > 1 else {
-                UIUtils.stopLoading()
-                PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "wrongQrTitle".localized, message: "wrongQrMessage".localized, buttonTitle: "wrongQrButtonTitle".localized), btnClickCompletion: {
-                    self.session.startRunning()
-                })
-                return
-            }
-            
-            QrCodeWebServiceRequest().getApplicationDetail(appId: appId, completion: { (permissionResponse) in
-                if permissionResponse != nil {
-                    UIUtils.stopLoading()
-                    UIUtils.navigateToPermissionDetail(vc: self, permission: permissionResponse!, qrCode: value)
-                }else {
-                    UIUtils.stopLoading()
-                    PopupGenerator.createPopup(controller: self, type: .error, popup: Popup(), btnClickCompletion: {
-                        self.session.startRunning()
-                    })
-                }
-            })
-            
-        }
-    }
-    
-    func btnBackPressed(_ sender: Any) {
+    // MARK: Actions
+    @IBAction func closeButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func takePhotoButtonPressed(_ sender: Any) {
+        takePhoto()
+    }
+    
+    // MARK: Functions
+    fileprivate func takePhoto() {
+        let settings = AVCapturePhotoSettings()
+        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first
+        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType]
+        settings.previewPhotoFormat = previewFormat
+        photoOutput?.capturePhoto(with: settings, delegate: self)
+    }
+    
+    fileprivate func setupCaptureSession() {
+        captureSession.sessionPreset = AVCaptureSession.Preset.photo
+    }
+    
+    fileprivate func setupDevice() {
+        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
+        let devices = deviceDiscoverySession.devices
+        
+        for device in devices {
+            if device.position == AVCaptureDevice.Position.back {
+                backCamera = device
+            } else if device.position == AVCaptureDevice.Position.front {
+                frontCamera = device
+            }
+        }
+        currentCamrera = backCamera ?? frontCamera
+    }
+    
+    fileprivate func setupInputOutput() {
+        do {
+            let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamrera!)
+            captureSession.addInput(captureDeviceInput)
+            photoOutput = AVCapturePhotoOutput()
+            captureSession.addOutput(photoOutput!)
+        } catch {
+            print(error)
+        }
+    }
+    
+    fileprivate func setupPreviewLayer() {
+        cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
+        cameraPreviewLayer?.frame = self.view.frame
+        self.view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
+    }
+    
+    fileprivate func startRunningCaptureSession() {
+        captureSession.startRunning()
+    }
+   
 }
+
+extension ProfileCameraVC: AVCapturePhotoCaptureDelegate {
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
+        if let sampleBuffer = photoSampleBuffer, let previewBuffer = previewPhotoSampleBuffer, let dataImage = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: previewBuffer) {
+//            let image = UIImage(data: dataImage)?.resizeImage(size: CGSize(width: (self.viewIfLoaded?.frame.size.width)!, height: (self.viewIfLoaded?.frame.size.height)! * 0.5))
+            let image = UIImage(data: dataImage)?.resizeImage(size: CGSize(width: (self.viewIfLoaded?.frame.size.width)!, height: (self.viewIfLoaded?.frame.size.height)! * 0.5))
+            Defaults[.userPhoto] = image?.getImageData()
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    func cropImage(_ inputImage: UIImage, toRect cropRect: CGRect, viewWidth: CGFloat, viewHeight: CGFloat) -> UIImage?
+    {
+        let imageViewScale = max(inputImage.size.width / viewWidth,
+                                 inputImage.size.height / viewHeight)
+        
+        // Scale cropRect to handle images larger than shown-on-screen size
+        let cropZone = CGRect(x:cropRect.origin.x * imageViewScale,
+                              y:cropRect.origin.y * imageViewScale,
+                              width:cropRect.size.width * imageViewScale,
+                              height:cropRect.size.height * imageViewScale)
+        
+        // Perform cropping in Core Graphics
+        guard let cutImageRef: CGImage = inputImage.cgImage?.cropping(to:cropZone)
+            else {
+                return nil
+        }
+        
+        // Return image to UIImage
+        let croppedImage: UIImage = UIImage(cgImage: cutImageRef)
+        return croppedImage
+    }
+    
+}
+
+
+

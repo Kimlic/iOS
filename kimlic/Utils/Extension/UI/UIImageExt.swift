@@ -41,7 +41,9 @@ public extension UIImage {
         let dataImage = imageData.base64EncodedString(options: .endLineWithLineFeed)
         return dataImage.trimmingCharacters(in: .whitespacesAndNewlines)
     }
-    public func resizeImage(size: CGSize) -> UIImage {
+    
+    // MARK: Resize Image
+    func resizeImage(size: CGSize) -> UIImage {
         var returnImage: UIImage?
         
         var scaleFactor: CGFloat = 1.0

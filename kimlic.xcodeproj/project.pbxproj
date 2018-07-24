@@ -414,7 +414,6 @@
 				7C48384F1FB5F62400FC864A /* Products */,
 				130904B38EF0A17D7598EFE3 /* Pods */,
 				819710C74CB57B34F052FD71 /* Frameworks */,
-				17D8B2AF20FFD08C00CEE289 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -676,6 +675,7 @@
 				7C48384C1FB5F62400FC864A /* Resources */,
 				DB2BEA7B75DD495A223EDDA9 /* [CP] Embed Pods Frameworks */,
 				1795117020EFEBEA0071772D /* Fabric */,
+				FE55E7852B153CD165533DEA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -851,6 +851,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kimlic/Pods-kimlic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE55E7852B153CD165533DEA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kimlic/Pods-kimlic-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1098,7 +1113,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V768S46E57;
+				DEVELOPMENT_TEAM = Z9WP434U24;
 				INFOPLIST_FILE = kimlic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1118,7 +1133,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V768S46E57;
+				DEVELOPMENT_TEAM = Z9WP434U24;
 				INFOPLIST_FILE = kimlic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

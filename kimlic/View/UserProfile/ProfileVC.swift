@@ -11,15 +11,12 @@ import SwiftyUserDefaults
 
 class ProfileVC: UIViewController {
     
+    // MARK: IBOutlet
     @IBOutlet weak var profileImage: UIImageView!
     
-    let imagePicker = UIImagePickerController()
-    
+    // MARK: Override
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        imagePicker.delegate = self
-        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.createQuorum()
     }
@@ -27,8 +24,24 @@ class ProfileVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         controlRisks()
+        setupView()
     }
     
+    // MARK: IBActions
+    @IBAction func scanButtonPressed(_ sender: Any) {
+           
+    }
+    
+    @IBAction func settingsButtonPressed(_ sender: Any) {
+        UIUtils.navigateToSettings(self)
+    }
+    
+    //Opens the camera when profile picture is clicked
+    @IBAction func addPhotoButtonPressed(_ sender: Any) {
+        UIUtils.navigateToProfileCamera(self)
+    }
+    
+    // MARK: Functions
     func controlRisks() {
         let passcode = Defaults[.passcode]
         let recovery = Defaults[.recovery]
@@ -41,54 +54,15 @@ class ProfileVC: UIViewController {
         }
     }
     
-    @IBAction func scanButtonPressed(_ sender: Any) {
-           
-    }
-    
-    @IBAction func settingsButtonPressed(_ sender: Any) {
-        UIUtils.navigateToSettings(self)
-    }
-    
-    //Opens the camera when profile picture is clicked
-    @IBAction func addPhotoButtonPressed(_ sender: Any) {
-        UIUtils.navigateToProfileCamera(self)
-        /*
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            //Camera settings are made
-            imagePicker.allowsEditing = false
-            imagePicker.sourceType = .camera
-            imagePicker.cameraCaptureMode = .photo
-            imagePicker.modalPresentationStyle = .fullScreen
-            self.present(imagePicker, animated: true, completion: nil)
-        } else {
-            PopupGenerator.createPopup(controller: self, type: .error, popup: Popup(title: "noCameraTitle".localized, message: "noCameraMessage".localized, buttonTitle: "noCameraButtonTitle".localized))
+    fileprivate func setupView() {
+        guard let photoData = Defaults[.userPhoto], let photo = UIImage(data: photoData) else {
             return
         }
-        */
-        
+        profileImage.image = photo.profileImageMask()
     }
-    
-}
-
-extension ProfileVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        var  chosenImage = UIImage()
-        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        let myImageSize = CGSize(width: 559, height: 516)
-        let resizeChosenImage: UIImage = chosenImage.resizeImage(size: myImageSize)
-        profileImage.image = resizeChosenImage.profileImageMask()
-        dismiss(animated:true, completion: nil)
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
 }
 
 class BodyTableVC: UITableViewController {
-    
     
     @IBOutlet var bodyTableView: UITableView!
     
