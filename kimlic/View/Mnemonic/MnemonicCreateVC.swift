@@ -13,8 +13,7 @@ class MnemonicCreateVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var saveButton: UIButton!
     
-    var tmpPassphrase = ["broken", "travel", "apology", "observe", "perfect", "prevent",
-                         "steel", "warrior", "cherry", "trial", "season", "column"]
+    fileprivate var tmpPassphrase = [String]()
     
     
     override func viewDidLoad() {
@@ -22,18 +21,26 @@ class MnemonicCreateVC: UIViewController {
         
         // Set default display
         setupView()
+        
+        // Set mnemonic passphrase
+        setMnemonicArray()
     }
     
-    private func setupView() {
-        saveButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: saveButton.frame, type: .topBottom).color
-    }
-
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         UIUtils.navigateToMnemonicVerification(self)
+    }
+    
+    fileprivate func setupView() {
+        saveButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: saveButton.frame, type: .topBottom).color
+    }
+    
+    fileprivate func setMnemonicArray() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        tmpPassphrase = appDelegate.quorumManager?.mnemonic.components(separatedBy: " ") ?? []
     }
 }
 

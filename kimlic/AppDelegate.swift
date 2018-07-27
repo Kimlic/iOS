@@ -68,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         quorumManager = QuorumManager(mnemonic: mnemonic)
     }
     
-    func createQuorumAPI(_ addresses: [String: String]) {
+    func createQuorumAPI(_ addresses: [String: Any]) {
         quorumAPI = try! QuorumAPI(addresses: addresses, manager: quorumManager!)
     }
     

@@ -44,10 +44,10 @@ final class QuorumAPI {
     
     // MARK: - Public
     
-    init(addresses: [String: String], manager: QuorumManager) throws {
+    init(addresses: [String: Any], manager: QuorumManager) throws {
         quorumManager = manager
         
-        guard let contextContractAddress = addresses["context_contract"] else { throw QuroumAPIError(kind: .contextContractAddress) }
+        guard let contextContractAddress = addresses["context_contract"] as? String else { throw QuroumAPIError(kind: .contextContractAddress) }
         let contractAddresses = ContractAddresses(contextContract: contextContractAddress, accountStorageAdapter: nil)
         
         let contextContract = KimlicContextContract(address: contractAddresses.contextContract)
@@ -59,8 +59,17 @@ final class QuorumAPI {
             accountStorageAdapter: accountStorageAdapterAddress.address)
     }
     
+    // TODO: Alttaki yapi degistirilecek, duzenlenecek
     func setAccountFieldMainData(type: AccountFieldMainType, value: String) throws -> [String: Any] {
-        let params = [value.sha256(), type.rawValue]
+//        ‘{“phone”: “151090B5FC99E6391180FC30D59C41D7B62D7DE92ED671AFF374D5084718407A”}’
+//
+//        setFieldMainData(‘{“phone”: “151090B5FC99E6391180FC30D59C41D7B62D7DE92ED671AFF374D5084718407A”}’, ‘phone’)
+//
+//        setFieldMainData(“151090B5FC99E6391180FC30D59C41D7B62D7DE92ED671AFF374D5084718407A”, ‘phone’)
+        
+        let param = "{\"phone\":\"\(value.sha256())\"}"
+
+        let params = [param, type.rawValue]
         let method = accountStorageAdapter.transactions.setAccountFieldMainData
         print("PARAMS: \(params)   METHOD: \(method)")
         return try quorumManager.quorum.send(contract: accountStorageAdapter, method: method, params: params)

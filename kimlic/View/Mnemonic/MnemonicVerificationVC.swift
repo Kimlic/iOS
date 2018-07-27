@@ -18,10 +18,9 @@ class MnemonicVerificationVC: UIViewController {
     @IBOutlet weak var fourthPassphraseTextField: UITextField!
     @IBOutlet weak var verifyButton: UIButton!
     
-    var tmpPassphrase = ["broken", "travel", "apology", "observe", "perfect", "prevent",
-                         "steel", "warrior", "cherry", "trial", "season", "column"]
     var randomVerifyList = [String]()
     var textFieldList = [UITextField]()
+    fileprivate var tmpPassphrase = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +28,14 @@ class MnemonicVerificationVC: UIViewController {
         // Set default display
         setupView()
         
+        // Set mnemonic passphrase
+        setMnemonicArray()
+        
         // Set text field array
         textFieldList = [firstPassphraseTextField, secondPassphraseTextField, thirdPassphraseTextField, fourthPassphraseTextField]
 
         // Set random passphrase
         setRandomPassphrase()
-    }
-    
-    private func setupView() {
-        verifyButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: verifyButton.frame, type: .topBottom).color
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -53,7 +51,16 @@ class MnemonicVerificationVC: UIViewController {
         }
     }
     
-    private func setRandomPassphrase() {
+    fileprivate func setupView() {
+        verifyButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: verifyButton.frame, type: .topBottom).color
+    }
+    
+    fileprivate func setMnemonicArray() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        tmpPassphrase = appDelegate.quorumManager?.mnemonic.components(separatedBy: " ") ?? []
+    }
+    
+    fileprivate func setRandomPassphrase() {
         
         // Randomly create 4 numbers from 0 to 12
         let randomIndexList = generateRandomUniqueNumbers()
@@ -68,7 +75,7 @@ class MnemonicVerificationVC: UIViewController {
         }
     }
     
-    private func setPlaceHolder(textFieldIndex: Int, randomPassIndex: Int) {
+    fileprivate func setPlaceHolder(textFieldIndex: Int, randomPassIndex: Int) {
         let randomPassSeq = randomPassIndex + 1
         switch randomPassSeq {
         case 1:
@@ -82,7 +89,7 @@ class MnemonicVerificationVC: UIViewController {
         }
     }
     
-    private func generateRandomUniqueNumbers() -> [Int] {
+    fileprivate func generateRandomUniqueNumbers() -> [Int] {
         guard 4 <= (12) else { return [] }
         var numbers: Set<Int> = Set<Int>()
         (0..<4).forEach { _ in
@@ -94,7 +101,7 @@ class MnemonicVerificationVC: UIViewController {
         return numbers.map{ $0 }.sorted()
     }
     
-    private func verifyPassphrase() -> Bool {
+    fileprivate func verifyPassphrase() -> Bool {
         for index in 0...3 {
             guard textFieldList[index].text == randomVerifyList[index] else {
                 return false

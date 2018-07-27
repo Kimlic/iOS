@@ -69,6 +69,31 @@ DEPENDENCIES:
   - TextFieldEffects (~> 1.4)
   - web3swift (from `https://github.com/Kimlic/web3swift`, branch `master`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Alamofire-Synchronous
+    - AlamofireImage
+    - BigInt
+    - Crashlytics
+    - CryptoSwift
+    - DynamicBlurView
+    - Fabric
+    - FSPagerView
+    - IQKeyboardManagerSwift
+    - libsodium
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - PhoneNumberKit
+    - PopupDialog
+    - Result
+    - secp256k1_ios
+    - SipHash
+    - SmileLock
+    - SwiftyJSON
+    - SwiftyUserDefaults
+    - TextFieldEffects
+
 EXTERNAL SOURCES:
   Quorum:
     :git: https://github.com/Kimlic/Quorum-iOS
@@ -112,4 +137,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 982e6ca758cf0410819fcdae31319a30045f3c7d
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

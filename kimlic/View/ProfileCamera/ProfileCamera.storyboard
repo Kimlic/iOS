@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vVE-Wi-QPL">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,11 +20,14 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileCameraVC" id="vVE-Wi-QPL" customClass="ProfileCameraVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T0c-Ab-NmZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bs0-pe-n0N">
+                                <rect key="frame" x="42" y="47" width="291" height="410"/>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Face_masked_cam_background" translatesAutoresizingMaskIntoConstraints="NO" id="BQz-5e-k26">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-0s-iZN">
                                 <rect key="frame" x="20" y="28" width="25" height="25"/>
@@ -34,27 +37,29 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2T-40-KlF">
-                                <rect key="frame" x="175" y="652" width="64" height="64"/>
+                                <rect key="frame" x="155.5" y="583" width="64" height="64"/>
                                 <state key="normal" image="shutter_button"/>
                                 <connections>
                                     <action selector="takePhotoButtonPressed:" destination="vVE-Wi-QPL" eventType="touchUpInside" id="brt-uz-qAT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take Your Portrait Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ua6-i1-xK0">
-                                <rect key="frame" x="117.33333333333333" y="623.66666666666663" width="179.66666666666669" height="20.333333333333371"/>
+                                <rect key="frame" x="97.5" y="554.5" width="180" height="20.5"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_Screen_portrait_photo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="jwi-RT-tlb">
-                                <rect key="frame" x="189.66666666666666" y="551.66666666666663" width="35" height="64"/>
+                                <rect key="frame" x="169.5" y="482.5" width="35" height="64"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zOu-MB-RQa" firstAttribute="bottom" secondItem="Y2T-40-KlF" secondAttribute="bottom" constant="20" id="1HW-GA-2BY"/>
                             <constraint firstAttribute="trailing" secondItem="BQz-5e-k26" secondAttribute="trailing" id="4Sh-v5-nDN"/>
+                            <constraint firstAttribute="bottom" secondItem="bs0-pe-n0N" secondAttribute="bottom" constant="210" id="Bpk-14-QQB"/>
                             <constraint firstItem="Ua6-i1-xK0" firstAttribute="centerX" secondItem="Y2T-40-KlF" secondAttribute="centerX" id="Mqf-Hj-Woh"/>
+                            <constraint firstAttribute="trailing" secondItem="bs0-pe-n0N" secondAttribute="trailing" constant="42" id="Oq1-en-NGy"/>
                             <constraint firstItem="Y2T-40-KlF" firstAttribute="top" secondItem="Ua6-i1-xK0" secondAttribute="bottom" constant="8" id="Tvj-AA-iQt"/>
                             <constraint firstItem="YyF-0s-iZN" firstAttribute="leading" secondItem="zOu-MB-RQa" secondAttribute="leading" constant="20" id="Wir-sa-jFc"/>
                             <constraint firstItem="jwi-RT-tlb" firstAttribute="centerX" secondItem="Ua6-i1-xK0" secondAttribute="centerX" id="Xpk-jP-R0u"/>
@@ -62,18 +67,21 @@
                             <constraint firstItem="Ua6-i1-xK0" firstAttribute="top" secondItem="jwi-RT-tlb" secondAttribute="bottom" constant="8" id="k9h-RS-Ert"/>
                             <constraint firstItem="Y2T-40-KlF" firstAttribute="centerX" secondItem="T0c-Ab-NmZ" secondAttribute="centerX" id="mfx-o8-oC9"/>
                             <constraint firstItem="YyF-0s-iZN" firstAttribute="top" secondItem="zOu-MB-RQa" secondAttribute="top" constant="8" id="niv-5v-xup"/>
+                            <constraint firstItem="bs0-pe-n0N" firstAttribute="leading" secondItem="T0c-Ab-NmZ" secondAttribute="leading" constant="42" id="oeh-lb-M3d"/>
                             <constraint firstAttribute="bottom" secondItem="BQz-5e-k26" secondAttribute="bottom" id="rEh-yo-pFC"/>
                             <constraint firstItem="BQz-5e-k26" firstAttribute="leading" secondItem="T0c-Ab-NmZ" secondAttribute="leading" id="sRA-KE-0H7"/>
+                            <constraint firstItem="bs0-pe-n0N" firstAttribute="top" secondItem="T0c-Ab-NmZ" secondAttribute="top" constant="47" id="xh2-kS-RBT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zOu-MB-RQa"/>
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="BQz-5e-k26" id="qi4-tZ-yb6"/>
+                        <outlet property="cutAreaView" destination="bs0-pe-n0N" id="Gzw-vv-x51"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLg-kt-F5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-424.80000000000001" y="-540.17991004497753"/>
+            <point key="canvasLocation" x="-426.08695652173918" y="-540.48913043478262"/>
         </scene>
     </scenes>
     <resources>
