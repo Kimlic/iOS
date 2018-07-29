@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import SwiftyUserDefaults
 
 class UserInfoVC: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
@@ -24,18 +24,21 @@ class UserInfoVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        firstNameTextField.text = Defaults[.firstName] ?? ""
-        lastNameTextField.text = Defaults[.lastName] ?? ""
+        let user = CoreDataHelper.getUser()
+        firstNameTextField.text = user?.firstName
+        lastNameTextField.text = user?.lastName
     }
     
-    private func setupView() {
-        saveButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: saveButton.frame, type: .topBottom).color
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        firstNameTextField.becomeFirstResponder()
     }
+    
+    // MARK: - IBActions
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         if formControl() {
-            Defaults[.firstName] = firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            Defaults[.lastName] = lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            CoreDataHelper.saveName(firstName: (firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!, lastName: (lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!)
             UIUtils.navigateToMessage(self, messageType: .fullNameSuccessfull)
         }else {
             PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "fieldsRequiredTitle".localized, message: "fieldsRequiredMessage".localized, buttonTitle: "fieldsRequiredButtonTitle".localized))
@@ -44,6 +47,12 @@ class UserInfoVC: UIViewController {
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    // MARK: - Functions
+    
+    private func setupView() {
+        saveButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: saveButton.frame, type: .topBottom).color
     }
     
     private func formControl() -> Bool {

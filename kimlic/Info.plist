@@ -46,7 +46,7 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>$(PRODUCT_NAME) use camera for user profile image.</string>
 	<key>ServerURL</key>
-	<string>http://mobile-api-dev.kimlic.com/api</string>
+	<string>https://mobile-api-dev.kimlic.com</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Muli-SemiBold.ttf</string>

@@ -41,11 +41,11 @@ class Constants {
     }
     
     enum APIEndpoint: String {
-        case config = "/config"
-        case phoneVerification = "/verifications/phone"
-        case phoneVerificationApprove =  "/verifications/phone/approve"
-        case emailVerification = "/verifications/email"
-        case emailVerificationApprove =  "/verifications/email/approve"
+        case config = "/api/config"
+        case phoneVerification = "/api/verifications/phone"
+        case phoneVerificationApprove =  "/api/verifications/phone/approve"
+        case emailVerification = "/api/verifications/email"
+        case emailVerificationApprove =  "/api/verifications/email/approve"
         
         func url() -> String {
             return Bundle.main.serverURL + rawValue

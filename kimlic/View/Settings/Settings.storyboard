@@ -240,14 +240,14 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings_warning_icon" translatesAutoresizingMaskIntoConstraints="NO" id="gWa-dS-kvp">
+                                                <imageView userInteractionEnabled="NO" tag="102" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings_warning_icon" translatesAutoresizingMaskIntoConstraints="NO" id="gWa-dS-kvp">
                                                     <rect key="frame" x="182" y="20" width="22" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="22" id="8nz-Gt-q0c"/>
                                                         <constraint firstAttribute="height" constant="20" id="wBv-1W-MEz"/>
                                                     </constraints>
                                                 </imageView>
-                                                <switch opaque="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rqm-UF-3h9">
+                                                <switch opaque="NO" tag="103" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rqm-UF-3h9">
                                                     <rect key="frame" x="263" y="19.5" width="49" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="47" id="Mjy-27-wRh"/>
@@ -291,14 +291,14 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings_warning_icon" translatesAutoresizingMaskIntoConstraints="NO" id="6NV-LM-N7a">
+                                                <imageView userInteractionEnabled="NO" tag="104" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings_warning_icon" translatesAutoresizingMaskIntoConstraints="NO" id="6NV-LM-N7a">
                                                     <rect key="frame" x="166.5" y="20" width="22" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="fCU-It-bmx"/>
                                                         <constraint firstAttribute="width" constant="22" id="rgh-lC-cg5"/>
                                                     </constraints>
                                                 </imageView>
-                                                <switch opaque="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eK8-PF-4ve">
+                                                <switch opaque="NO" tag="105" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eK8-PF-4ve">
                                                     <rect key="frame" x="263" y="19.5" width="49" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="31" id="ZpT-mD-Rte"/>
@@ -403,6 +403,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="settingsTableView" destination="JXp-qb-xhK" id="TfW-n2-jTC"/>
                         <outlet property="warningIconAccount" destination="gWa-dS-kvp" id="fqy-ph-qCt"/>
                         <outlet property="warningIconPasscode" destination="Tu9-RI-ppm" id="fWd-cs-jeD"/>
                         <outlet property="warningIconTouchID" destination="6NV-LM-N7a" id="AId-G1-uyZ"/>

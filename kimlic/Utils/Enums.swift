@@ -12,6 +12,11 @@ enum MessageType {
     verifyIDSuccessfull, phoneNumberSuccessfull, emailSuccessfull, accountLinkSuccessfull, fullNameSuccessfull
 }
 
+enum VerificationType: String {
+    case email = "email"
+    case phone = "phone"
+}
+
 enum PopupType {
     case none
     case error

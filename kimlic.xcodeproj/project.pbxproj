@@ -111,6 +111,7 @@
 		7C99D6EB1FC842B700A593C5 /* UINavigationControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6EA1FC842B700A593C5 /* UINavigationControllerExt.swift */; };
 		7C99D6ED1FC84A6400A593C5 /* EmailWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6EC1FC84A6400A593C5 /* EmailWebServiceRequest.swift */; };
 		7C99D6EF1FC84C5200A593C5 /* WrappedRootResponseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6EE1FC84C5200A593C5 /* WrappedRootResponseCollection.swift */; };
+		7CA54B1A210D67F2002555C7 /* CustomWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA54B19210D67F2002555C7 /* CustomWebServiceRequest.swift */; };
 		7CB516FB20D00DC0006FF06D /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CB516FA20D00DC0006FF06D /* UserInfo.storyboard */; };
 		7CB516FD20D00DE2006FF06D /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB516FC20D00DE2006FF06D /* UserInfoVC.swift */; };
 		7CB5674F1FB9C28E00F03D24 /* TutorialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB5674E1FB9C28E00F03D24 /* TutorialsVC.swift */; };
@@ -233,6 +234,7 @@
 		7C99D6EA1FC842B700A593C5 /* UINavigationControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExt.swift; sourceTree = "<group>"; };
 		7C99D6EC1FC84A6400A593C5 /* EmailWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailWebServiceRequest.swift; sourceTree = "<group>"; };
 		7C99D6EE1FC84C5200A593C5 /* WrappedRootResponseCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedRootResponseCollection.swift; sourceTree = "<group>"; };
+		7CA54B19210D67F2002555C7 /* CustomWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWebServiceRequest.swift; sourceTree = "<group>"; };
 		7CB516FA20D00DC0006FF06D /* UserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
 		7CB516FC20D00DE2006FF06D /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		7CB5674E1FB9C28E00F03D24 /* TutorialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialsVC.swift; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				7C99D6DE1FC7FF7000A593C5 /* WebServicesBaseRequest.swift */,
+				7CA54B19210D67F2002555C7 /* CustomWebServiceRequest.swift */,
 				7C99D6E01FC7FF8E00A593C5 /* TokenWebServiceRequest.swift */,
 				7C99D6E21FC7FFDE00A593C5 /* UserWebServiceRequest.swift */,
 				7C99D6E81FC8150E00A593C5 /* PhoneWebServiceRequest.swift */,
@@ -936,6 +939,7 @@
 				7C7A7FC820C53B6400BDE95C /* MessageVC.swift in Sources */,
 				7C99D6D51FC7FE6600A593C5 /* WrappedResponse.swift in Sources */,
 				7CF655691FBACB1F00CA9C1A /* Constants.swift in Sources */,
+				7CA54B1A210D67F2002555C7 /* CustomWebServiceRequest.swift in Sources */,
 				7C99D6E71FC8108300A593C5 /* BundleExt.swift in Sources */,
 				7C99D6DF1FC7FF7000A593C5 /* WebServicesBaseRequest.swift in Sources */,
 				7C929D661FCC53E6001B9E22 /* PermissionDetailResponse.swift in Sources */,

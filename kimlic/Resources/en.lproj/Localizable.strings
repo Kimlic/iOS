@@ -82,8 +82,8 @@
 //*********** Popup Default Message *********************
 
 "errorTitle" = "Oh snap";
-"errorMessage" = "Something went wrong";
-"errorButtonTitle" = "TRY, AGAIN";
+"errorMessage" = "Something went wrong, please try again later.";
+"errorButtonTitle" = "OK";
 
 "warningTitle" = "Whoa!";
 "warningMessage" = "You need to verify your email and phone number to login!";

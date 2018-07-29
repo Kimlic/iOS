@@ -59,19 +59,14 @@ final class QuorumAPI {
             accountStorageAdapter: accountStorageAdapterAddress.address)
     }
     
-    // TODO: Alttaki yapi degistirilecek, duzenlenecek
-    func setAccountFieldMainData(type: AccountFieldMainType, value: String) throws -> [String: Any] {
-//        ‘{“phone”: “151090B5FC99E6391180FC30D59C41D7B62D7DE92ED671AFF374D5084718407A”}’
-//
-//        setFieldMainData(‘{“phone”: “151090B5FC99E6391180FC30D59C41D7B62D7DE92ED671AFF374D5084718407A”}’, ‘phone’)
-//
-//        setFieldMainData(“151090B5FC99E6391180FC30D59C41D7B62D7DE92ED671AFF374D5084718407A”, ‘phone’)
+    // MARK: - Functions
+    
+    func setFieldMainData(type: AccountFieldMainType, value: String) throws -> [String: Any] {
         
-        let param = "{\"phone\":\"\(value.sha256())\"}"
-
-        let params = [param, type.rawValue]
-        let method = accountStorageAdapter.transactions.setAccountFieldMainData
-        print("PARAMS: \(params)   METHOD: \(method)")
+        let param = "'{\"\(type.rawValue)\":\"\(value.sha256())\"}'"
+        let params = [param, type.rawValue] as [Any]
+        let method = accountStorageAdapter.transactions.setFieldMainData
+        
         return try quorumManager.quorum.send(contract: accountStorageAdapter, method: method, params: params)
     }
 }

@@ -7,7 +7,6 @@
 
 import UIKit
 import SmileLock
-import SwiftyUserDefaults
 
 class PasscodeVC: UIViewController {
     
@@ -20,12 +19,17 @@ class PasscodeVC: UIViewController {
     var pageType: PasscodePageType = .confirm
     var tmpCode: String?
     var rootVC: UIViewController!
+    let user = CoreDataHelper.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
         changeLabelText()
+    }
+    
+    @IBAction func btnCancelPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     private func changeLabelText() {
@@ -58,12 +62,8 @@ class PasscodeVC: UIViewController {
             view.layer.borderColor = UIColor.passcodeLightBlue.cgColor
             view.label.font = UIFont.boldSystemFont(ofSize: view.label.font.pointSize)
         }
-        
     }
     
-    @IBAction func btnCancelPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }    
 }
 extension PasscodeVC: PasswordInputCompleteProtocol {
     
@@ -83,7 +83,7 @@ extension PasscodeVC: PasswordInputCompleteProtocol {
             }
         case .createConfirm:
             if tmpCode == input {
-                Defaults[.passcode] = input
+                CoreDataHelper.savePasscode(passcode: input)
                 UIUtils.navigateToMessage(self.rootVC, messageType: .passcodeSuccessfull)
                 dismiss(animated: true, completion: nil)
             }else {
@@ -99,14 +99,14 @@ extension PasscodeVC: PasswordInputCompleteProtocol {
             }
         case .delete:
             if validatePasscode(input: input) {
-                Defaults[.passcode] = nil
+                CoreDataHelper.savePasscode(passcode: nil)
                 dismiss(animated: true, completion: nil)
             }
         }
     }
     
     private func validatePasscode(input: String) -> Bool {
-        guard input == Defaults[.passcode] else {
+        guard input == user?.passcode else {
             passwordContainerView.wrongPassword()
             return false
         }

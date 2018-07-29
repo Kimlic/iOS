@@ -15,7 +15,7 @@ struct AccountStorageAdapter: QuorumContract {
     }
     
     struct Transactions {
-        let setAccountFieldMainData = "setAccountFieldMainData"
+        let setFieldMainData = "setFieldMainData"
     }
     
     let address: String

@@ -6,17 +6,11 @@
 //  Copyright © 2017 Ratel. All rights reserved.
 
 import UIKit
-import SwiftyUserDefaults
 import PhoneNumberKit
 import Alamofire
 import Quorum
 
 class VerificationVC: UIViewController {
-
-    enum VerificationType: String {
-        case email = "email"
-        case phone = "phone"
-    }
     
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var addressLabel: UILabel!
@@ -133,37 +127,28 @@ class VerificationVC: UIViewController {
         }
     }
     
-    private func showCodeError() {
-        PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "incorrectCodeTitle".localized, message: "incorrectCodeMessage".localized, buttonTitle: "incorrectCodeButtonTitle".localized))
+    private func showCodeError(_ message: String? = nil) {
+        PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "incorrectCodeTitle".localized, message: message ?? "incorrectCodeMessage".localized, buttonTitle: "incorrectCodeButtonTitle".localized))
     }
     
     private func serverRequest(_ code: String, type: VerificationType) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        var url: String
-        
-        switch type {
-        case .phone: url = Constants.APIEndpoint.phoneVerificationApprove.url()
-        case .email: url = Constants.APIEndpoint.emailVerificationApprove.url()
+        UIUtils.showLoading()
+        CustomWebServiceRequest.approveCode(code: code, type: type, success: {
+            switch type {
+            case .email:
+                CoreDataHelper.saveEmail(email: self.email!)
+                UIUtils.navigateToMessage(self, messageType: .emailSuccessfull)
+            case .phone:
+                CoreDataHelper.savePhone(phone: self.phoneNumber!)
+                UIUtils.navigateToMessage(self, messageType: .phoneNumberSuccessfull)
+            }
+            UIUtils.stopLoading()
+        }) { (error) in
+            UIUtils.stopLoading()
+            self.showCodeError(error)
         }
-
-        let headers = ["account-address": appDelegate.quorumManager!.accountAddress.lowercased()]
-        let params =  ["code": code]
-        let response = Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.queryString, headers: headers)
-            .responseJSON().value
         
-        guard let json = response as? [String: [String: AnyObject]] else { showCodeError(); return }
-        guard let code = json["meta"]?["code"] as? Int, code == 200 else { showCodeError(); return }
         
-        switch type {
-        case .email:
-            Defaults[.email] = email
-            UIUtils.navigateToMessage(self, messageType: .emailSuccessfull)
-
-        case .phone:
-            CoreDataHelper.initUser(phone: phoneNumber!)
-            Defaults[.phone] = phoneNumber
-            UIUtils.navigateToMessage(self, messageType: .phoneNumberSuccessfull)
-        }
     }
 
     private func codeVerify() -> String? {

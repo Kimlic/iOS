@@ -40,7 +40,8 @@ extension TouchIDVC {
             
             localAuthenticationContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reasonString) { success, evaluateError in
                 if success {
-                    PopupGenerator.createPopup(controller: self, type: .success, popup: Popup())
+                    CoreDataHelper.saveTouchID(isTouchID: true)
+                    UIUtils.navigateToTouchID(self)
                 } else {
                     //TODO: User did not authenticate successfully, look at error and take appropriate action
                     guard let error = evaluateError else {

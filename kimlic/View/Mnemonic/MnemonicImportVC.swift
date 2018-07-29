@@ -19,9 +19,9 @@ class MnemonicImportVC: UIViewController {
         setupView()
     }
     
-    private func setupView() {
-        passTextView.textContainerInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
-        verifyButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: verifyButton.frame, type: .topBottom).color
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        passTextView.becomeFirstResponder()
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -30,6 +30,11 @@ class MnemonicImportVC: UIViewController {
     
     @IBAction func verifyButtonPressed(_ sender: Any) {
         UIUtils.navigateToMessage(self, messageType: .passMatchSuccessfull)
+    }
+    
+    private func setupView() {
+        passTextView.textContainerInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+        verifyButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: verifyButton.frame, type: .topBottom).color
     }
     
     

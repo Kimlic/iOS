@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SwiftyUserDefaults
-
 class MnemonicVerificationVC: UIViewController {
     
     
@@ -38,6 +36,11 @@ class MnemonicVerificationVC: UIViewController {
         setRandomPassphrase()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        firstPassphraseTextField.becomeFirstResponder()
+    }
+    
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -45,7 +48,7 @@ class MnemonicVerificationVC: UIViewController {
     @IBAction func verifyButtonPressed(_ sender: Any) {
         if verifyPassphrase() {
             UIUtils.navigateToMessage(self, messageType: .passphraseSuccessfull)
-            Defaults[.recovery] = "Demo"
+            CoreDataHelper.saveRecovery(isAccountRecovery: true)
         }else {
             PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "Wrong", message: "Passphrase Verify Wrong", buttonTitle: "Try Again"), btnClickCompletion: nil)
         }

@@ -13,17 +13,17 @@ import web3swift
 import Alamofire
 
 class PhoneNumberVC: UIViewController {
-    
+    // MARK: - IBOutles
     @IBOutlet weak var imgHexagonContent: UIImageView!
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
+    // MARK: - Local Varibles
     var country = [Country]()
     var selectedCode = "+90"
     var defaultSelectedIndex = 215 //  Set default Turkey phone code
     let phoneNumberKit = PhoneNumberKit()
-//    private lazy var accountStorageAdapterManager = AccountStorageAdapterManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +35,43 @@ class PhoneNumberVC: UIViewController {
         self.setupPickerViews()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         phoneNumberTextField.becomeFirstResponder()
     }
     
+    // MARK: - IBActions
+    
+    @IBAction func phoneNumberTextFieldChanged(_ sender: Any) {
+        let str = phoneNumberTextField.text
+        guard (str?.range(of: selectedCode)) != nil else {
+            phoneNumberTextField.text = selectedCode
+            return
+        }
+        phoneNumberTextField.text = PartialFormatter().formatPartial(str!)
+    }
+    
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        guard let phoneNumber = phoneNumberTextField?.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+            !phoneNumber.isEmpty else {
+                return
+        }
+        do {
+            let verificatePhone = try phoneNumberKit.parse(phoneNumber)
+            serverRequest(verificatePhone.numberString.replacingOccurrences(of: " ", with: ""))
+        } catch {
+            showPhoneError()
+        }
+    }
+    
+    // MARK: - Functions
+    
     private func setupView() {
         nextButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: nextButton.frame, type: .topBottom).color
-        
     }
     
     private func setupPickerViews(){
@@ -64,7 +93,7 @@ class PhoneNumberVC: UIViewController {
     
     // Country code and name json file path "Resources > CountryCode.json"
     // PickerView set country code and name data
-    func loadCountryData() {
+    private func loadCountryData() {
         let path = Bundle.main.url(forResource: "CountryCode", withExtension: "json")
         let jsonData = try? Data(contentsOf: path!, options: Data.ReadingOptions.mappedIfSafe)
         let countryData = JSON(data: jsonData!)
@@ -77,60 +106,20 @@ class PhoneNumberVC: UIViewController {
     }
     
     private func serverRequest(_ phone: String) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        do {
-            let result = try appDelegate.quorumAPI?.setAccountFieldMainData(type: QuorumAPI.AccountFieldMainType.phone, value: phone)
-            guard let receipt = result!["receipt"] as? TransactionReceipt, receipt.status == .ok else { showPhoneError(); return }
-
-            let url = Constants.APIEndpoint.phoneVerification.url()
-            let headers = ["account-address": appDelegate.quorumManager!.accountAddress.lowercased()]
-            let params =  ["phone": phone]
-            let response = Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.queryString, headers: headers)
-                .responseJSON().value
-            print(response)
-            guard let json = response as? [String: [String: AnyObject]] else { showPhoneError(); return }
-            guard let code = json["meta"]?["code"] as? Int, code == 201 else { showPhoneError(); return }
-
-            CoreDataHelper.initUser(phone: phone)
+        UIUtils.showLoading()
+        CustomWebServiceRequest.createPhone(phone: phone, success: {
+            UIUtils.stopLoading()
             UIUtils.navigateToVerification(self, phoneNumber: phone)
-        } catch _ {
-            showPhoneError()
+        }) { (error) in
+            UIUtils.stopLoading()
+            self.showPhoneError(error)
         }
     }
     
-    @IBAction func phoneNumberTextFieldChanged(_ sender: Any) {
-        let str = phoneNumberTextField.text
-        guard (str?.range(of: selectedCode)) != nil else {
-            phoneNumberTextField.text = selectedCode
-            return
-        }
-        phoneNumberTextField.text = PartialFormatter().formatPartial(str!)
-    }
-    
-    @IBAction func cancelButtonPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    
-    @IBAction func saveButtonPressed(_ sender: Any) {
-        
-        guard let phoneNumber = phoneNumberTextField?.text?.trimmingCharacters(in: .whitespacesAndNewlines), !phoneNumber.isEmpty else {
-            return
-        }
-        
-        do {
-            let verificatePhone = try phoneNumberKit.parse(phoneNumber)
-            serverRequest(verificatePhone.numberString.replacingOccurrences(of: " ", with: ""))
-        } catch {
-            showPhoneError()
-        }
-    }
-    
-    private func showPhoneError() {
+    private func showPhoneError(_ message: String? = nil) {
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else { return }
-            PopupGenerator.createPopup(controller: strongSelf, type: .warning, popup: Popup(title: "phoneNotValidTitle".localized, message: "phoneNotValidMessage".localized, buttonTitle: "phoneNotValidButtonTitle".localized))
+            PopupGenerator.createPopup(controller: strongSelf, type: .warning, popup: Popup(title: "phoneNotValidTitle".localized, message: message ?? "phoneNotValidMessage".localized, buttonTitle: "phoneNotValidButtonTitle".localized))
         }
     }
 }

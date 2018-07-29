@@ -11,10 +11,12 @@ import SwiftyUserDefaults
 
 class ProfileVC: UIViewController {
     
-    // MARK: IBOutlet
+    // MARK: IBOutlets
     @IBOutlet weak var profileImage: UIImageView!
     
-    // MARK: Override
+     var user: KimlicUser?
+    
+    // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -23,6 +25,10 @@ class ProfileVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Get user data
+        user = CoreDataHelper.getUser()
+        
         controlRisks()
         setupView()
     }
@@ -43,13 +49,11 @@ class ProfileVC: UIViewController {
     
     // MARK: Functions
     func controlRisks() {
-        let passcode = Defaults[.passcode]
-        let recovery = Defaults[.recovery]
-        if passcode == nil && recovery == nil{
+        if user?.passcode == nil && user?.accountRecovery == nil{
             PopupGenerator.twoRisks(controller: self)
-        }else if passcode == nil{
+        }else if user?.passcode == nil{
             PopupGenerator.passcodeRisk(controller: self)
-        }else if recovery == nil{
+        }else if user?.accountRecovery == nil || !(user?.accountRecovery)! {
             PopupGenerator.recoveryRisk(controller: self)
         }
     }
@@ -66,6 +70,8 @@ class BodyTableVC: UITableViewController {
     
     @IBOutlet var bodyTableView: UITableView!
     
+    var user: KimlicUser?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -74,13 +80,20 @@ class BodyTableVC: UITableViewController {
         bodyTableView.tableFooterView = footerView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Get user data
+        user = CoreDataHelper.getUser()
+        bodyTableView.reloadData()
+    }
+    
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
         cell.selectionStyle = .none
         switch indexPath.row {
         case 0: // first name, last name page
-            if Defaults[.firstName] != nil, Defaults[.lastName] != nil {
-                cell.textLabel?.text = "\(Defaults[.firstName]!) \(Defaults[.lastName]!)"
+            if let firstName = user?.firstName, let lastName = user?.lastName {
+                cell.textLabel?.text = "\(firstName) \(lastName)"
             }else {
                 cell.textLabel?.text = "Add your name"
             }
@@ -89,9 +102,9 @@ class BodyTableVC: UITableViewController {
         case 2: // balance
             cell.textLabel?.text = "Balance 3 KIM"
         case 3: // phone number
-            cell.textLabel?.text = Defaults[.phone] ?? "Add your phone"
+            cell.textLabel?.text = user?.phone ?? "Add your phone"
         case 4: // email
-            cell.textLabel?.text = Defaults[.email] ?? "Add your email"
+            cell.textLabel?.text = user?.email ?? "Add your email"
         default:
             print("Add your full name")
         }

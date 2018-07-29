@@ -15,21 +15,64 @@ struct CoreDataHelper {
     static let context: NSManagedObjectContext = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             fatalError()
-        }
-        
+        }        
         let persistentContainer = appDelegate.persistentContainer
         let context = persistentContainer.viewContext
         
         return context
     }()
     
-    static func initUser(phone:String) {
-        let currentUser = getUser()
-        if currentUser != nil {
-            destroy()
+    static func savePhone(phone: String) {
+        var user = getUser()
+        if user == nil {
+            user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
         }
-        let kimlicUser = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as! KimlicUser
-        kimlicUser.phone = phone
+        user?.phone = phone
+        saveUser()
+    }
+    
+    static func saveEmail(email: String) {
+        var user = getUser()
+        if user == nil {
+            user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
+        }
+        user?.email = email
+        saveUser()
+    }
+    
+    static func saveName(firstName: String, lastName: String) {
+        var user = getUser()
+        if user == nil {
+            user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
+        }
+        user?.firstName = firstName
+        user?.lastName = lastName
+        saveUser()
+    }
+    
+    static func savePasscode(passcode: String?) {
+        var user = getUser()
+        if user == nil {
+            user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
+        }
+        user?.passcode = passcode
+        saveUser()
+    }
+    static func saveRecovery(isAccountRecovery: Bool) {
+        var user = getUser()
+        if user == nil {
+            user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
+        }
+        user?.accountRecovery = isAccountRecovery
+        saveUser()
+    }
+    
+    static func saveTouchID(isTouchID: Bool) {
+        var user = getUser()
+        if user == nil {
+            user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
+        }
+        user?.touchID = isTouchID
         saveUser()
     }
     
@@ -40,7 +83,6 @@ struct CoreDataHelper {
             print("Could not save \(error.localizedDescription)")
         }
     }
-    
     static func delete(kimlicUser: KimlicUser) {
         context.delete(kimlicUser)
         saveUser()

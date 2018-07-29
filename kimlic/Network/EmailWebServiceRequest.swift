@@ -8,8 +8,29 @@ import Foundation
 import ObjectMapper
 import Alamofire
 import SwiftyUserDefaults
+import web3swift
 
-class EmailWebServiceRequest: NSObject {
+final class EmailWebServiceRequest: NSObject {
+    
+    static func createEmail(email: String, success: @escaping () -> Void, failure: @escaping (String) -> Void) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        do {
+            let result = try appDelegate.quorumAPI?.setFieldMainData(type: QuorumAPI.AccountFieldMainType.email, value: email)
+            guard let receipt = result!["receipt"] as? TransactionReceipt, receipt.status == .ok else { failure("errorMessage".localized); return }
+            
+            let url = Constants.APIEndpoint.emailVerification.url()
+            let headers = ["account-address": appDelegate.quorumManager!.accountAddress.lowercased()]
+            let params =  ["email": email]
+            
+            WebServicesBaseRequest().executeRequest(url: url, method: .post, params: params, headers: headers, success: { (data) in
+                success()
+            }) { (error) in
+                failure(error ?? "errorMessage".localized)
+            }
+        } catch _ {
+            failure("errorMessage".localized)
+        }
+    }
     
     func getEmail(completion: @escaping (EmailResponse?) -> Void) {
         

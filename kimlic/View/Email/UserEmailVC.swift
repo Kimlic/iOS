@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyUserDefaults
 import web3swift
 import Alamofire
 
@@ -18,7 +17,7 @@ class UserEmailVC: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
-//    private lazy var accountStorageAdapterManager = AccountStorageAdapterManager()
+    //    private lazy var accountStorageAdapterManager = AccountStorageAdapterManager()
     
     // MARK: - Life
     
@@ -28,16 +27,21 @@ class UserEmailVC: UIViewController {
         setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        emailTextField.becomeFirstResponder()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        emailTextField.text = Defaults[.email]
+        let user = CoreDataHelper.getUser()
+        emailTextField.text = user?.email
     }
     
     // MARK: - IBActions
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        guard let email = emailTextField.text, email.isEmail else { showEmailError(); return }
+        guard let email = emailTextField.text, email.isEmail else { showEmailError("Invalid Email"); return }
         serverRequest(email)
     }
     
@@ -52,32 +56,20 @@ class UserEmailVC: UIViewController {
     }
     
     private func serverRequest(_ email: String) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        do {
-            let result = try appDelegate.quorumAPI?.setAccountFieldMainData(type: QuorumAPI.AccountFieldMainType.email, value: email)
-            print("RES: \(result)")
-            guard let receipt = result!["receipt"] as? TransactionReceipt, receipt.status == .ok else { showEmailError(); return }
-            
-            let url = Constants.APIEndpoint.emailVerification.url()
-            let headers = ["account-address": appDelegate.quorumManager!.accountAddress.lowercased()]
-            let params =  ["email": email]
-            let response = Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.queryString, headers: headers)
-                .responseJSON().value
-            print(response)
-            guard let json = response as? [String: [String: AnyObject]] else { showEmailError(); return }
-            guard let code = json["meta"]?["code"] as? Int, code == 201 else { showEmailError(); return }
-            
+        UIUtils.showLoading()
+        EmailWebServiceRequest.createEmail(email: email, success: {
+            UIUtils.stopLoading()
             UIUtils.navigateToVerification(self, email: email)
-        } catch _ {
-            showEmailError()
+        }) { (error) in
+            UIUtils.stopLoading()
+            self.showEmailError(error)
         }
     }
     
-    private func showEmailError() {
+    private func showEmailError(_ message: String) {
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else { return }
-            PopupGenerator.createPopup(controller: strongSelf, type: .warning, popup: Popup(title: "Wrong", message: "Wrong Email Address", buttonTitle: "Try! AGAIN"))
+            PopupGenerator.createPopup(controller: strongSelf, type: .warning, popup: Popup(title: "Wrong", message: message, buttonTitle: "Try! AGAIN"))
         }
     }
 }
