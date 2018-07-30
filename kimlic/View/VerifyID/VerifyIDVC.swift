@@ -141,42 +141,30 @@ class VerifyIDVC: UIViewController {
 
 extension VerifyIDVC: AVCapturePhotoCaptureDelegate {
     
-    
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
         if let sampleBuffer = photoSampleBuffer, let previewBuffer = previewPhotoSampleBuffer, let dataImage = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: previewBuffer) {
-            //            let image = UIImage(data: dataImage)?.resizeImage(size: CGSize(width: (self.viewIfLoaded?.frame.size.width)!, height: (self.viewIfLoaded?.frame.size.height)! * 0.5))
-            let image = UIImage(data: dataImage)
-            if let photo = cropImage(image!, toRect: croppedView.frame, viewWidth: croppedView.frame.width, viewHeight: croppedView.frame.height) {
-                CoreDataHelper.saveVerifyCardPhoto(frontPhoto: photo.getImageData(), backPhoto: photo.getImageData())
-            }
-            UIUtils.navigateToVerifyIDDetail(self)
+            activePageSettings(dataImage)
         }
     }
     
-//    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
-//        if let sampleBuffer = photoSampleBuffer, let previewBuffer = previewPhotoSampleBuffer, let dataImage = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: previewBuffer) {
-//            activePageSettings(dataImage)
-//        }
-//    }
-    
-//    private func activePageSettings(_ photoData: Data?) {
-//        guard let photo = cropImage(UIImage(data: photoData!)!, toRect: croppedView.frame, viewWidth: croppedView.frame.width, viewHeight: croppedView.frame.height) else {
-//            return
-//        }
-//        switch activePage {
-//        case .front:
-//            Animz.rotateY(layer: activePageImage.layer, angleFrom: 360, duration: 0.4) {
-//                self.activePageImage.image = UIImage(named: "camera_Screen_card_backside_icon")
-//            }
-//            activePageLabel.text = "Back Side of the document"
-//            activePage = .back
-//            cardFrontPhotoData = photo.getImageData()
-//        default:
-//            activePage = .front
-//            cardBackPhotoData = photo.getImageData()
-//            saveData()
-//        }
-//    }
+    private func activePageSettings(_ photoData: Data?) {
+        guard let photo = cropImage(UIImage(data: photoData!)!, toRect: croppedView.frame, viewWidth: self.view.frame.width, viewHeight: self.view.frame.height) else {
+            return
+        }
+        switch activePage {
+        case .front:
+            Animz.rotateY(layer: activePageImage.layer, angleFrom: 360, duration: 0.4) {
+                self.activePageImage.image = UIImage(named: "camera_Screen_card_backside_icon")
+            }
+            activePageLabel.text = "Back Side of the document"
+            activePage = .back
+            cardFrontPhotoData = photo.getImageData()
+        default:
+            activePage = .front
+            cardBackPhotoData = photo.getImageData()
+            saveData()
+        }
+    }
     
     // TODO: Call Web Service
     private func saveData() {
@@ -195,8 +183,8 @@ extension VerifyIDVC: AVCapturePhotoCaptureDelegate {
                                  inputImage.size.height / viewHeight)
         
         // Scale cropRect to handle images larger than shown-on-screen size
-        let cropZone = CGRect(x: cropRect.origin.x,
-                              y: cropRect.origin.y,
+        let cropZone = CGRect(x: cropRect.origin.x * imageViewScale,
+                              y: cropRect.origin.y * imageViewScale,
                               width: cropRect.size.width * imageViewScale,
                               height: cropRect.size.height * imageViewScale)
         
