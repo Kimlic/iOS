@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,32 +23,32 @@
             <objects>
                 <viewController storyboardIdentifier="MessageVC" id="Lm9-2z-If8" customClass="MessageVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4B6-TJ-eOb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="simple_background" translatesAutoresizingMaskIntoConstraints="NO" id="ySZ-b3-NjG">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gis-Iy-efY" userLabel="ContentView">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_circles" translatesAutoresizingMaskIntoConstraints="NO" id="ZPM-vC-cHG">
-                                        <rect key="frame" x="-227.66666666666666" y="-262" width="869.33333333333337" height="869"/>
+                                        <rect key="frame" x="-247" y="-295.5" width="869" height="869"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_clouds_effect" translatesAutoresizingMaskIntoConstraints="NO" id="W4u-px-UMD">
-                                        <rect key="frame" x="-10" y="181.66666666666666" width="434" height="351"/>
+                                        <rect key="frame" x="-10" y="148" width="395" height="351"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone_success_icon" translatesAutoresizingMaskIntoConstraints="NO" id="vgj-Rw-ua2">
-                                        <rect key="frame" x="134" y="103.66666666666669" width="147" height="138"/>
+                                        <rect key="frame" x="114" y="70" width="147" height="138"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="xnT-4l-tHV">
-                                        <rect key="frame" x="0.0" y="533.66666666666663" width="414" height="40.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="439" width="375" height="40.5"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Phone Number have been verified" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoC-a7-QxY">
-                                        <rect key="frame" x="30" y="574" width="354" height="55.333333333333371"/>
+                                        <rect key="frame" x="30" y="487.5" width="315" height="55.5"/>
                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -58,11 +58,11 @@
                                     <constraint firstItem="ZPM-vC-cHG" firstAttribute="centerY" secondItem="vgj-Rw-ua2" secondAttribute="centerY" id="2e2-Un-s28"/>
                                     <constraint firstItem="vgj-Rw-ua2" firstAttribute="centerX" secondItem="Gis-Iy-efY" secondAttribute="centerX" id="BLp-eR-jMv"/>
                                     <constraint firstItem="xnT-4l-tHV" firstAttribute="leading" secondItem="Gis-Iy-efY" secondAttribute="leading" id="C3o-PU-K6w"/>
-                                    <constraint firstItem="xnT-4l-tHV" firstAttribute="top" secondItem="W4u-px-UMD" secondAttribute="bottom" id="CqI-O5-kuQ"/>
+                                    <constraint firstItem="xnT-4l-tHV" firstAttribute="top" secondItem="W4u-px-UMD" secondAttribute="bottom" constant="-60" id="CqI-O5-kuQ"/>
                                     <constraint firstItem="W4u-px-UMD" firstAttribute="centerY" secondItem="Gis-Iy-efY" secondAttribute="centerY" id="D60-Dc-PLz"/>
                                     <constraint firstItem="W4u-px-UMD" firstAttribute="leading" secondItem="Gis-Iy-efY" secondAttribute="leading" constant="-10" id="DnL-Cc-nxo"/>
                                     <constraint firstItem="W4u-px-UMD" firstAttribute="top" secondItem="vgj-Rw-ua2" secondAttribute="bottom" constant="-60" id="NAp-CM-OMG"/>
-                                    <constraint firstItem="UoC-a7-QxY" firstAttribute="top" secondItem="xnT-4l-tHV" secondAttribute="bottom" id="UdY-eE-ZcR"/>
+                                    <constraint firstItem="UoC-a7-QxY" firstAttribute="top" secondItem="xnT-4l-tHV" secondAttribute="bottom" constant="8" id="UdY-eE-ZcR"/>
                                     <constraint firstItem="W4u-px-UMD" firstAttribute="centerX" secondItem="Gis-Iy-efY" secondAttribute="centerX" id="b2l-04-Voe"/>
                                     <constraint firstAttribute="trailing" secondItem="W4u-px-UMD" secondAttribute="trailing" constant="-10" id="dwF-fI-2Ig"/>
                                     <constraint firstItem="ZPM-vC-cHG" firstAttribute="centerX" secondItem="vgj-Rw-ua2" secondAttribute="centerX" id="iaQ-LB-TZV"/>

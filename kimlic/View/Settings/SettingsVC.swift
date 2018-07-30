@@ -43,6 +43,8 @@ class SettingsTableVC: UITableViewController {
     @IBOutlet var settingsTableView: UITableView!
     
     var user: KimlicUser?
+    var isTouchID: Bool = false
+    var isPassCode: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,14 +90,17 @@ class SettingsTableVC: UITableViewController {
     }
     
     @IBAction func touchIDSwitchChange(_ sender: UISwitch) {
-        if sender.isOn {
-            UIUtils.navigateToTouchID(self)
+        isTouchID = sender.isOn
+        warningIconTouchID.isHidden = isTouchID
+        UIUtils.navigateToTouchID(self) { (touchIDVC) in
+            CoreDataHelper.saveTouchID(isTouchID: self.isTouchID)
+            UIUtils.navigateToMessage(touchIDVC, messageType: .touchIDSuccessfull)            
         }
-        warningIconTouchID.isHidden = sender.isOn
     }
     
     @IBAction func accountSwitchChange(_ sender: UISwitch) {
         warningIconAccount.isHidden = sender.isOn
+        CoreDataHelper.saveRecovery(isAccountRecovery: sender.isOn)
         if sender.isOn {
             UIUtils.navigateToMnemonicCreate(self)
         }
@@ -104,11 +109,13 @@ class SettingsTableVC: UITableViewController {
     @IBAction func passcodeSwitchChange(_ sender: UISwitch) {
         warningIconPasscode.isHidden = sender.isOn
         if sender.isOn {
-            UIUtils.showPasscodeVC(vc: self, pageType: .create)
-        }        
+            UIUtils.showPasscodeVC(vc: self, pageType: .create) {
+                self.settingsTableView.reloadData()
+            }
+        }else {
+            UIUtils.showPasscodeVC(vc: self, pageType: .delete) {
+                self.settingsTableView.reloadData()
+            }
+        }
     }
-    
-    
-    
-    
 }

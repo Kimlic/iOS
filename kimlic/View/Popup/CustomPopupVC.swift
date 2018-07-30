@@ -86,9 +86,7 @@ class CustomPopupVC: UIViewController {
         switch sender.tag {
         case 100:
             self.dismiss(animated: true)
-            UIUtils.showPasscodeVC(vc: self.rootVC, pageType: .create, tmpCode: nil) {
-                UIUtils.navigateToMessage(self.rootVC, messageType: .passcodeSuccessfull)
-            }
+            UIUtils.showPasscodeVC(vc: self.rootVC, pageType: .create)
         case 101:
             self.dismiss(animated: true)
             UIUtils.navigateToMnemonicCreate(self.rootVC)

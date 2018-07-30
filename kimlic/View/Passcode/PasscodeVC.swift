@@ -21,6 +21,8 @@ class PasscodeVC: UIViewController {
     var rootVC: UIViewController!
     let user = CoreDataHelper.getUser()
     
+    var cancelCompletion: (() -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +31,7 @@ class PasscodeVC: UIViewController {
     }
     
     @IBAction func btnCancelPressed(_ sender: Any) {
+        cancelCompletion?()
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -78,7 +81,9 @@ extension PasscodeVC: PasswordInputCompleteProtocol {
         case .create:
             UIUtils.showLoading()
             dismiss(animated: true) {
-                UIUtils.showPasscodeVC(vc: self.rootVC, pageType: .createConfirm, tmpCode: input)
+                UIUtils.showPasscodeVC(vc: self.rootVC, pageType: .createConfirm, tmpCode: input) {
+                    self.cancelCompletion?()
+                }
                 UIUtils.stopLoading()
             }
         case .createConfirm:

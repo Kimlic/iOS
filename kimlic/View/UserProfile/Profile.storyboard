@@ -63,7 +63,7 @@
                                             <action selector="addPhotoButtonPressed:" destination="x7F-pS-psq" eventType="touchUpInside" id="Bv7-9d-B6B"/>
                                         </connections>
                                     </button>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_right_hex" translatesAutoresizingMaskIntoConstraints="NO" id="TLY-v9-Vmx">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_right_hex" translatesAutoresizingMaskIntoConstraints="NO" id="TLY-v9-Vmx">
                                         <rect key="frame" x="292" y="176" width="444" height="408"/>
                                     </imageView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="im9-xj-fSo">

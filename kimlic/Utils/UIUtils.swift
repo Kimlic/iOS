@@ -74,9 +74,10 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
-    static func navigateToTouchID(_ vc: UIViewController) {
+    static func navigateToTouchID(_ vc: UIViewController, successCompletion: ((TouchIDVC)->Void)? = nil ) {
         let storyboard = AppStoryboard.TouchID.instance
         let tarVC = storyboard.instantiateViewController(withIdentifier: TouchIDVC.className) as! TouchIDVC
+        tarVC.succussCompletion = successCompletion
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
@@ -261,13 +262,15 @@ public class UIUtils {
         NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
     }
     
-    static func showPasscodeVC(vc: UIViewController, pageType: PasscodePageType, tmpCode: String? = nil, completion: (() -> Swift.Void)? = nil) {
+    // completion -> Page popover
+    static func showPasscodeVC(vc: UIViewController, pageType: PasscodePageType, tmpCode: String? = nil, completion: (() -> Swift.Void)? = nil, cancelCompletion: (() -> Void)? = nil) {
         let storyboard = AppStoryboard.Passcode.instance
         let passVC = storyboard.instantiateViewController(withIdentifier: PasscodeVC.className) as! PasscodeVC
         passVC.modalPresentationStyle = .overCurrentContext
         passVC.pageType = pageType
         passVC.tmpCode = tmpCode
         passVC.rootVC = vc
+        passVC.cancelCompletion = cancelCompletion
         vc.present(passVC, animated: true, completion: {
             completion?()
         })

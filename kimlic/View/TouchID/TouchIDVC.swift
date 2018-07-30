@@ -10,6 +10,8 @@ import UIKit
 import LocalAuthentication
 
 class TouchIDVC: UIViewController {
+    
+    var succussCompletion: ((TouchIDVC) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +42,9 @@ extension TouchIDVC {
             
             localAuthenticationContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reasonString) { success, evaluateError in
                 if success {
-                    CoreDataHelper.saveTouchID(isTouchID: true)
-                    UIUtils.navigateToTouchID(self)
+                    DispatchQueue.main.async {
+                        self.succussCompletion?(self)
+                    }                    
                 } else {
                     //TODO: User did not authenticate successfully, look at error and take appropriate action
                     guard let error = evaluateError else {

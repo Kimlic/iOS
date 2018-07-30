@@ -39,7 +39,7 @@ class TermsAndConditionsVC: UIViewController {
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 }

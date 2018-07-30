@@ -49,7 +49,7 @@ class ProfileVC: UIViewController {
     
     // MARK: Functions
     func controlRisks() {
-        if user?.passcode == nil && user?.accountRecovery == nil{
+        if user?.passcode == nil && (user?.accountRecovery == nil || !(user?.accountRecovery)!){
             PopupGenerator.twoRisks(controller: self)
         }else if user?.passcode == nil{
             PopupGenerator.passcodeRisk(controller: self)
