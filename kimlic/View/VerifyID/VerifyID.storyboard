@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,21 +9,233 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--VerifyIDVC-->
         <scene sceneID="cPj-zA-Bsg">
             <objects>
-                <viewController id="1nJ-ZH-1zw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VerifyIDVC" id="1nJ-ZH-1zw" customClass="VerifyIDVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pPc-OZ-Toh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxr-n0-jY4" userLabel="ChoseDocumentView">
+                                <rect key="frame" x="40" y="228" width="240" height="340"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swp-g6-bs4" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="254" width="240" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="A42-zG-m3E"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
+                                        <state key="normal" title="ID Card">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="idCardButtonPressed:" destination="1nJ-ZH-1zw" eventType="touchUpInside" id="eTV-Se-ytd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2Q-TG-qIb" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="183" width="240" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="S90-Lj-baV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
+                                        <state key="normal" title="Drivers License">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="driverLicenseButtonPressed:" destination="1nJ-ZH-1zw" eventType="touchUpInside" id="XTv-B0-UNM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M32-rx-bJM" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="112" width="240" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="Udi-S8-aGT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
+                                        <state key="normal" title="Passport">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="passportButtonPressed:" destination="1nJ-ZH-1zw" eventType="touchUpInside" id="gr7-Ab-Fit"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chose Your Document Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V51-8g-lvs">
+                                        <rect key="frame" x="6.5" y="74" width="228" height="23"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_ID_icon_sml" translatesAutoresizingMaskIntoConstraints="NO" id="bBr-NA-b60">
+                                        <rect key="frame" x="87.5" y="4" width="65" height="62"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="swp-g6-bs4" secondAttribute="trailing" id="4wf-f7-KBP"/>
+                                    <constraint firstItem="V2Q-TG-qIb" firstAttribute="leading" secondItem="Lxr-n0-jY4" secondAttribute="leading" id="9oI-rC-mb1"/>
+                                    <constraint firstItem="swp-g6-bs4" firstAttribute="top" secondItem="V2Q-TG-qIb" secondAttribute="bottom" constant="15" id="E8p-ee-OEx"/>
+                                    <constraint firstItem="swp-g6-bs4" firstAttribute="leading" secondItem="Lxr-n0-jY4" secondAttribute="leading" id="KxK-oE-kgM"/>
+                                    <constraint firstItem="V51-8g-lvs" firstAttribute="top" secondItem="bBr-NA-b60" secondAttribute="bottom" constant="8" id="RSt-SM-NQT"/>
+                                    <constraint firstAttribute="bottom" secondItem="swp-g6-bs4" secondAttribute="bottom" constant="30" id="S9i-5K-l14"/>
+                                    <constraint firstItem="V2Q-TG-qIb" firstAttribute="top" secondItem="M32-rx-bJM" secondAttribute="bottom" constant="15" id="c9K-qm-cwl"/>
+                                    <constraint firstAttribute="height" constant="340" id="h8P-hJ-eyX"/>
+                                    <constraint firstAttribute="trailing" secondItem="V2Q-TG-qIb" secondAttribute="trailing" id="kUh-E4-hzQ"/>
+                                    <constraint firstItem="M32-rx-bJM" firstAttribute="leading" secondItem="Lxr-n0-jY4" secondAttribute="leading" id="leN-tl-Cm6"/>
+                                    <constraint firstItem="M32-rx-bJM" firstAttribute="top" secondItem="V51-8g-lvs" secondAttribute="bottom" constant="15" id="o9a-O3-u8t"/>
+                                    <constraint firstItem="bBr-NA-b60" firstAttribute="centerX" secondItem="Lxr-n0-jY4" secondAttribute="centerX" id="wj8-vM-8cq"/>
+                                    <constraint firstAttribute="trailing" secondItem="M32-rx-bJM" secondAttribute="trailing" id="xE8-4i-oIf"/>
+                                    <constraint firstItem="V51-8g-lvs" firstAttribute="centerX" secondItem="Lxr-n0-jY4" secondAttribute="centerX" id="zCc-7R-jkZ"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkj-Ou-AdO" userLabel="ContentView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card_masked_cam_background" translatesAutoresizingMaskIntoConstraints="NO" id="0bF-Gr-Jli">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKW-bg-Ivb">
+                                        <rect key="frame" x="128.5" y="474" width="64" height="64"/>
+                                        <state key="normal" image="shutter_button"/>
+                                        <connections>
+                                            <action selector="takePhotoButtonPressed:" destination="1nJ-ZH-1zw" eventType="touchUpInside" id="Rfs-hk-8yr"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Front Side of the document" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIG-pA-Fph">
+                                        <rect key="frame" x="59.5" y="446" width="203" height="20"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_Screen_card_frontside_icon" translatesAutoresizingMaskIntoConstraints="NO" id="eP8-d6-M0Q">
+                                        <rect key="frame" x="126.5" y="382" width="69" height="56"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y2R-n9-RWH" userLabel="CroppedView">
+                                        <rect key="frame" x="29" y="172" width="260" height="158"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0bF-Gr-Jli" firstAttribute="leading" secondItem="bkj-Ou-AdO" secondAttribute="leading" id="9O1-Ye-av5"/>
+                                    <constraint firstItem="gIG-pA-Fph" firstAttribute="centerX" secondItem="MKW-bg-Ivb" secondAttribute="centerX" id="Acc-GF-uuU"/>
+                                    <constraint firstItem="eP8-d6-M0Q" firstAttribute="centerX" secondItem="gIG-pA-Fph" secondAttribute="centerX" id="Cfs-dz-xhy"/>
+                                    <constraint firstItem="0bF-Gr-Jli" firstAttribute="top" secondItem="bkj-Ou-AdO" secondAttribute="top" id="Epc-Jy-kQh"/>
+                                    <constraint firstAttribute="bottom" secondItem="MKW-bg-Ivb" secondAttribute="bottom" constant="30" id="Iv1-tr-t2z"/>
+                                    <constraint firstItem="MKW-bg-Ivb" firstAttribute="top" secondItem="gIG-pA-Fph" secondAttribute="bottom" constant="8" id="JXO-MF-y8O"/>
+                                    <constraint firstItem="MKW-bg-Ivb" firstAttribute="centerX" secondItem="bkj-Ou-AdO" secondAttribute="centerX" id="TI8-lj-dGf"/>
+                                    <constraint firstAttribute="bottom" secondItem="0bF-Gr-Jli" secondAttribute="bottom" id="cnO-Qf-aJP"/>
+                                    <constraint firstAttribute="trailing" secondItem="0bF-Gr-Jli" secondAttribute="trailing" id="dci-NQ-1PP"/>
+                                    <constraint firstItem="gIG-pA-Fph" firstAttribute="top" secondItem="eP8-d6-M0Q" secondAttribute="bottom" constant="8" id="fyK-zb-eOY"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaH-s2-azO">
+                                <rect key="frame" x="20" y="28" width="25" height="25"/>
+                                <state key="normal" image="white_close_button"/>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="1nJ-ZH-1zw" eventType="touchUpInside" id="PNm-6s-uvX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Lxr-n0-jY4" secondAttribute="bottom" id="5ti-oZ-RRd"/>
+                            <constraint firstItem="LaH-s2-azO" firstAttribute="leading" secondItem="0ez-EA-CBm" secondAttribute="leading" constant="20" id="AKG-V8-X26"/>
+                            <constraint firstAttribute="trailing" secondItem="Lxr-n0-jY4" secondAttribute="trailing" constant="40" id="EES-Wr-oBV"/>
+                            <constraint firstItem="Lxr-n0-jY4" firstAttribute="leading" secondItem="pPc-OZ-Toh" secondAttribute="leading" constant="40" id="Hn8-hy-UNa"/>
+                            <constraint firstItem="LaH-s2-azO" firstAttribute="top" secondItem="0ez-EA-CBm" secondAttribute="top" constant="8" id="UGI-fL-2eN"/>
+                            <constraint firstAttribute="bottom" secondItem="bkj-Ou-AdO" secondAttribute="bottom" id="UGb-DN-a4I"/>
+                            <constraint firstItem="bkj-Ou-AdO" firstAttribute="leading" secondItem="pPc-OZ-Toh" secondAttribute="leading" id="eFS-T1-2sC"/>
+                            <constraint firstAttribute="trailing" secondItem="bkj-Ou-AdO" secondAttribute="trailing" id="i7n-ps-lr8"/>
+                            <constraint firstItem="bkj-Ou-AdO" firstAttribute="top" secondItem="pPc-OZ-Toh" secondAttribute="top" id="iKW-tJ-fYk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0ez-EA-CBm"/>
                     </view>
+                    <connections>
+                        <outlet property="activePageImage" destination="eP8-d6-M0Q" id="6NG-9e-2ko"/>
+                        <outlet property="activePageLabel" destination="gIG-pA-Fph" id="RjW-Fl-GkT"/>
+                        <outlet property="bgImage" destination="0bF-Gr-Jli" id="tpl-VL-Qfd"/>
+                        <outlet property="choseDocumentView" destination="Lxr-n0-jY4" id="Gkg-Th-SHA"/>
+                        <outlet property="contentView" destination="bkj-Ou-AdO" id="CbN-DV-cNf"/>
+                        <outlet property="croppedView" destination="Y2R-n9-RWH" id="J76-vU-92n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJ7-qJ-NCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-620" y="-508"/>
+            <point key="canvasLocation" x="-2079.375" y="-829.22535211267609"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Card_masked_cam_background" width="376" height="669"/>
+        <image name="camera_Screen_card_frontside_icon" width="69" height="56"/>
+        <image name="shutter_button" width="64" height="64"/>
+        <image name="white_ID_icon_sml" width="65" height="62"/>
+        <image name="white_close_button" width="25" height="25"/>
+    </resources>
 </document>

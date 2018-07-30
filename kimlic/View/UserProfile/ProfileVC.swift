@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyUserDefaults
 
 class ProfileVC: UIViewController {
     
@@ -39,7 +38,8 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func settingsButtonPressed(_ sender: Any) {
-        UIUtils.navigateToSettings(self)
+//        UIUtils.navigateToSettings(self)
+        UIUtils.navigateToVerifyIDDetail(self)
     }
     
     //Opens the camera when profile picture is clicked
@@ -59,7 +59,7 @@ class ProfileVC: UIViewController {
     }
     
     fileprivate func setupView() {
-        guard let photoData = Defaults[.userPhoto], let photo = UIImage(data: photoData) else {
+        guard let photoData = user?.profilePhoto, let photo = UIImage(data: photoData) else {
             return
         }
         profileImage.image = photo.profileImageMask()
@@ -122,6 +122,8 @@ class BodyTableVC: UITableViewController {
             UIUtils.navigateToPhoneNumber(self)
         case 4: // email
             UIUtils.navigateToEmail(self)
+        case 5: // verify id
+            UIUtils.navigateToVerifyID(self)
         default:
             print("Add your full name")
         }

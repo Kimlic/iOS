@@ -115,7 +115,7 @@
 		7CA54B1D210EB8FA002555C7 /* VerifyIDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA54B1C210EB8FA002555C7 /* VerifyIDVC.swift */; };
 		7CA54B1F210EB942002555C7 /* VerifyID.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA54B1E210EB942002555C7 /* VerifyID.storyboard */; };
 		7CA54B21210EBD5A002555C7 /* VerifyIDDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA54B20210EBD5A002555C7 /* VerifyIDDetail.storyboard */; };
-		7CA54B23210EBD6A002555C7 /* VerifyIDDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA54B22210EBD6A002555C7 /* VerifyIDDetail.swift */; };
+		7CA54B23210EBD6A002555C7 /* VerifyIDDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA54B22210EBD6A002555C7 /* VerifyIDDetailVC.swift */; };
 		7CB516FB20D00DC0006FF06D /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CB516FA20D00DC0006FF06D /* UserInfo.storyboard */; };
 		7CB516FD20D00DE2006FF06D /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB516FC20D00DE2006FF06D /* UserInfoVC.swift */; };
 		7CB5674F1FB9C28E00F03D24 /* TutorialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB5674E1FB9C28E00F03D24 /* TutorialsVC.swift */; };
@@ -242,7 +242,7 @@
 		7CA54B1C210EB8FA002555C7 /* VerifyIDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyIDVC.swift; sourceTree = "<group>"; };
 		7CA54B1E210EB942002555C7 /* VerifyID.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VerifyID.storyboard; sourceTree = "<group>"; };
 		7CA54B20210EBD5A002555C7 /* VerifyIDDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VerifyIDDetail.storyboard; sourceTree = "<group>"; };
-		7CA54B22210EBD6A002555C7 /* VerifyIDDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyIDDetail.swift; sourceTree = "<group>"; };
+		7CA54B22210EBD6A002555C7 /* VerifyIDDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyIDDetailVC.swift; sourceTree = "<group>"; };
 		7CB516FA20D00DC0006FF06D /* UserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
 		7CB516FC20D00DE2006FF06D /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		7CB5674E1FB9C28E00F03D24 /* TutorialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialsVC.swift; sourceTree = "<group>"; };
@@ -584,10 +584,10 @@
 		7CA54B1B210EB88D002555C7 /* VerifyID */ = {
 			isa = PBXGroup;
 			children = (
-				7CA54B1C210EB8FA002555C7 /* VerifyIDVC.swift */,
 				7CA54B1E210EB942002555C7 /* VerifyID.storyboard */,
+				7CA54B1C210EB8FA002555C7 /* VerifyIDVC.swift */,
 				7CA54B20210EBD5A002555C7 /* VerifyIDDetail.storyboard */,
-				7CA54B22210EBD6A002555C7 /* VerifyIDDetail.swift */,
+				7CA54B22210EBD6A002555C7 /* VerifyIDDetailVC.swift */,
 			);
 			path = VerifyID;
 			sourceTree = "<group>";
@@ -968,7 +968,7 @@
 				7C929D661FCC53E6001B9E22 /* PermissionDetailResponse.swift in Sources */,
 				7CCE2C861FBB32D400CC0E71 /* UserProfileVC.swift in Sources */,
 				7C6FC84F20CE730E0026AF1C /* ProfileVC.swift in Sources */,
-				7CA54B23210EBD6A002555C7 /* VerifyIDDetail.swift in Sources */,
+				7CA54B23210EBD6A002555C7 /* VerifyIDDetailVC.swift in Sources */,
 				0F359D941FC098F7007E07DC /* NSObjectExt.swift in Sources */,
 				7C8A80CF1FBD839E009E74F9 /* PermissionCell.swift in Sources */,
 				7C96874D1FBC949200DF4AB8 /* AllPermissionsVC.swift in Sources */,

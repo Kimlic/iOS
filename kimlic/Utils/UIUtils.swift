@@ -114,6 +114,18 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
+    static func navigateToVerifyIDDetail(_ vc: UIViewController){
+        let storyboard = AppStoryboard.VerifyIDDetail.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: VerifyIDDetailVC.className) as! VerifyIDDetailVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
+    static func navigateToVerifyID(_ vc: UIViewController){
+        let storyboard = AppStoryboard.VerifyID.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: VerifyIDVC.className) as! VerifyIDVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
     static func navigateToProfileCamera(_ vc: UIViewController){
         let storyboard = AppStoryboard.ProfileCamera.instance
         let tarVC = storyboard.instantiateViewController(withIdentifier: ProfileCameraVC.className) as! ProfileCameraVC
