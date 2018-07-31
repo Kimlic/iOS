@@ -186,6 +186,7 @@ extension VerifyIDVC: AVCapturePhotoCaptureDelegate {
         
         CoreDataHelper.saveVerifyCardPhoto(frontPhoto: cardFrontPhotoData, backPhoto: cardBackPhotoData)
         UIUtils.stopLoading()
-        UIUtils.navigateToMessage(self, messageType: .verifyIDSuccessfull)
+        UIUtils.navigateToVerifyIDDetail(self)
+//        UIUtils.navigateToMessage(self, messageType: .verifyIDSuccessfull)
     }
 }
