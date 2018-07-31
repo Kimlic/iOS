@@ -69,6 +69,26 @@ public class Animz: UIView{
             })
         })
     }
+    
+    static func fadeIn(view: UIView!, duration: Double, completion: (() -> ())? = nil) {
+        view.alpha = 0.0
+        view.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+        
+        UIView.animate(withDuration: duration, animations: {
+            view.alpha = 1.0
+            view.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        }, completion: { finished in
+            if finished {
+                UIView.animate(withDuration: 0.2, animations: {
+                    view.transform = CGAffineTransform.identity
+                }, completion: { (finish) in
+                    completion?()
+                })
+            }
+        })
+    }
+    
+    
     static func fadeIn(image: UIImageView!, duration: Double, completion: (() -> ())? = nil) {
         
         image.alpha = 0.0

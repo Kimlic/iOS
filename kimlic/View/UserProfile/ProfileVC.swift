@@ -106,7 +106,7 @@ class BodyTableVC: UITableViewController {
         case 4: // email
             cell.textLabel?.text = user?.email ?? "Add your email"
         default:
-            print("Add your full name")
+            break
         }
     }
     

@@ -101,33 +101,11 @@ extension ProfileCameraVC: AVCapturePhotoCaptureDelegate {
         if let sampleBuffer = photoSampleBuffer, let previewBuffer = previewPhotoSampleBuffer, let dataImage = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: previewBuffer) {
 //            let image = UIImage(data: dataImage)?.resizeImage(size: CGSize(width: (self.viewIfLoaded?.frame.size.width)!, height: (self.viewIfLoaded?.frame.size.height)! * 0.5))
             let image = UIImage(data: dataImage)
-            if let photo = cropImage(image!, toRect: croppedView.frame, viewWidth: self.view.frame.width, viewHeight: self.view.frame.height) {
+            if let photo = image?.cropImage(toRect: croppedView.frame, viewWidth: self.view.frame.width, viewHeight: self.view.frame.height) {
                 CoreDataHelper.saveProfilePhoto(photo: photo.getImageData())
             }
             self.navigationController?.popViewController(animated: true)
         }
-    }
-    
-    func cropImage(_ inputImage: UIImage, toRect cropRect: CGRect, viewWidth: CGFloat, viewHeight: CGFloat) -> UIImage?
-    {
-        let imageViewScale = max(inputImage.size.width / viewWidth,
-                                 inputImage.size.height / viewHeight)
-        
-        // Scale cropRect to handle images larger than shown-on-screen size
-        let cropZone = CGRect(x: cropRect.origin.x * imageViewScale,
-                              y: cropRect.origin.y * imageViewScale,
-                              width: cropRect.size.width * imageViewScale,
-                              height: cropRect.size.height * imageViewScale)
-        
-        // Perform cropping in Core Graphics
-        guard let cutImageRef: CGImage = inputImage.cgImage?.cropping(to:cropZone)
-            else {
-                return nil
-        }
-        
-        // Return image to UIImage
-        let croppedImage: UIImage = UIImage(cgImage: cutImageRef)
-        return croppedImage
     }
     
 }

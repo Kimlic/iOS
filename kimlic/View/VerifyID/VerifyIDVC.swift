@@ -89,9 +89,12 @@ class VerifyIDVC: UIViewController {
     }
     
     fileprivate func takePhoto() {
+        UIUtils.showLoading()
         let settings = AVCapturePhotoSettings()
-        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first
-        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType]
+        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
+        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType,
+                             kCVPixelBufferWidthKey as String: 160,
+                             kCVPixelBufferHeightKey as String: 160]
         settings.previewPhotoFormat = previewFormat
         photoOutput?.capturePhoto(with: settings, delegate: self)
     }
@@ -145,25 +148,34 @@ extension VerifyIDVC: AVCapturePhotoCaptureDelegate {
         if let sampleBuffer = photoSampleBuffer, let previewBuffer = previewPhotoSampleBuffer, let dataImage = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: previewBuffer) {
             activePageSettings(dataImage)
         }
+        UIUtils.stopLoading()
     }
     
     private func activePageSettings(_ photoData: Data?) {
-        guard let photo = cropImage(UIImage(data: photoData!)!, toRect: croppedView.frame, viewWidth: self.view.frame.width, viewHeight: self.view.frame.height) else {
+        
+        guard let photo = UIImage(data: photoData!)?.cropImage(toRect: croppedView.frame, viewWidth: self.view.frame.width, viewHeight: self.view.frame.height) else {
             return
         }
+        
         switch activePage {
         case .front:
-            Animz.rotateY(layer: activePageImage.layer, angleFrom: 360, duration: 0.4) {
-                self.activePageImage.image = UIImage(named: "camera_Screen_card_backside_icon")
-            }
-            activePageLabel.text = "Back Side of the document"
-            activePage = .back
-            cardFrontPhotoData = photo.getImageData()
+            frontRotateSetValue(photo)
         default:
+            activePageLabel.text = "Front Side"
             activePage = .front
             cardBackPhotoData = photo.getImageData()
             saveData()
         }
+    }
+    
+    private func frontRotateSetValue(_ photo: UIImage) {
+        Animz.rotateY(layer: activePageImage.layer, angleFrom: 360, duration: 0.4) {
+            self.activePageImage.image = UIImage(named: "camera_Screen_card_backside_icon")
+        }
+        activePageLabel.text = "Back Side"
+        Animz.fadeIn(view: activePageLabel, duration: 0.4)
+        activePage = .back
+        cardFrontPhotoData = photo.getImageData()
     }
     
     // TODO: Call Web Service
@@ -174,28 +186,6 @@ extension VerifyIDVC: AVCapturePhotoCaptureDelegate {
         
         CoreDataHelper.saveVerifyCardPhoto(frontPhoto: cardFrontPhotoData, backPhoto: cardBackPhotoData)
         UIUtils.stopLoading()
-        UIUtils.navigateToVerifyIDDetail(self)
-    }
-    
-    func cropImage(_ inputImage: UIImage, toRect cropRect: CGRect, viewWidth: CGFloat, viewHeight: CGFloat) -> UIImage?
-    {
-        let imageViewScale = max(inputImage.size.width / viewWidth,
-                                 inputImage.size.height / viewHeight)
-        
-        // Scale cropRect to handle images larger than shown-on-screen size
-        let cropZone = CGRect(x: cropRect.origin.x * imageViewScale,
-                              y: cropRect.origin.y * imageViewScale,
-                              width: cropRect.size.width * imageViewScale,
-                              height: cropRect.size.height * imageViewScale)
-        
-        // Perform cropping in Core Graphics
-        guard let cutImageRef: CGImage = inputImage.cgImage?.cropping(to:cropZone)
-            else {
-                return nil
-        }
-        
-        // Return image to UIImage
-        let croppedImage: UIImage = UIImage(cgImage: cutImageRef)
-        return croppedImage
+        UIUtils.navigateToMessage(self, messageType: .verifyIDSuccessfull)
     }
 }
