@@ -132,6 +132,12 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
+    static func navigateToQRCode(_ vc: UIViewController){
+        let storyboard = AppStoryboard.QRCode.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: QRCodeVC.className) as! QRCodeVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
     // Message = Constants > StaticMessage
     static func navigateToMessage(_ vc: UIViewController, messageType: MessageType, message: Message? = nil){
         let storyboard = AppStoryboard.Message.instance

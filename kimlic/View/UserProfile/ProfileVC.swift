@@ -33,13 +33,13 @@ class ProfileVC: UIViewController {
     }
     
     // MARK: IBActions
+    
     @IBAction func scanButtonPressed(_ sender: Any) {
-           
+        UIUtils.navigateToQRCode(self)
     }
     
     @IBAction func settingsButtonPressed(_ sender: Any) {
-//        UIUtils.navigateToSettings(self)
-        UIUtils.navigateToVerifyIDDetail(self)
+        UIUtils.navigateToSettings(self)
     }
     
     //Opens the camera when profile picture is clicked

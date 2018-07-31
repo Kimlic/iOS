@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CodeVC-->
+        <scene sceneID="5zb-YC-U9D">
+            <objects>
+                <viewController storyboardIdentifier="QRCodeVC" id="Hg8-Yk-cg4" customClass="QRCodeVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4qw-yN-9Kq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irN-BK-HZx" userLabel="CameraView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="te4-NC-Oi0" userLabel="CloseButton">
+                                <rect key="frame" x="20" y="28" width="25" height="25"/>
+                                <state key="normal" image="white_close_button"/>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="Hg8-Yk-cg4" eventType="touchUpInside" id="enT-gK-TS7"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QR_code_cam_background" translatesAutoresizingMaskIntoConstraints="NO" id="8RB-vl-bEs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNN-1b-kkt" userLabel="ScanAreaView">
+                                <rect key="frame" x="55" y="145" width="303" height="304"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="irN-BK-HZx" secondAttribute="trailing" id="DMZ-31-diC"/>
+                            <constraint firstItem="irN-BK-HZx" firstAttribute="leading" secondItem="4qw-yN-9Kq" secondAttribute="leading" id="GVQ-4b-0Bq"/>
+                            <constraint firstItem="irN-BK-HZx" firstAttribute="top" secondItem="4qw-yN-9Kq" secondAttribute="top" id="K0X-P5-r79"/>
+                            <constraint firstItem="8RB-vl-bEs" firstAttribute="top" secondItem="4qw-yN-9Kq" secondAttribute="top" id="KrR-T6-gBN"/>
+                            <constraint firstItem="te4-NC-Oi0" firstAttribute="leading" secondItem="Jmp-Aa-7TU" secondAttribute="leading" constant="20" id="Ss9-CM-54Q"/>
+                            <constraint firstItem="8RB-vl-bEs" firstAttribute="leading" secondItem="4qw-yN-9Kq" secondAttribute="leading" id="Tsd-L9-6KY"/>
+                            <constraint firstAttribute="bottom" secondItem="irN-BK-HZx" secondAttribute="bottom" id="VEc-Gq-eI5"/>
+                            <constraint firstItem="te4-NC-Oi0" firstAttribute="top" secondItem="Jmp-Aa-7TU" secondAttribute="top" constant="8" id="bbu-FD-ReZ"/>
+                            <constraint firstAttribute="bottom" secondItem="8RB-vl-bEs" secondAttribute="bottom" id="pG3-hK-UQT"/>
+                            <constraint firstAttribute="trailing" secondItem="8RB-vl-bEs" secondAttribute="trailing" id="xeO-lw-YMU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jmp-Aa-7TU"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="irN-BK-HZx" id="gkJ-D8-KJY"/>
+                        <outlet property="scanAreaView" destination="aNN-1b-kkt" id="O19-Ab-tVH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3vF-EF-Yn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1516" y="2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="QR_code_cam_background" width="376" height="667"/>
+        <image name="white_close_button" width="25" height="25"/>
+    </resources>
+</document>

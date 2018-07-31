@@ -60,6 +60,8 @@
 		7C4838591FB5F62500FC864A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4838581FB5F62500FC864A /* Assets.xcassets */; };
 		7C48385C1FB5F62500FC864A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C48385A1FB5F62500FC864A /* LaunchScreen.storyboard */; };
 		7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */; };
+		7C5FD1412110368A00229CE8 /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5FD1402110368A00229CE8 /* QRCodeVC.swift */; };
+		7C5FD1432110369800229CE8 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5FD1422110369800229CE8 /* QRCode.storyboard */; };
 		7C68A83220DA11D5001DDDC8 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68A83120DA11D5001DDDC8 /* GradientColor.swift */; };
 		7C68A83620DA1267001DDDC8 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68A83520DA1267001DDDC8 /* UIColorExt.swift */; };
 		7C68A83820DA12A1001DDDC8 /* UIFontExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68A83720DA12A1001DDDC8 /* UIFontExt.swift */; };
@@ -188,6 +190,8 @@
 		7C48385B1FB5F62500FC864A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C48385D1FB5F62500FC864A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateExt.swift; sourceTree = "<group>"; };
+		7C5FD1402110368A00229CE8 /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
+		7C5FD1422110369800229CE8 /* QRCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
 		7C68A83120DA11D5001DDDC8 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColor.swift; sourceTree = "<group>"; };
 		7C68A83520DA1267001DDDC8 /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
 		7C68A83720DA12A1001DDDC8 /* UIFontExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExt.swift; sourceTree = "<group>"; };
@@ -482,6 +486,15 @@
 			path = UserInfo;
 			sourceTree = "<group>";
 		};
+		7C5FD13F2110365B00229CE8 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				7C5FD1402110368A00229CE8 /* QRCodeVC.swift */,
+				7C5FD1422110369800229CE8 /* QRCode.storyboard */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
 		7C68A83320DA11FC001DDDC8 /* Primitive */ = {
 			isa = PBXGroup;
 			children = (
@@ -619,6 +632,7 @@
 		7CB5674C1FB9B54700F03D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7C5FD13F2110365B00229CE8 /* QRCode */,
 				7CA54B1B210EB88D002555C7 /* VerifyID */,
 				0F31443B20F4FCEB007B72F6 /* ProfileCamera */,
 				7C85BC0220E624F80000A4BA /* Popup */,
@@ -763,6 +777,7 @@
 				0F8F2B5E1FC5D66200BEF5B2 /* PermissionCell.xib in Resources */,
 				7C90C4B720C811BA006EEF87 /* TouchID.storyboard in Resources */,
 				7C8437EC20D2259400DD754D /* Muli-Regular.ttf in Resources */,
+				7C5FD1432110369800229CE8 /* QRCode.storyboard in Resources */,
 				7CA54B1F210EB942002555C7 /* VerifyID.storyboard in Resources */,
 				7CF655711FBAF19F00CA9C1A /* Localizable.strings in Resources */,
 				7C6FC84D20CE72EE0026AF1C /* Profile.storyboard in Resources */,
@@ -897,6 +912,7 @@
 				7C2F326720C0303900AEB314 /* SignUpVC.swift in Sources */,
 				0F359D911FC095C9007E07DC /* BaseVC.swift in Sources */,
 				7C882B0A1FC3FD1B0064DF7F /* ScanCodeVC.swift in Sources */,
+				7C5FD1412110368A00229CE8 /* QRCodeVC.swift in Sources */,
 				0FBA58F01FC0A81D00DF593F /* PopupGenerator.swift in Sources */,
 				79AD4C9220CE307F00EE9160 /* CoreDataProtocol.swift in Sources */,
 				7C99D6EB1FC842B700A593C5 /* UINavigationControllerExt.swift in Sources */,
