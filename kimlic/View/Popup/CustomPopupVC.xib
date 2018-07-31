@@ -39,9 +39,13 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMX-ff-PIn" userLabel="ContentView">
                             <rect key="frame" x="0.0" y="0.0" width="279" height="305"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBa-Ls-ySQ" userLabel="CloseButton">
-                                    <rect key="frame" x="245" y="16" width="18" height="18"/>
-                                    <state key="normal" backgroundImage="popup_close_button"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBa-Ls-ySQ" userLabel="CloseButton">
+                                    <rect key="frame" x="227" y="16" width="36" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="0nd-rA-Te8"/>
+                                        <constraint firstAttribute="width" constant="36" id="I7l-V6-Hd8"/>
+                                    </constraints>
+                                    <state key="normal" image="popup_close_button"/>
                                     <connections>
                                         <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="koG-xL-lNN"/>
                                     </connections>
@@ -60,14 +64,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have 2 security risks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Jrb-dr-0Md">
-                                    <rect key="frame" x="0.0" y="263.5" width="279" height="23"/>
+                                    <rect key="frame" x="30" y="263.5" width="219" height="23"/>
                                     <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="18"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="Jrb-dr-0Md" secondAttribute="trailing" id="6ib-tJ-JPG"/>
+                                <constraint firstAttribute="trailing" secondItem="Jrb-dr-0Md" secondAttribute="trailing" constant="30" id="6ib-tJ-JPG"/>
                                 <constraint firstItem="28h-oE-l04" firstAttribute="leading" secondItem="UMX-ff-PIn" secondAttribute="leading" id="8JD-nu-7U7"/>
                                 <constraint firstItem="SBa-Ls-ySQ" firstAttribute="top" secondItem="UMX-ff-PIn" secondAttribute="top" constant="16" id="Ko0-uf-qBp"/>
                                 <constraint firstItem="28h-oE-l04" firstAttribute="top" secondItem="fdz-9O-1d8" secondAttribute="bottom" constant="8" id="KxA-f2-yk1"/>
@@ -77,7 +81,7 @@
                                 <constraint firstAttribute="trailing" secondItem="SBa-Ls-ySQ" secondAttribute="trailing" constant="16" id="fj9-Ca-Jos"/>
                                 <constraint firstAttribute="bottom" secondItem="Jrb-dr-0Md" secondAttribute="bottom" constant="18.5" id="fk6-kS-FUh"/>
                                 <constraint firstItem="fdz-9O-1d8" firstAttribute="centerX" secondItem="UMX-ff-PIn" secondAttribute="centerX" id="iar-eb-uBr"/>
-                                <constraint firstItem="Jrb-dr-0Md" firstAttribute="leading" secondItem="UMX-ff-PIn" secondAttribute="leading" id="qsK-Gm-aPb"/>
+                                <constraint firstItem="Jrb-dr-0Md" firstAttribute="leading" secondItem="UMX-ff-PIn" secondAttribute="leading" constant="30" id="qsK-Gm-aPb"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9eQ-YF-ipv">
@@ -117,7 +121,7 @@
                     <real key="value" value="16"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="-1103" y="-1510"/>
+            <point key="canvasLocation" x="-1342" y="-1578"/>
         </view>
     </objects>
     <resources>

@@ -69,7 +69,8 @@ class UserEmailVC: UIViewController {
     private func showEmailError(_ message: String) {
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else { return }
-            PopupGenerator.createPopup(controller: strongSelf, type: .warning, popup: Popup(title: "Wrong", message: message, buttonTitle: "Try! AGAIN"))
+            let popup = Popup(title: "Warning", message: message, image: #imageLiteral(resourceName: "email_with_circle"), buttonTitle: nil)
+            PopupGenerator.baseCancelAlertPopup(controller: strongSelf, popup: popup)
         }
     }
 }

@@ -64,7 +64,7 @@ class PhoneNumberVC: UIViewController {
             let verificatePhone = try phoneNumberKit.parse(phoneNumber)
             serverRequest(verificatePhone.numberString.replacingOccurrences(of: " ", with: ""))
         } catch {
-            showPhoneError()
+            showPhoneError("errorMessage".localized)
         }
     }
     
@@ -116,10 +116,11 @@ class PhoneNumberVC: UIViewController {
         }
     }
     
-    private func showPhoneError(_ message: String? = nil) {
+    private func showPhoneError(_ message: String) {
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else { return }
-            PopupGenerator.createPopup(controller: strongSelf, type: .warning, popup: Popup(title: "phoneNotValidTitle".localized, message: message ?? "phoneNotValidMessage".localized, buttonTitle: "phoneNotValidButtonTitle".localized))
+            let popup = Popup(title: "Warning", message: message, image: #imageLiteral(resourceName: "phone_with_circle"), buttonTitle: nil)
+            PopupGenerator.baseCancelAlertPopup(controller: strongSelf, popup: popup)
         }
     }
 }

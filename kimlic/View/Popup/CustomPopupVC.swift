@@ -91,7 +91,7 @@ class CustomPopupVC: UIViewController {
             self.dismiss(animated: true)
             UIUtils.navigateToMnemonicCreate(self.rootVC)
         default:
-            print("Default Tag")
+            self.dismiss(animated: true)
         }
     }
     
