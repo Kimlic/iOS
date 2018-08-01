@@ -85,19 +85,19 @@ public extension UIImage {
         return returnImage!
     }
     
-    func cropImage(toRect cropRect: CGRect, viewWidth: CGFloat, viewHeight: CGFloat) -> UIImage?
-    {
-        let imageViewScale = max(size.width / viewWidth,
-                                 size.height / viewHeight)
+    func cropImage(toRect cropRect: CGRect, viewWidth: CGFloat, viewHeight: CGFloat) -> UIImage? {
+        
+        let scaleWidth = size.width / viewWidth
+        let scaleHeight = size.height / viewHeight
         
         // Scale cropRect to handle images larger than shown-on-screen size
-        let cropZone = CGRect(x: cropRect.origin.x * imageViewScale,
-                              y: cropRect.origin.y * imageViewScale,
-                              width: cropRect.size.width * imageViewScale,
-                              height: cropRect.size.height * imageViewScale)
+        let cropZone = CGRect(x: cropRect.origin.x * scaleWidth,
+                              y: cropRect.origin.y * scaleHeight,
+                              width: cropRect.size.width * scaleWidth,
+                              height: cropRect.size.height * scaleHeight)
         
         // Perform cropping in Core Graphics
-        guard let cutImageRef: CGImage = cgImage?.cropping(to:cropZone)
+        guard let cutImageRef: CGImage = fixedOrientation()?.cgImage?.cropping(to:cropZone)
             else {
                 return nil
         }
@@ -107,63 +107,66 @@ public extension UIImage {
         return croppedImage
     }
     
-    public func fixedOrientation() -> UIImage {
-        if imageOrientation == UIImageOrientation.up {
-            return self
+    func fixedOrientation() -> UIImage? {
+        
+        guard imageOrientation != UIImageOrientation.up else {
+            //This is default orientation, don't need to do anything
+            return self.copy() as? UIImage
+        }
+        
+        guard let cgImage = self.cgImage else {
+            //CGImage is not available
+            return nil
+        }
+        
+        guard let colorSpace = cgImage.colorSpace, let ctx = CGContext(data: nil, width: Int(size.width), height: Int(size.height), bitsPerComponent: cgImage.bitsPerComponent, bytesPerRow: 0, space: colorSpace, bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue) else {
+            return nil //Not able to create CGContext
         }
         
         var transform: CGAffineTransform = CGAffineTransform.identity
         
         switch imageOrientation {
-        case UIImageOrientation.down, UIImageOrientation.downMirrored:
+        case .down, .downMirrored:
             transform = transform.translatedBy(x: size.width, y: size.height)
             transform = transform.rotated(by: CGFloat.pi)
             break
-        case UIImageOrientation.left, UIImageOrientation.leftMirrored:
+        case .left, .leftMirrored:
             transform = transform.translatedBy(x: size.width, y: 0)
-            transform = transform.rotated(by: CGFloat.pi/2)
+            transform = transform.rotated(by: CGFloat.pi / 2.0)
             break
-        case UIImageOrientation.right, UIImageOrientation.rightMirrored:
+        case .right, .rightMirrored:
             transform = transform.translatedBy(x: 0, y: size.height)
-            transform = transform.rotated(by: -CGFloat.pi/2)
+            transform = transform.rotated(by: CGFloat.pi / -2.0)
             break
-        case UIImageOrientation.up, UIImageOrientation.upMirrored:
+        case .up, .upMirrored:
             break
         }
         
+        //Flip image one more time if needed to, this is to prevent flipped image
         switch imageOrientation {
-        case UIImageOrientation.upMirrored, UIImageOrientation.downMirrored:
+        case .upMirrored, .downMirrored:
             transform.translatedBy(x: size.width, y: 0)
             transform.scaledBy(x: -1, y: 1)
             break
-        case UIImageOrientation.leftMirrored, UIImageOrientation.rightMirrored:
+        case .leftMirrored, .rightMirrored:
             transform.translatedBy(x: size.height, y: 0)
             transform.scaledBy(x: -1, y: 1)
-        case UIImageOrientation.up, UIImageOrientation.down, UIImageOrientation.left, UIImageOrientation.right:
+        case .up, .down, .left, .right:
             break
         }
-        
-        let ctx: CGContext = CGContext(data: nil,
-                                       width: Int(size.width),
-                                       height: Int(size.height),
-                                       bitsPerComponent: self.cgImage!.bitsPerComponent,
-                                       bytesPerRow: 0,
-                                       space: self.cgImage!.colorSpace!,
-                                       bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue)!
         
         ctx.concatenate(transform)
         
         switch imageOrientation {
-        case UIImageOrientation.left, UIImageOrientation.leftMirrored, UIImageOrientation.right, UIImageOrientation.rightMirrored:
+        case .left, .leftMirrored, .right, .rightMirrored:
             ctx.draw(self.cgImage!, in: CGRect(x: 0, y: 0, width: size.height, height: size.width))
         default:
             ctx.draw(self.cgImage!, in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
             break
         }
         
-        let cgImage: CGImage = ctx.makeImage()!
-        
-        return UIImage(cgImage: cgImage)
+        guard let newCGImage = ctx.makeImage() else { return nil }
+        return UIImage.init(cgImage: newCGImage, scale: 1, orientation: .up)
     }
     
 }

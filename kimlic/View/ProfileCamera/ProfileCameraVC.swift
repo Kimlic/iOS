@@ -101,7 +101,12 @@ extension ProfileCameraVC: AVCapturePhotoCaptureDelegate {
         if let sampleBuffer = photoSampleBuffer, let previewBuffer = previewPhotoSampleBuffer, let dataImage = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: previewBuffer) {
 //            let image = UIImage(data: dataImage)?.resizeImage(size: CGSize(width: (self.viewIfLoaded?.frame.size.width)!, height: (self.viewIfLoaded?.frame.size.height)! * 0.5))
             let image = UIImage(data: dataImage)
-            if let photo = image?.cropImage(toRect: croppedView.frame, viewWidth: self.view.frame.width, viewHeight: self.view.frame.height) {
+            var custumCroppedRect  = croppedView.frame
+            custumCroppedRect.origin.y -= 20
+            custumCroppedRect.size.height += 40
+            custumCroppedRect.origin.x -= 40
+            custumCroppedRect.size.width += 80
+            if let photo = image?.cropImage(toRect: custumCroppedRect, viewWidth: self.view.frame.width, viewHeight: self.view.frame.height) {
                 CoreDataHelper.saveProfilePhoto(photo: photo.getImageData())
             }
             self.navigationController?.popViewController(animated: true)

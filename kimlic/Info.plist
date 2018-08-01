@@ -42,7 +42,7 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Kimlic application wants permission for camera.</string>
+	<string>$(PRODUCT_NAME) wants permission for camera.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>$(PRODUCT_NAME) use camera for user profile image.</string>
 	<key>ServerURL</key>
