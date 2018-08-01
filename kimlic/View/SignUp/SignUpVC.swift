@@ -9,8 +9,10 @@
 import UIKit
 import SwiftyUserDefaults
 
-
 class SignUpVC: UIViewController {
+    
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var newIdentityButton: UIButton!
     @IBOutlet weak var logo: UIImageView!
     
@@ -20,10 +22,7 @@ class SignUpVC: UIViewController {
         setupView()
     }
     
-    private func setupView() {
-        newIdentityButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: newIdentityButton.frame, type: .topBottom).color
-        
-    }
+    // MARK: - IBActions
     
     @IBAction func newIdentityButtonPressed(_ sender: Any) {
         createQuorum()
@@ -34,8 +33,14 @@ class SignUpVC: UIViewController {
         UIUtils.navigateToTerms(self, nextPage: .accountRecovery)
     }
     
+    // MARK: - Functions
+    
     private func createQuorum() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.createQuorum()
+    }
+    
+    private func setupView() {
+        newIdentityButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: newIdentityButton.frame, type: .topBottom).color
     }
 }

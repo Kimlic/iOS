@@ -247,25 +247,22 @@
                                                         <constraint firstAttribute="height" constant="20" id="wBv-1W-MEz"/>
                                                     </constraints>
                                                 </imageView>
-                                                <switch opaque="NO" tag="103" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rqm-UF-3h9">
-                                                    <rect key="frame" x="263" y="19.5" width="49" height="31"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_menu_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="SPv-Vf-ZcL">
+                                                    <rect key="frame" x="287" y="25" width="12" height="19"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="47" id="Mjy-27-wRh"/>
-                                                        <constraint firstAttribute="height" constant="31" id="uIh-qj-xA9"/>
+                                                        <constraint firstAttribute="height" constant="19" id="Bds-bd-1qq"/>
+                                                        <constraint firstAttribute="width" constant="12" id="SFX-LX-ptT"/>
                                                     </constraints>
-                                                    <connections>
-                                                        <action selector="accountSwitchChange:" destination="BRm-bW-Sgz" eventType="valueChanged" id="NbO-ao-mTn"/>
-                                                    </connections>
-                                                </switch>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="gWa-dS-kvp" firstAttribute="centerY" secondItem="T9W-0V-asc" secondAttribute="centerY" id="BcA-J3-quJ"/>
                                                 <constraint firstItem="gWa-dS-kvp" firstAttribute="leading" secondItem="T9W-0V-asc" secondAttribute="trailing" constant="4" id="Jx6-LV-qpz"/>
-                                                <constraint firstItem="rqm-UF-3h9" firstAttribute="centerY" secondItem="JEb-7A-7I1" secondAttribute="centerY" id="NyX-56-KCd"/>
-                                                <constraint firstAttribute="trailing" secondItem="rqm-UF-3h9" secondAttribute="trailing" constant="5" id="ehH-aP-tY0"/>
+                                                <constraint firstAttribute="trailing" secondItem="SPv-Vf-ZcL" secondAttribute="trailing" constant="16" id="Rcp-Hd-Dru"/>
                                                 <constraint firstItem="T9W-0V-asc" firstAttribute="leading" secondItem="JEb-7A-7I1" secondAttribute="leading" id="j3Q-Ir-oaD"/>
                                                 <constraint firstItem="T9W-0V-asc" firstAttribute="top" secondItem="JEb-7A-7I1" secondAttribute="top" constant="16" id="m12-f4-cbK"/>
+                                                <constraint firstItem="SPv-Vf-ZcL" firstAttribute="centerY" secondItem="JEb-7A-7I1" secondAttribute="centerY" id="oup-gn-UAc"/>
                                                 <constraint firstItem="OxR-Gh-lq0" firstAttribute="top" secondItem="T9W-0V-asc" secondAttribute="bottom" constant="2" id="poU-cI-I5G"/>
                                                 <constraint firstItem="OxR-Gh-lq0" firstAttribute="leading" secondItem="JEb-7A-7I1" secondAttribute="leading" id="yA5-H4-Uwu"/>
                                             </constraints>

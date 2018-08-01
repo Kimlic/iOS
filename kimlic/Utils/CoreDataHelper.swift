@@ -95,7 +95,17 @@ struct CoreDataHelper {
         saveUser()
     }
     
-    static func saveUser() {
+    static func saveMnemonicAndAddress(mnemonic: String?, accountAddress: String?) {
+        var user = getUser()
+        if user == nil {
+            user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
+        }
+        user?.mnemonic = mnemonic
+        user?.accountAddress = accountAddress
+        saveUser()
+    }
+    
+    private static func saveUser() {
         do {
             try context.save()
         } catch let error {

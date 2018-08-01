@@ -31,7 +31,8 @@ class SettingsVC: UIViewController {
     
     
     @IBAction func signOutButtonPressed(_ sender: Any) {
-        SystemUtils.logout(controller: self)
+        CoreDataHelper.destroy()
+        let _ = UIUtils.setSignUpScreenAsRoot()
     }
 }
 
@@ -66,10 +67,9 @@ class SettingsTableVC: UITableViewController {
             passSwitch.setOn(passcodeIsActive , animated: true)
             passWarning.isHidden = passSwitch.isOn
         }
-        if let recoveryWarning = cell.viewWithTag(102) as? UIImageView, let recoverySwitch = cell.viewWithTag(103) as? UISwitch {
+        if let recoveryWarning = cell.viewWithTag(102) as? UIImageView {
             let recoveryIsActive = user?.accountRecovery ?? false
-            recoverySwitch.setOn(recoveryIsActive, animated: true)
-            recoveryWarning.isHidden = recoverySwitch.isOn
+            recoveryWarning.isHidden = recoveryIsActive
         }
         if let touchIDWarning = cell.viewWithTag(104) as? UIImageView, let touchIDSwitch = cell.viewWithTag(105) as? UISwitch {
             let touchIDIsActive = user?.touchID ?? false
@@ -80,6 +80,8 @@ class SettingsTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
+        case 2:
+            UIUtils.navigateToMnemonicCreate(self)
         case 3:
             UIUtils.navigateToTerms(self, nextPage: .none)
         case 4:
@@ -95,14 +97,6 @@ class SettingsTableVC: UITableViewController {
         UIUtils.navigateToTouchID(self) { (touchIDVC) in
             CoreDataHelper.saveTouchID(isTouchID: self.isTouchID)
             UIUtils.navigateToMessage(touchIDVC, messageType: .touchIDSuccessfull)            
-        }
-    }
-    
-    @IBAction func accountSwitchChange(_ sender: UISwitch) {
-        warningIconAccount.isHidden = sender.isOn
-        CoreDataHelper.saveRecovery(isAccountRecovery: sender.isOn)
-        if sender.isOn {
-            UIUtils.navigateToMnemonicCreate(self)
         }
     }
     

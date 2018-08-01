@@ -18,8 +18,8 @@ class ProfileVC: UIViewController {
     // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.createQuorum()
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.createQuorum()
     }
     
     override func viewWillAppear(_ animated: Bool) {
