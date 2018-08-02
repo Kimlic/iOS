@@ -60,6 +60,8 @@
 		7C4838591FB5F62500FC864A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4838581FB5F62500FC864A /* Assets.xcassets */; };
 		7C48385C1FB5F62500FC864A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C48385A1FB5F62500FC864A /* LaunchScreen.storyboard */; };
 		7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */; };
+		7C5F7CEC2112FB94005E2DCE /* ICloudDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F7CEB2112FB94005E2DCE /* ICloudDataHelper.swift */; };
+		7C5F7CEF2112FCF7005E2DCE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5F7CEE2112FCF7005E2DCE /* CloudKit.framework */; };
 		7C5FD1412110368A00229CE8 /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5FD1402110368A00229CE8 /* QRCodeVC.swift */; };
 		7C5FD1432110369800229CE8 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5FD1422110369800229CE8 /* QRCode.storyboard */; };
 		7C68A83220DA11D5001DDDC8 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68A83120DA11D5001DDDC8 /* GradientColor.swift */; };
@@ -190,6 +192,9 @@
 		7C48385B1FB5F62500FC864A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C48385D1FB5F62500FC864A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateExt.swift; sourceTree = "<group>"; };
+		7C5F7CEB2112FB94005E2DCE /* ICloudDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudDataHelper.swift; sourceTree = "<group>"; };
+		7C5F7CED2112FCF5005E2DCE /* kimlic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kimlic.entitlements; sourceTree = "<group>"; };
+		7C5F7CEE2112FCF7005E2DCE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		7C5FD1402110368A00229CE8 /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
 		7C5FD1422110369800229CE8 /* QRCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
 		7C68A83120DA11D5001DDDC8 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColor.swift; sourceTree = "<group>"; };
@@ -269,6 +274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C5F7CEF2112FCF7005E2DCE /* CloudKit.framework in Frameworks */,
 				7C90C4BD20C8290B006EEF87 /* LocalAuthentication.framework in Frameworks */,
 				3FA05207AA63FC037BD17670 /* Pods_kimlic.framework in Frameworks */,
 			);
@@ -392,6 +398,7 @@
 				7C842B9E1FC2B8CC0010F98A /* UIUtils.swift */,
 				7C68A83120DA11D5001DDDC8 /* GradientColor.swift */,
 				0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */,
+				7C5F7CEB2112FB94005E2DCE /* ICloudDataHelper.swift */,
 				0F5608DA20F8DF4D00A782A0 /* ErrorHelper.swift */,
 			);
 			path = Utils;
@@ -443,6 +450,7 @@
 		7C4838501FB5F62400FC864A /* kimlic */ = {
 			isa = PBXGroup;
 			children = (
+				7C5F7CED2112FCF5005E2DCE /* kimlic.entitlements */,
 				0F4AB21F20EE6AF600F941D1 /* Quorum */,
 				7CB5674B1FB9B53400F03D24 /* Model */,
 				7CB5674C1FB9B54700F03D24 /* View */,
@@ -693,6 +701,7 @@
 		819710C74CB57B34F052FD71 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C5F7CEE2112FCF7005E2DCE /* CloudKit.framework */,
 				7C90C4BC20C8290B006EEF87 /* LocalAuthentication.framework */,
 				E4839EE1351BF59D4372E9EB /* Pods_kimlic.framework */,
 			);
@@ -735,6 +744,14 @@
 					7C48384D1FB5F62400FC864A = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -922,6 +939,7 @@
 				7CA54B1D210EB8FA002555C7 /* VerifyIDVC.swift in Sources */,
 				7C8272C51FC583C600054277 /* UIImageExt.swift in Sources */,
 				7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */,
+				7C5F7CEC2112FB94005E2DCE /* ICloudDataHelper.swift in Sources */,
 				79AD4C8220CD182500EE9160 /* MnemonicVerificationVC.swift in Sources */,
 				0F4AB22520EEB9A400F941D1 /* QuorumManager.swift in Sources */,
 				7C02B3111FD7F238005C55E3 /* PasscodeVC.swift in Sources */,
@@ -1139,6 +1157,7 @@
 			baseConfigurationReference = 0ABE458C4440E15E0344ADF0 /* Pods-kimlic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = kimlic/kimlic.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CANF8YSU8N;
@@ -1159,6 +1178,7 @@
 			baseConfigurationReference = B978BD0257D03E5317353E1D /* Pods-kimlic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = kimlic/kimlic.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CANF8YSU8N;
