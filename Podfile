@@ -21,4 +21,5 @@ target 'kimlic' do
 	pod 'Fabric'
 	pod 'Crashlytics'
     pod 'CloudCore', '~> 2.0'
+    pod 'GooglePlaces', '~> 2.7'
 end

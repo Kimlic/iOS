@@ -10,6 +10,7 @@ import IQKeyboardManagerSwift
 import Fabric
 import Crashlytics
 import CoreData
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

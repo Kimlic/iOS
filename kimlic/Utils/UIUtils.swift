@@ -138,6 +138,12 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
+    static func navigateToAddress(_ vc: UIViewController){
+        let storyboard = AppStoryboard.Address.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: AddressVC.className) as! AddressVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
     // Message = Constants > StaticMessage
     static func navigateToMessage(_ vc: UIViewController, messageType: MessageType, message: Message? = nil){
         let storyboard = AppStoryboard.Message.instance
