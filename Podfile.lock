@@ -6,6 +6,7 @@ PODS:
     - Alamofire (~> 4.5)
   - BigInt (3.1.0):
     - SipHash (~> 1.2)
+  - CloudCore (2.0.1)
   - Crashlytics (3.10.2):
     - Fabric (~> 1.7.7)
   - CryptoSwift (0.10.0)
@@ -53,6 +54,7 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireImage (~> 3.3)
+  - CloudCore (~> 2.0)
   - Crashlytics
   - CryptoSwift
   - Fabric
@@ -75,6 +77,7 @@ SPEC REPOS:
     - Alamofire-Synchronous
     - AlamofireImage
     - BigInt
+    - CloudCore
     - Crashlytics
     - CryptoSwift
     - DynamicBlurView
@@ -114,6 +117,7 @@ SPEC CHECKSUMS:
   Alamofire-Synchronous: eedf1e6e961c3795a63c74990b3f7d9fbfac7e50
   AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
+  CloudCore: 1d0eff6948afeb6964004b28819d77b3fbaf88be
   Crashlytics: 0360624eea1c978a743feddb2fb1ef8b37fb7a0d
   CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
   DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
@@ -135,6 +139,6 @@ SPEC CHECKSUMS:
   TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
   web3swift: ac26245dc6921900992dd773bdf0ffc693855997
 
-PODFILE CHECKSUM: 7263622ea0573f27cbc0907d3e8a2d594f8ca53b
+PODFILE CHECKSUM: 516f357c66f26ccfa3958814a8cb44cef43d5a60
 
 COCOAPODS: 1.5.3

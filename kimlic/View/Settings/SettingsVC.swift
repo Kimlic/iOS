@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudCore
 
 class SettingsVC: UIViewController {
     
@@ -29,9 +30,17 @@ class SettingsVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func deleteIdentityButtonPressed(_ sender: Any) {
+        CloudCore.deleteIdentity(completion: {
+            let _ = UIUtils.setSignUpScreenAsRoot()
+        }) { (error) in
+            print(error)
+        }
+    }
     
     @IBAction func signOutButtonPressed(_ sender: Any) {
         CoreDataHelper.destroy()
+        CloudCore.disable()
         let _ = UIUtils.setSignUpScreenAsRoot()
     }
 }

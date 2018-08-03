@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudCore
 
 class MnemonicImportVC: UIViewController {
 
@@ -29,7 +30,13 @@ class MnemonicImportVC: UIViewController {
     }
     
     @IBAction func verifyButtonPressed(_ sender: Any) {
-        UIUtils.navigateToMessage(self, messageType: .passMatchSuccessfull)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        CloudCore.fetchAndSave(to: appDelegate.persistentContainer, error: nil) {
+            DispatchQueue.main.async { [weak self] in
+                guard let strongSelf = self else { return }
+                UIUtils.navigateToMessage(strongSelf, messageType: .passMatchSuccessfull)
+            }
+        }
     }
     
     private func setupView() {

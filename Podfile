@@ -20,4 +20,5 @@ target 'kimlic' do
 	pod 'Quorum', :git => 'https://github.com/Kimlic/Quorum-iOS'
 	pod 'Fabric'
 	pod 'Crashlytics'
+    pod 'CloudCore', '~> 2.0'
 end

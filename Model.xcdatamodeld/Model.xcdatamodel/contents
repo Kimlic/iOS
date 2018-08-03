@@ -12,9 +12,11 @@
         <attribute name="passcode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="profilePhoto" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="recordData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="recordID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="touchID" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="KimlicUser" positionX="-63" positionY="-18" width="128" height="225"/>
+        <element name="KimlicUser" positionX="-63" positionY="-18" width="128" height="255"/>
     </elements>
 </model>

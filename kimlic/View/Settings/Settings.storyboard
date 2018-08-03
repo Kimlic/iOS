@@ -81,6 +81,9 @@
                                                 <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="deleteIdentityButtonPressed:" destination="s1r-J5-3Yy" eventType="touchUpInside" id="tOP-ad-4TA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPp-V1-t5z" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
                                         <rect key="frame" x="40" y="495" width="295" height="56"/>

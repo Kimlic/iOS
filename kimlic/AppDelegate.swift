@@ -4,12 +4,12 @@
 //
 //  Created by İzzet Öztürk on 10.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
+
 import UIKit
 import IQKeyboardManagerSwift
 import Fabric
 import Crashlytics
 import CoreData
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -82,6 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          error conditions that could cause the creation of the store to fail.
          */
         let container = NSPersistentContainer(name: "Model")
+//        container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

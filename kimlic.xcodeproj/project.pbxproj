@@ -45,6 +45,7 @@
 		7C161A211FBDB4E3004FD9A0 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161A201FBDB4E3004FD9A0 /* Popup.swift */; };
 		7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161A241FBDB526004FD9A0 /* Enums.swift */; };
 		7C161A4B1FBDEA05004FD9A0 /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161A4A1FBDEA05004FD9A0 /* UITextFieldExt.swift */; };
+		7C22A66C21142ECC00B1412A /* CloudCoreExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C22A66B21142ECC00B1412A /* CloudCoreExt.swift */; };
 		7C2F326520C0301700AEB314 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F326420C0301700AEB314 /* SignUp.storyboard */; };
 		7C2F326720C0303900AEB314 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F326620C0303900AEB314 /* SignUpVC.swift */; };
 		7C2F326920C0424700AEB314 /* TermsAndConditionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F326820C0424700AEB314 /* TermsAndConditionsVC.swift */; };
@@ -60,7 +61,6 @@
 		7C4838591FB5F62500FC864A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4838581FB5F62500FC864A /* Assets.xcassets */; };
 		7C48385C1FB5F62500FC864A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C48385A1FB5F62500FC864A /* LaunchScreen.storyboard */; };
 		7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */; };
-		7C5F7CEC2112FB94005E2DCE /* ICloudDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F7CEB2112FB94005E2DCE /* ICloudDataHelper.swift */; };
 		7C5F7CEF2112FCF7005E2DCE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5F7CEE2112FCF7005E2DCE /* CloudKit.framework */; };
 		7C5FD1412110368A00229CE8 /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5FD1402110368A00229CE8 /* QRCodeVC.swift */; };
 		7C5FD1432110369800229CE8 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5FD1422110369800229CE8 /* QRCode.storyboard */; };
@@ -175,6 +175,7 @@
 		7C161A201FBDB4E3004FD9A0 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		7C161A241FBDB526004FD9A0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		7C161A4A1FBDEA05004FD9A0 /* UITextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
+		7C22A66B21142ECC00B1412A /* CloudCoreExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudCoreExt.swift; sourceTree = "<group>"; };
 		7C2F326420C0301700AEB314 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		7C2F326620C0303900AEB314 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		7C2F326820C0424700AEB314 /* TermsAndConditionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsVC.swift; sourceTree = "<group>"; };
@@ -192,7 +193,6 @@
 		7C48385B1FB5F62500FC864A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C48385D1FB5F62500FC864A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateExt.swift; sourceTree = "<group>"; };
-		7C5F7CEB2112FB94005E2DCE /* ICloudDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudDataHelper.swift; sourceTree = "<group>"; };
 		7C5F7CED2112FCF5005E2DCE /* kimlic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kimlic.entitlements; sourceTree = "<group>"; };
 		7C5F7CEE2112FCF7005E2DCE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		7C5FD1402110368A00229CE8 /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
@@ -398,7 +398,6 @@
 				7C842B9E1FC2B8CC0010F98A /* UIUtils.swift */,
 				7C68A83120DA11D5001DDDC8 /* GradientColor.swift */,
 				0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */,
-				7C5F7CEB2112FB94005E2DCE /* ICloudDataHelper.swift */,
 				0F5608DA20F8DF4D00A782A0 /* ErrorHelper.swift */,
 			);
 			path = Utils;
@@ -510,6 +509,7 @@
 				7CF6556F1FBAF15D00CA9C1A /* StringExt.swift */,
 				0F1E43C31FC0A5A500B0B631 /* UserDefaultsExt.swift */,
 				7C99D6E61FC8108300A593C5 /* BundleExt.swift */,
+				7C22A66B21142ECC00B1412A /* CloudCoreExt.swift */,
 			);
 			path = Primitive;
 			sourceTree = "<group>";
@@ -860,6 +860,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire-Synchronous/Alamofire_Synchronous.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/CloudCore/CloudCore.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
@@ -885,6 +886,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_Synchronous.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CloudCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
@@ -929,6 +931,7 @@
 				7C2F326720C0303900AEB314 /* SignUpVC.swift in Sources */,
 				0F359D911FC095C9007E07DC /* BaseVC.swift in Sources */,
 				7C882B0A1FC3FD1B0064DF7F /* ScanCodeVC.swift in Sources */,
+				7C22A66C21142ECC00B1412A /* CloudCoreExt.swift in Sources */,
 				7C5FD1412110368A00229CE8 /* QRCodeVC.swift in Sources */,
 				0FBA58F01FC0A81D00DF593F /* PopupGenerator.swift in Sources */,
 				79AD4C9220CE307F00EE9160 /* CoreDataProtocol.swift in Sources */,
@@ -939,7 +942,6 @@
 				7CA54B1D210EB8FA002555C7 /* VerifyIDVC.swift in Sources */,
 				7C8272C51FC583C600054277 /* UIImageExt.swift in Sources */,
 				7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */,
-				7C5F7CEC2112FB94005E2DCE /* ICloudDataHelper.swift in Sources */,
 				79AD4C8220CD182500EE9160 /* MnemonicVerificationVC.swift in Sources */,
 				0F4AB22520EEB9A400F941D1 /* QuorumManager.swift in Sources */,
 				7C02B3111FD7F238005C55E3 /* PasscodeVC.swift in Sources */,
