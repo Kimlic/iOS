@@ -347,6 +347,13 @@
 			path = Phone;
 			sourceTree = "<group>";
 		};
+		7C22A66D211451C500B1412A /* Address */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
 		7C2F325F20C02B5300AEB314 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +647,7 @@
 		7CB5674C1FB9B54700F03D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7C22A66D211451C500B1412A /* Address */,
 				7C5FD13F2110365B00229CE8 /* QRCode */,
 				7CA54B1B210EB88D002555C7 /* VerifyID */,
 				0F31443B20F4FCEB007B72F6 /* ProfileCamera */,
