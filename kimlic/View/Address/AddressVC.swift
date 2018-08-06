@@ -8,51 +8,111 @@
 
 import UIKit
 import GooglePlaces
+import FileBrowser
 
 class AddressVC: UIViewController {
     
-    let googlePlaceAPIKey = "AIzaSyAhJoblJTjmCVjLKVmBAf2APWEhiqkbJWc"
-
+    // MARK: - IBOutles
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var addFileButton: UIButton!
+    @IBOutlet weak var uploadFileImageView: UIImageView!
+    
+    // MARK: - Local Varibles
+    var uploadFile: Data?
+    var imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GMSPlacesClient.provideAPIKey(googlePlaceAPIKey)
+        imagePicker.delegate = self
+        
+        setupView()
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     // Present the Autocomplete view controller when the button is pressed.
-    @IBAction func autocompleteClicked(_ sender: UIButton) {
-        let autocompleteController = GMSAutocompleteViewController()
-        autocompleteController.delegate = self
-        present(autocompleteController, animated: true, completion: nil)
+    @IBAction func addressSearchButtonPressed(_ sender: UIButton) {
+        UIUtils.navigateToAddressSearch(self) { (response) in
+            self.addressTextField.text = response.attributedFullText.string
+        }
+    }
+    
+    @IBAction func addFileButtonPressed(_ sender: Any) {
+        showActionSheet()
+    }
+    
+    // MARK: - Functions
+    
+    private func setupView() {
+        saveButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: saveButton.frame, type: .topBottom).color
+        addFileButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: addFileButton.frame, type: .topBottom).color
+    }
+    
+    private func showActionSheet() {
+        
+        let optionMenu = UIAlertController(title: nil, message: "Upload File", preferredStyle: .actionSheet)
+        
+        
+        let takePhoto = UIAlertAction(title: "Take Photo", style: .default) { (alert: UIAlertAction!) in
+            self.takePhotoHandler()
+        }
+        
+        let gallery = UIAlertAction(title: "Gallery", style: .default) { (alert: UIAlertAction!) in
+            self.galleryUploadHandler()
+        }
+        
+        let browse = UIAlertAction(title: "Browse File", style: .default) { (alert: UIAlertAction!) in
+            self.browseFileHandler()
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { _ in }
+        
+        optionMenu.addAction(takePhoto)
+        optionMenu.addAction(gallery)
+        optionMenu.addAction(browse)
+        optionMenu.addAction(cancel)
+        
+        self.present(optionMenu, animated: true, completion: nil)
+    }
+    
+    private func takePhotoHandler() {
+        //Camera settings are made
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .camera
+        imagePicker.cameraCaptureMode = .photo
+        imagePicker.modalPresentationStyle = .fullScreen
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    private func galleryUploadHandler() {
+        //Camera settings are made
+        imagePicker.sourceType = .photoLibrary
+        self.present(imagePicker, animated: true, completion: nil)
+        
+    }
+    
+    private func browseFileHandler() {
+        let fileBrowser = FileBrowser()
+        self.present(fileBrowser, animated: true, completion: nil)
+        fileBrowser.didSelectFile = { (file: FBFile) -> Void in
+            print(file.displayName)
+        }
     }
 
 }
 
-extension AddressVC: GMSAutocompleteViewControllerDelegate {
+extension AddressVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    // Handle the user's selection.
-    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        print("Place name: \(place.name)")
-        dismiss(animated: true, completion: nil)
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        uploadFile = image?.getImageData()
+        uploadFileImageView.image = image
+        dismiss(animated:true, completion: nil)
     }
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        // TODO: handle the error.
-        print("Error: ", error.localizedDescription)
-    }
-    
-    // User canceled the operation.
-    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    // Turn the network activity indicator on and off again.
-    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    }
-    
-    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
-    }
-    
 }

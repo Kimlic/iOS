@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 import SwiftyUserDefaults
 import NVActivityIndicatorView
+import GooglePlaces
+
 public class UIUtils {
     
     static func setSignUpScreenAsRoot() -> SignUpVC {
@@ -144,9 +146,10 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
-    static func navigateToAddressSearch(_ vc: UIViewController, completion: (() -> ())? = nil){
+    static func navigateToAddressSearch(_ vc: UIViewController, callback: ((GMSAutocompletePrediction) -> ())? = nil){
         let storyboard = AppStoryboard.AddressSearch.instance
         let tarVC = storyboard.instantiateViewController(withIdentifier: AddressSearchVC.className) as! AddressSearchVC
+        tarVC.callback = callback
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     

@@ -18,4 +18,7 @@ extension UIFont {
     class var popupButtonText: UIFont {
         return UIFont(name: "Muli-SemiBold", size: 20.0)!
     }
+    class var MuliRegular18: UIFont {
+        return UIFont(name: "Muli-Regular", size: 18.0)!
+    }
 }

@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Muli-Italic.ttf">
+            <string>Muli-Italic</string>
+        </array>
         <array key="Muli-Regular.ttf">
             <string>Muli-Regular</string>
         </array>
@@ -24,13 +27,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fingerprint_background" translatesAutoresizingMaskIntoConstraints="NO" id="2Ra-pJ-9r5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BwU-7s-Nr4" userLabel="ContentView">
-                                <rect key="frame" x="40" y="50" width="295" height="617"/>
+                                <rect key="frame" x="40" y="50" width="297" height="617"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type your address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gqy-O2-bXv" customClass="CustomTextField" customModule="kimlic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="56"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="297" height="56"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="OcS-a8-hVf"/>
@@ -55,20 +58,56 @@
                                                 <integer key="value" value="50"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addressTextFieldChanged:" destination="4aN-Yl-VNB" eventType="editingChanged" id="UV0-2f-SAM"/>
+                                            <outlet property="delegate" destination="4aN-Yl-VNB" id="E1Q-i1-zCt"/>
+                                        </connections>
                                     </textField>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4JA-8W-964">
+                                        <rect key="frame" x="0.0" y="64" width="297" height="553"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please look for an address from the top. Make sure you are looking for a correct address." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwR-io-fve">
+                                                <rect key="frame" x="0.0" y="235.5" width="297" height="82"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="D9d-7S-x7H"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="address_icon_with_circle" translatesAutoresizingMaskIntoConstraints="NO" id="eaW-rY-M3T">
+                                                <rect key="frame" x="58" y="46.5" width="181" height="181"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="QwR-io-fve" firstAttribute="leading" secondItem="4JA-8W-964" secondAttribute="leading" id="RVI-sO-tkS"/>
+                                            <constraint firstItem="QwR-io-fve" firstAttribute="centerY" secondItem="4JA-8W-964" secondAttribute="centerY" id="UfM-GE-w01"/>
+                                            <constraint firstItem="QwR-io-fve" firstAttribute="top" secondItem="eaW-rY-M3T" secondAttribute="bottom" constant="8" id="bPD-Sd-n2F"/>
+                                            <constraint firstAttribute="trailing" secondItem="QwR-io-fve" secondAttribute="trailing" id="cHh-Ak-cCa"/>
+                                            <constraint firstItem="eaW-rY-M3T" firstAttribute="centerX" secondItem="4JA-8W-964" secondAttribute="centerX" id="qPo-XG-xho"/>
+                                        </constraints>
+                                    </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ccr-SG-wwI">
-                                        <rect key="frame" x="0.0" y="64" width="295" height="553"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="64" width="297" height="553"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="4aN-Yl-VNB" id="dx8-zK-6iK"/>
+                                            <outlet property="delegate" destination="4aN-Yl-VNB" id="RD2-z0-inK"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Ccr-SG-wwI" secondAttribute="trailing" id="0wT-9H-1aw"/>
+                                    <constraint firstItem="4JA-8W-964" firstAttribute="width" secondItem="Ccr-SG-wwI" secondAttribute="width" id="5FA-wG-Eaj"/>
                                     <constraint firstAttribute="trailing" secondItem="Gqy-O2-bXv" secondAttribute="trailing" id="AJC-QG-8ah"/>
                                     <constraint firstItem="Gqy-O2-bXv" firstAttribute="leading" secondItem="BwU-7s-Nr4" secondAttribute="leading" id="E1i-D6-Pdh"/>
                                     <constraint firstItem="Gqy-O2-bXv" firstAttribute="leading" secondItem="BwU-7s-Nr4" secondAttribute="leading" id="H98-c5-nao"/>
                                     <constraint firstItem="Gqy-O2-bXv" firstAttribute="top" secondItem="BwU-7s-Nr4" secondAttribute="top" id="I4q-xg-ggM"/>
+                                    <constraint firstItem="4JA-8W-964" firstAttribute="centerY" secondItem="Ccr-SG-wwI" secondAttribute="centerY" id="MyI-y7-DCi"/>
+                                    <constraint firstItem="4JA-8W-964" firstAttribute="centerX" secondItem="Ccr-SG-wwI" secondAttribute="centerX" id="NNL-ek-6h9"/>
                                     <constraint firstAttribute="bottom" secondItem="Ccr-SG-wwI" secondAttribute="bottom" id="dCg-QW-B5E"/>
                                     <constraint firstItem="Ccr-SG-wwI" firstAttribute="top" secondItem="Gqy-O2-bXv" secondAttribute="bottom" constant="8" id="exk-Cp-9hb"/>
+                                    <constraint firstItem="4JA-8W-964" firstAttribute="height" secondItem="Ccr-SG-wwI" secondAttribute="height" id="kBl-ej-hzr"/>
                                     <constraint firstItem="Ccr-SG-wwI" firstAttribute="leading" secondItem="BwU-7s-Nr4" secondAttribute="leading" id="oaM-6R-zMp"/>
                                     <constraint firstAttribute="trailing" secondItem="Gqy-O2-bXv" secondAttribute="trailing" id="vGN-rf-5lD"/>
                                 </constraints>
@@ -87,13 +126,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Aag-h9-Vuk"/>
                     </view>
+                    <connections>
+                        <outlet property="addressTableView" destination="Ccr-SG-wwI" id="uIy-vv-vI6"/>
+                        <outlet property="emptyMessageView" destination="4JA-8W-964" id="RBf-KV-zkb"/>
+                        <outlet property="searchTextField" destination="Gqy-O2-bXv" id="ioO-kz-JzV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wz4-Sf-F2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="269"/>
+            <point key="canvasLocation" x="-1575.2" y="44.527736131934034"/>
         </scene>
     </scenes>
     <resources>
         <image name="Fingerprint_background" width="377" height="668"/>
+        <image name="address_icon_with_circle" width="181" height="181"/>
     </resources>
 </document>
