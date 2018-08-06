@@ -144,6 +144,12 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
+    static func navigateToAddressSearch(_ vc: UIViewController, completion: (() -> ())? = nil){
+        let storyboard = AppStoryboard.AddressSearch.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: AddressSearchVC.className) as! AddressSearchVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
     // Message = Constants > StaticMessage
     static func navigateToMessage(_ vc: UIViewController, messageType: MessageType, message: Message? = nil){
         let storyboard = AppStoryboard.Message.instance

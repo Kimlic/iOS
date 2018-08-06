@@ -90,6 +90,8 @@
 		7C85BC0520E625870000A4BA /* CustomPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C85BC0320E625870000A4BA /* CustomPopupVC.swift */; };
 		7C85BC0620E625870000A4BA /* CustomPopupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C85BC0420E625870000A4BA /* CustomPopupVC.xib */; };
 		7C85BC0A20E649380000A4BA /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C85BC0920E649380000A4BA /* UIViewExt.swift */; };
+		7C85FC5F211826AC007AFD96 /* AddressSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C85FC5E211826AC007AFD96 /* AddressSearch.storyboard */; };
+		7C85FC61211826C8007AFD96 /* AddressSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FC60211826C8007AFD96 /* AddressSearchVC.swift */; };
 		7C882B0A1FC3FD1B0064DF7F /* ScanCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C882B091FC3FD1B0064DF7F /* ScanCodeVC.swift */; };
 		7C8A80CD1FBD668D009E74F9 /* PermissionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8A80CC1FBD668D009E74F9 /* PermissionDetailVC.swift */; };
 		7C8A80CF1FBD839E009E74F9 /* PermissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8A80CE1FBD839E009E74F9 /* PermissionCell.swift */; };
@@ -224,6 +226,8 @@
 		7C85BC0320E625870000A4BA /* CustomPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupVC.swift; sourceTree = "<group>"; };
 		7C85BC0420E625870000A4BA /* CustomPopupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPopupVC.xib; sourceTree = "<group>"; };
 		7C85BC0920E649380000A4BA /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		7C85FC5E211826AC007AFD96 /* AddressSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddressSearch.storyboard; sourceTree = "<group>"; };
+		7C85FC60211826C8007AFD96 /* AddressSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchVC.swift; sourceTree = "<group>"; };
 		7C882B091FC3FD1B0064DF7F /* ScanCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCodeVC.swift; sourceTree = "<group>"; };
 		7C8A80CC1FBD668D009E74F9 /* PermissionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionDetailVC.swift; sourceTree = "<group>"; };
 		7C8A80CE1FBD839E009E74F9 /* PermissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionCell.swift; sourceTree = "<group>"; };
@@ -356,6 +360,8 @@
 			children = (
 				7C22A66E21149C0C00B1412A /* AddressVC.swift */,
 				7C22A67021149C1600B1412A /* Address.storyboard */,
+				7C85FC60211826C8007AFD96 /* AddressSearchVC.swift */,
+				7C85FC5E211826AC007AFD96 /* AddressSearch.storyboard */,
 			);
 			path = Address;
 			sourceTree = "<group>";
@@ -819,6 +825,7 @@
 				7C4838571FB5F62500FC864A /* Main.storyboard in Resources */,
 				7C7A7FCA20C53B7200BDE95C /* Message.storyboard in Resources */,
 				7C8437FC20D226C800DD754D /* Info.plist in Resources */,
+				7C85FC5F211826AC007AFD96 /* AddressSearch.storyboard in Resources */,
 				7CB516FB20D00DC0006FF06D /* UserInfo.storyboard in Resources */,
 				7C8437F020D2259400DD754D /* Muli-Italic.ttf in Resources */,
 				79AD4C8020CD051800EE9160 /* MnemonicCreate.storyboard in Resources */,
@@ -1037,6 +1044,7 @@
 				7C99D6E71FC8108300A593C5 /* BundleExt.swift in Sources */,
 				7C99D6DF1FC7FF7000A593C5 /* WebServicesBaseRequest.swift in Sources */,
 				7C929D661FCC53E6001B9E22 /* PermissionDetailResponse.swift in Sources */,
+				7C85FC61211826C8007AFD96 /* AddressSearchVC.swift in Sources */,
 				7CCE2C861FBB32D400CC0E71 /* UserProfileVC.swift in Sources */,
 				7C6FC84F20CE730E0026AF1C /* ProfileVC.swift in Sources */,
 				7CA54B23210EBD6A002555C7 /* VerifyIDDetailVC.swift in Sources */,
