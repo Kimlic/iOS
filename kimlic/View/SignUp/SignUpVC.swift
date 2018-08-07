@@ -25,9 +25,9 @@ class SignUpVC: UIViewController {
     // MARK: - IBActions
     
     @IBAction func newIdentityButtonPressed(_ sender: Any) {
-//        createQuorum()
-//        UIUtils.navigateToTutorial(self)
-        UIUtils.navigateToAddress(self)
+        createQuorum()
+        UIUtils.navigateToTutorial(self)
+//        UIUtils.navigateToAddress(self)
     }
     
     @IBAction func recoverIdentityButtonPressed(_ sender: Any) {

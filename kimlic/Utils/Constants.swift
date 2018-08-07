@@ -74,7 +74,7 @@ class Constants {
     struct QuorumConfig {
         let scheme = "https"
         let host = "mobile-api-test.kimlic.com"
-        let port = 80
+        let port = 443
         let path = "/api/quorum"
         let networkId = 10
     }
