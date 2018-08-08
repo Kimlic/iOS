@@ -87,7 +87,6 @@ extension AddressSearchVC: GMSAutocompleteViewControllerDelegate {
     
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        print("Place name: \(place.name)")
         dismiss(animated: true, completion: nil)
     }
     

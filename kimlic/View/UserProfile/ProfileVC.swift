@@ -11,10 +11,12 @@ import CloudCore
 
 class ProfileVC: UIViewController {
     
-    // MARK: IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet weak var profileImage: UIImageView!
     
-     var user: KimlicUser?
+    // MARK: - Local Varibles
+    var user: KimlicUser?
+    var securityRiskCount = 0
     
     // MARK: Overrides
     override func viewDidLoad() {
@@ -36,7 +38,7 @@ class ProfileVC: UIViewController {
         setupView()
     }
     
-    // MARK: IBActions
+    // MARK: - IBActions
     
     @IBAction func scanButtonPressed(_ sender: Any) {
         UIUtils.navigateToQRCode(self)
@@ -51,18 +53,21 @@ class ProfileVC: UIViewController {
         UIUtils.navigateToProfileCamera(self)
     }
     
-    // MARK: Functions
-    func controlRisks() {
+    // MARK: - Functions
+    private func controlRisks() {
         if user?.passcode == nil && (user?.accountRecovery == nil || !(user?.accountRecovery)!){
+            securityRiskCount = 2
             PopupGenerator.twoRisks(controller: self)
         }else if user?.passcode == nil{
+            securityRiskCount = 1
             PopupGenerator.passcodeRisk(controller: self)
         }else if user?.accountRecovery == nil || !(user?.accountRecovery)! {
+            securityRiskCount = 1
             PopupGenerator.recoveryRisk(controller: self)
         }
     }
     
-    fileprivate func setupView() {
+    private func setupView() {
         guard let photoData = user?.profilePhoto, let photo = UIImage(data: photoData) else {
             return
         }
@@ -102,7 +107,9 @@ class BodyTableVC: UITableViewController {
                 cell.textLabel?.text = "Add your name"
             }
         case 1: // security status
-            cell.textLabel?.text = "You have 2 Security"
+            cell.frame.size.height = 0
+            cell.isHidden = true
+            cell.textLabel?.text = "You have 2 Security Risk"
         case 2: // balance
             cell.textLabel?.text = "Balance 3 KIM"
         case 3: // phone number
@@ -128,6 +135,8 @@ class BodyTableVC: UITableViewController {
             UIUtils.navigateToEmail(self)
         case 5: // verify id
             UIUtils.navigateToVerifyID(self)
+        case 6: // address
+            UIUtils.navigateToAddress(self)
         default:
             print("Add your full name")
         }

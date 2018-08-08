@@ -60,13 +60,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func createQuorum() {
         guard quorumManager == nil else { return }
         
-        createQuorumWith(mnemonic: nil)
+        let user = CoreDataHelper.getUser()
+        
+        createQuorumWith(mnemonic: user?.mnemonic)
         let accountAddress = quorumManager!.accountAddress
         ConfigWebServiceRequest.execute(accountAddress: accountAddress, success: createQuorumAPI(_:), failure: { _ in })
     }
     
     func createQuorumWith(mnemonic: String?) {
         quorumManager = QuorumManager(mnemonic: mnemonic)
+        CoreDataHelper.saveMnemonicAndAddress(mnemonic: quorumManager?.mnemonic, accountAddress: quorumManager?.accountAddress)
     }
     
     func createQuorumAPI(_ addresses: [String: Any]) {

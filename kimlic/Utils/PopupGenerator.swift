@@ -15,6 +15,11 @@ public class PopupGenerator {
     
     private static let icnWarning = UIImage(named: "warning_icon_with_circles")
     
+    static func baseErrorPopup(controller: UIViewController, title: String, message: String) {
+        let popup = Popup(title: title, message: message, image: icnWarning, buttonTitle: "Cancel")
+        createPopupNew(controller: controller, type: .error, popup: popup)
+    }
+    
     static func baseCancelAlertPopup(controller: UIViewController, popup: Popup) {
         popup.buttons = [btnCancel]
         createPopupNew(controller: controller, type: .warning, popup: popup)

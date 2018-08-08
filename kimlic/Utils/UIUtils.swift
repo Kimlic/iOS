@@ -13,7 +13,7 @@ import GooglePlaces
 
 public class UIUtils {
     
-    static func setSignUpScreenAsRoot() -> SignUpVC {
+    static func setSignUpScreenAsRoot(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let window :UIWindow = appDelegate.window!
         let storyboard = AppStoryboard.SignUp.instance
@@ -25,7 +25,6 @@ public class UIUtils {
         }, completion: { completed in
             // maybe do something here
         })
-        return homeVC
     }
     
     static func setTutorialScreenAsRoot() -> TutorialsVC {
@@ -43,7 +42,7 @@ public class UIUtils {
         return homeVC
     }
     
-    static func setUserProfileScreenAsRoot() -> ProfileVC{
+    static func setUserProfileScreenAsRoot(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let window: UIWindow = appDelegate.window!
         let storyboard = AppStoryboard.Profile.instance
@@ -55,7 +54,6 @@ public class UIUtils {
         }, completion: { completed in
             // maybe do something here
         })
-        return homeVC
     }
     
     static func navigateToProfile(_ vc: UIViewController){

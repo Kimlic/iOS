@@ -9,25 +9,36 @@ import SwiftyUserDefaults
 
 class SplashScreenVC: BaseVC {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var imgShield: UIImageView!
     @IBOutlet weak var viewImageContainer: UIView!
+    
+    // MARK: - Local Varibles
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let currentUser = CoreDataHelper.getUser()
+    var navigateFunction: (()->())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        rotateAnimation()
+    }
+    
+    // MARK: - Functions
+    private func rotateAnimation() {
         //Splash screen animation
         Animz.rotateY(layer: self.viewImageContainer.layer, angleFrom: 360, duration: Animz.time1) {
-            UIView.animate(withDuration: Animz.time1 , animations: {
-            },completion: {
+            
+            if self.currentUser == nil {
+                self.navigateFunction = UIUtils.setSignUpScreenAsRoot
+            } else {
+                self.appDelegate.createQuorum()
+                self.navigateFunction = UIUtils.setUserProfileScreenAsRoot
+            }
+            
+            UIView.animate(withDuration: Animz.time1 , animations: {}, completion: {
                 (finished: Bool) -> Void in
-                
-                let currentUser = CoreDataHelper.getUser()
-
-                // kullanıcı token bilgisine göre düzenlenecek
-                if currentUser != nil {
-                    let _ = UIUtils.setUserProfileScreenAsRoot()
-                }else {
-                     let _ = UIUtils.setSignUpScreenAsRoot()
-                }
+                self.navigateFunction!()
             })
         }
     }
