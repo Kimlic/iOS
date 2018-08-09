@@ -107,8 +107,6 @@ class BodyTableVC: UITableViewController {
                 cell.textLabel?.text = "Add your name"
             }
         case 1: // security status
-            cell.frame.size.height = 0
-            cell.isHidden = true
             cell.textLabel?.text = "You have 2 Security Risk"
         case 2: // balance
             cell.textLabel?.text = "Balance 3 KIM"

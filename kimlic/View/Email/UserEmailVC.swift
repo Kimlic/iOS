@@ -57,9 +57,9 @@ class UserEmailVC: UIViewController {
     
     private func serverRequest(_ email: String) {
         UIUtils.showLoading()
-        EmailWebServiceRequest.createEmail(email: email, success: {
+        CustomWebServiceRequest.createEmail(email: email, success: {
             UIUtils.stopLoading()
-            UIUtils.navigateToVerification(self, email: email)
+            UIUtils.navigateToMessage(self, messageType: .emailSuccessfull)
         }) { (error) in
             UIUtils.stopLoading()
             self.showEmailError(error)

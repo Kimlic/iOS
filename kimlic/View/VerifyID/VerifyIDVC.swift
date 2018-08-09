@@ -28,14 +28,10 @@ class VerifyIDVC: UIViewController {
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     var image: UIImage?
     
-    var selectedDocumentType: DocumentType = .driverLicense
+    var selectedDocumentType: DocumentType = .driversLicense
     var activePage: ActivePage = .front
-    var cardFrontPhotoData: Data?
-    var cardBackPhotoData: Data?
-    
-    enum DocumentType {
-        case idCard, driverLicense, passport
-    }
+    var cardFrontImage: UIImage?
+    var cardBackImage: UIImage?
     
     enum ActivePage {
         case front, back
@@ -64,7 +60,7 @@ class VerifyIDVC: UIViewController {
         setDocumentTypeAndView(type: .idCard)
     }
     @IBAction func driverLicenseButtonPressed(_ sender: Any) {
-        setDocumentTypeAndView(type: .driverLicense)
+        setDocumentTypeAndView(type: .driversLicense)
     }
     @IBAction func passportButtonPressed(_ sender: Any) {
         setDocumentTypeAndView(type: .passport)
@@ -163,7 +159,7 @@ extension VerifyIDVC: AVCapturePhotoCaptureDelegate {
         default:
             activePageLabel.text = "Front Side"
             activePage = .front
-            cardBackPhotoData = photo.getImageData()
+            cardBackImage = photo
             saveData()
         }
     }
@@ -175,18 +171,10 @@ extension VerifyIDVC: AVCapturePhotoCaptureDelegate {
         activePageLabel.text = "Back Side"
         Animz.fadeIn(view: activePageLabel, duration: 0.4)
         activePage = .back
-        cardFrontPhotoData = photo.getImageData()
+        cardFrontImage = photo
     }
     
-    // TODO: Call Web Service
     private func saveData() {
-        UIUtils.showLoading()
-        
-        // Call Web Service
-        
-        CoreDataHelper.saveVerifyCardPhoto(frontPhoto: cardFrontPhotoData, backPhoto: cardBackPhotoData)
-        UIUtils.stopLoading()
-        UIUtils.navigateToVerifyIDDetail(self)
-//        UIUtils.navigateToMessage(self, messageType: .verifyIDSuccessfull)
+        UIUtils.navigateToVerifyIDDetail(self, documentType: selectedDocumentType, frontImage: cardFrontImage, backImage: cardBackImage)
     }
 }

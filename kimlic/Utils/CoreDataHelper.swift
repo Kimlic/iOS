@@ -85,16 +85,6 @@ struct CoreDataHelper {
         saveUser()
     }
     
-    static func saveVerifyCardPhoto(frontPhoto: Data?, backPhoto: Data?) {
-        var user = getUser()
-        if user == nil {
-            user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
-        }
-        user?.cardFrontPhoto = frontPhoto
-        user?.cardBackPhoto = backPhoto
-        saveUser()
-    }
-    
     static func saveMnemonicAndAddress(mnemonic: String?, accountAddress: String?) {
         var user = getUser()
         if user == nil {

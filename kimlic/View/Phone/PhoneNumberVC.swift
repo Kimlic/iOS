@@ -22,7 +22,7 @@ class PhoneNumberVC: UIViewController {
     // MARK: - Local Varibles
     var country = [Country]()
     var selectedCode = "+90"
-    var defaultSelectedIndex = 215 //  Set default Turkey phone code
+    var defaultSelectedIndex = 222 //  Set default Turkey phone code
     let phoneNumberKit = PhoneNumberKit()
     
     override func viewDidLoad() {
@@ -99,8 +99,8 @@ class PhoneNumberVC: UIViewController {
         let countryData = JSON(data: jsonData!)
         
         for (_, subJson) in countryData["countries"] {
-            if let code = subJson["code"].string, let name = subJson["name"].string {
-                country.append(Country(code: code, name: name))
+            if let dialCode = subJson["dial_code"].string, let name = subJson["name"].string, let code = subJson["code"].string {
+                country.append(Country(code: code, dialCode: dialCode, name: name))
             }
         }
     }
@@ -141,7 +141,7 @@ extension PhoneNumberVC: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.countryTextField.text = self.country[row].name
-        self.selectedCode = self.country[row].code
+        self.selectedCode = self.country[row].dialCode
         self.phoneNumberTextField.text = self.selectedCode
     }
     

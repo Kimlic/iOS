@@ -114,9 +114,12 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
-    static func navigateToVerifyIDDetail(_ vc: UIViewController){
+    static func navigateToVerifyIDDetail(_ vc: UIViewController, documentType: DocumentType, frontImage: UIImage?, backImage: UIImage?){
         let storyboard = AppStoryboard.VerifyIDDetail.instance
         let tarVC = storyboard.instantiateViewController(withIdentifier: VerifyIDDetailVC.className) as! VerifyIDDetailVC
+        tarVC.documentType = documentType
+        tarVC.frontImage = frontImage
+        tarVC.backImage = backImage
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     

@@ -48,6 +48,14 @@ enum PasscodePageType {
     case delete
 }
 
+enum DocumentType: String {
+    case idCard = "ID_CARD"
+    case driversLicense = "DRIVERS_LICENSE"
+    case passport = "PASSPORT"
+}
+
+
+
 enum AppStoryboard : String {
     // Must be the same as storyboard name
     case SplashScreen, SignUp, Tutorial, TermsAndConditions, PhoneNumber, Verification, Message, TouchID, Passcode, QRCode, Address, AddressSearch,

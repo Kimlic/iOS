@@ -120,30 +120,30 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country of citizenship" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xVa-6N-y8S" customClass="CustomTextField" customModule="kimlic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mi4-ch-KXb" customClass="PickerTextField" customModule="kimlic" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="150" width="335" height="56"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" selected="YES"/>
+                                                        </accessibility>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="56" id="A8S-La-SHG"/>
+                                                            <constraint firstAttribute="height" constant="56" id="0uH-Pz-Zmn"/>
                                                         </constraints>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="22"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                                <real key="value" value="0.69999999999999996"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                 <color key="value" red="0.59999999999999998" green="0.83137254900000002" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
                                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
-                                                                <real key="value" value="0.69999999999999996"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                                                <integer key="value" value="50"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
@@ -215,19 +215,19 @@
                                                 <constraints>
                                                     <constraint firstItem="koD-un-GzB" firstAttribute="top" secondItem="AZ4-Vv-dAx" secondAttribute="bottom" constant="15" id="0YY-7I-dh7"/>
                                                     <constraint firstItem="koD-un-GzB" firstAttribute="leading" secondItem="5Vn-1P-rZY" secondAttribute="leading" id="1Gx-CE-a1N"/>
+                                                    <constraint firstItem="Mi4-ch-KXb" firstAttribute="leading" secondItem="5Vn-1P-rZY" secondAttribute="leading" id="1WI-I3-6tH"/>
+                                                    <constraint firstItem="Mi4-ch-KXb" firstAttribute="top" secondItem="koD-un-GzB" secondAttribute="bottom" constant="15" id="2QE-hV-Dnp"/>
                                                     <constraint firstAttribute="height" constant="700" id="5Vv-bS-Vi1"/>
                                                     <constraint firstItem="AZ4-Vv-dAx" firstAttribute="leading" secondItem="5Vn-1P-rZY" secondAttribute="leading" id="85G-aY-n8P"/>
-                                                    <constraint firstAttribute="trailing" secondItem="xVa-6N-y8S" secondAttribute="trailing" id="ASj-uh-pag"/>
-                                                    <constraint firstItem="xVa-6N-y8S" firstAttribute="top" secondItem="koD-un-GzB" secondAttribute="bottom" constant="15" id="AZm-uQ-65i"/>
-                                                    <constraint firstItem="xVa-6N-y8S" firstAttribute="leading" secondItem="5Vn-1P-rZY" secondAttribute="leading" id="AhD-p8-KSO"/>
                                                     <constraint firstAttribute="trailing" secondItem="Yxf-wP-Wje" secondAttribute="trailing" id="Ej6-SK-fmX"/>
                                                     <constraint firstItem="t3o-9o-NTK" firstAttribute="leading" secondItem="5Vn-1P-rZY" secondAttribute="leading" id="HC4-kh-PJL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Mi4-ch-KXb" secondAttribute="trailing" id="HTm-9D-RL4"/>
+                                                    <constraint firstItem="Apu-R7-n25" firstAttribute="top" secondItem="Mi4-ch-KXb" secondAttribute="bottom" constant="25" id="KWd-c7-YEE"/>
                                                     <constraint firstItem="k3b-dL-Hgp" firstAttribute="top" secondItem="t3o-9o-NTK" secondAttribute="bottom" id="NjW-bj-OiD"/>
                                                     <constraint firstAttribute="trailing" secondItem="AZ4-Vv-dAx" secondAttribute="trailing" id="OvH-Mo-n0z"/>
                                                     <constraint firstAttribute="trailing" secondItem="Apu-R7-n25" secondAttribute="trailing" id="Rdb-3g-HvK"/>
                                                     <constraint firstAttribute="trailing" secondItem="koD-un-GzB" secondAttribute="trailing" id="UaD-s1-Rfy"/>
                                                     <constraint firstItem="Yxf-wP-Wje" firstAttribute="leading" secondItem="5Vn-1P-rZY" secondAttribute="leading" id="Vpa-oc-FSk"/>
-                                                    <constraint firstItem="Apu-R7-n25" firstAttribute="top" secondItem="xVa-6N-y8S" secondAttribute="bottom" constant="25" id="XvL-3x-WRJ"/>
                                                     <constraint firstItem="k3b-dL-Hgp" firstAttribute="top" secondItem="t3o-9o-NTK" secondAttribute="bottom" id="bgf-Mk-WmX"/>
                                                     <constraint firstAttribute="trailing" secondItem="k3b-dL-Hgp" secondAttribute="trailing" id="ePT-Bo-V1S"/>
                                                     <constraint firstItem="k3b-dL-Hgp" firstAttribute="leading" secondItem="5Vn-1P-rZY" secondAttribute="leading" id="fSe-m9-2xO"/>
@@ -271,6 +271,9 @@
                                                 <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="1Pf-PX-twZ" eventType="touchUpInside" id="f47-HG-Jyz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -310,11 +313,14 @@
                     <connections>
                         <outlet property="cardBackImage" destination="dC0-B7-ET5" id="EUo-cQ-Zm3"/>
                         <outlet property="cardFrontImage" destination="wSN-PL-n6A" id="TuN-OW-C4S"/>
+                        <outlet property="countryTextField" destination="Mi4-ch-KXb" id="yMS-Dr-ZuU"/>
+                        <outlet property="documentNumber" destination="AZ4-Vv-dAx" id="fFp-43-uE0"/>
+                        <outlet property="expiryDateTextField" destination="koD-un-GzB" id="rVl-DU-GTx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvO-Og-0Yo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2020" y="-80"/>
+            <point key="canvasLocation" x="-2465" y="-95"/>
         </scene>
     </scenes>
     <resources>

@@ -66,6 +66,7 @@
 		7C5F7CEF2112FCF7005E2DCE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5F7CEE2112FCF7005E2DCE /* CloudKit.framework */; };
 		7C5FD1412110368A00229CE8 /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5FD1402110368A00229CE8 /* QRCodeVC.swift */; };
 		7C5FD1432110369800229CE8 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5FD1422110369800229CE8 /* QRCode.storyboard */; };
+		7C6546B6211C8A65009972D7 /* DarkDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6546B5211C8A65009972D7 /* DarkDatePicker.swift */; };
 		7C68A83220DA11D5001DDDC8 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68A83120DA11D5001DDDC8 /* GradientColor.swift */; };
 		7C68A83620DA1267001DDDC8 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68A83520DA1267001DDDC8 /* UIColorExt.swift */; };
 		7C68A83820DA12A1001DDDC8 /* UIFontExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68A83720DA12A1001DDDC8 /* UIFontExt.swift */; };
@@ -203,6 +204,7 @@
 		7C5F7CEE2112FCF7005E2DCE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		7C5FD1402110368A00229CE8 /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
 		7C5FD1422110369800229CE8 /* QRCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
+		7C6546B5211C8A65009972D7 /* DarkDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkDatePicker.swift; sourceTree = "<group>"; };
 		7C68A83120DA11D5001DDDC8 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColor.swift; sourceTree = "<group>"; };
 		7C68A83520DA1267001DDDC8 /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
 		7C68A83720DA12A1001DDDC8 /* UIFontExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExt.swift; sourceTree = "<group>"; };
@@ -714,6 +716,7 @@
 				79AF1D2A20C4A16000CCA150 /* PickerTextField.swift */,
 				79AF1D2E20C4BCD100CCA150 /* PinTextField.swift */,
 				7C7FC46A20CC07D100AC8F8F /* DesignableView.swift */,
+				7C6546B5211C8A65009972D7 /* DarkDatePicker.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -967,6 +970,7 @@
 				7CB5674F1FB9C28E00F03D24 /* TutorialsVC.swift in Sources */,
 				7C99D6E11FC7FF8E00A593C5 /* TokenWebServiceRequest.swift in Sources */,
 				0F31444220F51D98007B72F6 /* Model.xcdatamodeld in Sources */,
+				7C6546B6211C8A65009972D7 /* DarkDatePicker.swift in Sources */,
 				7C68A83220DA11D5001DDDC8 /* GradientColor.swift in Sources */,
 				17D8B2AE20FF3E1600CEE289 /* ConfigResponse.swift in Sources */,
 				79AD4C7E20CD050200EE9160 /* MnemonicCreateVC.swift in Sources */,
