@@ -3,6 +3,8 @@
     <entity name="KimlicUser" representedClassName="KimlicUser" syncable="YES" codeGenerationType="class">
         <attribute name="accountAddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="accountRecovery" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="addressFile" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
@@ -15,6 +17,6 @@
         <attribute name="touchID" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="KimlicUser" positionX="-63" positionY="-18" width="128" height="225"/>
+        <element name="KimlicUser" positionX="-63" positionY="-18" width="128" height="255"/>
     </elements>
 </model>

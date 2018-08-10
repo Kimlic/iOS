@@ -16,6 +16,9 @@
         <array key="Muli-Regular.ttf">
             <string>Muli-Regular</string>
         </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Address SearchVC-->
@@ -63,11 +66,11 @@
                                             <outlet property="delegate" destination="4aN-Yl-VNB" id="E1Q-i1-zCt"/>
                                         </connections>
                                     </textField>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4JA-8W-964">
-                                        <rect key="frame" x="0.0" y="64" width="297" height="553"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4JA-8W-964">
+                                        <rect key="frame" x="0.0" y="64" width="297" height="467"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please look for an address from the top. Make sure you are looking for a correct address." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwR-io-fve">
-                                                <rect key="frame" x="0.0" y="235.5" width="297" height="82"/>
+                                                <rect key="frame" x="0.0" y="192.5" width="297" height="82"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="82" id="D9d-7S-x7H"/>
                                                 </constraints>
@@ -76,7 +79,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="address_icon_with_circle" translatesAutoresizingMaskIntoConstraints="NO" id="eaW-rY-M3T">
-                                                <rect key="frame" x="58" y="46.5" width="181" height="181"/>
+                                                <rect key="frame" x="58" y="3.5" width="181" height="181"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -88,16 +91,31 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ccr-SG-wwI">
-                                        <rect key="frame" x="0.0" y="64" width="297" height="553"/>
+                                        <rect key="frame" x="0.0" y="64" width="297" height="467"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="dataSource" destination="4aN-Yl-VNB" id="dx8-zK-6iK"/>
                                             <outlet property="delegate" destination="4aN-Yl-VNB" id="RD2-z0-inK"/>
                                         </connections>
                                     </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diy-xP-vur" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="113" y="531" width="70" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="ESr-St-lwu"/>
+                                            <constraint firstAttribute="height" constant="56" id="fVD-EG-axO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="4aN-Yl-VNB" eventType="touchUpInside" id="aGG-e1-cEs"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Ccr-SG-wwI" secondAttribute="trailing" id="0wT-9H-1aw"/>
+                                    <constraint firstAttribute="bottom" secondItem="diy-xP-vur" secondAttribute="bottom" constant="30" id="1dt-WP-gBb"/>
                                     <constraint firstItem="4JA-8W-964" firstAttribute="width" secondItem="Ccr-SG-wwI" secondAttribute="width" id="5FA-wG-Eaj"/>
                                     <constraint firstAttribute="trailing" secondItem="Gqy-O2-bXv" secondAttribute="trailing" id="AJC-QG-8ah"/>
                                     <constraint firstItem="Gqy-O2-bXv" firstAttribute="leading" secondItem="BwU-7s-Nr4" secondAttribute="leading" id="E1i-D6-Pdh"/>
@@ -105,10 +123,11 @@
                                     <constraint firstItem="Gqy-O2-bXv" firstAttribute="top" secondItem="BwU-7s-Nr4" secondAttribute="top" id="I4q-xg-ggM"/>
                                     <constraint firstItem="4JA-8W-964" firstAttribute="centerY" secondItem="Ccr-SG-wwI" secondAttribute="centerY" id="MyI-y7-DCi"/>
                                     <constraint firstItem="4JA-8W-964" firstAttribute="centerX" secondItem="Ccr-SG-wwI" secondAttribute="centerX" id="NNL-ek-6h9"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ccr-SG-wwI" secondAttribute="bottom" id="dCg-QW-B5E"/>
                                     <constraint firstItem="Ccr-SG-wwI" firstAttribute="top" secondItem="Gqy-O2-bXv" secondAttribute="bottom" constant="8" id="exk-Cp-9hb"/>
+                                    <constraint firstItem="diy-xP-vur" firstAttribute="top" secondItem="Ccr-SG-wwI" secondAttribute="bottom" id="hDC-I9-CZD"/>
                                     <constraint firstItem="4JA-8W-964" firstAttribute="height" secondItem="Ccr-SG-wwI" secondAttribute="height" id="kBl-ej-hzr"/>
                                     <constraint firstItem="Ccr-SG-wwI" firstAttribute="leading" secondItem="BwU-7s-Nr4" secondAttribute="leading" id="oaM-6R-zMp"/>
+                                    <constraint firstItem="diy-xP-vur" firstAttribute="centerX" secondItem="BwU-7s-Nr4" secondAttribute="centerX" id="rqk-Hl-6YW"/>
                                     <constraint firstAttribute="trailing" secondItem="Gqy-O2-bXv" secondAttribute="trailing" id="vGN-rf-5lD"/>
                                 </constraints>
                             </view>
@@ -134,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wz4-Sf-F2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1575.2" y="44.527736131934034"/>
+            <point key="canvasLocation" x="-2105" y="36"/>
         </scene>
     </scenes>
     <resources>

@@ -114,6 +114,8 @@ class BodyTableVC: UITableViewController {
             cell.textLabel?.text = user?.phone ?? "Add your phone"
         case 4: // email
             cell.textLabel?.text = user?.email ?? "Add your email"
+        case 6: // address
+            cell.textLabel?.text = user?.address ?? "Add your address"
         default:
             break
         }

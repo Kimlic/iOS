@@ -44,6 +44,10 @@ class AddressSearchVC: UIViewController {
         searchTextField.becomeFirstResponder()
     }
     
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func addressTextFieldChanged(_ sender: UITextField) {
         
         guard let searchWord = sender.text, !searchWord.isEmpty else {
@@ -66,6 +70,7 @@ class AddressSearchVC: UIViewController {
         // for tableview clear seperator
         let footerView = UIView(frame: CGRect.zero)
         addressTableView.tableFooterView = footerView
+        addressTableView.backgroundView = emptyMessageView
         
         // textfield clear button
         searchTextField.clearButtonMode = .whileEditing
@@ -74,11 +79,13 @@ class AddressSearchVC: UIViewController {
     // TableView reload data handler
     private func reloadHandler() {
         addressTableView.reloadData()
-//        if addressList.count > 0 {
-//            addressTableView.backgroundView = nil
-//        } else {
-//            addressTableView.backgroundView = emptyMessageView
-//        }
+        if addressList.count > 0 {
+            addressTableView.isScrollEnabled = true
+            addressTableView.backgroundView?.isHidden = true
+        } else {
+            addressTableView.isScrollEnabled = false
+            addressTableView.backgroundView?.isHidden = false
+        }
     }
 
 }

@@ -21,6 +21,7 @@ class AddressVC: UIViewController {
     // MARK: - Local Varibles
     var uploadFile: Data?
     var imagePicker = UIImagePickerController()
+    var user = CoreDataHelper.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,10 @@ class AddressVC: UIViewController {
         imagePicker.delegate = self
         
         setupView()
+        
+        // Load core data
+        loadData()
+       
     }
     
     // MARK: - IBActions
@@ -47,6 +52,14 @@ class AddressVC: UIViewController {
         showActionSheet()
     }
     
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        guard let address = addressTextField.text, !address.isEmpty, uploadFile != nil else {
+            return
+        }
+        CoreDataHelper.saveAddress(address: address, addressFile: uploadFile)
+        UIUtils.navigateToMessage(self, messageType: .addressSuccessfull)
+    }
+    
     // MARK: - Functions
     
     private func setupView() {
@@ -54,22 +67,30 @@ class AddressVC: UIViewController {
         addFileButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: addFileButton.frame, type: .topBottom).color
     }
     
+    private func loadData() {
+        addressTextField.text = user?.address
+        uploadFile = user?.addressFile
+        if let file = user?.addressFile {
+            let image = UIImage(data: file)
+            uploadFileImageView.image = image
+        }
+    }
+    
     private func showActionSheet() {
         
         let optionMenu = UIAlertController(title: nil, message: "Upload File", preferredStyle: .actionSheet)
         
+        let takePhoto = UIAlertAction(title: "Take Photo", style: .default) { _ in self.takePhotoHandler()}
+        let takePhotoImage = UIImage(named: "profile_blue_location_icon")
+        takePhoto.setValue(takePhotoImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
         
-        let takePhoto = UIAlertAction(title: "Take Photo", style: .default) { (alert: UIAlertAction!) in
-            self.takePhotoHandler()
-        }
+        let gallery = UIAlertAction(title: "Gallery", style: .default) { _ in self.galleryUploadHandler()}
+        let galleryImage = UIImage(named: "profile_blue_location_icon")
+        gallery.setValue(galleryImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
         
-        let gallery = UIAlertAction(title: "Gallery", style: .default) { (alert: UIAlertAction!) in
-            self.galleryUploadHandler()
-        }
-        
-        let browse = UIAlertAction(title: "Browse File", style: .default) { (alert: UIAlertAction!) in
-            self.browseFileHandler()
-        }
+        let browse = UIAlertAction(title: "Browse File", style: .default) { _ in self.browseFileHandler()}
+        let browseImage = UIImage(named: "profile_blue_location_icon")
+        browse.setValue(browseImage?.withRenderingMode(.alwaysOriginal), forKey: "image")
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { _ in }
         
@@ -101,7 +122,8 @@ class AddressVC: UIViewController {
         let fileBrowser = FileBrowser()
         self.present(fileBrowser, animated: true, completion: nil)
         fileBrowser.didSelectFile = { (file: FBFile) -> Void in
-            print(file.displayName)
+            self.uploadFileImageView.image = file.type.image()
+            
         }
     }
 

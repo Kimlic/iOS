@@ -95,6 +95,16 @@ struct CoreDataHelper {
         saveUser()
     }
     
+    static func saveAddress(address: String?, addressFile: Data?) {
+        var user = getUser()
+        if user == nil {
+            user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
+        }
+        user?.address = address
+        user?.addressFile = addressFile
+        saveUser()
+    }
+    
     private static func saveUser() {
         do {
             try context.save()
