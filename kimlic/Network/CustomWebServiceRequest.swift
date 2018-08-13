@@ -128,9 +128,9 @@ final class CustomWebServiceRequest {
         
         WebServicesBaseRequest().executeRequest(url: url, method: .post, params: params, headers: headers, success: { (data) in
             print(data)
-            success()
+            success?()
         }) { (error) in
-            failure(error ?? "errorMessage".localized)
+            failure?(error ?? "errorMessage".localized)
         }
     }
     
