@@ -10,12 +10,14 @@ import UIKit
 
 class TermsAndConditionsVC: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var modifiedLabel: UILabel!
     @IBOutlet weak var termNoticeLabel: UILabel!
     @IBOutlet weak var termsDescLabel: UILabel!
     @IBOutlet weak var acceptButton: UIButton!
     
+    // MARK: -Local Varibles
     var nextPage: TermsNavigateTarget!
     
     override func viewDidLoad() {
@@ -27,10 +29,15 @@ class TermsAndConditionsVC: UIViewController {
         acceptButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: acceptButton.frame, type: .topBottom).color
     }
     
+    // MARK: - IBActions
+    
     @IBAction func acceptButtonPressed(_ sender: Any) {
         switch nextPage {
         case .phoneNumber:
+            UIUtils.showLoading()
+            createQuorum()
             UIUtils.navigateToPhoneNumber(self)
+            UIUtils.stopLoading()
         case .accountRecovery:
             UIUtils.navigateToMnemonicImport(self)
         default:
@@ -40,6 +47,13 @@ class TermsAndConditionsVC: UIViewController {
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    // MARK: - Functions
+    
+    private func createQuorum() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.createQuorum()
     }
     
 }

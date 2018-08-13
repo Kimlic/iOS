@@ -54,7 +54,11 @@ enum DocumentType: String {
     case passport = "PASSPORT"
 }
 
-
+enum DocumentPhotoContext: String {
+    case face = "face"
+    case documentFront = "document-front"
+    case documentBack = "document-back"
+}
 
 enum AppStoryboard : String {
     // Must be the same as storyboard name

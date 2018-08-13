@@ -157,8 +157,6 @@ extension VerifyIDVC: AVCapturePhotoCaptureDelegate {
         case .front:
             frontRotateSetValue(photo)
         default:
-            activePageLabel.text = "Front Side"
-            activePage = .front
             cardBackImage = photo
             saveData()
         }

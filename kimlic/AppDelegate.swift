@@ -10,6 +10,7 @@ import IQKeyboardManagerSwift
 import Fabric
 import Crashlytics
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,11 +20,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var quorumAPI: QuorumAPI?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Fabric set config
         Fabric.with([Crashlytics.self])
         
         // Override point for customization after application launch.
         IQKeyboardManager.sharedManager().enable = true
         IQKeyboardManager.sharedManager().keyboardAppearance = UIKeyboardAppearance.dark
+        
+        // Set push notifications config
+        // iOS 10 support
+        if #available(iOS 10, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]){ (granted, error) in }
+            application.registerForRemoteNotifications()
+        }else {
+            let pushNotificationSettings = UIUserNotificationSettings(types: [.badge, .alert, .sound], categories: nil)
+            application.registerUserNotificationSettings(pushNotificationSettings)
+            application.registerForRemoteNotifications()
+        }
         
         // Load Splash Storyboard
         let initialViewController = AppStoryboard.SplashScreen.instance.instantiateViewController(withIdentifier: SplashScreenVC.className)
@@ -55,16 +68,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    // MARK: - Push Notification Functions
+    
+    // Called when APNs has assigned the device a unique token
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        print(token)
+        CoreDataHelper.saveDeviceToken(deviceToken: token)
+    }
+    
+    // Called when APNs failed to register the device for push notifications
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        // Print the error to console (you should alert the user that registration failed)
+        print("APNs registration failed: \(error)")
+    }
+    
+    // Push notification received
+    func application(_ application: UIApplication, didReceiveRemoteNotification data: [AnyHashable : Any]) {
+        // Print notification payload data
+        print("Push notification received: \(data)")
+    }
+    
     // MARK: - Quorum
     
-    func createQuorum() {
+    func createQuorum(mnemonic: String? = nil, completion: (() -> ())? = nil) {
         guard quorumManager == nil else { return }
         
         let user = CoreDataHelper.getUser()
         
-        createQuorumWith(mnemonic: user?.mnemonic)
+        createQuorumWith(mnemonic: mnemonic ?? user?.mnemonic)
         let accountAddress = quorumManager!.accountAddress
         ConfigWebServiceRequest.execute(accountAddress: accountAddress, success: createQuorumAPI(_:), failure: { _ in })
+        
+        completion?()
     }
     
     func createQuorumWith(mnemonic: String?) {

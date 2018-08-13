@@ -55,11 +55,30 @@ class VerifyIDDetailVC: UIViewController {
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {
-        print(selectedCode)
-        print(documentType?.rawValue)
+        request()
     }
     
     // MARK: - Functions
+    
+    private func request() {
+        CustomWebServiceRequest.createVerificationSession(success: { (sessionID) in
+            self.photoUploads(sessionID: sessionID)
+        }) { (error) in
+            // TODO: Error Popup
+            print(error)
+        }
+    }
+    
+    private func photoUploads(sessionID: String) {
+        // face upload
+//        CustomWebServiceRequest.photoUpload(image: , sessionID: sessionID, context: .face, countryCode: selectedCode, success: nil, failure: nil)
+        
+        // front image upload
+        CustomWebServiceRequest.photoUpload(image: frontImage!, sessionID: sessionID, context: .documentFront, countryCode: selectedCode, success: nil, failure: nil)
+        
+        // back image upload
+        CustomWebServiceRequest.photoUpload(image: backImage!, sessionID: sessionID, context: .documentBack, countryCode: selectedCode, success: nil, failure: nil)
+    }
     
     private func setupData() {
         cardFrontImage.image = frontImage

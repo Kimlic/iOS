@@ -15,11 +15,14 @@ class SplashScreenVC: BaseVC {
     
     // MARK: - Local Varibles
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    let currentUser = CoreDataHelper.getUser()
+    var currentUser: KimlicUser?
     var navigateFunction: (()->())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Get current user in core data
+        currentUser = CoreDataHelper.getUser()
         
         rotateAnimation()
     }
@@ -29,11 +32,11 @@ class SplashScreenVC: BaseVC {
         //Splash screen animation
         Animz.rotateY(layer: self.viewImageContainer.layer, angleFrom: 360, duration: Animz.time1) {
             
-            if self.currentUser == nil {
-                self.navigateFunction = UIUtils.setSignUpScreenAsRoot
-            } else {
+            if self.isOldUserCheck() {
                 self.appDelegate.createQuorum()
                 self.navigateFunction = UIUtils.setUserProfileScreenAsRoot
+            } else {
+                self.navigateFunction = UIUtils.setSignUpScreenAsRoot
             }
             
             UIView.animate(withDuration: Animz.time1 , animations: {}, completion: {
@@ -41,5 +44,12 @@ class SplashScreenVC: BaseVC {
                 self.navigateFunction!()
             })
         }
+    }
+    
+    private func isOldUserCheck() -> Bool {
+        if currentUser == nil || currentUser?.phone == nil || currentUser?.email == nil {
+            return false
+        }
+        return true
     }
 }

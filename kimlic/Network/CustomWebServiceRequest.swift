@@ -12,7 +12,7 @@ import web3swift
 
 final class CustomWebServiceRequest {
     
-    // MARK - Get Config
+    // MARK: - Get Config
     static func getConfig(accountAddress: String, success: @escaping ([String: Any]) -> Void, failure: @escaping (String?) -> Void) {
         let url = Constants.APIEndpoint.config.url()
         let headers: HTTPHeaders = [
@@ -24,7 +24,7 @@ final class CustomWebServiceRequest {
         }, failure: failure)
     }
     
-    // MARK - Create Email
+    // MARK: - Create Email
     static func createEmail(email: String, success: @escaping () -> Void, failure: @escaping (String) -> Void) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         do {
@@ -45,7 +45,7 @@ final class CustomWebServiceRequest {
         }
     }
     
-    // MARK - Create Phone
+    // MARK: - Create Phone
     static func createPhone(phone: String, success: @escaping () -> Void, failure: @escaping (String) -> Void) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         do {
@@ -66,7 +66,7 @@ final class CustomWebServiceRequest {
         }
     }
     
-    // MARK - Approve Code
+    // MARK: - Approve Code
     static func approveCode(code: String, type: VerificationType, success: @escaping () -> Void, failure: @escaping (String) -> Void) {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -85,4 +85,53 @@ final class CustomWebServiceRequest {
             failure(error ?? "errorMessage".localized)
         }
     }
+    
+    // MARK: - Create verification session
+    // TODO: Code Refactoring
+    static func createVerificationSession(success: @escaping (String) -> Void, failure: @escaping (String) -> Void) {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let user = CoreDataHelper.getUser()
+        let url = "https://ap-api-test.kimlic.com/api/verifications/digital/sessions"
+        let headers = ["account-address": appDelegate.quorumManager!.accountAddress.lowercased()]
+        let params =  ["first_name": user?.firstName,
+                       "last_name": user?.lastName,
+                       "lang": "en",
+                       "document_type": "DRIVERS_LICENSE",
+                       "timestamp": 1631209420,
+                       "contract_address": appDelegate.quorumAPI?.addresses.contextContract,
+                       "device_os": "ios",
+                       "device_token": user?.deviceToken
+            ] as [String : Any]
+        
+        WebServicesBaseRequest().executeRequest(url: url, method: .post, params: params, headers: headers, success: { (data) in
+            print(data)
+            success("")
+        }) { (error) in
+            failure(error ?? "errorMessage".localized)
+        }
+    }
+    
+    // MARK: - Create verification session
+    // TODO: Code Refactoring
+    static func photoUpload(image: UIImage, sessionID: String, context: DocumentPhotoContext, countryCode: String, success: (() -> Void)? = nil, failure: ((String) -> Void)? = nil) {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let url = "https://ap-api-test.kimlic.com/api/verifications/digital/sessions/\(sessionID)/media"
+        let headers = ["account-address": appDelegate.quorumManager!.accountAddress.lowercased()]
+        let params =  [
+            "country": countryCode,
+            "context": context.rawValue,
+            "content": image.convertBase64(),
+            "timestamp": 1631209420
+            ] as [String : Any]
+        
+        WebServicesBaseRequest().executeRequest(url: url, method: .post, params: params, headers: headers, success: { (data) in
+            print(data)
+            success()
+        }) { (error) in
+            failure(error ?? "errorMessage".localized)
+        }
+    }
+    
 }

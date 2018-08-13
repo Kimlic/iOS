@@ -25,9 +25,7 @@ class SignUpVC: UIViewController {
     // MARK: - IBActions
     
     @IBAction func newIdentityButtonPressed(_ sender: Any) {
-        createQuorum()
         UIUtils.navigateToTutorial(self)
-//        UIUtils.navigateToAddress(self)
     }
     
     @IBAction func recoverIdentityButtonPressed(_ sender: Any) {
@@ -35,11 +33,6 @@ class SignUpVC: UIViewController {
     }
     
     // MARK: - Functions
-    
-    private func createQuorum() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.createQuorum()
-    }
     
     private func setupView() {
         newIdentityButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: newIdentityButton.frame, type: .topBottom).color

@@ -105,6 +105,15 @@ struct CoreDataHelper {
         saveUser()
     }
     
+    static func saveDeviceToken(deviceToken: String) {
+        var user = getUser()
+        if user == nil {
+            user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
+        }
+        user?.deviceToken = deviceToken
+        saveUser()
+    }
+    
     private static func saveUser() {
         do {
             try context.save()
