@@ -221,46 +221,6 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
-    static func navigateToUserBasicProfile(vc: UIViewController){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tarVC = storyboard.instantiateViewController(withIdentifier: UserBasicProfileInfoVC.className) as! UserBasicProfileInfoVC
-        vc.navigationController?.pushViewController(tarVC, animated: true)
-    }
-    
-    static func navigateToUserProfile(vc: UIViewController){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tarVC = storyboard.instantiateViewController(withIdentifier: UserProfileVC.className) as! UserProfileVC
-        vc.navigationController?.pushViewController(tarVC, animated: true)
-    }
-    
-    static func navigateToUserProfileWithHandler(vc: UIViewController){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tarVC = storyboard.instantiateViewController(withIdentifier: UserProfileVC.className) as! UserProfileVC
-        vc.navigationController?.pushViewControllerWithHandler(tarVC: tarVC, completion: {
-            let _ = self.setUserProfileScreenAsRoot()
-        })
-    }
-    
-    static func navigateToAllPermissionsFooter(vc: UIViewController, completion: @escaping() -> ()){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tarVC = storyboard.instantiateViewController(withIdentifier: AllPermissionsVC.className) as! AllPermissionsVC
-        
-        let transition: CATransition = CATransition()
-        CATransaction.begin()
-        let timeFunc : CAMediaTimingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        transition.duration = Animz.time04
-        transition.timingFunction = timeFunc
-        transition.type = kCATransitionMoveIn
-        transition.subtype = kCATransitionFromLeft
-        vc.navigationController!.view.layer.add(transition, forKey: kCATransition)
-        vc.navigationController!.pushViewController(tarVC, animated: false)
-        // Callback function
-        CATransaction.setCompletionBlock {
-            completion()
-        }
-        CATransaction.commit()
-    }
-    
     static func navigateToUserProfileFooter(vc: UIViewController){
         let transition: CATransition = CATransition()
         let timeFunc : CAMediaTimingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
@@ -270,20 +230,6 @@ public class UIUtils {
         transition.subtype = kCATransitionFromRight
         vc.navigationController!.view.layer.add(transition, forKey: kCATransition)
         vc.navigationController!.popViewController(animated: false)
-    }
-    
-    static func navigateToPermissionDetail(vc: UIViewController, permission: PermissionDetailResponse, qrCode: String!){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tarVC = storyboard.instantiateViewController(withIdentifier: PermissionDetailVC.className) as! PermissionDetailVC
-        tarVC.permission = permission
-        tarVC.qrCode = qrCode
-        vc.navigationController?.pushViewController(tarVC, animated: true)
-    }
-    
-    static func navigateToScanCode(vc: UIViewController){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tarVC = storyboard.instantiateViewController(withIdentifier: ScanCodeVC.className) as! ScanCodeVC
-        vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
     // Loading 

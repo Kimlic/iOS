@@ -7,7 +7,7 @@
 import UIKit
 import SwiftyUserDefaults
 
-class SplashScreenVC: BaseVC {
+class SplashScreenVC: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var imgShield: UIImageView!

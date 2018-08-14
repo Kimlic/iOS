@@ -6,7 +6,7 @@
 //  Copyright © 2017 Ratel. All rights reserved.
 import UIKit
 
-class TutorialsVC: BaseVC, UIPageViewControllerDataSource {
+class TutorialsVC: UIViewController, UIPageViewControllerDataSource {
     
     var pageViewController: UIPageViewController!
     var pageCount = 3
