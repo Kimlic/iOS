@@ -86,7 +86,7 @@ class TutorialsVC: UIViewController, UIPageViewControllerDataSource {
     private func setupPageControl() {
         let appearance = UIPageControl.appearance()
         appearance.pageIndicatorTintColor = UIColor.gray
-        appearance.currentPageIndicatorTintColor = Constants.Colors.appBlue
+        appearance.currentPageIndicatorTintColor = UIColor.waterBlue
     }
     
     //Tutorials Start Page Number

@@ -13,20 +13,6 @@ class Constants {
         static let debug = false
     }
     
-    struct Colors {
-        
-        static let appBlue = UIColor(hex:"#65beff")
-        static let appGreen = UIColor(hex: "#9ABC2A")
-        static let appOrange = UIColor(hex: "#FFB100")
-        static let textGray = UIColor(hex:"#878787")
-        
-        static let popupTitleDarkGrey = UIColor(hex:"#626262")
-        static let popupMsgGrey = UIColor(hex:"#ADADAD")
-        static let popupErrorRed = UIColor(hex:"#e85234")
-        static let popupWarningOrange = UIColor(hex:"#ffb40b")
-        static let popupSuccessGreen = UIColor(hex:"#b3d641")
-    }
-    
     struct WebServicesUrl {
         private static let Base = Bundle.main.serverURL
         static  let ClientCredentials = Base + "/oauth/token"

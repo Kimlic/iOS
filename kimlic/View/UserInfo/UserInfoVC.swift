@@ -41,7 +41,7 @@ class UserInfoVC: UIViewController {
             CoreDataHelper.saveName(firstName: (firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!, lastName: (lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!)
             UIUtils.navigateToMessage(self, messageType: .fullNameSuccessfull)
         }else {
-            PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "fieldsRequiredTitle".localized, message: "fieldsRequiredMessage".localized, buttonTitle: "fieldsRequiredButtonTitle".localized))
+//            PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "fieldsRequiredTitle".localized, message: "fieldsRequiredMessage".localized, buttonTitle: "fieldsRequiredButtonTitle".localized))
         }
     }
     

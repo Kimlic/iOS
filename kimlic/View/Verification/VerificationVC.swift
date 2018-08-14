@@ -128,7 +128,7 @@ class VerificationVC: UIViewController {
     }
     
     private func showCodeError(_ message: String? = nil) {
-        PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "incorrectCodeTitle".localized, message: message ?? "incorrectCodeMessage".localized, buttonTitle: "incorrectCodeButtonTitle".localized))
+//        PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "incorrectCodeTitle".localized, message: message ?? "incorrectCodeMessage".localized, buttonTitle: "incorrectCodeButtonTitle".localized))
     }
     
     private func serverRequest(_ code: String, type: VerificationType) {

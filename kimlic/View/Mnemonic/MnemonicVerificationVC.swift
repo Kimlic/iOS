@@ -50,7 +50,7 @@ class MnemonicVerificationVC: UIViewController {
             UIUtils.navigateToMessage(self, messageType: .passphraseSuccessfull)
             CoreDataHelper.saveRecovery(isAccountRecovery: true)
         }else {
-            PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "Wrong", message: "Passphrase Verify Wrong", buttonTitle: "Try Again"), btnClickCompletion: nil)
+//            PopupGenerator.createPopup(controller: self, type: .warning, popup: Popup(title: "Wrong", message: "Passphrase Verify Wrong", buttonTitle: "Try Again"), btnClickCompletion: nil)
         }
     }
     

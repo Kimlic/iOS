@@ -234,7 +234,7 @@ public class UIUtils {
     
     // Loading 
     static func showLoading(){
-        let activityData = ActivityData(type: .ballClipRotate, color: Constants.Colors.appBlue)
+        let activityData = ActivityData(type: .ballClipRotate, color: UIColor.waterBlue)
         NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
     }
     
