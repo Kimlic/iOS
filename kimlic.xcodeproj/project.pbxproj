@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F1E43C41FC0A5A500B0B631 /* UserDefaultsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E43C31FC0A5A500B0B631 /* UserDefaultsExt.swift */; };
 		0F31443A20F3BA41007B72F6 /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F31443920F3BA41007B72F6 /* ButtonModel.swift */; };
 		0F31443D20F4FD5A007B72F6 /* ProfileCamera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F31443C20F4FD5A007B72F6 /* ProfileCamera.storyboard */; };
 		0F31443F20F4FD6D007B72F6 /* ProfileCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F31443E20F4FD6D007B72F6 /* ProfileCameraVC.swift */; };
@@ -18,7 +17,6 @@
 		0F4AB22520EEB9A400F941D1 /* QuorumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4AB22420EEB9A400F941D1 /* QuorumManager.swift */; };
 		0F5608CF20F7BCC600A782A0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */; };
 		0FBA58F01FC0A81D00DF593F /* PopupGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */; };
-		17D8B2A820FE293C00CEE289 /* ConfigWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B2A720FE293C00CEE289 /* ConfigWebServiceRequest.swift */; };
 		17D8B2AA20FE2DFB00CEE289 /* KimlicContractsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B2A920FE2DFB00CEE289 /* KimlicContractsContext.swift */; };
 		17D8B2AC20FF298D00CEE289 /* QuorumAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B2AB20FF298D00CEE289 /* QuorumAPI.swift */; };
 		17D8B2AE20FF3E1600CEE289 /* ConfigResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B2AD20FF3E1600CEE289 /* ConfigResponse.swift */; };
@@ -50,7 +48,6 @@
 		7C30A62220C04A1B00EC69F7 /* TermsAndConditions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C30A62120C04A1B00EC69F7 /* TermsAndConditions.storyboard */; };
 		7C30A62520C04AE700EC69F7 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C30A62420C04AE700EC69F7 /* Tutorial.storyboard */; };
 		7C379AA31FB9DCF900D005CC /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C379AA21FB9DCF900D005CC /* SplashScreenVC.swift */; };
-		7C4441B51FCD664F00DB551C /* UIImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4441B41FCD664F00DB551C /* UIImageViewExt.swift */; };
 		7C4838521FB5F62400FC864A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4838511FB5F62400FC864A /* AppDelegate.swift */; };
 		7C4838591FB5F62500FC864A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4838581FB5F62500FC864A /* Assets.xcassets */; };
 		7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */; };
@@ -88,7 +85,6 @@
 		7C90C4B920C811CC006EEF87 /* TouchIDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C90C4B820C811CC006EEF87 /* TouchIDVC.swift */; };
 		7C90C4BD20C8290B006EEF87 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C90C4BC20C8290B006EEF87 /* LocalAuthentication.framework */; };
 		7C929D661FCC53E6001B9E22 /* PermissionDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929D651FCC53E6001B9E22 /* PermissionDetailResponse.swift */; };
-		7C929D681FCC583F001B9E22 /* QrCodeWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929D671FCC583F001B9E22 /* QrCodeWebServiceRequest.swift */; };
 		7C99D6C91FC7FC5B00A593C5 /* GenericResponseMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6C81FC7FC5B00A593C5 /* GenericResponseMappable.swift */; };
 		7C99D6CB1FC7FDCB00A593C5 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6CA1FC7FDCB00A593C5 /* TokenResponse.swift */; };
 		7C99D6CD1FC7FDFD00A593C5 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6CC1FC7FDFD00A593C5 /* UserResponse.swift */; };
@@ -100,12 +96,8 @@
 		7C99D6D91FC7FE8D00A593C5 /* WrappedRootResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6D81FC7FE8D00A593C5 /* WrappedRootResponse.swift */; };
 		7C99D6DD1FC7FF4000A593C5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6DC1FC7FF4000A593C5 /* User.swift */; };
 		7C99D6DF1FC7FF7000A593C5 /* WebServicesBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6DE1FC7FF7000A593C5 /* WebServicesBaseRequest.swift */; };
-		7C99D6E11FC7FF8E00A593C5 /* TokenWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6E01FC7FF8E00A593C5 /* TokenWebServiceRequest.swift */; };
-		7C99D6E31FC7FFDE00A593C5 /* UserWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6E21FC7FFDE00A593C5 /* UserWebServiceRequest.swift */; };
 		7C99D6E71FC8108300A593C5 /* BundleExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6E61FC8108300A593C5 /* BundleExt.swift */; };
-		7C99D6E91FC8150E00A593C5 /* PhoneWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6E81FC8150E00A593C5 /* PhoneWebServiceRequest.swift */; };
 		7C99D6EB1FC842B700A593C5 /* UINavigationControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6EA1FC842B700A593C5 /* UINavigationControllerExt.swift */; };
-		7C99D6ED1FC84A6400A593C5 /* EmailWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6EC1FC84A6400A593C5 /* EmailWebServiceRequest.swift */; };
 		7C99D6EF1FC84C5200A593C5 /* WrappedRootResponseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6EE1FC84C5200A593C5 /* WrappedRootResponseCollection.swift */; };
 		7CA54B1A210D67F2002555C7 /* CustomWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA54B19210D67F2002555C7 /* CustomWebServiceRequest.swift */; };
 		7CA54B1D210EB8FA002555C7 /* VerifyIDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA54B1C210EB8FA002555C7 /* VerifyIDVC.swift */; };
@@ -127,7 +119,6 @@
 
 /* Begin PBXFileReference section */
 		0ABE458C4440E15E0344ADF0 /* Pods-kimlic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kimlic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kimlic/Pods-kimlic.debug.xcconfig"; sourceTree = "<group>"; };
-		0F1E43C31FC0A5A500B0B631 /* UserDefaultsExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExt.swift; sourceTree = "<group>"; };
 		0F31443920F3BA41007B72F6 /* ButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
 		0F31443C20F4FD5A007B72F6 /* ProfileCamera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileCamera.storyboard; sourceTree = "<group>"; };
 		0F31443E20F4FD6D007B72F6 /* ProfileCameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCameraVC.swift; sourceTree = "<group>"; };
@@ -137,9 +128,7 @@
 		0F4AB22020EE6B7300F941D1 /* AccountStorageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStorageAdapter.swift; sourceTree = "<group>"; };
 		0F4AB22420EEB9A400F941D1 /* QuorumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuorumManager.swift; sourceTree = "<group>"; };
 		0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
-		0F5608DA20F8DF4D00A782A0 /* ErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHelper.swift; sourceTree = "<group>"; };
 		0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupGenerator.swift; sourceTree = "<group>"; };
-		17D8B2A720FE293C00CEE289 /* ConfigWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigWebServiceRequest.swift; sourceTree = "<group>"; };
 		17D8B2A920FE2DFB00CEE289 /* KimlicContractsContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KimlicContractsContext.swift; sourceTree = "<group>"; };
 		17D8B2AB20FF298D00CEE289 /* QuorumAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuorumAPI.swift; sourceTree = "<group>"; };
 		17D8B2AD20FF3E1600CEE289 /* ConfigResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigResponse.swift; sourceTree = "<group>"; };
@@ -170,7 +159,6 @@
 		7C30A62120C04A1B00EC69F7 /* TermsAndConditions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TermsAndConditions.storyboard; sourceTree = "<group>"; };
 		7C30A62420C04AE700EC69F7 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		7C379AA21FB9DCF900D005CC /* SplashScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenVC.swift; sourceTree = "<group>"; };
-		7C4441B41FCD664F00DB551C /* UIImageViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExt.swift; sourceTree = "<group>"; };
 		7C48384E1FB5F62400FC864A /* kimlic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kimlic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4838511FB5F62400FC864A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C4838581FB5F62500FC864A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -210,7 +198,6 @@
 		7C90C4B820C811CC006EEF87 /* TouchIDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDVC.swift; sourceTree = "<group>"; };
 		7C90C4BC20C8290B006EEF87 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		7C929D651FCC53E6001B9E22 /* PermissionDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionDetailResponse.swift; sourceTree = "<group>"; };
-		7C929D671FCC583F001B9E22 /* QrCodeWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeWebServiceRequest.swift; sourceTree = "<group>"; };
 		7C99D6C81FC7FC5B00A593C5 /* GenericResponseMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponseMappable.swift; sourceTree = "<group>"; };
 		7C99D6CA1FC7FDCB00A593C5 /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
 		7C99D6CC1FC7FDFD00A593C5 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
@@ -222,12 +209,8 @@
 		7C99D6D81FC7FE8D00A593C5 /* WrappedRootResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedRootResponse.swift; sourceTree = "<group>"; };
 		7C99D6DC1FC7FF4000A593C5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7C99D6DE1FC7FF7000A593C5 /* WebServicesBaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesBaseRequest.swift; sourceTree = "<group>"; };
-		7C99D6E01FC7FF8E00A593C5 /* TokenWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenWebServiceRequest.swift; sourceTree = "<group>"; };
-		7C99D6E21FC7FFDE00A593C5 /* UserWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWebServiceRequest.swift; sourceTree = "<group>"; };
 		7C99D6E61FC8108300A593C5 /* BundleExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExt.swift; sourceTree = "<group>"; };
-		7C99D6E81FC8150E00A593C5 /* PhoneWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneWebServiceRequest.swift; sourceTree = "<group>"; };
 		7C99D6EA1FC842B700A593C5 /* UINavigationControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExt.swift; sourceTree = "<group>"; };
-		7C99D6EC1FC84A6400A593C5 /* EmailWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailWebServiceRequest.swift; sourceTree = "<group>"; };
 		7C99D6EE1FC84C5200A593C5 /* WrappedRootResponseCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedRootResponseCollection.swift; sourceTree = "<group>"; };
 		7CA54B19210D67F2002555C7 /* CustomWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWebServiceRequest.swift; sourceTree = "<group>"; };
 		7CA54B1C210EB8FA002555C7 /* VerifyIDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyIDVC.swift; sourceTree = "<group>"; };
@@ -379,7 +362,6 @@
 				7C842B9E1FC2B8CC0010F98A /* UIUtils.swift */,
 				7C68A83120DA11D5001DDDC8 /* GradientColor.swift */,
 				0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */,
-				0F5608DA20F8DF4D00A782A0 /* ErrorHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -398,12 +380,6 @@
 			children = (
 				7C99D6DE1FC7FF7000A593C5 /* WebServicesBaseRequest.swift */,
 				7CA54B19210D67F2002555C7 /* CustomWebServiceRequest.swift */,
-				7C99D6E01FC7FF8E00A593C5 /* TokenWebServiceRequest.swift */,
-				7C99D6E21FC7FFDE00A593C5 /* UserWebServiceRequest.swift */,
-				7C99D6E81FC8150E00A593C5 /* PhoneWebServiceRequest.swift */,
-				7C99D6EC1FC84A6400A593C5 /* EmailWebServiceRequest.swift */,
-				17D8B2A720FE293C00CEE289 /* ConfigWebServiceRequest.swift */,
-				7C929D671FCC583F001B9E22 /* QrCodeWebServiceRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -485,7 +461,6 @@
 			children = (
 				0F359D931FC098F7007E07DC /* NSObjectExt.swift */,
 				7CF6556F1FBAF15D00CA9C1A /* StringExt.swift */,
-				0F1E43C31FC0A5A500B0B631 /* UserDefaultsExt.swift */,
 				7C99D6E61FC8108300A593C5 /* BundleExt.swift */,
 				7C22A66B21142ECC00B1412A /* CloudCoreExt.swift */,
 			);
@@ -498,7 +473,6 @@
 				7C8272C41FC583C600054277 /* UIImageExt.swift */,
 				7C161A4A1FBDEA05004FD9A0 /* UITextFieldExt.swift */,
 				7C99D6EA1FC842B700A593C5 /* UINavigationControllerExt.swift */,
-				7C4441B41FCD664F00DB551C /* UIImageViewExt.swift */,
 				7C6FC85220CEA9530026AF1C /* UITableViewCellExt.swift */,
 				7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */,
 				7C68A83520DA1267001DDDC8 /* UIColorExt.swift */,
@@ -904,7 +878,6 @@
 				7C161A211FBDB4E3004FD9A0 /* Popup.swift in Sources */,
 				7C68A83820DA12A1001DDDC8 /* UIFontExt.swift in Sources */,
 				7CB5674F1FB9C28E00F03D24 /* TutorialsVC.swift in Sources */,
-				7C99D6E11FC7FF8E00A593C5 /* TokenWebServiceRequest.swift in Sources */,
 				0F31444220F51D98007B72F6 /* Model.xcdatamodeld in Sources */,
 				7C6546B6211C8A65009972D7 /* DarkDatePicker.swift in Sources */,
 				7C68A83220DA11D5001DDDC8 /* GradientColor.swift in Sources */,
@@ -917,7 +890,6 @@
 				0FBA58F01FC0A81D00DF593F /* PopupGenerator.swift in Sources */,
 				7C99D6EB1FC842B700A593C5 /* UINavigationControllerExt.swift in Sources */,
 				7C99D6C91FC7FC5B00A593C5 /* GenericResponseMappable.swift in Sources */,
-				7C99D6E91FC8150E00A593C5 /* PhoneWebServiceRequest.swift in Sources */,
 				7C99D6CD1FC7FDFD00A593C5 /* UserResponse.swift in Sources */,
 				7CA54B1D210EB8FA002555C7 /* VerifyIDVC.swift in Sources */,
 				7C8272C51FC583C600054277 /* UIImageExt.swift in Sources */,
@@ -933,22 +905,17 @@
 				7C99D6D71FC7FE7A00A593C5 /* WrappedResponseCollection.swift in Sources */,
 				7C85BC0A20E649380000A4BA /* UIViewExt.swift in Sources */,
 				7C99D6EF1FC84C5200A593C5 /* WrappedRootResponseCollection.swift in Sources */,
-				7C929D681FCC583F001B9E22 /* QrCodeWebServiceRequest.swift in Sources */,
 				7CDED0101FBC87AF006FB0AC /* VerificationVC.swift in Sources */,
 				17D8B2AA20FE2DFB00CEE289 /* KimlicContractsContext.swift in Sources */,
 				7C6FC85320CEA9530026AF1C /* UITableViewCellExt.swift in Sources */,
 				0F4AB22120EE6B7300F941D1 /* AccountStorageAdapter.swift in Sources */,
-				0F1E43C41FC0A5A500B0B631 /* UserDefaultsExt.swift in Sources */,
 				7C99D6CF1FC7FE2600A593C5 /* UserCreateResponse.swift in Sources */,
-				7C99D6ED1FC84A6400A593C5 /* EmailWebServiceRequest.swift in Sources */,
 				7C99D6DD1FC7FF4000A593C5 /* User.swift in Sources */,
 				7C99D6CB1FC7FDCB00A593C5 /* TokenResponse.swift in Sources */,
 				7C99D6D31FC7FE5000A593C5 /* EmailResponse.swift in Sources */,
 				7CB516FD20D00DE2006FF06D /* UserInfoVC.swift in Sources */,
-				7C4441B51FCD664F00DB551C /* UIImageViewExt.swift in Sources */,
 				0F31443A20F3BA41007B72F6 /* ButtonModel.swift in Sources */,
 				17D8B2AC20FF298D00CEE289 /* QuorumAPI.swift in Sources */,
-				7C99D6E31FC7FFDE00A593C5 /* UserWebServiceRequest.swift in Sources */,
 				7CF655701FBAF15D00CA9C1A /* StringExt.swift in Sources */,
 				7C7FC46B20CC07D100AC8F8F /* DesignableView.swift in Sources */,
 				7CB567511FB9C2CA00F03D24 /* TutorialsContentVC.swift in Sources */,
@@ -966,7 +933,6 @@
 				7C99D6D11FC7FE3C00A593C5 /* PhoneResponse.swift in Sources */,
 				7C22A66F21149C0C00B1412A /* AddressVC.swift in Sources */,
 				0F359D8F1FC07EDD007E07DC /* Animz.swift in Sources */,
-				17D8B2A820FE293C00CEE289 /* ConfigWebServiceRequest.swift in Sources */,
 				7C85BC0520E625870000A4BA /* CustomPopupVC.swift in Sources */,
 				7CDED00E1FBC7DD8006FB0AC /* PhoneNumberVC.swift in Sources */,
 				7C4838521FB5F62400FC864A /* AppDelegate.swift in Sources */,

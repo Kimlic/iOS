@@ -26,18 +26,8 @@ enum PopupType {
     case security
 }
 
-enum TouchIDNavigateTarget {
-    case UserProfileVC
-    case UserBasicProfileVC
-}
-
 enum TermsNavigateTarget {
     case none, phoneNumber, accountRecovery
-}
-
-enum LevelBarAnimationType {
-    case create
-    case show
 }
 
 enum PasscodePageType {

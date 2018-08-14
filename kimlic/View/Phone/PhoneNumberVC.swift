@@ -7,7 +7,6 @@
 
 import UIKit
 import PhoneNumberKit
-import SwiftyUserDefaults
 import SwiftyJSON
 import web3swift
 import Alamofire

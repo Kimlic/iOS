@@ -98,7 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         createQuorumWith(mnemonic: mnemonic ?? user?.mnemonic)
         let accountAddress = quorumManager!.accountAddress
-        ConfigWebServiceRequest.execute(accountAddress: accountAddress, success: createQuorumAPI(_:), failure: { _ in })
+        CustomWebServiceRequest.getConfig(accountAddress: accountAddress, success: createQuorumAPI(_:), failure: { _ in })
         
         completion?()
     }

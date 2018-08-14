@@ -99,7 +99,6 @@ extension ProfileCameraVC: AVCapturePhotoCaptureDelegate {
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
         if let sampleBuffer = photoSampleBuffer, let previewBuffer = previewPhotoSampleBuffer, let dataImage = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: previewBuffer) {
-//            let image = UIImage(data: dataImage)?.resizeImage(size: CGSize(width: (self.viewIfLoaded?.frame.size.width)!, height: (self.viewIfLoaded?.frame.size.height)! * 0.5))
             let image = UIImage(data: dataImage)
             var custumCroppedRect  = croppedView.frame
             custumCroppedRect.origin.y -= 20

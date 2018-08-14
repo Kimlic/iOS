@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import SwiftyUserDefaults
 import NVActivityIndicatorView
 import GooglePlaces
 

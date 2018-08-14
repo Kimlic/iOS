@@ -26,22 +26,4 @@ public extension String {
         if (c.count <= n) { return self }
         return String( Array(c).prefix(upTo: n) )
     }
-    
-    //Get the application id value from QR Code string
-    func getAppIdFromQrCode() -> String? {
-        let token = self.components(separatedBy: ":")
-        if token.count > 1 {
-            return token[0]
-        }
-        return nil
-    }
-    
-    //Get the token value from QR Code string
-    func getToken() -> String?{
-        let token = self.components(separatedBy: ":")
-        if token.count > 1 {
-            return token[1]
-        }
-        return nil
-    }
 }

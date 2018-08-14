@@ -4,8 +4,8 @@
 //
 //  Created by İzzet Öztürk on 13.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
+
 import UIKit
-import SwiftyUserDefaults
 
 class SplashScreenVC: UIViewController {
     

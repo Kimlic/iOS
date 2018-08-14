@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyUserDefaults
 
 class SignUpVC: UIViewController {
     

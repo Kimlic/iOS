@@ -41,50 +41,7 @@ public extension UIImage {
         let dataImage = imageData.base64EncodedString(options: .endLineWithLineFeed)
         return dataImage.trimmingCharacters(in: .whitespacesAndNewlines)
     }
-    
-    // MARK: Resize Image
-    func resizeImage(size: CGSize) -> UIImage {
-        var returnImage: UIImage?
-        
-        var scaleFactor: CGFloat = 1.0
-        var scaledWidth = size.width
-        var scaledHeight = size.height
-        var thumbnailPoint = CGPoint(x: 0, y: 0)
-        
-        
-        if !self.size.equalTo(size) {
-            let widthFactor = size.width / self.size.width
-            let heightFactor = size.height / self.size.height
-            
-            if widthFactor > heightFactor {
-                scaleFactor = widthFactor
-            } else {
-                scaleFactor = heightFactor
-            }
-            
-            scaledWidth = self.size.width * scaleFactor
-            scaledHeight = self.size.height * scaleFactor
-            
-            if widthFactor > heightFactor {
-                thumbnailPoint.y = (size.height - scaledHeight) * 0.5
-            } else if widthFactor < heightFactor {
-                thumbnailPoint.x = (size.width - scaledWidth) * 0.5
-            }
-        }
-        UIGraphicsBeginImageContextWithOptions(size, true, 0)        
-        var thumbnailRect = CGRect(x: 0, y: 0, width: 0, height: 0)
-        thumbnailRect.origin = thumbnailPoint
-        thumbnailRect.size.width = scaledWidth
-        thumbnailRect.size.height = scaledHeight
-        
-        self.draw(in: thumbnailRect)
-        returnImage = UIGraphicsGetImageFromCurrentImageContext()
-        
-        UIGraphicsEndImageContext()
-        
-        return returnImage!
-    }
-    
+  
     func cropImage(toRect cropRect: CGRect, viewWidth: CGFloat, viewHeight: CGFloat) -> UIImage? {
         
         let scaleWidth = size.width / viewWidth
