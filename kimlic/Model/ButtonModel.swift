@@ -8,8 +8,7 @@
 
 import Foundation
 
-public class ButtonModel {
-    
+struct ButtonModel {
     var tag: Int
     var title: String
     init(tag: Int, title: String) {

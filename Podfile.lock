@@ -22,7 +22,6 @@ PODS:
   - NVActivityIndicatorView (4.2.1):
     - NVActivityIndicatorView/Presenter (= 4.2.1)
   - NVActivityIndicatorView/Presenter (4.2.1)
-  - ObjectMapper (3.0.0)
   - PhoneNumberKit (2.1.0):
     - PhoneNumberKit/PhoneNumberKitCore (= 2.1.0)
     - PhoneNumberKit/UIKit (= 2.1.0)
@@ -45,7 +44,6 @@ PODS:
   - SipHash (1.2.2)
   - SmileLock (3.0.3)
   - SwiftyJSON (3.1.0)
-  - SwiftyUserDefaults (3.0.1)
   - TextFieldEffects (1.4.0)
   - web3swift (0.8.2):
     - Alamofire (~> 4.7)
@@ -68,13 +66,11 @@ DEPENDENCIES:
   - GooglePlaces (~> 2.7)
   - IQKeyboardManagerSwift (~> 5.0.6)
   - NVActivityIndicatorView (~> 4.2.1)
-  - ObjectMapper (~> 3.0.0)
   - PhoneNumberKit (~> 2.1)
   - PopupDialog (~> 0.7.1)
   - Quorum (from `https://github.com/Kimlic/Quorum-iOS`)
   - SmileLock (~> 3.0)
   - SwiftyJSON (= 3.1.0)
-  - SwiftyUserDefaults (= 3.0.1)
   - TextFieldEffects (~> 1.4)
   - web3swift (from `https://github.com/Kimlic/web3swift`, branch `master`)
 
@@ -96,7 +92,6 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - libsodium
     - NVActivityIndicatorView
-    - ObjectMapper
     - PhoneNumberKit
     - PopupDialog
     - Result
@@ -104,7 +99,6 @@ SPEC REPOS:
     - SipHash
     - SmileLock
     - SwiftyJSON
-    - SwiftyUserDefaults
     - TextFieldEffects
 
 EXTERNAL SOURCES:
@@ -139,7 +133,6 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
   libsodium: 9a8faa5ef2fa0d2d57bd7f7d79bf8fb7c1a9f0ea
   NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
-  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
   PhoneNumberKit: 62003f40ff75315fd3738286558bc365365ac222
   PopupDialog: 39598b7d41719f5c025b4b70e62728bae7734fef
   Quorum: b80b244e9cbde3ab0b63a520a5e14016d8c57119
@@ -148,10 +141,9 @@ SPEC CHECKSUMS:
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
   SmileLock: 247b62849cedca324e70ccfad5d01714602d739e
   SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
-  SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
   TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
   web3swift: ac26245dc6921900992dd773bdf0ffc693855997
 
-PODFILE CHECKSUM: c168321b06094862c4cdb96a70418a93f1ceeee4
+PODFILE CHECKSUM: a9d311058c662534f0c979086e1fec2c2689248a
 
 COCOAPODS: 1.5.3

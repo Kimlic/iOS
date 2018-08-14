@@ -19,7 +19,6 @@
 		0FBA58F01FC0A81D00DF593F /* PopupGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */; };
 		17D8B2AA20FE2DFB00CEE289 /* KimlicContractsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B2A920FE2DFB00CEE289 /* KimlicContractsContext.swift */; };
 		17D8B2AC20FF298D00CEE289 /* QuorumAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B2AB20FF298D00CEE289 /* QuorumAPI.swift */; };
-		17D8B2AE20FF3E1600CEE289 /* ConfigResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B2AD20FF3E1600CEE289 /* ConfigResponse.swift */; };
 		3FA05207AA63FC037BD17670 /* Pods_kimlic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4839EE1351BF59D4372E9EB /* Pods_kimlic.framework */; };
 		79AD4C7E20CD050200EE9160 /* MnemonicCreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD4C7D20CD050200EE9160 /* MnemonicCreateVC.swift */; };
 		79AD4C8020CD051800EE9160 /* MnemonicCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD4C7F20CD051800EE9160 /* MnemonicCreate.storyboard */; };
@@ -84,21 +83,9 @@
 		7C90C4B720C811BA006EEF87 /* TouchID.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C90C4B620C811BA006EEF87 /* TouchID.storyboard */; };
 		7C90C4B920C811CC006EEF87 /* TouchIDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C90C4B820C811CC006EEF87 /* TouchIDVC.swift */; };
 		7C90C4BD20C8290B006EEF87 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C90C4BC20C8290B006EEF87 /* LocalAuthentication.framework */; };
-		7C929D661FCC53E6001B9E22 /* PermissionDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C929D651FCC53E6001B9E22 /* PermissionDetailResponse.swift */; };
-		7C99D6C91FC7FC5B00A593C5 /* GenericResponseMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6C81FC7FC5B00A593C5 /* GenericResponseMappable.swift */; };
-		7C99D6CB1FC7FDCB00A593C5 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6CA1FC7FDCB00A593C5 /* TokenResponse.swift */; };
-		7C99D6CD1FC7FDFD00A593C5 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6CC1FC7FDFD00A593C5 /* UserResponse.swift */; };
-		7C99D6CF1FC7FE2600A593C5 /* UserCreateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6CE1FC7FE2600A593C5 /* UserCreateResponse.swift */; };
-		7C99D6D11FC7FE3C00A593C5 /* PhoneResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6D01FC7FE3C00A593C5 /* PhoneResponse.swift */; };
-		7C99D6D31FC7FE5000A593C5 /* EmailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6D21FC7FE5000A593C5 /* EmailResponse.swift */; };
-		7C99D6D51FC7FE6600A593C5 /* WrappedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6D41FC7FE6600A593C5 /* WrappedResponse.swift */; };
-		7C99D6D71FC7FE7A00A593C5 /* WrappedResponseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6D61FC7FE7A00A593C5 /* WrappedResponseCollection.swift */; };
-		7C99D6D91FC7FE8D00A593C5 /* WrappedRootResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6D81FC7FE8D00A593C5 /* WrappedRootResponse.swift */; };
-		7C99D6DD1FC7FF4000A593C5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6DC1FC7FF4000A593C5 /* User.swift */; };
 		7C99D6DF1FC7FF7000A593C5 /* WebServicesBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6DE1FC7FF7000A593C5 /* WebServicesBaseRequest.swift */; };
 		7C99D6E71FC8108300A593C5 /* BundleExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6E61FC8108300A593C5 /* BundleExt.swift */; };
 		7C99D6EB1FC842B700A593C5 /* UINavigationControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6EA1FC842B700A593C5 /* UINavigationControllerExt.swift */; };
-		7C99D6EF1FC84C5200A593C5 /* WrappedRootResponseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C99D6EE1FC84C5200A593C5 /* WrappedRootResponseCollection.swift */; };
 		7CA54B1A210D67F2002555C7 /* CustomWebServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA54B19210D67F2002555C7 /* CustomWebServiceRequest.swift */; };
 		7CA54B1D210EB8FA002555C7 /* VerifyIDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA54B1C210EB8FA002555C7 /* VerifyIDVC.swift */; };
 		7CA54B1F210EB942002555C7 /* VerifyID.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA54B1E210EB942002555C7 /* VerifyID.storyboard */; };
@@ -131,7 +118,6 @@
 		0FBA58EF1FC0A81D00DF593F /* PopupGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupGenerator.swift; sourceTree = "<group>"; };
 		17D8B2A920FE2DFB00CEE289 /* KimlicContractsContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KimlicContractsContext.swift; sourceTree = "<group>"; };
 		17D8B2AB20FF298D00CEE289 /* QuorumAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuorumAPI.swift; sourceTree = "<group>"; };
-		17D8B2AD20FF3E1600CEE289 /* ConfigResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigResponse.swift; sourceTree = "<group>"; };
 		79AD4C7D20CD050200EE9160 /* MnemonicCreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicCreateVC.swift; sourceTree = "<group>"; };
 		79AD4C7F20CD051800EE9160 /* MnemonicCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MnemonicCreate.storyboard; sourceTree = "<group>"; };
 		79AD4C8120CD182500EE9160 /* MnemonicVerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicVerificationVC.swift; sourceTree = "<group>"; };
@@ -197,21 +183,9 @@
 		7C90C4B620C811BA006EEF87 /* TouchID.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TouchID.storyboard; sourceTree = "<group>"; };
 		7C90C4B820C811CC006EEF87 /* TouchIDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDVC.swift; sourceTree = "<group>"; };
 		7C90C4BC20C8290B006EEF87 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
-		7C929D651FCC53E6001B9E22 /* PermissionDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionDetailResponse.swift; sourceTree = "<group>"; };
-		7C99D6C81FC7FC5B00A593C5 /* GenericResponseMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponseMappable.swift; sourceTree = "<group>"; };
-		7C99D6CA1FC7FDCB00A593C5 /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
-		7C99D6CC1FC7FDFD00A593C5 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
-		7C99D6CE1FC7FE2600A593C5 /* UserCreateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreateResponse.swift; sourceTree = "<group>"; };
-		7C99D6D01FC7FE3C00A593C5 /* PhoneResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneResponse.swift; sourceTree = "<group>"; };
-		7C99D6D21FC7FE5000A593C5 /* EmailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailResponse.swift; sourceTree = "<group>"; };
-		7C99D6D41FC7FE6600A593C5 /* WrappedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedResponse.swift; sourceTree = "<group>"; };
-		7C99D6D61FC7FE7A00A593C5 /* WrappedResponseCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedResponseCollection.swift; sourceTree = "<group>"; };
-		7C99D6D81FC7FE8D00A593C5 /* WrappedRootResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedRootResponse.swift; sourceTree = "<group>"; };
-		7C99D6DC1FC7FF4000A593C5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7C99D6DE1FC7FF7000A593C5 /* WebServicesBaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesBaseRequest.swift; sourceTree = "<group>"; };
 		7C99D6E61FC8108300A593C5 /* BundleExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExt.swift; sourceTree = "<group>"; };
 		7C99D6EA1FC842B700A593C5 /* UINavigationControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExt.swift; sourceTree = "<group>"; };
-		7C99D6EE1FC84C5200A593C5 /* WrappedRootResponseCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedRootResponseCollection.swift; sourceTree = "<group>"; };
 		7CA54B19210D67F2002555C7 /* CustomWebServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWebServiceRequest.swift; sourceTree = "<group>"; };
 		7CA54B1C210EB8FA002555C7 /* VerifyIDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyIDVC.swift; sourceTree = "<group>"; };
 		7CA54B1E210EB942002555C7 /* VerifyID.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VerifyID.storyboard; sourceTree = "<group>"; };
@@ -566,23 +540,10 @@
 		7CB5674B1FB9B53400F03D24 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7C99D6C81FC7FC5B00A593C5 /* GenericResponseMappable.swift */,
-				7C99D6CE1FC7FE2600A593C5 /* UserCreateResponse.swift */,
-				7C99D6CC1FC7FDFD00A593C5 /* UserResponse.swift */,
-				7C99D6D21FC7FE5000A593C5 /* EmailResponse.swift */,
-				7C99D6D01FC7FE3C00A593C5 /* PhoneResponse.swift */,
-				7C99D6CA1FC7FDCB00A593C5 /* TokenResponse.swift */,
-				7C929D651FCC53E6001B9E22 /* PermissionDetailResponse.swift */,
-				7C99D6D41FC7FE6600A593C5 /* WrappedResponse.swift */,
-				7C99D6D61FC7FE7A00A593C5 /* WrappedResponseCollection.swift */,
-				7C99D6D81FC7FE8D00A593C5 /* WrappedRootResponse.swift */,
-				7C99D6EE1FC84C5200A593C5 /* WrappedRootResponseCollection.swift */,
 				7C161A201FBDB4E3004FD9A0 /* Popup.swift */,
-				7C99D6DC1FC7FF4000A593C5 /* User.swift */,
 				79AF1D2820C4903400CCA150 /* Country.swift */,
 				7C7A7FCB20C5440700BDE95C /* Message.swift */,
 				0F31443920F3BA41007B72F6 /* ButtonModel.swift */,
-				17D8B2AD20FF3E1600CEE289 /* ConfigResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -804,7 +765,6 @@
 				"${BUILT_PRODUCTS_DIR}/FileBrowser/FileBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/Quorum/Quorum.framework",
@@ -812,7 +772,6 @@
 				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
 				"${BUILT_PRODUCTS_DIR}/SmileLock/SmileLock.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 				"${BUILT_PRODUCTS_DIR}/libsodium/libsodium.framework",
 				"${BUILT_PRODUCTS_DIR}/secp256k1_ios/secp256k1_ios.framework",
@@ -831,7 +790,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FileBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quorum.framework",
@@ -839,7 +797,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SmileLock.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libsodium.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1_ios.framework",
@@ -881,7 +838,6 @@
 				0F31444220F51D98007B72F6 /* Model.xcdatamodeld in Sources */,
 				7C6546B6211C8A65009972D7 /* DarkDatePicker.swift in Sources */,
 				7C68A83220DA11D5001DDDC8 /* GradientColor.swift in Sources */,
-				17D8B2AE20FF3E1600CEE289 /* ConfigResponse.swift in Sources */,
 				79AD4C7E20CD050200EE9160 /* MnemonicCreateVC.swift in Sources */,
 				7C7FC46720CBFAA000AC8F8F /* MnemonicImportVC.swift in Sources */,
 				7C2F326720C0303900AEB314 /* SignUpVC.swift in Sources */,
@@ -889,8 +845,6 @@
 				7C5FD1412110368A00229CE8 /* QRCodeVC.swift in Sources */,
 				0FBA58F01FC0A81D00DF593F /* PopupGenerator.swift in Sources */,
 				7C99D6EB1FC842B700A593C5 /* UINavigationControllerExt.swift in Sources */,
-				7C99D6C91FC7FC5B00A593C5 /* GenericResponseMappable.swift in Sources */,
-				7C99D6CD1FC7FDFD00A593C5 /* UserResponse.swift in Sources */,
 				7CA54B1D210EB8FA002555C7 /* VerifyIDVC.swift in Sources */,
 				7C8272C51FC583C600054277 /* UIImageExt.swift in Sources */,
 				7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */,
@@ -902,17 +856,11 @@
 				79AF1D2920C4903400CCA150 /* Country.swift in Sources */,
 				79AD4C8920CD55F000EE9160 /* SettingsVC.swift in Sources */,
 				7C90C4B920C811CC006EEF87 /* TouchIDVC.swift in Sources */,
-				7C99D6D71FC7FE7A00A593C5 /* WrappedResponseCollection.swift in Sources */,
 				7C85BC0A20E649380000A4BA /* UIViewExt.swift in Sources */,
-				7C99D6EF1FC84C5200A593C5 /* WrappedRootResponseCollection.swift in Sources */,
 				7CDED0101FBC87AF006FB0AC /* VerificationVC.swift in Sources */,
 				17D8B2AA20FE2DFB00CEE289 /* KimlicContractsContext.swift in Sources */,
 				7C6FC85320CEA9530026AF1C /* UITableViewCellExt.swift in Sources */,
 				0F4AB22120EE6B7300F941D1 /* AccountStorageAdapter.swift in Sources */,
-				7C99D6CF1FC7FE2600A593C5 /* UserCreateResponse.swift in Sources */,
-				7C99D6DD1FC7FF4000A593C5 /* User.swift in Sources */,
-				7C99D6CB1FC7FDCB00A593C5 /* TokenResponse.swift in Sources */,
-				7C99D6D31FC7FE5000A593C5 /* EmailResponse.swift in Sources */,
 				7CB516FD20D00DE2006FF06D /* UserInfoVC.swift in Sources */,
 				0F31443A20F3BA41007B72F6 /* ButtonModel.swift in Sources */,
 				17D8B2AC20FF298D00CEE289 /* QuorumAPI.swift in Sources */,
@@ -923,26 +871,22 @@
 				0F5608CF20F7BCC600A782A0 /* CoreDataHelper.swift in Sources */,
 				7C2F326920C0424700AEB314 /* TermsAndConditionsVC.swift in Sources */,
 				7C68A83620DA1267001DDDC8 /* UIColorExt.swift in Sources */,
-				7C99D6D91FC7FE8D00A593C5 /* WrappedRootResponse.swift in Sources */,
 				0F31443F20F4FD6D007B72F6 /* ProfileCameraVC.swift in Sources */,
 				7C7A7FCC20C5440700BDE95C /* Message.swift in Sources */,
 				79AF1D2B20C4A16000CCA150 /* PickerTextField.swift in Sources */,
 				7C161A4B1FBDEA05004FD9A0 /* UITextFieldExt.swift in Sources */,
 				7C379AA31FB9DCF900D005CC /* SplashScreenVC.swift in Sources */,
 				79AF1D2F20C4BCD100CCA150 /* PinTextField.swift in Sources */,
-				7C99D6D11FC7FE3C00A593C5 /* PhoneResponse.swift in Sources */,
 				7C22A66F21149C0C00B1412A /* AddressVC.swift in Sources */,
 				0F359D8F1FC07EDD007E07DC /* Animz.swift in Sources */,
 				7C85BC0520E625870000A4BA /* CustomPopupVC.swift in Sources */,
 				7CDED00E1FBC7DD8006FB0AC /* PhoneNumberVC.swift in Sources */,
 				7C4838521FB5F62400FC864A /* AppDelegate.swift in Sources */,
 				7C7A7FC820C53B6400BDE95C /* MessageVC.swift in Sources */,
-				7C99D6D51FC7FE6600A593C5 /* WrappedResponse.swift in Sources */,
 				7CF655691FBACB1F00CA9C1A /* Constants.swift in Sources */,
 				7CA54B1A210D67F2002555C7 /* CustomWebServiceRequest.swift in Sources */,
 				7C99D6E71FC8108300A593C5 /* BundleExt.swift in Sources */,
 				7C99D6DF1FC7FF7000A593C5 /* WebServicesBaseRequest.swift in Sources */,
-				7C929D661FCC53E6001B9E22 /* PermissionDetailResponse.swift in Sources */,
 				7C85FC61211826C8007AFD96 /* AddressSearchVC.swift in Sources */,
 				7C6FC84F20CE730E0026AF1C /* ProfileVC.swift in Sources */,
 				7CA54B23210EBD6A002555C7 /* VerifyIDDetailVC.swift in Sources */,

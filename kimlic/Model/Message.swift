@@ -10,7 +10,6 @@ import UIKit
 
 
 struct Message {
-    
     var icon: UIImage?
     var title: String?
     var desc: String?

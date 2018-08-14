@@ -6,7 +6,6 @@ target 'kimlic' do
 
 	pod 'PopupDialog', '~> 0.7.1'
 	pod 'TextFieldEffects', '~> 1.4'
-	pod 'SwiftyUserDefaults', '3.0.1'
 	pod 'SwiftyJSON', '3.1.0'
 	pod 'PhoneNumberKit', '~> 2.1'
     pod 'Alamofire', '~> 4.7.2'
@@ -14,7 +13,6 @@ target 'kimlic' do
 	pod 'NVActivityIndicatorView', '~> 4.2.1'
 	pod 'FSPagerView', '~> 0.7'
 	pod 'IQKeyboardManagerSwift', '~> 5.0.6'
-	pod 'ObjectMapper', '~> 3.0.0'
 	pod 'SmileLock', '~> 3.0'
 	pod 'CryptoSwift'
 	pod 'web3swift', :git => 'https://github.com/Kimlic/web3swift', :branch => 'master'
