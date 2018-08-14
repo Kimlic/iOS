@@ -44,6 +44,8 @@ class AddressSearchVC: UIViewController {
         searchTextField.becomeFirstResponder()
     }
     
+    // MARK: - IBActions
+    
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -63,6 +65,8 @@ class AddressSearchVC: UIViewController {
             }
         }
     }
+    
+    // MARK: - Functions
     
     private func setupView() {
         addressTableView.separatorColor = UIColor.seperatorBlue

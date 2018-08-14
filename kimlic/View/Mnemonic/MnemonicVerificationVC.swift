@@ -18,7 +18,7 @@ class MnemonicVerificationVC: UIViewController {
     
     var randomVerifyList = [String]()
     var textFieldList = [UITextField]()
-    fileprivate var tmpPassphrase = [String]()
+    private var tmpPassphrase = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,16 +54,16 @@ class MnemonicVerificationVC: UIViewController {
         }
     }
     
-    fileprivate func setupView() {
+    private func setupView() {
         verifyButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.greenGradianteColors, frame: verifyButton.frame, type: .topBottom).color
     }
     
-    fileprivate func setMnemonicArray() {
+    private func setMnemonicArray() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         tmpPassphrase = appDelegate.quorumManager?.mnemonic.components(separatedBy: " ") ?? []
     }
     
-    fileprivate func setRandomPassphrase() {
+    private func setRandomPassphrase() {
         
         // Randomly create 4 numbers from 0 to 12
         let randomIndexList = generateRandomUniqueNumbers()
@@ -78,7 +78,7 @@ class MnemonicVerificationVC: UIViewController {
         }
     }
     
-    fileprivate func setPlaceHolder(textFieldIndex: Int, randomPassIndex: Int) {
+    private func setPlaceHolder(textFieldIndex: Int, randomPassIndex: Int) {
         let randomPassSeq = randomPassIndex + 1
         switch randomPassSeq {
         case 1:
@@ -92,7 +92,7 @@ class MnemonicVerificationVC: UIViewController {
         }
     }
     
-    fileprivate func generateRandomUniqueNumbers() -> [Int] {
+    private func generateRandomUniqueNumbers() -> [Int] {
         guard 4 <= (12) else { return [] }
         var numbers: Set<Int> = Set<Int>()
         (0..<4).forEach { _ in
@@ -104,7 +104,7 @@ class MnemonicVerificationVC: UIViewController {
         return numbers.map{ $0 }.sorted()
     }
     
-    fileprivate func verifyPassphrase() -> Bool {
+    private func verifyPassphrase() -> Bool {
         for index in 0...3 {
             guard textFieldList[index].text == randomVerifyList[index] else {
                 return false

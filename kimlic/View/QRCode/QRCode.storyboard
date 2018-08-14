@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,20 +9,28 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--CodeVC-->
         <scene sceneID="5zb-YC-U9D">
             <objects>
                 <viewController storyboardIdentifier="QRCodeVC" id="Hg8-Yk-cg4" customClass="QRCodeVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4qw-yN-9Kq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irN-BK-HZx" userLabel="CameraView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QR_code_cam_background" translatesAutoresizingMaskIntoConstraints="NO" id="8RB-vl-bEs">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="te4-NC-Oi0" userLabel="CloseButton">
                                 <rect key="frame" x="20" y="28" width="25" height="25"/>
@@ -32,20 +40,75 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNN-1b-kkt" userLabel="ScanAreaView">
-                                <rect key="frame" x="55" y="145" width="303" height="304"/>
+                                <rect key="frame" x="50" y="131" width="274" height="276"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcm-eq-kC1" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="581" width="150" height="56"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="F0d-7Y-T2Q"/>
+                                    <constraint firstAttribute="width" constant="150" id="Ii2-FZ-FmT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="Hg8-Yk-cg4" eventType="touchUpInside" id="Zpj-rp-Y81"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_Screen_QR_code_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Tjk-71-eOr">
+                                <rect key="frame" x="166.5" y="489.5" width="42" height="42"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YUu-Td-Tf4">
+                                <rect key="frame" x="90" y="539.5" width="195" height="21.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eot-kq-WYX">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="the QR code to login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8P-Cu-i53">
+                                        <rect key="frame" x="45" y="0.0" width="150" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="rcm-eq-kC1" firstAttribute="centerX" secondItem="4qw-yN-9Kq" secondAttribute="centerX" id="8hc-eM-CeH"/>
                             <constraint firstAttribute="trailing" secondItem="irN-BK-HZx" secondAttribute="trailing" id="DMZ-31-diC"/>
                             <constraint firstItem="irN-BK-HZx" firstAttribute="leading" secondItem="4qw-yN-9Kq" secondAttribute="leading" id="GVQ-4b-0Bq"/>
                             <constraint firstItem="irN-BK-HZx" firstAttribute="top" secondItem="4qw-yN-9Kq" secondAttribute="top" id="K0X-P5-r79"/>
+                            <constraint firstItem="YUu-Td-Tf4" firstAttribute="top" secondItem="Tjk-71-eOr" secondAttribute="bottom" constant="8" id="Ka0-wz-G4m"/>
                             <constraint firstItem="8RB-vl-bEs" firstAttribute="top" secondItem="4qw-yN-9Kq" secondAttribute="top" id="KrR-T6-gBN"/>
                             <constraint firstItem="te4-NC-Oi0" firstAttribute="leading" secondItem="Jmp-Aa-7TU" secondAttribute="leading" constant="20" id="Ss9-CM-54Q"/>
                             <constraint firstItem="8RB-vl-bEs" firstAttribute="leading" secondItem="4qw-yN-9Kq" secondAttribute="leading" id="Tsd-L9-6KY"/>
+                            <constraint firstItem="Jmp-Aa-7TU" firstAttribute="bottom" secondItem="rcm-eq-kC1" secondAttribute="bottom" constant="30" id="V77-FR-KNY"/>
                             <constraint firstAttribute="bottom" secondItem="irN-BK-HZx" secondAttribute="bottom" id="VEc-Gq-eI5"/>
                             <constraint firstItem="te4-NC-Oi0" firstAttribute="top" secondItem="Jmp-Aa-7TU" secondAttribute="top" constant="8" id="bbu-FD-ReZ"/>
+                            <constraint firstItem="YUu-Td-Tf4" firstAttribute="centerX" secondItem="4qw-yN-9Kq" secondAttribute="centerX" id="edA-fe-2ux"/>
+                            <constraint firstItem="Tjk-71-eOr" firstAttribute="centerX" secondItem="4qw-yN-9Kq" secondAttribute="centerX" id="jaS-HU-kAa"/>
+                            <constraint firstItem="rcm-eq-kC1" firstAttribute="top" secondItem="YUu-Td-Tf4" secondAttribute="bottom" constant="20" id="o7d-XK-d06"/>
                             <constraint firstAttribute="bottom" secondItem="8RB-vl-bEs" secondAttribute="bottom" id="pG3-hK-UQT"/>
                             <constraint firstAttribute="trailing" secondItem="8RB-vl-bEs" secondAttribute="trailing" id="xeO-lw-YMU"/>
                         </constraints>
@@ -53,16 +116,18 @@
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="irN-BK-HZx" id="gkJ-D8-KJY"/>
+                        <outlet property="cancelButton" destination="rcm-eq-kC1" id="r4l-RC-7me"/>
                         <outlet property="scanAreaView" destination="aNN-1b-kkt" id="O19-Ab-tVH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vF-EF-Yn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1516" y="2"/>
+            <point key="canvasLocation" x="-1577" y="2"/>
         </scene>
     </scenes>
     <resources>
         <image name="QR_code_cam_background" width="376" height="667"/>
+        <image name="camera_Screen_QR_code_icon" width="42" height="42"/>
         <image name="white_close_button" width="25" height="25"/>
     </resources>
 </document>

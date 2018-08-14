@@ -67,4 +67,8 @@ extension UIColor {
                 UIColor(red: 246.0 / 255.0, green: 246.0 / 255.0, blue: 246.0 / 255.0, alpha: 1.0),
                 UIColor(red: 229.0 / 255.0, green: 229.0 / 255.0, blue: 229.0 / 255.0, alpha: 1.0)]
     }
+    @nonobjc class var cancelButtonGrayGradiante: [UIColor] {
+        return [UIColor(red: 82.0 / 255.0, green: 82.0 / 255.0, blue: 82.0 / 255.0, alpha: 1.0),
+                UIColor(red: 46.0 / 255.0, green: 46.0 / 255.0, blue: 46.0 / 255.0, alpha: 1.0)]
+    }
 }

@@ -10,8 +10,10 @@ import AVFoundation
 
 class QRCodeVC: UIViewController {
     
+    // MARK: IBOutlets
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var scanAreaView: UIView!
+    @IBOutlet weak var cancelButton: CustomButton!
     
     // MARK: - Local Varibles
     
@@ -22,6 +24,8 @@ class QRCodeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupView()
         
         // Set QRCode Reader Config
         setupQRCodeReader()
@@ -52,6 +56,10 @@ class QRCodeVC: UIViewController {
     }
     
     // MARK: - Functions
+    
+    private func setupView() {
+        cancelButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.cancelButtonGrayGradiante, frame: cancelButton.frame, type: .topBottom).color
+    }
     
     private func setupQRCodeReader() {
         let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)

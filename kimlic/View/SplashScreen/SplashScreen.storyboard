@@ -18,27 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background" translatesAutoresizingMaskIntoConstraints="NO" id="sdz-m6-ycN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fingerprint_background" translatesAutoresizingMaskIntoConstraints="NO" id="sdz-m6-ycN">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAQ-OC-sbT" userLabel="ContentView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kimlic_logo_with_text" translatesAutoresizingMaskIntoConstraints="NO" id="tKQ-O6-Huc">
-                                        <rect key="frame" x="105.5" y="131" width="164" height="225"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="164" id="9U8-Gm-NSg"/>
-                                            <constraint firstAttribute="height" constant="225" id="VAt-Yb-wLJ"/>
-                                        </constraints>
+                                        <rect key="frame" x="120" y="151" width="135" height="185"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="tKQ-O6-Huc" firstAttribute="centerY" secondItem="VAQ-OC-sbT" secondAttribute="centerY" constant="-80" id="FeB-Nr-zYR"/>
-                                    <constraint firstItem="tKQ-O6-Huc" firstAttribute="centerX" secondItem="VAQ-OC-sbT" secondAttribute="centerX" id="kl5-Wc-LIB"/>
+                                    <constraint firstItem="tKQ-O6-Huc" firstAttribute="centerY" secondItem="VAQ-OC-sbT" secondAttribute="centerY" constant="-80" id="Ca0-UW-BD2"/>
+                                    <constraint firstItem="tKQ-O6-Huc" firstAttribute="centerX" secondItem="VAQ-OC-sbT" secondAttribute="centerX" id="JJC-k7-M6e"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="sdz-m6-ycN" secondAttribute="trailing" id="6Cs-aZ-j18"/>
                             <constraint firstItem="sdz-m6-ycN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="L3n-DT-PeV"/>
@@ -62,7 +57,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="kimlic_logo_with_text" width="389" height="532"/>
-        <image name="tutorial_background" width="375" height="667"/>
+        <image name="Fingerprint_background" width="377" height="668"/>
+        <image name="kimlic_logo_with_text" width="135" height="185"/>
     </resources>
 </document>

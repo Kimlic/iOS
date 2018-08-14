@@ -17,8 +17,8 @@ class CustomPopupVC: UIViewController {
     @IBOutlet weak var buttonStackView: UIStackView!
     @IBOutlet weak var closeButton: UIButton!
     
-    fileprivate var popup: Popup!
-    fileprivate var popupType: PopupType = .none
+    private var popup: Popup!
+    private var popupType: PopupType = .none
     private lazy var backgroundView: UIView = {
         let view = UIView()
         return view
@@ -51,18 +51,18 @@ class CustomPopupVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    fileprivate func setValue() {
+    private func setValue() {
         icon.image = popup.image
         titleLabel.text = popup.title
         descLabel.text = popup.message
     }
     
-    fileprivate func setupView() {
+    private func setupView() {
         rootView.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.popupGrayGradianteColors, frame: rootView.frame, type: .topBottom).color
         pinBackground(backgroundView, to: buttonStackView)
     }
     
-    fileprivate func createButtons() {
+    private func createButtons() {
         for buttonModel in self.popup.buttons! {
             let button = UIButton()
             button.setTitle(buttonModel.title, for: .normal)
@@ -94,7 +94,7 @@ class CustomPopupVC: UIViewController {
         }
     }
     
-    fileprivate func pinBackground(_ view: UIView, to stackView: UIStackView) {
+    private func pinBackground(_ view: UIView, to stackView: UIStackView) {
         view.translatesAutoresizingMaskIntoConstraints = false
         stackView.insertSubview(view, at: 0)
         view.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: stackView.frame, type: .topBottom).color

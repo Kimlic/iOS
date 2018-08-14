@@ -4,9 +4,10 @@
 //
 //  Created by İzzet Öztürk on 24.11.2017.
 //  Copyright © 2017 Ratel. All rights reserved.
+
 import Foundation
 
-public extension Bundle {
+extension Bundle {
 
     public var serverURL: String {
         return string(for: "ServerURL")
@@ -38,7 +39,7 @@ public extension Bundle {
     }
 }
 
-fileprivate extension Bundle {
+private extension Bundle {
     
     func string(for key: String) -> String {
         guard let infoDictionary = Bundle.main.infoDictionary,

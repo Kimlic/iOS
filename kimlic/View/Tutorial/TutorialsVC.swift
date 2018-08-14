@@ -22,7 +22,7 @@ class TutorialsVC: UIViewController, UIPageViewControllerDataSource {
      * @param
      * @return
      */
-    fileprivate func setupPageViewController() {
+    private func setupPageViewController() {
         
         // Registering PageViewController from StoryBoard
         pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as! UIPageViewController

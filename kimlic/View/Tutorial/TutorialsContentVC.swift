@@ -32,7 +32,7 @@ class TutorialsContentVC: UIViewController {
         Animz.fadeIn(image: tutorialImage, duration: Animz.time06)
     }
     
-    fileprivate func setupView() {
+    private func setupView() {
         if AppDelegate.isIPhone5s() {
             DispatchQueue.main.async {
                 self.verticalConstraint.constant = -75

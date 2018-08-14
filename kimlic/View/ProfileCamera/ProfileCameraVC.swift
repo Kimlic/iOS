@@ -44,7 +44,7 @@ class ProfileCameraVC: UIViewController {
     }
     
     // MARK: Functions
-    fileprivate func takePhoto() {
+    private func takePhoto() {
         let settings = AVCapturePhotoSettings()
         let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first
         let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType]
@@ -52,11 +52,11 @@ class ProfileCameraVC: UIViewController {
         photoOutput?.capturePhoto(with: settings, delegate: self)
     }
     
-    fileprivate func setupCaptureSession() {
+    private func setupCaptureSession() {
         captureSession.sessionPreset = AVCaptureSession.Preset.photo
     }
     
-    fileprivate func setupDevice() {
+    private func setupDevice() {
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
         let devices = deviceDiscoverySession.devices
         
@@ -70,7 +70,7 @@ class ProfileCameraVC: UIViewController {
         currentCamrera = frontCamera ?? backCamera
     }
     
-    fileprivate func setupInputOutput() {
+    private func setupInputOutput() {
         do {
             let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamrera!)
             captureSession.addInput(captureDeviceInput)
@@ -81,7 +81,7 @@ class ProfileCameraVC: UIViewController {
         }
     }
     
-    fileprivate func setupPreviewLayer() {
+    private func setupPreviewLayer() {
         cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
         cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
@@ -89,7 +89,7 @@ class ProfileCameraVC: UIViewController {
         self.view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
     }
     
-    fileprivate func startRunningCaptureSession() {
+    private func startRunningCaptureSession() {
         captureSession.startRunning()
     }
    
