@@ -86,10 +86,11 @@ final class CustomWebServiceRequest {
         }
     }
     
-    // MARK: - Approve Code
+    // MARK: - Verify ID created
     static func createVerifyID(request: VerifyIDModel, success: @escaping () -> Void, failure: @escaping (String?) -> Void) {
         CustomWebServiceRequest.createVerificationSession(request: request, success: { (sessionID) in
-            CustomWebServiceRequest.photoUploads(sessionID: sessionID, request: request, success: {}, failure: { (error) in failure(error)})
+            print(sessionID)
+//            CustomWebServiceRequest.photoUploads(sessionID: sessionID, request: request, success: {}, failure: { (error) in failure(error)})
         }) { (error) in
             UIUtils.stopLoading()
             // TODO: Error Popup
@@ -97,7 +98,8 @@ final class CustomWebServiceRequest {
         }
     }
     
-    static func photoUploads(sessionID: String, request: VerifyIDModel, success: @escaping () -> Void, failure: @escaping (String?) -> Void) {
+    private static func photoUploads(sessionID: String, request: VerifyIDModel, success: @escaping () -> Void, failure: @escaping (String?) -> Void) {
+        
         // face upload
         CustomWebServiceRequest.photoUpload(sessionID: sessionID, request: request, context: .face, success: {success()}, failure: {err in failure(err)})
         
@@ -111,19 +113,21 @@ final class CustomWebServiceRequest {
     // MARK: - Create verification session
     static func createVerificationSession(request: VerifyIDModel, success: @escaping (String) -> Void, failure: @escaping (String) -> Void) {
         
+        // Set local varibles
         let url = "https://ap-api-test.kimlic.com/api/verifications/digital/sessions"
-        let headers = ["account-address": request.accountAddress ?? ""]
+        let headers = ["account-address": request.accountAddress]
         let params =  [
-            "first_name": request.firstName ?? "",
-            "last_name": request.lastName ?? "",
+            "first_name": request.firstName,
+            "last_name": request.lastName,
             "lang": request.lang,
             "document_type": request.documentType.rawValue,
             "timestamp": request.timestamp,
-            "contract_address": request.contractAddress ?? "",
+            "contract_address": request.contractAddress,
             "device_os": request.deviceOs,
-            "device_token": request.deviceToken ?? ""
+            "device_token": request.deviceToken
             ] as [String : Any]
         
+        // Web service request
         WebServicesBaseRequest().executeRequest(url: url, method: .post, params: params, headers: headers, success: { (response) in
             print(response)
             if let data = response["data"] as? [String: Any], let sessionID = data["session_id"] as? String {
@@ -136,26 +140,26 @@ final class CustomWebServiceRequest {
         }
     }
     
-    // MARK: - Create verification session
+    // MARK: - Photo Upload
     static func photoUpload(sessionID: String, request: VerifyIDModel, context: DocumentPhotoContext, success: (() -> Void)? = nil, failure: ((String) -> Void)? = nil) {
         
-        var contextValue: String?
+        var contextValue: String = ""
         
         switch context {
         case .face:
-            contextValue = request.faceImage?.convertBase64()
+            contextValue = request.faceImage?.convertBase64() ?? contextValue
         case .documentFront:
-            contextValue = request.documentFrontImage?.convertBase64()
+            contextValue = request.documentFrontImage?.convertBase64() ?? contextValue
         case .documentBack:
-            contextValue = request.documentBackImage?.convertBase64()
+            contextValue = request.documentBackImage?.convertBase64() ?? contextValue
         }
         
         let url = "https://ap-api-test.kimlic.com/api/verifications/digital/sessions/\(sessionID)/media"
-        let headers = ["account-address": request.accountAddress ?? ""]
+        let headers = ["account-address": request.accountAddress]
         let params =  [
             "country": request.country,
             "context": context.rawValue,
-            "content": contextValue ?? "",
+            "content": contextValue,
             "timestamp": request.timestamp
             ] as [String : Any]
         

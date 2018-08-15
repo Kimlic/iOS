@@ -299,18 +299,18 @@
                                         <rect key="frame" x="0.0" y="320" width="315" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZXq-de-RrQ" id="UCf-pN-Gs9">
-                                            <rect key="frame" x="0.0" y="0.0" width="281" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="289" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Verify your ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VEp-4a-kgC">
-                                                    <rect key="frame" x="59" y="0.0" width="221" height="59.5"/>
+                                                    <rect key="frame" x="51" y="0.0" width="229" height="59.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="profile_id_icon_blue" id="SNv-em-hZX">
-                                                    <rect key="frame" x="16" y="18" width="28" height="22"/>
+                                                    <rect key="frame" x="8" y="18" width="28" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -322,18 +322,18 @@
                                         <rect key="frame" x="0.0" y="380" width="315" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QNq-qj-boC" id="DXZ-1F-BgG">
-                                            <rect key="frame" x="0.0" y="0.0" width="281" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="289" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Add your address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Ax-6h-CwZ">
-                                                    <rect key="frame" x="48" y="0.0" width="232" height="59.5"/>
+                                                    <rect key="frame" x="40" y="0.0" width="240" height="59.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="profile_blue_location_icon" id="BCr-eq-30b">
-                                                    <rect key="frame" x="16" y="18" width="17" height="22"/>
+                                                    <rect key="frame" x="8" y="18" width="17" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>

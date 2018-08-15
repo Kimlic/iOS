@@ -10,6 +10,6 @@ import Foundation
 
 extension Date {
     func toMillis() -> Int64! {
-        return Int64(self.timeIntervalSince1970 * 1000)
+        return Int64(self.timeIntervalSince1970)
     }
 }

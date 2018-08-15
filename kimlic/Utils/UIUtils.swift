@@ -220,6 +220,12 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
+    static func navigateToAccounts(_ vc: UIViewController){
+        let storyboard = AppStoryboard.Accounts.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: AccountsVC.className) as! AccountsVC
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
     static func navigateToUserProfileFooter(vc: UIViewController){
         let transition: CATransition = CATransition()
         let timeFunc : CAMediaTimingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)

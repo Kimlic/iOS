@@ -47,6 +47,8 @@
 		7C30A62220C04A1B00EC69F7 /* TermsAndConditions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C30A62120C04A1B00EC69F7 /* TermsAndConditions.storyboard */; };
 		7C30A62520C04AE700EC69F7 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C30A62420C04AE700EC69F7 /* Tutorial.storyboard */; };
 		7C379AA31FB9DCF900D005CC /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C379AA21FB9DCF900D005CC /* SplashScreenVC.swift */; };
+		7C42A775212410CA006698B9 /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C42A774212410CA006698B9 /* Accounts.storyboard */; };
+		7C42A777212410DE006698B9 /* AccountsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C42A776212410DE006698B9 /* AccountsVC.swift */; };
 		7C4838521FB5F62400FC864A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4838511FB5F62400FC864A /* AppDelegate.swift */; };
 		7C4838591FB5F62500FC864A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4838581FB5F62500FC864A /* Assets.xcassets */; };
 		7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C53C54F1FD02C0C005884F8 /* AppDelegateExt.swift */; };
@@ -146,6 +148,8 @@
 		7C30A62120C04A1B00EC69F7 /* TermsAndConditions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TermsAndConditions.storyboard; sourceTree = "<group>"; };
 		7C30A62420C04AE700EC69F7 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		7C379AA21FB9DCF900D005CC /* SplashScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenVC.swift; sourceTree = "<group>"; };
+		7C42A774212410CA006698B9 /* Accounts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
+		7C42A776212410DE006698B9 /* AccountsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsVC.swift; sourceTree = "<group>"; };
 		7C48384E1FB5F62400FC864A /* kimlic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kimlic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4838511FB5F62400FC864A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C4838581FB5F62500FC864A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -361,6 +365,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		7C42A77321241085006698B9 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				7C42A774212410CA006698B9 /* Accounts.storyboard */,
+				7C42A776212410DE006698B9 /* AccountsVC.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
 		7C4838451FB5F62400FC864A = {
 			isa = PBXGroup;
 			children = (
@@ -556,6 +569,7 @@
 		7CB5674C1FB9B54700F03D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7C42A77321241085006698B9 /* Accounts */,
 				7C22A66D211451C500B1412A /* Address */,
 				7C5FD13F2110365B00229CE8 /* QRCode */,
 				7CA54B1B210EB88D002555C7 /* VerifyID */,
@@ -692,6 +706,7 @@
 				7C85BC0620E625870000A4BA /* CustomPopupVC.xib in Resources */,
 				7C2F326520C0301700AEB314 /* SignUp.storyboard in Resources */,
 				79AF1D2D20C4A3D300CCA150 /* Verification.storyboard in Resources */,
+				7C42A775212410CA006698B9 /* Accounts.storyboard in Resources */,
 				7C8437EE20D2259400DD754D /* Muli-SemiBold.ttf in Resources */,
 				7CDBFE3D1FC9AA020073D70A /* CountryCode.json in Resources */,
 				7C90C4B720C811BA006EEF87 /* TouchID.storyboard in Resources */,
@@ -852,6 +867,7 @@
 				7C99D6EB1FC842B700A593C5 /* UINavigationControllerExt.swift in Sources */,
 				7CA54B1D210EB8FA002555C7 /* VerifyIDVC.swift in Sources */,
 				7C8272C51FC583C600054277 /* UIImageExt.swift in Sources */,
+				7C42A777212410DE006698B9 /* AccountsVC.swift in Sources */,
 				7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */,
 				79AD4C8220CD182500EE9160 /* MnemonicVerificationVC.swift in Sources */,
 				0F4AB22520EEB9A400F941D1 /* QuorumManager.swift in Sources */,

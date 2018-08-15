@@ -62,7 +62,10 @@ class VerifyIDDetailVC: UIViewController {
     
     private func serverRequest() {
         UIUtils.showLoading()
-        CustomWebServiceRequest.createVerifyID(request: VerifyIDModel(), success: {
+        
+        let verifyIDModel = VerifyIDModel(country: selectedCode, timestamp: selectedDate.toMillis(), documentType: documentType!, faceImage: frontImage, documentFrontImage: frontImage, documentBackImage: backImage)
+        
+        CustomWebServiceRequest.createVerifyID(request: verifyIDModel, success: {
             UIUtils.stopLoading()
             // Success proccess
         }) { (error) in

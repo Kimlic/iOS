@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vVE-Wi-QPL">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,15 +20,15 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileCameraVC" id="vVE-Wi-QPL" customClass="ProfileCameraVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T0c-Ab-NmZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bs0-pe-n0N" userLabel="CroppedView">
-                                <rect key="frame" x="55" y="60" width="263" height="360"/>
+                                <rect key="frame" x="0.0" y="66" width="414" height="458"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Face_masked_cam_background" translatesAutoresizingMaskIntoConstraints="NO" id="BQz-5e-k26">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-0s-iZN">
                                 <rect key="frame" x="20" y="28" width="25" height="25"/>
@@ -38,20 +38,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2T-40-KlF">
-                                <rect key="frame" x="155.5" y="583" width="64" height="64"/>
+                                <rect key="frame" x="175" y="652" width="64" height="64"/>
                                 <state key="normal" image="shutter_button"/>
                                 <connections>
                                     <action selector="takePhotoButtonPressed:" destination="vVE-Wi-QPL" eventType="touchUpInside" id="brt-uz-qAT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take Your Portrait Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ua6-i1-xK0">
-                                <rect key="frame" x="97.5" y="554.5" width="180" height="20.5"/>
+                                <rect key="frame" x="117" y="623.66666666666663" width="180" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_Screen_portrait_photo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="jwi-RT-tlb">
-                                <rect key="frame" x="169.5" y="482.5" width="35" height="64"/>
+                                <rect key="frame" x="189" y="551.66666666666663" width="35" height="64"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLg-kt-F5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-427.536231884058" y="-541.304347826087"/>
+            <point key="canvasLocation" x="-428" y="-541.97901049475263"/>
         </scene>
     </scenes>
     <resources>

@@ -53,7 +53,7 @@ enum DocumentPhotoContext: String {
 enum AppStoryboard : String {
     // Must be the same as storyboard name
     case SplashScreen, SignUp, Tutorial, TermsAndConditions, PhoneNumber, Verification, Message, TouchID, Passcode, QRCode, Address, AddressSearch,
-    MnemonicImport, MnemonicCreate, MnemonicVerification, Settings, UserEmail, Profile, UserInfo, ProfileCamera, VerifyIDDetail, VerifyID
+    MnemonicImport, MnemonicCreate, MnemonicVerification, Settings, UserEmail, Profile, UserInfo, ProfileCamera, VerifyIDDetail, VerifyID, Accounts
     var instance : UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
     }
