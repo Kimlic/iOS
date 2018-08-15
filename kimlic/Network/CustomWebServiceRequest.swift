@@ -86,48 +86,81 @@ final class CustomWebServiceRequest {
         }
     }
     
-    // MARK: - Create verification session
-    // TODO: Code Refactoring
-    static func createVerificationSession(success: @escaping (String) -> Void, failure: @escaping (String) -> Void) {
+    // MARK: - Approve Code
+    static func createVerifyID(request: VerifyIDModel, success: @escaping () -> Void, failure: @escaping (String?) -> Void) {
+        CustomWebServiceRequest.createVerificationSession(request: request, success: { (sessionID) in
+            CustomWebServiceRequest.photoUploads(sessionID: sessionID, request: request, success: {}, failure: { (error) in failure(error)})
+        }) { (error) in
+            UIUtils.stopLoading()
+            // TODO: Error Popup
+            print(error)
+        }
+    }
+    
+    static func photoUploads(sessionID: String, request: VerifyIDModel, success: @escaping () -> Void, failure: @escaping (String?) -> Void) {
+        // face upload
+        CustomWebServiceRequest.photoUpload(sessionID: sessionID, request: request, context: .face, success: {success()}, failure: {err in failure(err)})
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let user = CoreDataHelper.getUser()
+        // front image upload
+        CustomWebServiceRequest.photoUpload(sessionID: sessionID, request: request, context: .documentFront, success: {success()}, failure: {err in failure(err)})
+        
+        // back image upload
+        CustomWebServiceRequest.photoUpload(sessionID: sessionID, request: request, context: .documentBack, success: {success()}, failure: {err in failure(err)})
+    }
+    
+    // MARK: - Create verification session
+    static func createVerificationSession(request: VerifyIDModel, success: @escaping (String) -> Void, failure: @escaping (String) -> Void) {
+        
         let url = "https://ap-api-test.kimlic.com/api/verifications/digital/sessions"
-        let headers = ["account-address": appDelegate.quorumManager!.accountAddress.lowercased()]
-        let params =  ["first_name": user?.firstName,
-                       "last_name": user?.lastName,
-                       "lang": "en",
-                       "document_type": "DRIVERS_LICENSE",
-                       "timestamp": 1631209420,
-                       "contract_address": appDelegate.quorumAPI?.addresses.contextContract,
-                       "device_os": "ios",
-                       "device_token": user?.deviceToken
+        let headers = ["account-address": request.accountAddress ?? ""]
+        let params =  [
+            "first_name": request.firstName ?? "",
+            "last_name": request.lastName ?? "",
+            "lang": request.lang,
+            "document_type": request.documentType.rawValue,
+            "timestamp": request.timestamp,
+            "contract_address": request.contractAddress ?? "",
+            "device_os": request.deviceOs,
+            "device_token": request.deviceToken ?? ""
             ] as [String : Any]
         
-        WebServicesBaseRequest().executeRequest(url: url, method: .post, params: params, headers: headers, success: { (data) in
-            print(data)
-            success("")
+        WebServicesBaseRequest().executeRequest(url: url, method: .post, params: params, headers: headers, success: { (response) in
+            print(response)
+            if let data = response["data"] as? [String: Any], let sessionID = data["session_id"] as? String {
+                success(sessionID)
+            } else {
+                failure("errorMessage".localized)
+            }
         }) { (error) in
             failure(error ?? "errorMessage".localized)
         }
     }
     
     // MARK: - Create verification session
-    // TODO: Code Refactoring
-    static func photoUpload(image: UIImage, sessionID: String, context: DocumentPhotoContext, countryCode: String, success: (() -> Void)? = nil, failure: ((String) -> Void)? = nil) {
+    static func photoUpload(sessionID: String, request: VerifyIDModel, context: DocumentPhotoContext, success: (() -> Void)? = nil, failure: ((String) -> Void)? = nil) {
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        var contextValue: String?
+        
+        switch context {
+        case .face:
+            contextValue = request.faceImage?.convertBase64()
+        case .documentFront:
+            contextValue = request.documentFrontImage?.convertBase64()
+        case .documentBack:
+            contextValue = request.documentBackImage?.convertBase64()
+        }
+        
         let url = "https://ap-api-test.kimlic.com/api/verifications/digital/sessions/\(sessionID)/media"
-        let headers = ["account-address": appDelegate.quorumManager!.accountAddress.lowercased()]
+        let headers = ["account-address": request.accountAddress ?? ""]
         let params =  [
-            "country": countryCode,
+            "country": request.country,
             "context": context.rawValue,
-            "content": image.convertBase64(),
-            "timestamp": 1631209420
+            "content": contextValue ?? "",
+            "timestamp": request.timestamp
             ] as [String : Any]
         
         WebServicesBaseRequest().executeRequest(url: url, method: .post, params: params, headers: headers, success: { (data) in
-            print(data)
+//            print(data)
             success?()
         }) { (error) in
             failure?(error ?? "errorMessage".localized)
