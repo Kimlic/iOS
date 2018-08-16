@@ -62,6 +62,10 @@
 		7C6FC84D20CE72EE0026AF1C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C6FC84C20CE72EE0026AF1C /* Profile.storyboard */; };
 		7C6FC84F20CE730E0026AF1C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6FC84E20CE730E0026AF1C /* ProfileVC.swift */; };
 		7C6FC85320CEA9530026AF1C /* UITableViewCellExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6FC85220CEA9530026AF1C /* UITableViewCellExt.swift */; };
+		7C73050D21256D2300F6DE26 /* VerifyIDFaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C73050C21256D2300F6DE26 /* VerifyIDFaceVC.swift */; };
+		7C73050F21256D3000F6DE26 /* VerifyIDFace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C73050E21256D3000F6DE26 /* VerifyIDFace.storyboard */; };
+		7C7305122125788700F6DE26 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7305102125788700F6DE26 /* AccountCell.swift */; };
+		7C7305132125788700F6DE26 /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C7305112125788700F6DE26 /* AccountCell.xib */; };
 		7C75E8A020C9141E00EEB053 /* Passcode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C75E89F20C9141E00EEB053 /* Passcode.storyboard */; };
 		7C7A7FC820C53B6400BDE95C /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A7FC720C53B6400BDE95C /* MessageVC.swift */; };
 		7C7A7FCA20C53B7200BDE95C /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C7A7FC920C53B7200BDE95C /* Message.storyboard */; };
@@ -166,6 +170,10 @@
 		7C6FC84C20CE72EE0026AF1C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		7C6FC84E20CE730E0026AF1C /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		7C6FC85220CEA9530026AF1C /* UITableViewCellExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExt.swift; sourceTree = "<group>"; };
+		7C73050C21256D2300F6DE26 /* VerifyIDFaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyIDFaceVC.swift; sourceTree = "<group>"; };
+		7C73050E21256D3000F6DE26 /* VerifyIDFace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VerifyIDFace.storyboard; sourceTree = "<group>"; };
+		7C7305102125788700F6DE26 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		7C7305112125788700F6DE26 /* AccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
 		7C75E89F20C9141E00EEB053 /* Passcode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Passcode.storyboard; sourceTree = "<group>"; };
 		7C7A7FC720C53B6400BDE95C /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
 		7C7A7FC920C53B7200BDE95C /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
@@ -370,6 +378,8 @@
 			children = (
 				7C42A774212410CA006698B9 /* Accounts.storyboard */,
 				7C42A776212410DE006698B9 /* AccountsVC.swift */,
+				7C7305112125788700F6DE26 /* AccountCell.xib */,
+				7C7305102125788700F6DE26 /* AccountCell.swift */,
 			);
 			path = Accounts;
 			sourceTree = "<group>";
@@ -546,6 +556,8 @@
 		7CA54B1B210EB88D002555C7 /* VerifyID */ = {
 			isa = PBXGroup;
 			children = (
+				7C73050E21256D3000F6DE26 /* VerifyIDFace.storyboard */,
+				7C73050C21256D2300F6DE26 /* VerifyIDFaceVC.swift */,
 				7CA54B1E210EB942002555C7 /* VerifyID.storyboard */,
 				7CA54B1C210EB8FA002555C7 /* VerifyIDVC.swift */,
 				7CA54B20210EBD5A002555C7 /* VerifyIDDetail.storyboard */,
@@ -725,7 +737,9 @@
 				79AD4C8020CD051800EE9160 /* MnemonicCreate.storyboard in Resources */,
 				7C75E8A020C9141E00EEB053 /* Passcode.storyboard in Resources */,
 				7C3023E320C012B10093598E /* SplashScreen.storyboard in Resources */,
+				7C73050F21256D3000F6DE26 /* VerifyIDFace.storyboard in Resources */,
 				7C8437F120D2259400DD754D /* Muli-Bold.ttf in Resources */,
+				7C7305132125788700F6DE26 /* AccountCell.xib in Resources */,
 				79AD4C8420CD183800EE9160 /* MnemonicVerification.storyboard in Resources */,
 				0F31443D20F4FD5A007B72F6 /* ProfileCamera.storyboard in Resources */,
 			);
@@ -867,6 +881,7 @@
 				7C99D6EB1FC842B700A593C5 /* UINavigationControllerExt.swift in Sources */,
 				7CA54B1D210EB8FA002555C7 /* VerifyIDVC.swift in Sources */,
 				7C8272C51FC583C600054277 /* UIImageExt.swift in Sources */,
+				7C73050D21256D2300F6DE26 /* VerifyIDFaceVC.swift in Sources */,
 				7C42A777212410DE006698B9 /* AccountsVC.swift in Sources */,
 				7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */,
 				79AD4C8220CD182500EE9160 /* MnemonicVerificationVC.swift in Sources */,
@@ -907,6 +922,7 @@
 				7C7A7FC820C53B6400BDE95C /* MessageVC.swift in Sources */,
 				7CF655691FBACB1F00CA9C1A /* Constants.swift in Sources */,
 				7CA54B1A210D67F2002555C7 /* CustomWebServiceRequest.swift in Sources */,
+				7C7305122125788700F6DE26 /* AccountCell.swift in Sources */,
 				7C99D6E71FC8108300A593C5 /* BundleExt.swift in Sources */,
 				7C99D6DF1FC7FF7000A593C5 /* WebServicesBaseRequest.swift in Sources */,
 				7C85FC61211826C8007AFD96 /* AddressSearchVC.swift in Sources */,

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--VerifyID FaceVC-->
+        <scene sceneID="iFu-kD-yPh">
+            <objects>
+                <viewController storyboardIdentifier="VerifyIDFaceVC" id="e6U-pI-4t6" customClass="VerifyIDFaceVC" customModule="kimlic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j3e-KI-Q7M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O7N-t9-kPE" userLabel="CroppedView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="597"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Face_and_ID_cart_guideline" translatesAutoresizingMaskIntoConstraints="NO" id="SNR-5r-T43">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tj-65-o46" userLabel="ChoseDocumentView">
+                                <rect key="frame" x="40" y="396" width="334" height="340"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-1a-evB" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="254" width="334" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="DeG-Y5-sQT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
+                                        <state key="normal" title="ID Card">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RC8-HS-NVH" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="183" width="334" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="Q65-n1-cZO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
+                                        <state key="normal" title="Drivers License">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eK9-Wf-T7B" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="112" width="334" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="QhK-MI-ZOe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
+                                        <state key="normal" title="Passport">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chose Your Document Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDt-58-LRV">
+                                        <rect key="frame" x="53.666666666666686" y="74" width="228" height="23"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_ID_icon_sml" translatesAutoresizingMaskIntoConstraints="NO" id="2Ql-86-4iO">
+                                        <rect key="frame" x="134.66666666666666" y="4" width="65" height="62"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eK9-Wf-T7B" firstAttribute="top" secondItem="oDt-58-LRV" secondAttribute="bottom" constant="15" id="5Od-cR-a6O"/>
+                                    <constraint firstItem="gA7-1a-evB" firstAttribute="top" secondItem="RC8-HS-NVH" secondAttribute="bottom" constant="15" id="NyG-Hm-Yly"/>
+                                    <constraint firstAttribute="trailing" secondItem="gA7-1a-evB" secondAttribute="trailing" id="Q81-8w-Q7m"/>
+                                    <constraint firstItem="oDt-58-LRV" firstAttribute="centerX" secondItem="1tj-65-o46" secondAttribute="centerX" id="RYR-oL-aFu"/>
+                                    <constraint firstItem="gA7-1a-evB" firstAttribute="leading" secondItem="1tj-65-o46" secondAttribute="leading" id="SZ7-37-hYo"/>
+                                    <constraint firstAttribute="bottom" secondItem="gA7-1a-evB" secondAttribute="bottom" constant="30" id="SZR-nM-bul"/>
+                                    <constraint firstItem="oDt-58-LRV" firstAttribute="top" secondItem="2Ql-86-4iO" secondAttribute="bottom" constant="8" id="WM7-Bw-omd"/>
+                                    <constraint firstAttribute="trailing" secondItem="RC8-HS-NVH" secondAttribute="trailing" id="eJh-qh-Kh8"/>
+                                    <constraint firstItem="RC8-HS-NVH" firstAttribute="top" secondItem="eK9-Wf-T7B" secondAttribute="bottom" constant="15" id="eZ2-Tj-d5E"/>
+                                    <constraint firstAttribute="height" constant="340" id="fJX-vv-u4q"/>
+                                    <constraint firstAttribute="trailing" secondItem="eK9-Wf-T7B" secondAttribute="trailing" id="n7M-lB-R8j"/>
+                                    <constraint firstItem="eK9-Wf-T7B" firstAttribute="leading" secondItem="1tj-65-o46" secondAttribute="leading" id="oBm-c9-Yne"/>
+                                    <constraint firstItem="RC8-HS-NVH" firstAttribute="leading" secondItem="1tj-65-o46" secondAttribute="leading" id="olg-tT-OX9"/>
+                                    <constraint firstItem="2Ql-86-4iO" firstAttribute="centerX" secondItem="1tj-65-o46" secondAttribute="centerX" id="x5y-Zt-zvJ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJE-nz-fCk" userLabel="CloseButton">
+                                <rect key="frame" x="20" y="28" width="25" height="25"/>
+                                <state key="normal" image="white_close_button"/>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="e6U-pI-4t6" eventType="touchUpInside" id="kpq-bw-dIV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFs-iV-agN" userLabel="TakeButton">
+                                <rect key="frame" x="175" y="652" width="64" height="64"/>
+                                <state key="normal" image="shutter_button"/>
+                                <connections>
+                                    <action selector="takePhotoButtonPressed:" destination="e6U-pI-4t6" eventType="touchUpInside" id="QAB-tL-Raw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8hB-Rx-hWs" firstAttribute="bottom" secondItem="kFs-iV-agN" secondAttribute="bottom" constant="20" id="CHy-Mn-got"/>
+                            <constraint firstItem="8hB-Rx-hWs" firstAttribute="trailing" secondItem="1tj-65-o46" secondAttribute="trailing" constant="40" id="EJu-1q-hx5"/>
+                            <constraint firstItem="8hB-Rx-hWs" firstAttribute="bottom" secondItem="1tj-65-o46" secondAttribute="bottom" id="ENB-h5-RaG"/>
+                            <constraint firstItem="SNR-5r-T43" firstAttribute="top" secondItem="j3e-KI-Q7M" secondAttribute="top" id="Hbq-Yi-jdp"/>
+                            <constraint firstAttribute="trailing" secondItem="SNR-5r-T43" secondAttribute="trailing" id="IRO-yP-Q3E"/>
+                            <constraint firstItem="kFs-iV-agN" firstAttribute="centerX" secondItem="j3e-KI-Q7M" secondAttribute="centerX" id="Vd3-ov-44R"/>
+                            <constraint firstItem="SNR-5r-T43" firstAttribute="leading" secondItem="j3e-KI-Q7M" secondAttribute="leading" id="c8D-7s-HLj"/>
+                            <constraint firstItem="KJE-nz-fCk" firstAttribute="top" secondItem="8hB-Rx-hWs" secondAttribute="top" constant="8" id="g9q-HV-ePZ"/>
+                            <constraint firstItem="KJE-nz-fCk" firstAttribute="leading" secondItem="8hB-Rx-hWs" secondAttribute="leading" constant="20" id="qVM-ts-MHe"/>
+                            <constraint firstAttribute="bottom" secondItem="SNR-5r-T43" secondAttribute="bottom" id="rGS-Hd-XfI"/>
+                            <constraint firstItem="1tj-65-o46" firstAttribute="leading" secondItem="8hB-Rx-hWs" secondAttribute="leading" constant="40" id="sge-03-xO5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8hB-Rx-hWs"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="SNR-5r-T43" id="RG1-7B-3E4"/>
+                        <outlet property="croppedView" destination="O7N-t9-kPE" id="NPL-G4-CAb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJE-WC-5o8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-794.39999999999998" y="-678.71064467766121"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Face_and_ID_cart_guideline" width="378" height="670"/>
+        <image name="shutter_button" width="64" height="64"/>
+        <image name="white_ID_icon_sml" width="65" height="62"/>
+        <image name="white_close_button" width="25" height="25"/>
+    </resources>
+</document>

@@ -24,20 +24,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bs0-pe-n0N" userLabel="CroppedView">
-                                <rect key="frame" x="0.0" y="66" width="414" height="458"/>
+                                <rect key="frame" x="0.0" y="47" width="414" height="477"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Face_masked_cam_background" translatesAutoresizingMaskIntoConstraints="NO" id="BQz-5e-k26">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Face_photo_guideline" translatesAutoresizingMaskIntoConstraints="NO" id="BQz-5e-k26">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-0s-iZN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-0s-iZN" userLabel="CloseButton">
                                 <rect key="frame" x="20" y="28" width="25" height="25"/>
                                 <state key="normal" image="white_close_button"/>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="vVE-Wi-QPL" eventType="touchUpInside" id="frf-9h-diH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2T-40-KlF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2T-40-KlF" userLabel="TakeButton">
                                 <rect key="frame" x="175" y="652" width="64" height="64"/>
                                 <state key="normal" image="shutter_button"/>
                                 <connections>
@@ -78,11 +78,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLg-kt-F5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-428" y="-541.97901049475263"/>
+            <point key="canvasLocation" x="-428" y="-542.36453201970448"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Face_masked_cam_background" width="376" height="669"/>
+        <image name="Face_photo_guideline" width="376" height="669"/>
         <image name="camera_Screen_portrait_photo_icon" width="35" height="64"/>
         <image name="shutter_button" width="64" height="64"/>
         <image name="white_close_button" width="25" height="25"/>

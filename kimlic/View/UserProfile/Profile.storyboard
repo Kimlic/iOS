@@ -124,6 +124,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxS-pP-xm4" userLabel="AccountButton">
                                         <rect key="frame" x="250.5" y="45" width="116.5" height="66"/>
                                         <state key="normal" image="accounts_lightblue_button"/>
+                                        <connections>
+                                            <action selector="accountsButtonPressed:" destination="x7F-pS-psq" eventType="touchUpInside" id="vU4-UC-Ew8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

@@ -53,6 +53,10 @@ class ProfileVC: UIViewController {
         UIUtils.navigateToProfileCamera(self)
     }
     
+    @IBAction func accountsButtonPressed(_ sender: Any) {
+        UIUtils.navigateToAccounts(self)
+    }
+    
     // MARK: - Functions
     private func controlRisks() {
         if user?.passcode == nil && (user?.accountRecovery == nil || !(user?.accountRecovery)!){
