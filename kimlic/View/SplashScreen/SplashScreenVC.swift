@@ -31,13 +31,12 @@ class SplashScreenVC: UIViewController {
     private func rotateAnimation() {
         //Splash screen animation
         Animz.rotateY(layer: self.viewImageContainer.layer, angleFrom: 360, duration: Animz.time1) {
-            self.navigateFunction = UIUtils.setUserProfileScreenAsRoot
-//            if self.isOldUserCheck() {
-//                self.appDelegate.createQuorum()
-//                self.navigateFunction = UIUtils.setUserProfileScreenAsRoot
-//            } else {
-//                self.navigateFunction = UIUtils.setSignUpScreenAsRoot
-//            }
+            if self.isOldUserCheck() {
+                self.appDelegate.createQuorum()
+                self.navigateFunction = UIUtils.setUserProfileScreenAsRoot
+            } else {
+                self.navigateFunction = UIUtils.setSignUpScreenAsRoot
+            }
             
             UIView.animate(withDuration: Animz.time1 , animations: {}, completion: {
                 (finished: Bool) -> Void in

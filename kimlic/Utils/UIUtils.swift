@@ -260,4 +260,10 @@ public class UIUtils {
             completion?()
         })
     }
+    
+    static func prettyPrint(with json: [String:Any]) -> String{
+        let data = try! JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+        let string = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+        return string as! String
+    }
 }

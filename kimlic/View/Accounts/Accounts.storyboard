@@ -44,19 +44,19 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accounts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vzq-4M-Avn">
-                                        <rect key="frame" x="143.66666666666666" y="40" width="126.99999999999997" height="35"/>
+                                        <rect key="frame" x="142.66666666666663" y="40" width="129.33333333333337" height="37.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVB-Sk-rHk" userLabel="EmptyView">
-                                        <rect key="frame" x="25" y="75" width="364" height="530"/>
+                                        <rect key="frame" x="25" y="77.666666666666686" width="364" height="527.33333333333326"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account_icon_with_circles" translatesAutoresizingMaskIntoConstraints="NO" id="l2q-Er-OXg">
                                                 <rect key="frame" x="40.666666666666686" y="0.0" width="282" height="282"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looks like you haven't connect any accounts to your ID" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LG-nU-akJ">
-                                                <rect key="frame" x="40.666666666666686" y="290" width="282" height="44.333333333333314"/>
+                                                <rect key="frame" x="40.666666666666686" y="290" width="282" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="282" id="fyX-TC-QPf"/>
                                                 </constraints>
@@ -73,14 +73,14 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NPA-h4-nTa">
-                                        <rect key="frame" x="25" y="75" width="364" height="530"/>
+                                        <rect key="frame" x="25" y="77.666666666666686" width="364" height="527.33333333333326"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AccountCell" rowHeight="80" id="Gna-nj-Uhl" customClass="AccountCell" customModule="kimlic" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="364" height="80"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AccountCell" id="Gna-nj-Uhl" customClass="AccountCell" customModule="kimlic" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="364" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gna-nj-Uhl" id="75H-go-MFz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="364" height="80"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="364" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
