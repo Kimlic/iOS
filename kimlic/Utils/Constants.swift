@@ -62,6 +62,6 @@ class Constants {
         let host = "mobile-api-dev.kimlic.com"
         let port = 443
         let path = "/api/quorum"
-        let networkId = 10
+        let networkId = 61059
     }
 }
