@@ -28,8 +28,6 @@ class AccountsVC: UIViewController {
     // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        accountsTableView.register(UINib(nibName: AccountCell.className, bundle: nil), forCellReuseIdentifier: AccountCell.className)
 
         // Set default view
         setupView()
@@ -70,7 +68,7 @@ extension AccountsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "AccountCell") as? AccountCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: AccountCell.className) as? AccountCell {
             cell.setData(logo: #imageLiteral(resourceName: "kimlic_logo_with_text"), siteName: accountList[indexPath.row].name, date: accountList[indexPath.row].date)
             return cell
         }
@@ -78,15 +76,15 @@ extension AccountsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 100
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40// space b/w cells
+        return 30// space b/w cells
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 50
+        return 110
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

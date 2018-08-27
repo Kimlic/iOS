@@ -14,15 +14,11 @@ class AccountCell: UITableViewCell {
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var siteNameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var bodyView: UIView!
     
 
     // MARK: - Overrides
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        // Set view default value
-        setupView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,11 +33,6 @@ class AccountCell: UITableViewCell {
         self.logo.image = logo
         self.siteNameLabel.text = siteName
         self.dateLabel.text = date
-    }
-    
-    private func setupView() {
-        bodyView.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.accountCellBlue, frame: bodyView.frame, type: .topBottom).color
-        self.backgroundColor = UIColor.clear
     }
     
 }
