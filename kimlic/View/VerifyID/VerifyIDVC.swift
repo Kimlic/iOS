@@ -12,7 +12,6 @@ import AVFoundation
 class VerifyIDVC: UIViewController {
     
     @IBOutlet weak var bgImage: UIImageView!
-    @IBOutlet weak var choseDocumentView: UIView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var activePageImage: UIImageView!
     @IBOutlet weak var activePageLabel: UILabel!
@@ -26,12 +25,11 @@ class VerifyIDVC: UIViewController {
     
     var photoOutput: AVCapturePhotoOutput?
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
-    var image: UIImage?
     
-    var selectedDocumentType: DocumentType = .driversLicense
     var activePage: ActivePage = .front
     var cardFrontImage: UIImage?
     var cardBackImage: UIImage?
+    var profileImage: UIImage?
     
     enum ActivePage {
         case front, back
@@ -40,8 +38,6 @@ class VerifyIDVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupView()
-
         // Setup AVFoundation Camera
         setupCaptureSession()
         setupDevice()
@@ -53,36 +49,15 @@ class VerifyIDVC: UIViewController {
     // MARK: - IBActions
     
     @IBAction func closeButtonPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-        Animz.hideMenu(myView: choseDocumentView, duration: 0.5) {}
+        UIUtils.setUserProfileScreenAsRoot()
     }
-    @IBAction func idCardButtonPressed(_ sender: Any) {
-        setDocumentTypeAndView(type: .idCard)
-    }
-    @IBAction func driverLicenseButtonPressed(_ sender: Any) {
-        setDocumentTypeAndView(type: .driversLicense)
-    }
-    @IBAction func passportButtonPressed(_ sender: Any) {
-        setDocumentTypeAndView(type: .passport)
-    }
+    
     @IBAction func takePhotoButtonPressed(_ sender: Any) {
         takePhoto()
     }
     
     
     // MARK: - Functions
-    
-    private func setupView() {
-        Animz.showMenu(myView: choseDocumentView, duration: 0.5) {}
-    }
-    
-    private func setDocumentTypeAndView(type: DocumentType) {
-        selectedDocumentType = type
-        Animz.hideMenu(myView: choseDocumentView, duration: 0.5) {
-            self.contentView.isHidden = false
-            self.choseDocumentView.isHidden = true
-        }
-    }
     
     private func takePhoto() {
         UIUtils.showLoading()
@@ -158,7 +133,7 @@ extension VerifyIDVC: AVCapturePhotoCaptureDelegate {
             frontRotateSetValue(photo)
         default:
             cardBackImage = photo
-            saveData()
+            UIUtils.navigateToVerifyIDDetail(self, documentType: .driversLicense, frontImage: cardFrontImage, backImage: cardBackImage)
         }
     }
     
@@ -170,9 +145,5 @@ extension VerifyIDVC: AVCapturePhotoCaptureDelegate {
         Animz.fadeIn(view: activePageLabel, duration: 0.4)
         activePage = .back
         cardFrontImage = photo
-    }
-    
-    private func saveData() {
-        UIUtils.navigateToVerifyIDDetail(self, documentType: selectedDocumentType, frontImage: cardFrontImage, backImage: cardBackImage)
     }
 }

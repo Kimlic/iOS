@@ -136,7 +136,7 @@ public class Animz: UIView{
         CATransaction.commit()
     }
     
-    static func showMenu(myView:UIView, duration: Double, completion: @escaping() -> ()){
+    static func showMenu(myView: UIView, duration: Double, completion: @escaping() -> ()){
         //ibrahim - animasyonla ekrana getiriyoruz.
         UIView.animate(withDuration: duration, animations: {
             var myViewFrame = myView.frame

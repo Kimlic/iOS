@@ -122,9 +122,16 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
-    static func navigateToVerifyID(_ vc: UIViewController){
+    static func navigateToVerifyID(_ vc: UIViewController, profileImage: UIImage?){
         let storyboard = AppStoryboard.VerifyID.instance
         let tarVC = storyboard.instantiateViewController(withIdentifier: VerifyIDVC.className) as! VerifyIDVC
+        tarVC.profileImage = profileImage
+        vc.navigationController?.pushViewController(tarVC, animated: true)
+    }
+    
+    static func navigateToVerifyIDFace(_ vc: UIViewController){
+        let storyboard = AppStoryboard.VerifyIDFace.instance
+        let tarVC = storyboard.instantiateViewController(withIdentifier: VerifyIDFaceVC.className) as! VerifyIDFaceVC
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     

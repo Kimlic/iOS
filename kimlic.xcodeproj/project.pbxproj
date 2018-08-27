@@ -62,7 +62,6 @@
 		7C6FC84D20CE72EE0026AF1C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C6FC84C20CE72EE0026AF1C /* Profile.storyboard */; };
 		7C6FC84F20CE730E0026AF1C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6FC84E20CE730E0026AF1C /* ProfileVC.swift */; };
 		7C6FC85320CEA9530026AF1C /* UITableViewCellExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6FC85220CEA9530026AF1C /* UITableViewCellExt.swift */; };
-		7C73050D21256D2300F6DE26 /* VerifyIDFaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C73050C21256D2300F6DE26 /* VerifyIDFaceVC.swift */; };
 		7C73050F21256D3000F6DE26 /* VerifyIDFace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C73050E21256D3000F6DE26 /* VerifyIDFace.storyboard */; };
 		7C7305122125788700F6DE26 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7305102125788700F6DE26 /* AccountCell.swift */; };
 		7C75E8A020C9141E00EEB053 /* Passcode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C75E89F20C9141E00EEB053 /* Passcode.storyboard */; };
@@ -86,6 +85,9 @@
 		7C85FC61211826C8007AFD96 /* AddressSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FC60211826C8007AFD96 /* AddressSearchVC.swift */; };
 		7C86F2E721235C03005A5A43 /* VerifyIDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C86F2E621235C03005A5A43 /* VerifyIDModel.swift */; };
 		7C86F2E921236259005A5A43 /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C86F2E821236259005A5A43 /* DateExt.swift */; };
+		7C8E13652133F9660009D6EA /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E13642133F9660009D6EA /* CameraController.swift */; };
+		7C8E13672133FA6D0009D6EA /* VerifyIDFaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E13662133FA6D0009D6EA /* VerifyIDFaceVC.swift */; };
+		7C8E1369213421260009D6EA /* UIStackViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E1368213421260009D6EA /* UIStackViewExt.swift */; };
 		7C90C4B720C811BA006EEF87 /* TouchID.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C90C4B620C811BA006EEF87 /* TouchID.storyboard */; };
 		7C90C4B920C811CC006EEF87 /* TouchIDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C90C4B820C811CC006EEF87 /* TouchIDVC.swift */; };
 		7C90C4BD20C8290B006EEF87 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C90C4BC20C8290B006EEF87 /* LocalAuthentication.framework */; };
@@ -169,7 +171,6 @@
 		7C6FC84C20CE72EE0026AF1C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		7C6FC84E20CE730E0026AF1C /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		7C6FC85220CEA9530026AF1C /* UITableViewCellExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExt.swift; sourceTree = "<group>"; };
-		7C73050C21256D2300F6DE26 /* VerifyIDFaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyIDFaceVC.swift; sourceTree = "<group>"; };
 		7C73050E21256D3000F6DE26 /* VerifyIDFace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VerifyIDFace.storyboard; sourceTree = "<group>"; };
 		7C7305102125788700F6DE26 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		7C75E89F20C9141E00EEB053 /* Passcode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Passcode.storyboard; sourceTree = "<group>"; };
@@ -193,6 +194,9 @@
 		7C85FC60211826C8007AFD96 /* AddressSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchVC.swift; sourceTree = "<group>"; };
 		7C86F2E621235C03005A5A43 /* VerifyIDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyIDModel.swift; sourceTree = "<group>"; };
 		7C86F2E821236259005A5A43 /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
+		7C8E13642133F9660009D6EA /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		7C8E13662133FA6D0009D6EA /* VerifyIDFaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyIDFaceVC.swift; sourceTree = "<group>"; };
+		7C8E1368213421260009D6EA /* UIStackViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExt.swift; sourceTree = "<group>"; };
 		7C90C4B620C811BA006EEF87 /* TouchID.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TouchID.storyboard; sourceTree = "<group>"; };
 		7C90C4B820C811CC006EEF87 /* TouchIDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDVC.swift; sourceTree = "<group>"; };
 		7C90C4BC20C8290B006EEF87 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
@@ -349,6 +353,7 @@
 				7C842B9E1FC2B8CC0010F98A /* UIUtils.swift */,
 				7C68A83120DA11D5001DDDC8 /* GradientColor.swift */,
 				0F5608CE20F7BCC600A782A0 /* CoreDataHelper.swift */,
+				7C8E13642133F9660009D6EA /* CameraController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -476,6 +481,7 @@
 				7C68A83520DA1267001DDDC8 /* UIColorExt.swift */,
 				7C68A83720DA12A1001DDDC8 /* UIFontExt.swift */,
 				7C85BC0920E649380000A4BA /* UIViewExt.swift */,
+				7C8E1368213421260009D6EA /* UIStackViewExt.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -554,7 +560,7 @@
 			isa = PBXGroup;
 			children = (
 				7C73050E21256D3000F6DE26 /* VerifyIDFace.storyboard */,
-				7C73050C21256D2300F6DE26 /* VerifyIDFaceVC.swift */,
+				7C8E13662133FA6D0009D6EA /* VerifyIDFaceVC.swift */,
 				7CA54B1E210EB942002555C7 /* VerifyID.storyboard */,
 				7CA54B1C210EB8FA002555C7 /* VerifyIDVC.swift */,
 				7CA54B20210EBD5A002555C7 /* VerifyIDDetail.storyboard */,
@@ -867,6 +873,7 @@
 			files = (
 				7C161A211FBDB4E3004FD9A0 /* Popup.swift in Sources */,
 				7C68A83820DA12A1001DDDC8 /* UIFontExt.swift in Sources */,
+				7C8E13672133FA6D0009D6EA /* VerifyIDFaceVC.swift in Sources */,
 				7CB5674F1FB9C28E00F03D24 /* TutorialsVC.swift in Sources */,
 				0F31444220F51D98007B72F6 /* Model.xcdatamodeld in Sources */,
 				7C6546B6211C8A65009972D7 /* DarkDatePicker.swift in Sources */,
@@ -881,7 +888,6 @@
 				7C99D6EB1FC842B700A593C5 /* UINavigationControllerExt.swift in Sources */,
 				7CA54B1D210EB8FA002555C7 /* VerifyIDVC.swift in Sources */,
 				7C8272C51FC583C600054277 /* UIImageExt.swift in Sources */,
-				7C73050D21256D2300F6DE26 /* VerifyIDFaceVC.swift in Sources */,
 				7C42A777212410DE006698B9 /* AccountsVC.swift in Sources */,
 				7C161A251FBDB526004FD9A0 /* Enums.swift in Sources */,
 				79AD4C8220CD182500EE9160 /* MnemonicVerificationVC.swift in Sources */,
@@ -889,6 +895,7 @@
 				7C02B3111FD7F238005C55E3 /* PasscodeVC.swift in Sources */,
 				7C53C5501FD02C0C005884F8 /* AppDelegateExt.swift in Sources */,
 				7C842B9F1FC2B8CC0010F98A /* UIUtils.swift in Sources */,
+				7C8E13652133F9660009D6EA /* CameraController.swift in Sources */,
 				79AF1D2920C4903400CCA150 /* Country.swift in Sources */,
 				79AD4C8920CD55F000EE9160 /* SettingsVC.swift in Sources */,
 				7C90C4B920C811CC006EEF87 /* TouchIDVC.swift in Sources */,
@@ -925,6 +932,7 @@
 				7C7305122125788700F6DE26 /* AccountCell.swift in Sources */,
 				7C99D6E71FC8108300A593C5 /* BundleExt.swift in Sources */,
 				7C99D6DF1FC7FF7000A593C5 /* WebServicesBaseRequest.swift in Sources */,
+				7C8E1369213421260009D6EA /* UIStackViewExt.swift in Sources */,
 				7C85FC61211826C8007AFD96 /* AddressSearchVC.swift in Sources */,
 				7C6FC84F20CE730E0026AF1C /* ProfileVC.swift in Sources */,
 				7CA54B23210EBD6A002555C7 /* VerifyIDDetailVC.swift in Sources */,

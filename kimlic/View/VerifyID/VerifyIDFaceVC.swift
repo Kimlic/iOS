@@ -2,53 +2,56 @@
 //  VerifyIDFaceVC.swift
 //  kimlic
 //
-//  Created by İzzet Öztürk on 16.08.2018.
+//  Created by İzzet Öztürk on 27.08.2018.
 //  Copyright © 2018 Kimlic. All rights reserved.
 //
 
 import UIKit
-import AVFoundation
 
 class VerifyIDFaceVC: UIViewController {
     
-    // MARK: IBOutlets
-    @IBOutlet weak var bgImage: UIImageView!
-    @IBOutlet weak var choseDocumentView: UIView!
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var activePageImage: UIImageView!
-    @IBOutlet weak var activePageLabel: UILabel!
+    // MARK: - IBOutlets
     @IBOutlet weak var croppedView: UIView!
+    @IBOutlet weak var choseDocumentView: UIView!
+    @IBOutlet weak var buttonsStackView: UIStackView!
+    @IBOutlet weak var driversLicanseButton: CustomButton!
+    @IBOutlet weak var bgImageView: UIImageView!
+    @IBOutlet weak var captureImageButton: UIButton!
     
     
-    // MARK: Local Variables
-    var captureSession = AVCaptureSession()
-    var backCamera: AVCaptureDevice?
-    var frontCamera: AVCaptureDevice?
-    var currentCamrera: AVCaptureDevice?
-    var photoOutput: AVCapturePhotoOutput?
-    var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
-    
+    // MARK: - Local Varibles
+    let cameraController = CameraController()
     var selectedDocumentType: DocumentType = .driversLicense
-    var profileImage: UIImage?
+    
+    // MARK: - Overrides
+    override var prefersStatusBarHidden: Bool { return false }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Setup AVFoundation Camera
-        setupCaptureSession()
-        setupDevice()
-        setupInputOutput()
-        setupPreviewLayer()
-        startRunningCaptureSession()
-
+        configureCameraController()
+        
+        setupView()
+        
+        Animz.showMenu(myView: choseDocumentView, duration: 0.5, completion: {})
     }
     
     // MARK: - IBActions
-    
     @IBAction func closeButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-        Animz.hideMenu(myView: choseDocumentView, duration: 0.5) {}
     }
+    
+    @IBAction func captureImageButtonPressed(_ sender: Any) {
+        cameraController.captureImage {(image, error) in
+            guard let image = image else {
+                print(error ?? "Image capture error")
+                return
+            }
+            let croppedImage = image.cropImage(toRect: self.croppedView.frame, viewWidth: self.view.frame.size.width, viewHeight: self.view.frame.size.height)
+            UIUtils.navigateToVerifyID(self, profileImage: croppedImage)
+        }
+    }
+    
     @IBAction func idCardButtonPressed(_ sender: Any) {
         setDocumentTypeAndView(type: .idCard)
     }
@@ -58,85 +61,30 @@ class VerifyIDFaceVC: UIViewController {
     @IBAction func passportButtonPressed(_ sender: Any) {
         setDocumentTypeAndView(type: .passport)
     }
-    @IBAction func takePhotoButtonPressed(_ sender: Any) {
-        takePhoto()
-    }
-    
     
     // MARK: - Functions
     
     private func setupView() {
-        Animz.showMenu(myView: choseDocumentView, duration: 0.5) {}
+        buttonsStackView.setBackgroundColor(colors: UIColor.verifyButtonsBlackGradiante, cornerRadius: 17)
+        driversLicanseButton.addBorder(side: .top, color: UIColor.seperatorGray, width: 1)
+        driversLicanseButton.addBorder(side: .bottom, color: UIColor.seperatorGray, width: 1)
+    }
+    
+    private func configureCameraController() {
+        cameraController.prepare {(error) in
+            if let error = error {
+                print(error)
+            }
+            try? self.cameraController.displayPreview(on: self.view)
+        }
     }
     
     private func setDocumentTypeAndView(type: DocumentType) {
         selectedDocumentType = type
         Animz.hideMenu(myView: choseDocumentView, duration: 0.5) {
-            self.contentView.isHidden = false
             self.choseDocumentView.isHidden = true
-        }
-    }
-    
-    private func takePhoto() {
-        UIUtils.showLoading()
-        let settings = AVCapturePhotoSettings()
-        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
-        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType,
-                             kCVPixelBufferWidthKey as String: 160,
-                             kCVPixelBufferHeightKey as String: 160]
-        settings.previewPhotoFormat = previewFormat
-        photoOutput?.capturePhoto(with: settings, delegate: self)
-    }
-    
-    private func setupCaptureSession() {
-        captureSession.sessionPreset = AVCaptureSession.Preset.photo
-    }
-    
-    private func setupDevice() {
-        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
-        let devices = deviceDiscoverySession.devices
-        
-        for device in devices {
-            if device.position == AVCaptureDevice.Position.back {
-                backCamera = device
-            } else if device.position == AVCaptureDevice.Position.front {
-                frontCamera = device
-            }
-        }
-        currentCamrera = backCamera ?? frontCamera
-    }
-    
-    private func setupInputOutput() {
-        do {
-            let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamrera!)
-            captureSession.addInput(captureDeviceInput)
-            photoOutput = AVCapturePhotoOutput()
-            captureSession.addOutput(photoOutput!)
-        } catch {
-            print(error)
-        }
-    }
-    
-    private func setupPreviewLayer() {
-        cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-        cameraPreviewLayer?.frame = self.view.frame
-        self.view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
-    }
-    
-    private func startRunningCaptureSession() {
-        captureSession.startRunning()
-    }
-    
-}
-
-extension VerifyIDFaceVC: AVCapturePhotoCaptureDelegate {
-    
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
-        if let sampleBuffer = photoSampleBuffer, let previewBuffer = previewPhotoSampleBuffer, let dataImage = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: previewBuffer) {
-//            activePageSettings(dataImage)
+            self.bgImageView.isHidden = false
+            self.captureImageButton.isHidden = false
         }
     }
 }
-

@@ -57,6 +57,9 @@ extension UIColor {
     @nonobjc class var seperatorBlue: UIColor {
         return UIColor(red: 209 / 255.0, green: 232 / 255.0, blue: 255 / 255.0, alpha: 1.0)
     }
+    @nonobjc class var seperatorGray: UIColor {
+        return UIColor(red: 165.0 / 255.0, green: 165.0 / 255.0, blue: 165.0 / 255.0, alpha: 1.0)
+    }
     @nonobjc class var orangeGradianteColors: [UIColor] {
         return [UIColor(red: 255.0 / 255.0, green: 130.0 / 255.0, blue: 74.0 / 255.0, alpha: 1.0),
         UIColor(red: 244.0 / 255.0, green: 87.0 / 255.0, blue: 17.0 / 255.0, alpha: 1.0),
@@ -74,5 +77,9 @@ extension UIColor {
     @nonobjc class var cancelButtonGrayGradiante: [UIColor] {
         return [UIColor(red: 82.0 / 255.0, green: 82.0 / 255.0, blue: 82.0 / 255.0, alpha: 1.0),
                 UIColor(red: 46.0 / 255.0, green: 46.0 / 255.0, blue: 46.0 / 255.0, alpha: 1.0)]
+    }
+    @nonobjc class var verifyButtonsBlackGradiante: [UIColor] {
+        return [UIColor(red: 121.0 / 255.0, green: 121.0 / 255.0, blue: 121.0 / 255.0, alpha: 1.0),
+                UIColor(red: 64.0 / 255.0, green: 64.0 / 255.0, blue: 64.0 / 255.0, alpha: 1.0)]
     }
 }

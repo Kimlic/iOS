@@ -138,7 +138,7 @@ class BodyTableVC: UITableViewController {
         case 4: // email
             UIUtils.navigateToEmail(self)
         case 5: // verify id
-            UIUtils.navigateToVerifyID(self)
+            UIUtils.navigateToVerifyIDFace(self)
         case 6: // address
             UIUtils.navigateToAddress(self)
         default:
