@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import NVActivityIndicatorView
-import GooglePlaces
+import MapKit
 
 public class UIUtils {
     
@@ -153,7 +153,7 @@ public class UIUtils {
         vc.navigationController?.pushViewController(tarVC, animated: true)
     }
     
-    static func navigateToAddressSearch(_ vc: UIViewController, callback: ((GMSAutocompletePrediction) -> ())? = nil){
+    static func navigateToAddressSearch(_ vc: UIViewController, callback: ((MKMapItem) -> ())? = nil){
         let storyboard = AppStoryboard.AddressSearch.instance
         let tarVC = storyboard.instantiateViewController(withIdentifier: AddressSearchVC.className) as! AddressSearchVC
         tarVC.callback = callback

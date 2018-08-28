@@ -56,6 +56,7 @@
 		7C5FD1412110368A00229CE8 /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5FD1402110368A00229CE8 /* QRCodeVC.swift */; };
 		7C5FD1432110369800229CE8 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5FD1422110369800229CE8 /* QRCode.storyboard */; };
 		7C6546B6211C8A65009972D7 /* DarkDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6546B5211C8A65009972D7 /* DarkDatePicker.swift */; };
+		7C67F1002135366900D434CC /* VerificationDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C67F0FF2135366900D434CC /* VerificationDocument.swift */; };
 		7C68A83220DA11D5001DDDC8 /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68A83120DA11D5001DDDC8 /* GradientColor.swift */; };
 		7C68A83620DA1267001DDDC8 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68A83520DA1267001DDDC8 /* UIColorExt.swift */; };
 		7C68A83820DA12A1001DDDC8 /* UIFontExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68A83720DA12A1001DDDC8 /* UIFontExt.swift */; };
@@ -165,6 +166,7 @@
 		7C5FD1402110368A00229CE8 /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
 		7C5FD1422110369800229CE8 /* QRCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
 		7C6546B5211C8A65009972D7 /* DarkDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkDatePicker.swift; sourceTree = "<group>"; };
+		7C67F0FF2135366900D434CC /* VerificationDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationDocument.swift; sourceTree = "<group>"; };
 		7C68A83120DA11D5001DDDC8 /* GradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColor.swift; sourceTree = "<group>"; };
 		7C68A83520DA1267001DDDC8 /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
 		7C68A83720DA12A1001DDDC8 /* UIFontExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExt.swift; sourceTree = "<group>"; };
@@ -577,6 +579,7 @@
 				7C7A7FCB20C5440700BDE95C /* Message.swift */,
 				0F31443920F3BA41007B72F6 /* ButtonModel.swift */,
 				7C86F2E621235C03005A5A43 /* VerifyIDModel.swift */,
+				7C67F0FF2135366900D434CC /* VerificationDocument.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -927,6 +930,7 @@
 				7CDED00E1FBC7DD8006FB0AC /* PhoneNumberVC.swift in Sources */,
 				7C4838521FB5F62400FC864A /* AppDelegate.swift in Sources */,
 				7C7A7FC820C53B6400BDE95C /* MessageVC.swift in Sources */,
+				7C67F1002135366900D434CC /* VerificationDocument.swift in Sources */,
 				7CF655691FBACB1F00CA9C1A /* Constants.swift in Sources */,
 				7CA54B1A210D67F2002555C7 /* CustomWebServiceRequest.swift in Sources */,
 				7C7305122125788700F6DE26 /* AccountCell.swift in Sources */,

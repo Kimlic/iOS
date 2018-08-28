@@ -12,6 +12,8 @@ import web3swift
 
 final class CustomWebServiceRequest {
     
+    private static let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     // MARK: - Get Config
     static func getConfig(accountAddress: String, success: @escaping ([String: Any]) -> Void, failure: @escaping (String?) -> Void) {
         let url = Constants.APIEndpoint.config.url()
@@ -26,7 +28,6 @@ final class CustomWebServiceRequest {
     
     // MARK: - Create Email
     static func createEmail(email: String, success: @escaping () -> Void, failure: @escaping (String) -> Void) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         do {
             let result = try appDelegate.quorumAPI?.setFieldMainData(type: QuorumAPI.AccountFieldMainType.email, value: email)
             guard let receipt = result!["receipt"] as? TransactionReceipt, receipt.status == .ok else { failure("errorMessage".localized); return }
@@ -47,7 +48,6 @@ final class CustomWebServiceRequest {
     
     // MARK: - Create Phone
     static func createPhone(phone: String, success: @escaping () -> Void, failure: @escaping (String) -> Void) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         do {
             let result = try appDelegate.quorumAPI?.setFieldMainData(type: QuorumAPI.AccountFieldMainType.phone, value: phone)
             guard let receipt = result!["receipt"] as? TransactionReceipt, receipt.status == .ok else { failure("errorMessage".localized); return }
@@ -69,7 +69,7 @@ final class CustomWebServiceRequest {
     // MARK: - Approve Code
     static func approveCode(code: String, type: VerificationType, success: @escaping () -> Void, failure: @escaping (String) -> Void) {
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
         var url: String
         
         switch type {
@@ -86,89 +86,21 @@ final class CustomWebServiceRequest {
         }
     }
     
-    // MARK: - Verify ID created
-    static func createVerifyID(request: VerifyIDModel, success: @escaping () -> Void, failure: @escaping (String?) -> Void) {
-        CustomWebServiceRequest.createVerificationSession(request: request, success: { (sessionID) in
-            print(sessionID)
-//            CustomWebServiceRequest.photoUploads(sessionID: sessionID, request: request, success: {}, failure: { (error) in failure(error)})
-        }) { (error) in
-            UIUtils.stopLoading()
-            // TODO: Error Popup
-            print(error)
-        }
-    }
-    
-    private static func photoUploads(sessionID: String, request: VerifyIDModel, success: @escaping () -> Void, failure: @escaping (String?) -> Void) {
+    // MARK: - Verification Documents
+    static func getVerificationDocuments(success: @escaping ([VerificationDocument]) -> Void, failure: @escaping (String?) -> Void) {
+        let url = "https://ap-api-test.kimlic.com/api/verifications/digital/vendors"
+        let headers = ["account-address": appDelegate.quorumManager!.accountAddress.lowercased()]
         
-        // face upload
-        CustomWebServiceRequest.photoUpload(sessionID: sessionID, request: request, context: .face, success: {success()}, failure: {err in failure(err)})
-        
-        // front image upload
-        CustomWebServiceRequest.photoUpload(sessionID: sessionID, request: request, context: .documentFront, success: {success()}, failure: {err in failure(err)})
-        
-        // back image upload
-        CustomWebServiceRequest.photoUpload(sessionID: sessionID, request: request, context: .documentBack, success: {success()}, failure: {err in failure(err)})
-    }
-    
-    // MARK: - Create verification session
-    static func createVerificationSession(request: VerifyIDModel, success: @escaping (String) -> Void, failure: @escaping (String) -> Void) {
-        
-        // Set local varibles
-        let url = "https://ap-api-test.kimlic.com/api/verifications/digital/sessions"
-        let headers = ["account-address": request.accountAddress]
-        let params =  [
-            "first_name": request.firstName,
-            "last_name": request.lastName,
-            "lang": request.lang,
-            "document_type": request.documentType.rawValue,
-            "timestamp": request.timestamp,
-            "contract_address": request.contractAddress,
-            "device_os": request.deviceOs,
-            "device_token": request.deviceToken
-            ] as [String : Any]
-        
-        // Web service request
-        WebServicesBaseRequest().executeRequest(url: url, method: .post, params: params, headers: headers, success: { (response) in
-            print(response)
-            if let data = response["data"] as? [String: Any], let sessionID = data["session_id"] as? String {
-                success(sessionID)
-            } else {
+        WebServicesBaseRequest().executeRequest(url: url, method: .get, params: nil, headers: headers, success: { (response) in
+            do {
+                let data = try JSONSerialization.data(withJSONObject: response["data"], options: .prettyPrinted)
+                let documents = try JSONDecoder().decode([VerificationDocument].self, from: data)
+                success(documents)
+            } catch {
                 failure("errorMessage".localized)
             }
         }) { (error) in
             failure(error ?? "errorMessage".localized)
         }
     }
-    
-    // MARK: - Photo Upload
-    static func photoUpload(sessionID: String, request: VerifyIDModel, context: DocumentPhotoContext, success: (() -> Void)? = nil, failure: ((String) -> Void)? = nil) {
-        
-        var contextValue: String = ""
-        
-        switch context {
-        case .face:
-            contextValue = request.faceImage?.convertBase64() ?? contextValue
-        case .documentFront:
-            contextValue = request.documentFrontImage?.convertBase64() ?? contextValue
-        case .documentBack:
-            contextValue = request.documentBackImage?.convertBase64() ?? contextValue
-        }
-        
-        let url = "https://ap-api-test.kimlic.com/api/verifications/digital/sessions/\(sessionID)/media"
-        let headers = ["account-address": request.accountAddress]
-        let params =  [
-            "country": request.country,
-            "context": context.rawValue,
-            "content": contextValue,
-            "timestamp": request.timestamp
-            ] as [String : Any]
-        
-        WebServicesBaseRequest().executeRequest(url: url, method: .post, params: params, headers: headers, success: { (data) in
-//            print(data)
-            success?()
-        }) { (error) in
-            failure?(error ?? "errorMessage".localized)
-        }
-    }
-    
 }

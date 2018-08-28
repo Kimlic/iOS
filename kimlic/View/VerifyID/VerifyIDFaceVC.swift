@@ -22,6 +22,11 @@ class VerifyIDFaceVC: UIViewController {
     // MARK: - Local Varibles
     let cameraController = CameraController()
     var selectedDocumentType: DocumentType = .driversLicense
+    lazy var documents: [VerificationDocument] = {
+        let ver1 = VerificationDocument.init(contexts: [], countries: [], description: "ID Card", type: "ID_CARD")
+        let ver2 = VerificationDocument.init(contexts: [], countries: [], description: "Driver License", type: "DRIVER_LICENSE")
+        return [ver1, ver2]
+    }()
     
     // MARK: - Overrides
     override var prefersStatusBarHidden: Bool { return false }
@@ -31,9 +36,16 @@ class VerifyIDFaceVC: UIViewController {
         
         configureCameraController()
         
-        setupView()
+        createDocumentButtons()
         
-        Animz.showMenu(myView: choseDocumentView, duration: 0.5, completion: {})
+        Animz.showMenu(myView: self.choseDocumentView, duration: 0.5, completion: {})
+        
+        
+//        Animz.showMenu(myView: self.choseDocumentView, duration: 0.5, completion: {})
+        
+//        serverRequest {
+//            Animz.showMenu(myView: self.choseDocumentView, duration: 0.5, completion: {})
+//        }
     }
     
     // MARK: - IBActions
@@ -64,12 +76,6 @@ class VerifyIDFaceVC: UIViewController {
     
     // MARK: - Functions
     
-    private func setupView() {
-        buttonsStackView.setBackgroundColor(colors: UIColor.verifyButtonsBlackGradiante, cornerRadius: 17)
-        driversLicanseButton.addBorder(side: .top, color: UIColor.seperatorGray, width: 1)
-        driversLicanseButton.addBorder(side: .bottom, color: UIColor.seperatorGray, width: 1)
-    }
-    
     private func configureCameraController() {
         cameraController.prepare {(error) in
             if let error = error {
@@ -87,4 +93,51 @@ class VerifyIDFaceVC: UIViewController {
             self.captureImageButton.isHidden = false
         }
     }
+    
+    
 }
+
+// MARK: - Setup View and Web Serivce
+extension VerifyIDFaceVC {
+    
+    private func setupView() {
+        buttonsStackView.setBackgroundColor(colors: UIColor.verifyButtonsBlackGradiante, cornerRadius: 17)
+//        driversLicanseButton.addBorder(side: .top, color: UIColor.seperatorGray, width: 1)
+//        driversLicanseButton.addBorder(side: .bottom, color: UIColor.seperatorGray, width: 1)
+    }
+    
+    private func serverRequest(completion: @escaping () -> () ) {
+        CustomWebServiceRequest.getVerificationDocuments(success: { (documents) in
+            self.documents = documents
+            self.createDocumentButtons()
+            completion()
+        }) { (error) in
+            // TODO: Error Popup
+            print(error)
+        }
+    }
+    
+    private func createDocumentButtons() {
+        for (index, document) in documents.enumerated() {
+            let button = UIButton()
+            button.setTitle(document.description, for: .normal)
+            button.setTitleColor(UIColor.white, for: .normal)
+            button.tag = index
+            button.backgroundColor = UIColor.clear
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor.white.cgColor
+            button.addTarget(self, action: #selector(VerifyIDFaceVC.selectDocumentButtonPressed), for: .touchUpInside)
+            buttonsStackView.addArrangedSubview(button)
+        }
+    }
+    
+    @objc private func selectDocumentButtonPressed(_ sender: UIButton) {
+        for (index, document) in documents.enumerated() {
+            if index == sender.tag {
+                selectedDocumentType = DocumentType(rawValue: document.type)!
+            }
+        }
+    }
+    
+}
+

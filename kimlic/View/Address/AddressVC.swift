@@ -44,7 +44,7 @@ class AddressVC: UIViewController {
     // Present the Autocomplete view controller when the button is pressed.
     @IBAction func addressSearchButtonPressed(_ sender: UIButton) {
         UIUtils.navigateToAddressSearch(self) { (response) in
-            self.addressTextField.text = response.attributedFullText.string
+            self.addressTextField.text = response.name
         }
     }
     

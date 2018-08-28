@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import GoogleMapsBase
-import GooglePlaces
+import MapKit
 
 class AddressSearchVC: UIViewController {
     
@@ -19,19 +18,12 @@ class AddressSearchVC: UIViewController {
     
     // MARK: - Local Varibles
     let cellIdentifier = "AddressCell"
-    let googlePlaceAPIKey = "AIzaSyAhJoblJTjmCVjLKVmBAf2APWEhiqkbJWc"
-    var addressList = [GMSAutocompletePrediction]()
-    lazy var filter: GMSAutocompleteFilter = {
-       let filter = GMSAutocompleteFilter()
-        filter.type = .address
-        return filter
-    }()
-    var callback: ((GMSAutocompletePrediction)->())?
+    var addressList = [MKMapItem]()
+    var callback: ((MKMapItem)->())?
+    let request = MKLocalSearchRequest()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        GMSPlacesClient.provideAPIKey(googlePlaceAPIKey)
 
         // Set default display value
         setupView()
@@ -53,14 +45,20 @@ class AddressSearchVC: UIViewController {
     @IBAction func addressTextFieldChanged(_ sender: UITextField) {
         
         guard let searchWord = sender.text, !searchWord.isEmpty else {
-            self.addressList = [GMSAutocompletePrediction]()
+            self.addressList = [MKMapItem]()
             reloadHandler()
             return
         }
         
-        GMSPlacesClient.shared().autocompleteQuery(searchWord, bounds: nil, filter: filter) { (responseList, error) in
-            if error == nil && responseList != nil {
-                self.addressList = responseList!
+        request.naturalLanguageQuery = sender.text
+        let activeSearch = MKLocalSearch(request: request)
+        
+        activeSearch.start { (response, error) in
+            if response == nil {
+                // TODO: Error Popup
+                print("ERROR")
+            } else {
+                self.addressList = response!.mapItems
                 self.reloadHandler()
             }
         }
@@ -94,34 +92,6 @@ class AddressSearchVC: UIViewController {
 
 }
 
-extension AddressSearchVC: GMSAutocompleteViewControllerDelegate {
-    
-    // Handle the user's selection.
-    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        // TODO: handle the error.
-        print("Error: ", error.localizedDescription)
-    }
-    
-    // User canceled the operation.
-    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    // Turn the network activity indicator on and off again.
-    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    }
-    
-    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
-    }
-    
-}
-
 extension AddressSearchVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -149,7 +119,8 @@ extension AddressSearchVC: UITableViewDelegate, UITableViewDataSource {
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
         }
-        cell?.textLabel?.attributedText = addressList[indexPath.row].attributedFullText
+        let address = addressList[indexPath.row]
+        cell?.textLabel?.text = address.name
         cell?.imageView?.image = #imageLiteral(resourceName: "profile_blue_location_icon")
         return cell!
     }
