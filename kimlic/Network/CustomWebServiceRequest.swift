@@ -26,6 +26,27 @@ final class CustomWebServiceRequest {
         }, failure: failure)
     }
     
+    // MARK: - Get Config
+    static func getNetworkID(callback: @escaping (Int) -> ()){
+        let url = Constants.APIEndpoint.quorum.url()
+        let params =  ["id": 1, "method": "net_version"] as [String: Any]
+        WebServicesBaseRequest().executeRequest(url: url, method: .post, params: params, headers: nil, success: { result in
+            guard let data = result["result"] as? String, let ID = Int(data) else { return }
+            callback(ID)
+        }, failure: { _ in })
+    }
+    
+    // MARK: - Get Config
+    static func profileSync(success: @escaping ([DataFields]) -> Void, failure: @escaping (String?) -> Void){
+        let url = Constants.APIEndpoint.sync.url()
+        let headers: HTTPHeaders = [
+            "account-address": appDelegate.quorumManager!.accountAddress.lowercased()
+        ]
+        WebServicesBaseRequest().executeRequest(url: url, method: .get, params: nil, headers: headers, success: { result in
+            guard let data = result["data"] as? [String: Any], let dataFields = data["data_fields"] as? [String: Any] else { return }
+        }, failure: failure)
+    }
+    
     // MARK: - Create Email
     static func createEmail(email: String, success: @escaping () -> Void, failure: @escaping (String) -> Void) {
         do {
@@ -101,6 +122,16 @@ final class CustomWebServiceRequest {
             }
         }) { (error) in
             failure(error ?? "errorMessage".localized)
+        }
+    }
+    
+    // MARK: - Create Phone
+    static func saveVerificationDocument() {
+        do {
+            let result = try appDelegate.quorumAPI?.setFieldMainData(params: [""])
+            print(result)
+        } catch {
+            print(error.localizedDescription)
         }
     }
 }

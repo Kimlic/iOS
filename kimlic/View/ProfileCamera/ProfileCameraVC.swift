@@ -8,6 +8,7 @@
 import UIKit
 import AVFoundation
 
+// TODO: integrate general CameraController class
 class ProfileCameraVC: UIViewController {
     
     @IBOutlet weak var backgroundImage: UIImageView!

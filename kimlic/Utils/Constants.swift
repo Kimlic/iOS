@@ -13,21 +13,10 @@ class Constants {
         static let debug = false
     }
     
-    struct WebServicesUrl {
-        private static let Base = Bundle.main.serverURL
-        static  let ClientCredentials = Base + "/oauth/token"
-        static let CreateUser = Base + "/v1/users"
-        static let GetUserInfo = Base + "/v1/users/me"
-        static let UpdateUser = Base + "/v1/users/me/profiles"
-        static let BaseEmails = Base + "/v1/emails"
-        static let BasePhone = Base + "/v1/phones"
-        static let Authenticate = Base + "/v1/authentication_requests"
-        static let Applications = Base + "/v1/applications"
-        static let AllPermissions = Base + "/v1/access_grants"
-    }
-    
     enum APIEndpoint: String {
         case config = "/api/config"
+        case quorum = "/api/quorum"
+        case sync = "/api/sync"
         case phoneVerification = "/api/verifications/phone"
         case phoneVerificationApprove =  "/api/verifications/phone/approve"
         case emailVerification = "/api/verifications/email"
@@ -62,6 +51,6 @@ class Constants {
         let host = "mobile-api-test.kimlic.com"
         let port = 443
         let path = "/api/quorum"
-        let networkId = 13602
+        var networkId = 13602
     }
 }

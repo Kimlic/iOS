@@ -37,10 +37,10 @@
                                 <rect key="frame" x="40" y="327" width="295" height="340"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KlM-b1-IUa">
-                                        <rect key="frame" x="0.0" y="310" width="295" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="142" width="295" height="168"/>
                                         <subviews>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-1a-evB" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="-637" width="295" height="56"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-1a-evB" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="mLM-I8-Rol"/>
                                                 </constraints>
@@ -52,8 +52,8 @@
                                                     <action selector="idCardButtonPressed:" destination="e6U-pI-4t6" eventType="touchUpInside" id="Ns4-6o-juK"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RC8-HS-NVH" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="-637" width="295" height="56"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RC8-HS-NVH" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="56" width="295" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="O4h-uC-d1R"/>
                                                 </constraints>
@@ -65,8 +65,8 @@
                                                     <action selector="driverLicenseButtonPressed:" destination="e6U-pI-4t6" eventType="touchUpInside" id="8gh-eP-kOq"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eK9-Wf-T7B" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="-637" width="295" height="56"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eK9-Wf-T7B" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="112" width="295" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="0iO-8v-vI2"/>
                                                 </constraints>
@@ -89,13 +89,13 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chose Your Document Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDt-58-LRV">
-                                        <rect key="frame" x="34" y="267" width="228" height="23"/>
+                                        <rect key="frame" x="34" y="99" width="228" height="23"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_ID_icon_sml" translatesAutoresizingMaskIntoConstraints="NO" id="2Ql-86-4iO">
-                                        <rect key="frame" x="115" y="190" width="65" height="62"/>
+                                        <rect key="frame" x="115" y="22" width="65" height="62"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -123,6 +123,14 @@
                                     <action selector="captureImageButtonPressed:" destination="e6U-pI-4t6" eventType="touchUpInside" id="Oxe-XF-BjA"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbK-Vu-Oac" userLabel="PositionButton">
+                                <rect key="frame" x="331" y="28" width="24" height="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="ic_camera_rear.png"/>
+                                <connections>
+                                    <action selector="switchCameraButtonPressed:" destination="e6U-pI-4t6" eventType="touchUpInside" id="Ni3-1t-Gi1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -131,12 +139,14 @@
                             <constraint firstItem="8hB-Rx-hWs" firstAttribute="bottom" secondItem="1tj-65-o46" secondAttribute="bottom" id="ENB-h5-RaG"/>
                             <constraint firstItem="SNR-5r-T43" firstAttribute="top" secondItem="j3e-KI-Q7M" secondAttribute="top" id="Hbq-Yi-jdp"/>
                             <constraint firstAttribute="trailing" secondItem="SNR-5r-T43" secondAttribute="trailing" id="IRO-yP-Q3E"/>
+                            <constraint firstItem="cbK-Vu-Oac" firstAttribute="top" secondItem="8hB-Rx-hWs" secondAttribute="top" constant="8" id="L7H-D7-McP"/>
                             <constraint firstItem="kFs-iV-agN" firstAttribute="centerX" secondItem="j3e-KI-Q7M" secondAttribute="centerX" id="Vd3-ov-44R"/>
                             <constraint firstItem="SNR-5r-T43" firstAttribute="leading" secondItem="j3e-KI-Q7M" secondAttribute="leading" id="c8D-7s-HLj"/>
                             <constraint firstItem="KJE-nz-fCk" firstAttribute="top" secondItem="8hB-Rx-hWs" secondAttribute="top" constant="8" id="g9q-HV-ePZ"/>
                             <constraint firstItem="KJE-nz-fCk" firstAttribute="leading" secondItem="8hB-Rx-hWs" secondAttribute="leading" constant="20" id="qVM-ts-MHe"/>
                             <constraint firstAttribute="bottom" secondItem="SNR-5r-T43" secondAttribute="bottom" id="rGS-Hd-XfI"/>
                             <constraint firstItem="1tj-65-o46" firstAttribute="leading" secondItem="8hB-Rx-hWs" secondAttribute="leading" constant="40" id="sge-03-xO5"/>
+                            <constraint firstItem="8hB-Rx-hWs" firstAttribute="trailing" secondItem="cbK-Vu-Oac" secondAttribute="trailing" constant="20" id="vkh-jB-7n1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8hB-Rx-hWs"/>
                     </view>
@@ -147,15 +157,17 @@
                         <outlet property="choseDocumentView" destination="1tj-65-o46" id="bLP-Ai-4Cc"/>
                         <outlet property="croppedView" destination="O7N-t9-kPE" id="zwc-xI-2cP"/>
                         <outlet property="driversLicanseButton" destination="RC8-HS-NVH" id="H4r-qg-64d"/>
+                        <outlet property="switchCameraButton" destination="cbK-Vu-Oac" id="d1M-mO-MKE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJE-WC-5o8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2417" y="-1146"/>
+            <point key="canvasLocation" x="-2527" y="-1174"/>
         </scene>
     </scenes>
     <resources>
         <image name="Face_and_ID_cart_guideline" width="378" height="670"/>
+        <image name="ic_camera_rear.png" width="24" height="24"/>
         <image name="shutter_button" width="64" height="64"/>
         <image name="white_ID_icon_sml" width="65" height="62"/>
         <image name="white_close_button" width="25" height="25"/>

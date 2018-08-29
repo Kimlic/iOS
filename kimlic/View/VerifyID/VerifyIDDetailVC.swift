@@ -21,9 +21,7 @@ class VerifyIDDetailVC: UIViewController {
     
     // MARK: - Local Varibles
     
-    var documentType: DocumentType?
-    var frontImage: UIImage?
-    var backImage: UIImage?
+    var verifyIDModel: VerifyIDModel!
     var user: KimlicUser?
     var country = [Country]()
     var selectedCode = "tr"
@@ -61,11 +59,12 @@ class VerifyIDDetailVC: UIViewController {
     // MARK: - Functions
     
     private func serverRequest() {
+        CustomWebServiceRequest.saveVerificationDocument()
     }
     
     private func setupData() {
-        cardFrontImage.image = frontImage
-        cardBackImage.image = backImage
+        cardFrontImage.image = verifyIDModel.documentFrontImage
+        cardBackImage.image = verifyIDModel.documentBackImage
         
         expiryDateTextField.text = dateFortmatted(date: Date())
     }

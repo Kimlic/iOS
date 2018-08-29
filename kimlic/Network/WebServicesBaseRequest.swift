@@ -13,7 +13,7 @@ import Alamofire
 
 class WebServicesBaseRequest: NSObject {
     
-    func executeRequest(url: String, method: HTTPMethod, params: Parameters?, headers: HTTPHeaders, success: @escaping ([String: Any]) -> Void, failure: @escaping (String?) -> Void) {
+    func executeRequest(url: String, method: HTTPMethod, params: Parameters?, headers: HTTPHeaders?, success: @escaping ([String: Any]) -> Void, failure: @escaping (String?) -> Void) {
         Alamofire.request(url, method: method, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON() { response in
             switch response.result {
             case .failure(let error): failure(error.localizedDescription)

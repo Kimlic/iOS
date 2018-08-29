@@ -8,6 +8,7 @@
 
 import UIKit
 
+// TODO: integrate general CameraController class
 class VerifyIDFaceVC: UIViewController {
     
     // MARK: - IBOutlets
@@ -17,6 +18,7 @@ class VerifyIDFaceVC: UIViewController {
     @IBOutlet weak var driversLicanseButton: CustomButton!
     @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var captureImageButton: UIButton!
+    @IBOutlet weak var switchCameraButton: UIButton!
     
     
     // MARK: - Local Varibles
@@ -36,7 +38,9 @@ class VerifyIDFaceVC: UIViewController {
         
         configureCameraController()
         
-        createDocumentButtons()
+//        createDocumentButtons()
+        
+        setupView()
         
         Animz.showMenu(myView: self.choseDocumentView, duration: 0.5, completion: {})
         
@@ -60,7 +64,9 @@ class VerifyIDFaceVC: UIViewController {
                 return
             }
             let croppedImage = image.cropImage(toRect: self.croppedView.frame, viewWidth: self.view.frame.size.width, viewHeight: self.view.frame.size.height)
-            UIUtils.navigateToVerifyID(self, profileImage: croppedImage)
+            var verifyIDModel = VerifyIDModel()
+            verifyIDModel.faceImage = croppedImage
+            UIUtils.navigateToVerifyID(self, model: verifyIDModel)
         }
     }
     
@@ -74,6 +80,26 @@ class VerifyIDFaceVC: UIViewController {
         setDocumentTypeAndView(type: .passport)
     }
     
+    @IBAction func switchCameraButtonPressed(_ sender: Any) {
+        do {
+            try cameraController.switchCameras()
+        }
+            
+        catch {
+            print(error)
+        }
+        
+        switch cameraController.currentCameraPosition {
+        case .some(.front):
+            switchCameraButton.setImage(#imageLiteral(resourceName: "ic_camera_front.png"), for: .normal)
+            
+        case .some(.rear):
+            switchCameraButton.setImage(#imageLiteral(resourceName: "ic_camera_rear.png"), for: .normal)
+            
+        case .none:
+            return
+        }
+    }
     // MARK: - Functions
     
     private func configureCameraController() {
@@ -82,6 +108,7 @@ class VerifyIDFaceVC: UIViewController {
                 print(error)
             }
             try? self.cameraController.displayPreview(on: self.view)
+            try? self.cameraController.switchCameras()
         }
     }
     
@@ -102,8 +129,8 @@ extension VerifyIDFaceVC {
     
     private func setupView() {
         buttonsStackView.setBackgroundColor(colors: UIColor.verifyButtonsBlackGradiante, cornerRadius: 17)
-//        driversLicanseButton.addBorder(side: .top, color: UIColor.seperatorGray, width: 1)
-//        driversLicanseButton.addBorder(side: .bottom, color: UIColor.seperatorGray, width: 1)
+        driversLicanseButton.addBorder(side: .top, color: UIColor.seperatorGray, width: 1)
+        driversLicanseButton.addBorder(side: .bottom, color: UIColor.seperatorGray, width: 1)
     }
     
     private func serverRequest(completion: @escaping () -> () ) {

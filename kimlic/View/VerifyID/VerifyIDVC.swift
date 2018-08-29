@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 
+// TODO: integrate general CameraController class
 class VerifyIDVC: UIViewController {
     
     @IBOutlet weak var bgImage: UIImageView!
@@ -27,9 +28,7 @@ class VerifyIDVC: UIViewController {
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     
     var activePage: ActivePage = .front
-    var cardFrontImage: UIImage?
-    var cardBackImage: UIImage?
-    var profileImage: UIImage?
+    var verifyIDModel: VerifyIDModel!
     
     enum ActivePage {
         case front, back
@@ -132,8 +131,8 @@ extension VerifyIDVC: AVCapturePhotoCaptureDelegate {
         case .front:
             frontRotateSetValue(photo)
         default:
-            cardBackImage = photo
-            UIUtils.navigateToVerifyIDDetail(self, documentType: .driversLicense, frontImage: cardFrontImage, backImage: cardBackImage)
+            verifyIDModel?.documentBackImage = photo
+            UIUtils.navigateToVerifyIDDetail(self, model: verifyIDModel)
         }
     }
     
@@ -144,6 +143,6 @@ extension VerifyIDVC: AVCapturePhotoCaptureDelegate {
         activePageLabel.text = "Back Side"
         Animz.fadeIn(view: activePageLabel, duration: 0.4)
         activePage = .back
-        cardFrontImage = photo
+        verifyIDModel?.documentFrontImage = photo
     }
 }

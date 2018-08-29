@@ -37,6 +37,10 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name_icon_with_circle" translatesAutoresizingMaskIntoConstraints="NO" id="Zio-DT-d4t">
                                         <rect key="frame" x="97" y="0.0" width="181" height="181"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="181" id="Qjz-ua-QgP"/>
+                                            <constraint firstAttribute="height" constant="181" id="q8o-Of-ojA"/>
+                                        </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwo-Ui-4DL">
                                         <rect key="frame" x="25" y="30" width="15" height="28"/>
@@ -320,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvO-Og-0Yo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2465" y="-95"/>
+            <point key="canvasLocation" x="-2834" y="-111"/>
         </scene>
     </scenes>
     <resources>
