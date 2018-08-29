@@ -20,6 +20,5 @@ target 'kimlic' do
 	pod 'Fabric', '~> 1.7.7'
 	pod 'Crashlytics', '~> 3.10.2'
     pod 'CloudCore', '~> 2.0'
-    pod 'GooglePlaces', '~> 2.7'
     pod 'FileBrowser', '~> 1.0'
 end

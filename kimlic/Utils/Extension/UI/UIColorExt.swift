@@ -45,6 +45,9 @@ extension UIColor {
     @nonobjc class var lightBlueGrey: UIColor {
         return UIColor(red: 206.0 / 255.0, green: 226.0 / 255.0, blue: 240.0 / 255.0, alpha: 1.0)
     }
+    @nonobjc class var placeHolderBlue: UIColor {
+        return UIColor(red: 153.0 / 255.0, green: 212.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0)
+    }
     @nonobjc class var blueGradianteColors: [UIColor] {
         return [popupButtonLightBlue, popupButtonDarkBlue]
     }

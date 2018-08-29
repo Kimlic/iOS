@@ -55,12 +55,11 @@ class AddressSearchVC: UIViewController {
         
         activeSearch.start { (response, error) in
             if response == nil {
-                // TODO: Error Popup
-                print("ERROR")
+                self.addressList = [MKMapItem]()
             } else {
                 self.addressList = response!.mapItems
-                self.reloadHandler()
             }
+            self.reloadHandler()
         }
     }
     
@@ -117,10 +116,12 @@ extension AddressSearchVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
+            cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
         }
         let address = addressList[indexPath.row]
         cell?.textLabel?.text = address.name
+        cell?.detailTextLabel?.text = address.placemark.title
+        cell?.detailTextLabel?.textColor = UIColor.placeHolderBlue
         cell?.imageView?.image = #imageLiteral(resourceName: "profile_blue_location_icon")
         return cell!
     }

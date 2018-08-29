@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import GooglePlaces
 import FileBrowser
 
 class AddressVC: UIViewController {
@@ -44,7 +43,7 @@ class AddressVC: UIViewController {
     // Present the Autocomplete view controller when the button is pressed.
     @IBAction func addressSearchButtonPressed(_ sender: UIButton) {
         UIUtils.navigateToAddressSearch(self) { (response) in
-            self.addressTextField.text = response.name
+            self.addressTextField.text = response.placemark.title
         }
     }
     
