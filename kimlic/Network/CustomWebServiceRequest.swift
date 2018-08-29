@@ -26,7 +26,7 @@ final class CustomWebServiceRequest {
         }, failure: failure)
     }
     
-    // MARK: - Get Config
+    // MARK: - Get Network ID
     static func getNetworkID(callback: @escaping (Int) -> ()){
         let url = Constants.APIEndpoint.quorum.url()
         let params =  ["id": 1, "method": "net_version"] as [String: Any]
@@ -36,7 +36,7 @@ final class CustomWebServiceRequest {
         }, failure: { _ in })
     }
     
-    // MARK: - Get Config
+    // MARK: - Profile Sync
     static func profileSync(success: @escaping ([DataFields]) -> Void, failure: @escaping (String?) -> Void){
         let url = Constants.APIEndpoint.sync.url()
         let headers: HTTPHeaders = [
@@ -127,11 +127,11 @@ final class CustomWebServiceRequest {
     
     // MARK: - Create Phone
     static func saveVerificationDocument() {
-        do {
-            let result = try appDelegate.quorumAPI?.setFieldMainData(params: [""])
-            print(result)
-        } catch {
-            print(error.localizedDescription)
-        }
+//        do {
+//            let result = try appDelegate.quorumAPI?.setFieldMainData(params: [""])
+//            print(result)
+//        } catch {
+//            print(error.localizedDescription)
+//        }
     }
 }
