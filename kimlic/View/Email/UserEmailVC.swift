@@ -56,14 +56,15 @@ class UserEmailVC: UIViewController {
     }
     
     private func serverRequest(_ email: String) {
-        UIUtils.showLoading()
-        CustomWebServiceRequest.createEmail(email: email, success: {
-            UIUtils.stopLoading()
-            UIUtils.navigateToMessage(self, messageType: .emailSuccessfull)
-        }) { (error) in
-            UIUtils.stopLoading()
-            self.showEmailError(error)
-        }
+        UIUtils.navigateToVerification(self, email: email)
+//        UIUtils.showLoading()
+//        CustomWebServiceRequest.createEmail(email: email, success: {
+//            UIUtils.stopLoading()
+//            UIUtils.navigateToVerification(self, email: email)
+//        }) { (error) in
+//            UIUtils.stopLoading()
+//            self.showEmailError(error)
+//        }
     }
     
     private func showEmailError(_ message: String) {

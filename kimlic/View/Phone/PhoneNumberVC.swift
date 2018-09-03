@@ -105,14 +105,15 @@ class PhoneNumberVC: UIViewController {
     }
     
     private func serverRequest(_ phone: String) {
-        UIUtils.showLoading()
-        CustomWebServiceRequest.createPhone(phone: phone, success: {
-            UIUtils.stopLoading()
-            UIUtils.navigateToVerification(self, phoneNumber: phone)
-        }) { (error) in
-            UIUtils.stopLoading()
-            self.showPhoneError(error)
-        }
+        UIUtils.navigateToVerification(self, phoneNumber: phone)
+//        UIUtils.showLoading()
+//        CustomWebServiceRequest.createPhone(phone: phone, success: {
+//            UIUtils.stopLoading()
+//            UIUtils.navigateToVerification(self, phoneNumber: phone)
+//        }) { (error) in
+//            UIUtils.stopLoading()
+//            self.showPhoneError(error)
+//        }
     }
     
     private func showPhoneError(_ message: String) {

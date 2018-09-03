@@ -18,6 +18,8 @@ class VerifyIDDetailVC: UIViewController {
     @IBOutlet weak var expiryDateTextField: UITextField!
     @IBOutlet weak var cardFrontImage: UIImageView!
     @IBOutlet weak var cardBackImage: UIImageView!
+    @IBOutlet weak var newIDButton: CustomButton!
+    @IBOutlet weak var titleLabel: UILabel!
     
     // MARK: - Local Varibles
     
@@ -35,6 +37,8 @@ class VerifyIDDetailVC: UIViewController {
 
         // Get user data
         user = CoreDataHelper.getUser()
+        
+        setupView()
         
         // Set data
         setupData()
@@ -62,7 +66,12 @@ class VerifyIDDetailVC: UIViewController {
         CustomWebServiceRequest.saveVerificationDocument()
     }
     
+    private func setupView() {
+        newIDButton.backgroundColor = GradiantColor.convertGradientToColour(colors: UIColor.blueGradianteColors, frame: newIDButton.frame, type: .topBottom).color
+    }
+    
     private func setupData() {
+        titleLabel.text = verifyIDModel.documentType?.description
         cardFrontImage.image = verifyIDModel.documentFrontImage
         cardBackImage.image = verifyIDModel.documentBackImage
         

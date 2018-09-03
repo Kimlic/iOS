@@ -38,12 +38,6 @@ enum PasscodePageType {
     case delete
 }
 
-enum DocumentType: String {
-    case idCard = "ID_CARD"
-    case driversLicense = "DRIVERS_LICENSE"
-    case passport = "PASSPORT"
-}
-
 enum DocumentPhotoContext: String {
     case face = "face"
     case documentFront = "document-front"

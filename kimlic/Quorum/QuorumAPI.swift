@@ -63,7 +63,7 @@ final class QuorumAPI {
     
     func setFieldMainData(type: AccountFieldMainType, value: String) throws -> [String: Any] {
         
-        let param = "'{\"\(type.rawValue)\":\"\(value.sha256())\"}'"
+        let param = "{\"\(type.rawValue)\":\"\(value.sha256())\"}"
         let params = [param, type.rawValue] as [Any]
         let method = accountStorageAdapter.transactions.setFieldMainData
         

@@ -129,20 +129,24 @@ extension VerifyIDVC: AVCapturePhotoCaptureDelegate {
         
         switch activePage {
         case .front:
-            frontRotateSetValue(photo)
+            activePage = .back
+            verifyIDModel?.documentFrontImage = photo
+            if let contexts = verifyIDModel.documentType?.contexts, contexts.contains(DocumentPhotoContext.documentBack.rawValue) {
+                rotateBack()
+            }else {
+                UIUtils.navigateToVerifyIDDetail(self, model: verifyIDModel)
+            }
         default:
             verifyIDModel?.documentBackImage = photo
             UIUtils.navigateToVerifyIDDetail(self, model: verifyIDModel)
         }
     }
     
-    private func frontRotateSetValue(_ photo: UIImage) {
+    private func rotateBack() {
         Animz.rotateY(layer: activePageImage.layer, angleFrom: 360, duration: 0.4) {
             self.activePageImage.image = UIImage(named: "camera_Screen_card_backside_icon")
         }
         activePageLabel.text = "Back Side"
         Animz.fadeIn(view: activePageLabel, duration: 0.4)
-        activePage = .back
-        verifyIDModel?.documentFrontImage = photo
     }
 }

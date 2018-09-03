@@ -132,23 +132,29 @@ class VerificationVC: UIViewController {
     }
     
     private func serverRequest(_ code: String, type: VerificationType) {
-        UIUtils.showLoading()
-        CustomWebServiceRequest.approveCode(code: code, type: type, success: {
-            switch type {
-            case .email:
-                CoreDataHelper.saveEmail(email: self.email!)
-                UIUtils.navigateToMessage(self, messageType: .emailSuccessfull)
-            case .phone:
-                CoreDataHelper.savePhone(phone: self.phoneNumber!)
-                UIUtils.navigateToMessage(self, messageType: .phoneNumberSuccessfull)
-            }
-            UIUtils.stopLoading()
-        }) { (error) in
-            UIUtils.stopLoading()
-            self.showCodeError(error)
+        switch type {
+        case .email:
+            CoreDataHelper.saveEmail(email: self.email!)
+            UIUtils.navigateToMessage(self, messageType: .emailSuccessfull)
+        case .phone:
+            CoreDataHelper.savePhone(phone: self.phoneNumber!)
+            UIUtils.navigateToMessage(self, messageType: .phoneNumberSuccessfull)
         }
-        
-        
+//        UIUtils.showLoading()
+//        CustomWebServiceRequest.approveCode(code: code, type: type, success: {
+//            switch type {
+//            case .email:
+//                CoreDataHelper.saveEmail(email: self.email!)
+//                UIUtils.navigateToMessage(self, messageType: .emailSuccessfull)
+//            case .phone:
+//                CoreDataHelper.savePhone(phone: self.phoneNumber!)
+//                UIUtils.navigateToMessage(self, messageType: .phoneNumberSuccessfull)
+//            }
+//            UIUtils.stopLoading()
+//        }) { (error) in
+//            UIUtils.stopLoading()
+//            self.showCodeError(error)
+//        }
     }
 
     private func codeVerify() -> String? {

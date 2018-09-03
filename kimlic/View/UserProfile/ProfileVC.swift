@@ -17,12 +17,11 @@ class ProfileVC: UIViewController {
     // MARK: - Local Varibles
     var user: KimlicUser?
     var securityRiskCount = 0
+    lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         // Enable sync cloud kit
         CloudCore.enable(persistentContainer: appDelegate.persistentContainer)
@@ -84,6 +83,7 @@ class BodyTableVC: UITableViewController {
     @IBOutlet var bodyTableView: UITableView!
     
     var user: KimlicUser?
+    lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,6 +113,8 @@ class BodyTableVC: UITableViewController {
         case 1: // security status
             cell.textLabel?.text = "You have 2 Security Risk"
         case 2: // balance
+//            let balance = try! appDelegate.quorumManager?.quorum.accountBalance()
+//            cell.textLabel?.text = "Balance \(balance) KIM"
             cell.textLabel?.text = "Balance 3 KIM"
         case 3: // phone number
             cell.textLabel?.text = user?.phone ?? "Add your phone"

@@ -9,7 +9,7 @@
 import UIKit
 
 struct VerifyIDModel {
-    var documentType: String = "documents."
+    var documentType: VerificationDocument?
     var faceImage: UIImage?
     var documentFrontImage: UIImage?
     var documentBackImage: UIImage?

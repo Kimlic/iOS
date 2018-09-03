@@ -320,11 +320,13 @@
                         <outlet property="countryTextField" destination="Mi4-ch-KXb" id="yMS-Dr-ZuU"/>
                         <outlet property="documentNumber" destination="AZ4-Vv-dAx" id="fFp-43-uE0"/>
                         <outlet property="expiryDateTextField" destination="koD-un-GzB" id="rVl-DU-GTx"/>
+                        <outlet property="newIDButton" destination="T24-KZ-7Sc" id="wfX-vI-lS5"/>
+                        <outlet property="titleLabel" destination="7ZP-Fw-v6x" id="74K-w7-kPQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvO-Og-0Yo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2834" y="-111"/>
+            <point key="canvasLocation" x="-3154" y="-153"/>
         </scene>
     </scenes>
     <resources>

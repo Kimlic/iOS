@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import web3swift
+import SwiftyJSON
 
 final class CustomWebServiceRequest {
     
@@ -114,8 +115,11 @@ final class CustomWebServiceRequest {
         
         WebServicesBaseRequest().executeRequest(url: url, method: .get, params: nil, headers: headers, success: { (response) in
             do {
-                let data = try JSONSerialization.data(withJSONObject: response["data"], options: .prettyPrinted)
-                let documents = try JSONDecoder().decode([VerificationDocument].self, from: data)
+                guard let data = response["data"] as? [String: Any], let docs = data["documents"] as? [Any] else {
+                    return
+                }
+                let jsonData = JSON(docs)
+                let documents = try JSONDecoder().decode([VerificationDocument].self, from: jsonData.rawData())
                 success(documents)
             } catch {
                 failure("errorMessage".localized)

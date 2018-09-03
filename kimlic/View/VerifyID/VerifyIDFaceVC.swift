@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 // TODO: integrate general CameraController class
 class VerifyIDFaceVC: UIViewController {
@@ -15,41 +16,39 @@ class VerifyIDFaceVC: UIViewController {
     @IBOutlet weak var croppedView: UIView!
     @IBOutlet weak var choseDocumentView: UIView!
     @IBOutlet weak var buttonsStackView: UIStackView!
-    @IBOutlet weak var driversLicanseButton: CustomButton!
     @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var captureImageButton: UIButton!
     @IBOutlet weak var switchCameraButton: UIButton!
     
     
     // MARK: - Local Varibles
-    let cameraController = CameraController()
-    var selectedDocumentType: DocumentType = .driversLicense
-    lazy var documents: [VerificationDocument] = {
-        let ver1 = VerificationDocument.init(contexts: [], countries: [], description: "ID Card", type: "ID_CARD")
-        let ver2 = VerificationDocument.init(contexts: [], countries: [], description: "Driver License", type: "DRIVER_LICENSE")
-        return [ver1, ver2]
-    }()
+    var captureSession = AVCaptureSession()
+    var backCamera: AVCaptureDevice?
+    var frontCamera: AVCaptureDevice?
+    var currentCamrera: AVCaptureDevice?
+    
+    var photoOutput: AVCapturePhotoOutput?
+    var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
+    
+    var selectedDocument: VerificationDocument!
+    lazy var documents: [VerificationDocument] = [VerificationDocument]()
     
     // MARK: - Overrides
     override var prefersStatusBarHidden: Bool { return false }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureCameraController()
+        // Camera Config
+        setupCaptureSession()
+        setupDevice()
+        setupInputOutput()
+        setupPreviewLayer()
+        startRunningCaptureSession()
         
-//        createDocumentButtons()
-        
-        setupView()
-        
-        Animz.showMenu(myView: self.choseDocumentView, duration: 0.5, completion: {})
-        
-        
-//        Animz.showMenu(myView: self.choseDocumentView, duration: 0.5, completion: {})
-        
-//        serverRequest {
-//            Animz.showMenu(myView: self.choseDocumentView, duration: 0.5, completion: {})
-//        }
+        serverRequest {
+            Animz.showMenu(myView: self.choseDocumentView, duration: 0.5, completion: {})
+        }
     }
     
     // MARK: - IBActions
@@ -58,87 +57,82 @@ class VerifyIDFaceVC: UIViewController {
     }
     
     @IBAction func captureImageButtonPressed(_ sender: Any) {
-        cameraController.captureImage {(image, error) in
-            guard let image = image else {
-                print(error ?? "Image capture error")
-                return
-            }
-            let croppedImage = image.cropImage(toRect: self.croppedView.frame, viewWidth: self.view.frame.size.width, viewHeight: self.view.frame.size.height)
-            var verifyIDModel = VerifyIDModel()
-            verifyIDModel.faceImage = croppedImage
-            UIUtils.navigateToVerifyID(self, model: verifyIDModel)
-        }
+        takePhoto()
     }
     
-    @IBAction func idCardButtonPressed(_ sender: Any) {
-        setDocumentTypeAndView(type: .idCard)
-    }
-    @IBAction func driverLicenseButtonPressed(_ sender: Any) {
-        setDocumentTypeAndView(type: .driversLicense)
-    }
-    @IBAction func passportButtonPressed(_ sender: Any) {
-        setDocumentTypeAndView(type: .passport)
-    }
-    
-    @IBAction func switchCameraButtonPressed(_ sender: Any) {
-        do {
-            try cameraController.switchCameras()
-        }
-            
-        catch {
-            print(error)
-        }
-        
-        switch cameraController.currentCameraPosition {
-        case .some(.front):
-            switchCameraButton.setImage(#imageLiteral(resourceName: "ic_camera_front.png"), for: .normal)
-            
-        case .some(.rear):
-            switchCameraButton.setImage(#imageLiteral(resourceName: "ic_camera_rear.png"), for: .normal)
-            
-        case .none:
-            return
-        }
-    }
     // MARK: - Functions
     
-    private func configureCameraController() {
-        cameraController.prepare {(error) in
-            if let error = error {
-                print(error)
+    private func takePhoto() {
+        let settings = AVCapturePhotoSettings()
+        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first
+        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType]
+        settings.previewPhotoFormat = previewFormat
+        photoOutput?.capturePhoto(with: settings, delegate: self)
+    }
+    
+    private func setupCaptureSession() {
+        captureSession.sessionPreset = AVCaptureSession.Preset.photo
+    }
+    
+    private func setupDevice() {
+        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
+        let devices = deviceDiscoverySession.devices
+        
+        for device in devices {
+            if device.position == AVCaptureDevice.Position.back {
+                backCamera = device
+            } else if device.position == AVCaptureDevice.Position.front {
+                frontCamera = device
             }
-            try? self.cameraController.displayPreview(on: self.view)
-            try? self.cameraController.switchCameras()
+        }
+        currentCamrera = frontCamera ?? backCamera
+    }
+    
+    private func setupInputOutput() {
+        do {
+            let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamrera!)
+            captureSession.addInput(captureDeviceInput)
+            photoOutput = AVCapturePhotoOutput()
+            captureSession.addOutput(photoOutput!)
+        } catch {
+            print(error)
         }
     }
     
-    private func setDocumentTypeAndView(type: DocumentType) {
-        selectedDocumentType = type
+    private func setupPreviewLayer() {
+        cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
+        cameraPreviewLayer?.frame = self.view.frame
+        self.view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
+    }
+    
+    private func startRunningCaptureSession() {
+        captureSession.startRunning()
+    }
+    
+    private func setDocumentTypeAndView(_ document: VerificationDocument) {
+        selectedDocument = document
         Animz.hideMenu(myView: choseDocumentView, duration: 0.5) {
             self.choseDocumentView.isHidden = true
             self.bgImageView.isHidden = false
             self.captureImageButton.isHidden = false
         }
     }
-    
-    
 }
 
 // MARK: - Setup View and Web Serivce
 extension VerifyIDFaceVC {
     
-    private func setupView() {
-        buttonsStackView.setBackgroundColor(colors: UIColor.verifyButtonsBlackGradiante, cornerRadius: 17)
-        driversLicanseButton.addBorder(side: .top, color: UIColor.seperatorGray, width: 1)
-        driversLicanseButton.addBorder(side: .bottom, color: UIColor.seperatorGray, width: 1)
-    }
-    
     private func serverRequest(completion: @escaping () -> () ) {
+        UIUtils.showLoading()
         CustomWebServiceRequest.getVerificationDocuments(success: { (documents) in
+            UIUtils.stopLoading()
             self.documents = documents
             self.createDocumentButtons()
             completion()
         }) { (error) in
+            UIUtils.stopLoading()
             // TODO: Error Popup
             print(error)
         }
@@ -146,13 +140,17 @@ extension VerifyIDFaceVC {
     
     private func createDocumentButtons() {
         for (index, document) in documents.enumerated() {
-            let button = UIButton()
+            let button = UIButton(type: .system)
             button.setTitle(document.description, for: .normal)
             button.setTitleColor(UIColor.white, for: .normal)
+            button.titleLabel?.font = UIFont.popupButtonText
             button.tag = index
             button.backgroundColor = UIColor.clear
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.white.cgColor
+            let buttonHeightConstraint = button.heightAnchor.constraint(equalToConstant: 56.0)
+            buttonHeightConstraint.isActive = true
+            button.layer.cornerRadius = 6
             button.addTarget(self, action: #selector(VerifyIDFaceVC.selectDocumentButtonPressed), for: .touchUpInside)
             buttonsStackView.addArrangedSubview(button)
         }
@@ -161,10 +159,28 @@ extension VerifyIDFaceVC {
     @objc private func selectDocumentButtonPressed(_ sender: UIButton) {
         for (index, document) in documents.enumerated() {
             if index == sender.tag {
-                selectedDocumentType = DocumentType(rawValue: document.type)!
+                setDocumentTypeAndView(document)
             }
+        }
+    }
+}
+
+extension VerifyIDFaceVC: AVCapturePhotoCaptureDelegate {
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
+        if let sampleBuffer = photoSampleBuffer, let previewBuffer = previewPhotoSampleBuffer, let dataImage = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: previewBuffer) {
+            guard let image = UIImage(data: dataImage) else {
+                return
+            }
+            let croppedImage = image.cropImage(toRect: self.croppedView.frame, viewWidth: self.view.frame.size.width, viewHeight: self.view.frame.size.height)
+            var verifyIDModel = VerifyIDModel()
+            verifyIDModel.faceImage = croppedImage
+            verifyIDModel.documentType = selectedDocument
+            UIUtils.navigateToVerifyID(self, model: verifyIDModel)
         }
     }
     
 }
+
+
 

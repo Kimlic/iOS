@@ -36,11 +36,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tj-65-o46" userLabel="ChoseDocumentView">
                                 <rect key="frame" x="40" y="327" width="295" height="340"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KlM-b1-IUa">
-                                        <rect key="frame" x="0.0" y="142" width="295" height="168"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KlM-b1-IUa">
+                                        <rect key="frame" x="0.0" y="310" width="295" height="0.0"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-1a-evB" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="295" height="56"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-1a-evB" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="-637" width="295" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="mLM-I8-Rol"/>
                                                 </constraints>
@@ -48,12 +48,9 @@
                                                 <state key="normal" title="ID Card">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="idCardButtonPressed:" destination="e6U-pI-4t6" eventType="touchUpInside" id="Ns4-6o-juK"/>
-                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RC8-HS-NVH" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="56" width="295" height="56"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RC8-HS-NVH" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="-637" width="295" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="O4h-uC-d1R"/>
                                                 </constraints>
@@ -61,12 +58,9 @@
                                                 <state key="normal" title="Drivers License">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="driverLicenseButtonPressed:" destination="e6U-pI-4t6" eventType="touchUpInside" id="8gh-eP-kOq"/>
-                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eK9-Wf-T7B" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="112" width="295" height="56"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eK9-Wf-T7B" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="-637" width="295" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="0iO-8v-vI2"/>
                                                 </constraints>
@@ -74,8 +68,18 @@
                                                 <state key="normal" title="Passport">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1y-JW-B3M" customClass="CustomButton" customModule="kimlic" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="-637" width="295" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="isk-v9-8PC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
+                                                <state key="normal" title="Residence card">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
-                                                    <action selector="passportButtonPressed:" destination="e6U-pI-4t6" eventType="touchUpInside" id="bps-4B-PED"/>
+                                                    <action selector="passportButtonPressed:" destination="e6U-pI-4t6" eventType="touchUpInside" id="GXK-Qd-GSn"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -89,13 +93,13 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chose Your Document Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDt-58-LRV">
-                                        <rect key="frame" x="34" y="99" width="228" height="23"/>
+                                        <rect key="frame" x="33.5" y="267" width="228" height="23"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_ID_icon_sml" translatesAutoresizingMaskIntoConstraints="NO" id="2Ql-86-4iO">
-                                        <rect key="frame" x="115" y="22" width="65" height="62"/>
+                                        <rect key="frame" x="115" y="190" width="65" height="62"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -156,7 +160,6 @@
                         <outlet property="captureImageButton" destination="kFs-iV-agN" id="gGv-RA-9E1"/>
                         <outlet property="choseDocumentView" destination="1tj-65-o46" id="bLP-Ai-4Cc"/>
                         <outlet property="croppedView" destination="O7N-t9-kPE" id="zwc-xI-2cP"/>
-                        <outlet property="driversLicanseButton" destination="RC8-HS-NVH" id="H4r-qg-64d"/>
                         <outlet property="switchCameraButton" destination="cbK-Vu-Oac" id="d1M-mO-MKE"/>
                     </connections>
                 </viewController>
