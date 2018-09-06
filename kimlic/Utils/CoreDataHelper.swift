@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import CloudCore
 
 struct CoreDataHelper {
     static let kimlicUserEntity = "KimlicUser"
@@ -28,7 +29,7 @@ struct CoreDataHelper {
             user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
         }
         user?.phone = phone
-        saveUser()
+        saveUser(user!)
     }
     
     static func saveEmail(email: String) {
@@ -37,7 +38,7 @@ struct CoreDataHelper {
             user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
         }
         user?.email = email
-        saveUser()
+        saveUser(user!)
     }
     
     static func saveName(firstName: String, lastName: String) {
@@ -47,7 +48,7 @@ struct CoreDataHelper {
         }
         user?.firstName = firstName
         user?.lastName = lastName
-        saveUser()
+        saveUser(user!)
     }
     
     static func savePasscode(passcode: String?) {
@@ -56,7 +57,7 @@ struct CoreDataHelper {
             user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
         }
         user?.passcode = passcode
-        saveUser()
+        saveUser(user!)
     }
     static func saveRecovery(isAccountRecovery: Bool) {
         var user = getUser()
@@ -64,7 +65,7 @@ struct CoreDataHelper {
             user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
         }
         user?.accountRecovery = isAccountRecovery
-        saveUser()
+        saveUser(user!)
     }
     
     static func saveTouchID(isTouchID: Bool) {
@@ -73,7 +74,7 @@ struct CoreDataHelper {
             user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
         }
         user?.touchID = isTouchID
-        saveUser()
+        saveUser(user!)
     }
     
     static func saveProfilePhoto(photo: Data?) {
@@ -82,7 +83,7 @@ struct CoreDataHelper {
             user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
         }
         user?.profilePhoto = photo
-        saveUser()
+        saveUser(user!)
     }
     
     static func saveMnemonicAndAddress(mnemonic: String?, accountAddress: String?) {
@@ -92,7 +93,7 @@ struct CoreDataHelper {
         }
         user?.mnemonic = mnemonic
         user?.accountAddress = accountAddress
-        saveUser()
+        saveUser(user!)
     }
     
     static func saveAddress(address: String?, addressFile: Data?) {
@@ -102,7 +103,7 @@ struct CoreDataHelper {
         }
         user?.address = address
         user?.addressFile = addressFile
-        saveUser()
+        saveUser(user!)
     }
     
     static func saveDeviceToken(deviceToken: String) {
@@ -111,11 +112,25 @@ struct CoreDataHelper {
             user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
         }
         user?.deviceToken = deviceToken
-        saveUser()
+        saveUser(user!)
     }
     
-    private static func saveUser() {
+    static func saveToRecord(record: CKRecord) {
+        var user = getUser()
+        if user == nil {
+            user = NSEntityDescription.insertNewObject(forEntityName: kimlicUserEntity, into: context) as? KimlicUser
+        }
+        for key in record.allKeys() {
+            let recordValue = record.value(forKey: key)
+            user?.setValue(recordValue, forKey: key)
+        }
+        saveUser(user!)
+        CloudKitHelper.deleteToCloud(record: record)
+    }
+    
+    private static func saveUser(_ user: NSManagedObject) {
         do {
+            context.refresh(user, mergeChanges: true)
             try context.save()
         } catch let error {
             print("Could not save \(error.localizedDescription)")
@@ -123,7 +138,7 @@ struct CoreDataHelper {
     }
     static func delete(kimlicUser: KimlicUser) {
         context.delete(kimlicUser)
-        saveUser()
+        saveUser(kimlicUser)
     }
     
     static func destroy() {
@@ -150,4 +165,40 @@ struct CoreDataHelper {
             return nil
         }
     }
+}
+
+import CloudKit
+
+struct CloudKitHelper {
+    
+    private static let database = CKContainer.default().privateCloudDatabase
+    
+    static func getDatabaseWithAccountAddress(accountAddress: String, callback: @escaping (CKRecord?) -> ()){
+        let predicate = NSPredicate(format: "accountAddress = '\(accountAddress)'")
+        let query = CKQuery(recordType: CoreDataHelper.kimlicUserEntity, predicate: predicate)
+        database.perform(query, inZoneWith: CloudCore.config.zoneID) { (records, _) in
+            guard let records = records else { callback(nil); return }
+            callback(records.first)
+        }
+    }
+
+    static func getDatabaseWithRecordId(callback: @escaping (CKRecord?) -> ()){
+        let user = CoreDataHelper.getUser()
+        let predicate = NSPredicate(format: "recordID = '\(user?.recordID ?? "")'")
+        let query = CKQuery(recordType: CoreDataHelper.kimlicUserEntity, predicate: predicate)
+        database.perform(query, inZoneWith: nil) { (records, _) in
+            guard let records = records else { callback(nil); return }
+            callback(records.first)
+        }
+    }
+
+    static func saveToCloud(record: CKRecord, completionHandler: ((CKRecord?, Error?) -> Void)? = nil) {
+        database.save(record, completionHandler: completionHandler ?? {_,_ in})
+    }
+    
+    static func deleteToCloud(record: CKRecord, completionHandler: ((CKRecordID?, Error?) -> Void)? = nil) {
+        database.delete(withRecordID: record.recordID, completionHandler: completionHandler ?? {_,_ in})
+    }
+    
+    
 }

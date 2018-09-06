@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import CloudCore
-
 class MnemonicImportVC: UIViewController {
-
+    
     @IBOutlet weak var passTextView: UITextView!
     @IBOutlet weak var verifyButton: UITextView!
     
@@ -18,7 +16,7 @@ class MnemonicImportVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupView()
     }
     
@@ -45,7 +43,9 @@ class MnemonicImportVC: UIViewController {
         
         appDelegate.createQuorum(mnemonic: passTextView.text) {
             if self.appDelegate.quorumManager != nil {
-                self.coreDataFetchAndSave(completion: completion)
+                guard let accountAddress = self.appDelegate.quorumManager?.accountAddress else { return }
+                self.coreDataFetchAndSave(accountAddress: accountAddress)
+                completion()
             } else {
                 // TODO: Wrong mnemonic popup
                 completion()
@@ -55,14 +55,20 @@ class MnemonicImportVC: UIViewController {
     }
     
     // Core data sync cloud kit
-    private func coreDataFetchAndSave(completion: @escaping () -> ()) {
-        CloudCore.fetchAndSave(to: appDelegate.persistentContainer, error: nil) {
-            DispatchQueue.main.async { [weak self] in
-                guard let strongSelf = self else { return }
-                UIUtils.navigateToMessage(strongSelf, messageType: .passMatchSuccessfull)
+    private func coreDataFetchAndSave(accountAddress: String) {
+        
+        CloudKitHelper.getDatabaseWithAccountAddress(accountAddress: accountAddress) { (record) in
+            if record != nil {
+                
+                CoreDataHelper.saveToRecord(record: record!)
+                DispatchQueue.main.async { [weak self] in
+                    guard let strongSelf = self else { return }
+                    UIUtils.navigateToMessage(strongSelf, messageType: .passMatchSuccessfull)
+                }
+            }else {
+                // TODO: Error Mnemonic
+                print("Error Mnemonic")
             }
-            completion()
         }
     }
-    
 }

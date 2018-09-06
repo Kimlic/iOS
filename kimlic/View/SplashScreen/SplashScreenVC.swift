@@ -46,8 +46,7 @@ class SplashScreenVC: UIViewController {
     }
     
     private func isOldUserCheck() -> Bool {
-//        if currentUser == nil || currentUser?.phone == nil || currentUser?.email == nil {
-        if currentUser == nil {
+        guard currentUser?.phone != nil || currentUser?.email != nil else{
             return false
         }
         return true

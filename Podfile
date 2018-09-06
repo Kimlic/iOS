@@ -15,10 +15,10 @@ target 'kimlic' do
 	pod 'IQKeyboardManagerSwift', '~> 5.0.6'
 	pod 'SmileLock', '~> 3.0'
 	pod 'CryptoSwift'
-	pod 'web3swift', :git => 'https://github.com/Kimlic/web3swift', :branch => 'quorum'
+    pod 'web3swift', :git => 'https://github.com/Kimlic/web3swift', :branch => 'quorum'
 	pod 'Quorum', :git => 'https://github.com/Kimlic/Quorum-iOS'
 	pod 'Fabric', '~> 1.7.7'
 	pod 'Crashlytics', '~> 3.10.2'
-    pod 'CloudCore', '~> 2.0'
     pod 'FileBrowser', '~> 1.0'
+    pod 'CloudCore', :git => 'https://github.com/calismatest/CloudCore'
 end

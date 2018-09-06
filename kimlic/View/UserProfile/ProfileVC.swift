@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CloudCore
 
 class ProfileVC: UIViewController {
     
@@ -22,9 +21,6 @@ class ProfileVC: UIViewController {
     // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Enable sync cloud kit
-        CloudCore.enable(persistentContainer: appDelegate.persistentContainer)
     }
     
     override func viewWillAppear(_ animated: Bool) {

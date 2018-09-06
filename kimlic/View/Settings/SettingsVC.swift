@@ -7,12 +7,13 @@
 //
 
 import UIKit
-import CloudCore
 
 class SettingsVC: UIViewController {
     
     @IBOutlet weak var signOutButton: UIButton!
     @IBOutlet weak var deleteIdentityButton: UIButton!
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,16 +32,15 @@ class SettingsVC: UIViewController {
     }
     
     @IBAction func deleteIdentityButtonPressed(_ sender: Any) {
-        CloudCore.deleteIdentity(completion: {
-            let _ = UIUtils.setSignUpScreenAsRoot()
-        }) { (error) in
-            print(error)
-        }
+        CoreDataHelper.delete(kimlicUser: CoreDataHelper.getUser()!)
+        CoreDataHelper.destroy()
+        appDelegate.quorumManager = nil
+        let _ = UIUtils.setSignUpScreenAsRoot()
     }
     
     @IBAction func signOutButtonPressed(_ sender: Any) {
         CoreDataHelper.destroy()
-        CloudCore.disable()
+        appDelegate.quorumManager = nil
         let _ = UIUtils.setSignUpScreenAsRoot()
     }
 }
